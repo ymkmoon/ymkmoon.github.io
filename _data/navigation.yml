@@ -1,12 +1,14 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "홈"
+    url: /index.html
+  - title: "카테고리"
+    url: /categories/
+  - title: "공부"
+    url: /categories/study
+  - title: "리눅스"
+    url: /categories/linux
+  - title: "스프링"
+    url: /categories/spring
+  - title: "스프링부트"
+  - url: /categories/springBoot
