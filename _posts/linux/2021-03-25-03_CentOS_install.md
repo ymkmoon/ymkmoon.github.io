@@ -54,6 +54,9 @@ last_modified_at: 2021-03-25
   > Root 계정 생성 대신 일반 계정을 생성하고, 관리자로 사용한다는 부분을 체크.
 
 
+![VMWare](/assets/image/linux/vmware_Centos_install06.PNG)
+  > 위 내용까지 진행하면 정상적으로 CentOS 환경이 구축됩니다.   
+  다음 포스트 부터는 프로젝트 배포를 위한 설치 및 설정이 진행됩니다.
 
 
 
