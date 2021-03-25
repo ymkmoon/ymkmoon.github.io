@@ -4,11 +4,5 @@ main:
     url: /index.html
   - title: "카테고리"
     url: /categories/
-  - title: "공부"
-    url: /categories/study
-  - title: "리눅스"
-    url: /categories/linux
-  - title: "스프링"
-    url: /categories/spring
-  - title: "스프링부트"
-  - url: /categories/springBoot
+  - title: "태그"
+    url: /tags/
