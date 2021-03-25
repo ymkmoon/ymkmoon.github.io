@@ -25,27 +25,35 @@ last_modified_at: 2021-03-25
 
 ### 1. VMWare Worksation 시작하기.
 ![VMWare](/assets/image/linux/vmware_top.PNG)
+  > 빨간 네모 부분을 선택하여 가상환경을 생성합니다.
 
 ![VMWare](/assets/image/linux/vmware_Centos_install01.PNG)
   > 위에서 설치한 iso 파일을 선택해줍니다.
 
 ![VMWare](/assets/image/linux/vmware_Centos_install02.PNG)
-  > 가상환경의 이름과 경로를 설정합니다.
+  > 가상환경의 이름과 경로를 설정합니다.   
+  이후 나오는 창에서는 그냥 Next 를 선택하며 지나갑니다.
+
+
+- 위 작업이 끝나면 VMWare Workstation 에 방금 설치한 CentOS 환경이 생성됩니다.
 
   
 <br>   
 
-### 2. Player Install
-- 라이센스, 제품 경로 변경 등 개인에 맞게 세팅 후 계속 진행.
-- User Experience 설정에서 모두 체크 해제 후 Next   
-(사용 통계 정보등을 VMWare 측에 보낼지에 대한 여부등에 대한 내용이 있다.)
-- Shortcuts 에서 모두 체크 후 Next   
-(바탕화면과 시작메뉴에 바로가기 생성 여부등에 대한 내용이 있다)
-  
-<br>
+### 2. CentOS 설치하기
+- 위에서 설치한 환경을 더블클릭하고 기다리면 아래의 화면이 나옵니다.
+
+![VMWare](/assets/image/linux/vmware_Centos_install03.PNG)
+  > 설치 진행을 어떤 언어로 사용할지 선택
+
+![VMWare](/assets/image/linux/vmware_Centos_install04.PNG)
+  > 위 이미지에서 보이는 3개만 설정하고 나머지는 그냥 넘어가셔도 좋습니다.   
+  파티션은 자동선택 하셔도, 커스텀 하셔도 됩니다. (본인은 자동선택)
+
+![VMWare](/assets/image/linux/vmware_Centos_install05.PNG)
+  > Root 계정 생성 대신 일반 계정을 생성하고, 관리자로 사용한다는 부분을 체크.
 
 
-> 이번 포스트 에서는 가상머신 설치까지만 진행하고   
-다음 포스트에서 본격적으로 가상머신에 Linux 를 구축하겠습니다.
+
 
 
