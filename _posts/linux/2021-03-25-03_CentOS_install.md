@@ -16,6 +16,7 @@ last_modified_at: 2021-03-25
 
 ## CentOS 이미지 파일 다운로드
   > https://www.centos.org/download/
+
 - VMWare에 CentOS7 환경을 만들기 위해서는 ISO 파일이 필요하다.   
 위 링크에서 CentOS7 의 ISO 파일을 다운받자.
 - 작성자는 x86_64 선택 후 `CentOS-7-x86_64-DVD-2009.iso` 파일 설치
@@ -23,7 +24,15 @@ last_modified_at: 2021-03-25
 
 
 ### 1. VMWare Worksation 시작하기.
-  ![VMWare](/assets/image/linux/vmware_top.PNG)
+![VMWare](/assets/image/linux/vmware_top.PNG)
+
+![VMWare](/assets/image/linux/vmware_Centos_install01.PNG)
+  > 위에서 설치한 iso 파일을 선택해줍니다.
+
+![VMWare](/assets/image/linux/vmware_Centos_install02.PNG)
+  > 가상환경의 이름과 경로를 설정합니다.
+
+  
 <br>   
 
 ### 2. Player Install
