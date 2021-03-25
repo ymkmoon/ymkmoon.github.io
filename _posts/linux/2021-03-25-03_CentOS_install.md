@@ -23,7 +23,7 @@ last_modified_at: 2021-03-25
 
 
 ### 1. VMWare Worksation 시작하기.
-  ![VMWare](.../assets/image/linux/vmware_top.png)
+  ![VMWare](https://github.com/ymkmoon/ymkmoon.github.io/tree/main/assets/image/linux/vmware_top.png)
 <br>   
 
 ### 2. Player Install
