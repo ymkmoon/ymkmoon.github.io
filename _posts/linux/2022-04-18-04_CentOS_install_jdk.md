@@ -20,21 +20,21 @@ last_modified_at: 2021-03-25
 
 ### 1. JDK 설치하기
 - 인증 문제로 설치가 안 될 경우 open jdk 8 버전을 설치한다.
-  ```
-  sudo yum -y install java-1.8.0-openjdk-devel.x86_64
-  ```
+  > sudo yum -y install java-1.8.0-openjdk-devel.x86_64
 
 - wget 명령어 실행이 안된다면 sudo yum install wget 을 입력하려 wget 설치.
+  > sudo yum install wget
 
 <br>
 
 ### 2. 환경변수 등록하기
 - /usr/bin/java 경로에 심볼릭링크가 걸려있기 때문에 실제 경로를 찾아서 환경변수에 등록해주어야 한다.
 
+  > readlink -f /usr/bin/java
   ```
-  readlink -f /usr/bin/java
   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.322.b06-1.el7_9.x86_64/jre/bin/java
   ```
+  
 
 - 실제 경로를 찾았으면 /etc/profile을 vi로 열어준 뒤 최하단에 JAVA_HOME, PATH, CLASSPATH를 등록한다.
   ```
@@ -46,23 +46,23 @@ last_modified_at: 2021-03-25
   ```
 
 - 등록한 환경변수 적용
-  ```
-  source /etc/profile
-  ```
+  > source /etc/profile
+
 
 ### 3. 환경변수 확인하기
-    ```
-    echo $JAVA_HOME
-    echo $PATH
-    echo $CLASSPATH
-    ```
+  > echo $JAVA_HOME
+
+  > echo $PATH
+
+  > echo $CLASSPATH
 
 ### 4. 컴파일 테스트
 - jvm 이 정상적으로 작동하는지 간단한 class 를 생성하여 실행해보자.
-  > 파일을 생성 후 아래 내용을 작성합니다.
-  ```
-  vi HelloWorld.java
-  ```
+  
+  파일을 생성 후 아래 내용을 작성합니다.
+  
+  > vi HelloWorld.java
+  
   ```
   public class HelloWorld{
    public static void main(String[] args){
@@ -75,7 +75,7 @@ last_modified_at: 2021-03-25
   java -cp . Helloworld
   ```
 
-  >  위 명령어 실행 시 Hello World!! 가 출력됩니다.
+  위 명령어 실행 시 Hello World!! 가 출력됩니다.
 
 
 
