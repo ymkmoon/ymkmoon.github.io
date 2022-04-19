@@ -22,6 +22,7 @@ last_modified_at: 2021-03-25
 
 ### 1. Apache 설치하기
   > 필수 툴 설치
+
   ```
   sudo yum install gcc gcc-c++ expat-devel.x86_64 pcre-devel
   ```
@@ -68,6 +69,7 @@ last_modified_at: 2021-03-25
 
 ### 4. httpd.conf의 ServerName 수정
   > sudo vi /usr/local/apache2/conf/httpd.conf 파일의 193번째 라인
+  
   ```
   ServerName localhost:80
   ```
