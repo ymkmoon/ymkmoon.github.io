@@ -84,7 +84,7 @@ last_modified_at: 2021-03-25
   - tomcat9.service 파일 생성 후 아래 내용을 입력 후 저장한다.
 
   ```
-  vi /etc/systemd/system/tomcat9.service
+  vi /usr/lib/systemd/system/tomcat9.service
   ```
 
   ```
