@@ -81,7 +81,7 @@ last_modified_at: 2021-03-25
   ps -ef|grep httpd
   ```
 
-  ![VMWare](/assets/image/linux/Centos_install_apache_01.PNG)
+![VMWare](/assets/image/linux/Centos_install_apache_01.PNG)
 
 
 
@@ -92,7 +92,7 @@ last_modified_at: 2021-03-25
     sudo wget http://127.0.0.1
     ```
 
-    ![VMWare](/assets/image/linux/Centos_install_apache_02.PNG)
+![VMWare](/assets/image/linux/Centos_install_apache_02.PNG)
 
     > /usr/local/apache2/htdocs 경로에 위치한 index.html이 다운로드 된다.
 
