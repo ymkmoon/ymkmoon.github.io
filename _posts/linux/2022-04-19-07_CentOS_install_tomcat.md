@@ -29,6 +29,7 @@ last_modified_at: 2021-03-25
   ```
 
 ### 2. 압축 해제 및 폴더 이동
+
   ```
   cd /usr/local/download
   sudo tar xvfz apache-tomcat-9.0.62.tar.gz
@@ -36,11 +37,13 @@ last_modified_at: 2021-03-25
   ```
 
 ### 3. Tomcat 설정
+
   ```
   /usr/local/tomcat9/conf/server.xml
   ```
 
 ### 4. 방화벽 설정
+
   ```
   firewall-cmd --permanent --add-port=8080/tcp
   firewall-cmd --reload
@@ -48,6 +51,7 @@ last_modified_at: 2021-03-25
 
 ### 5. 환경변수 설정
   > 환경변수 CATALINA_HOME 을 추가하고 CLASSPATH 의 변수에도 아래 내용을 추가해준다.
+
   ```
   sudo vi /etc/profile
 
@@ -60,9 +64,11 @@ last_modified_at: 2021-03-25
   ```
 
 ### 6. Tomcat 실행
+
   ```
   sudo /usr/local/tomcat9/bin/startup.sh
   ```
+
 ![VMWare](/assets/image/linux/Centos_install_tomcat_01.PNG)
 
   ```
@@ -76,6 +82,7 @@ last_modified_at: 2021-03-25
 
 ### 7. 서비스 등록
   - tomcat9.service 파일 생성 후 아래 내용을 입력 후 저장한다.
+
   ```
   vi /etc/systemd/system/tomcat9.service
   ```
@@ -111,9 +118,11 @@ last_modified_at: 2021-03-25
   ```
 
 ### 8. Tomcat 유저 설정
+
   ```
   sudo vi /usr/local/tomcat9/conf/tomcat-user.xml
   ```
+  
   > 위 파일에서 'tomcat-users' 태그 안에 추가
 
   ```
@@ -128,9 +137,11 @@ last_modified_at: 2021-03-25
 
 ### 9. 외부접근 허용 설정
   - 관리파일을 별도로 생성한다.
+
   ```
   sudo vi /usr/local/tomcat9/conf/Catalina/localhost/manager.xml
   ```
+  
   ```
   <Context privileged="true" antiResourceLocking="false" docBase="${catalina.home}/webapps/manager">
     <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" />
