@@ -39,7 +39,14 @@ last_modified_at: 2021-03-25
 ### 3. Tomcat 설정
 
   ```
-  /usr/local/tomcat9/conf/server.xml
+  sudo vi /usr/local/tomcat9/conf/server.xml
+
+  # 에서 아래의 내용을 찾아 URIEncoding="UTF-8"을 추가
+		
+  <Connector port="8080" protocol="HTTP/1.1"
+              connectionTimeout="20000"
+              redirectPort="8443"
+              URIEncoding="UTF-8" />
   ```
 
 ### 4. 방화벽 설정
@@ -120,7 +127,7 @@ last_modified_at: 2021-03-25
 ### 8. Tomcat 유저 설정
 
   ```
-  sudo vi /usr/local/tomcat9/conf/tomcat-user.xml
+  sudo vi /usr/local/tomcat9/conf/tomcat-users.xml
   ```
   
   > 위 파일에서 'tomcat-users' 태그 안에 추가
