@@ -267,5 +267,5 @@ last_modified_at: 2021-03-25
 ![VMWare](/assets/image/linux/Centos_redmine_01.PNG)
 
 
-> http://[서버ip]:3000 로 Redmine 접속 가능
+> http://[서버ip]:3000 로 Redmine 접속 가능하며, 초기 계정은 admin / admin 입니다.
 
