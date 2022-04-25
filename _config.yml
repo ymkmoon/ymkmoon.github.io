@@ -280,3 +280,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+# Analytics
+analytics:
+  provider               : "google-gtag" 
+                          # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          : "G-9BZVYH3G18"
+    anonymize_ip         : # true, false (default)
