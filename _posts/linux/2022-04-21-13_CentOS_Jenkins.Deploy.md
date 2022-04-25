@@ -17,8 +17,12 @@ last_modified_at: 2021-03-25
 ## Jenkins를 통한 프로젝트 배포
 > https://github.com/ymkmoon/toyseven <br>
 > Spring boot 프로젝트를 jar 형태로 배포 작업을 진행 <br>
-> 해당 프로젝트는 gradle 7.2, jdk 1.8 을 사용중이며, 젠킨스 환경도 프로젝트와 맞춰 설정 <br>
+> 해당 프로젝트는 gradle 7.2, jdk 1.8 을 사용
+
+<br><br>
+
 > 진행 전에 앞서, 프로젝트의 build.gradle 파일의 최하단에 아래 내용을 작성
+
 ```
 bootJar {
 	mainClassName = 'com.toyseven.ymk.ToysevenApplication'
