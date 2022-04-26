@@ -7,6 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
+toc_label: "[CentOS #1 install]"
  
 date: 2021-03-25
 last_modified_at: 2021-03-25
