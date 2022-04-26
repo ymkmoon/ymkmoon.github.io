@@ -2,8 +2,6 @@
 title:  "CentOS7 Jenkins Git Repo 배포"
 excerpt: "Jenkins 에 Gitgub Repository 배포하기"
 
-categories:
-  - Linux
 tags:
   - [Linux, CentOS7, VMWare, Jenkins]
 
