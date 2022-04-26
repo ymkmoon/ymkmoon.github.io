@@ -3,7 +3,7 @@ title:  "CentOS7 Redmine 설치"
 excerpt: "리눅스 환경에 Redmin 설치하기"
 
 tags:
-  - [Linux, CentOS7, VMWare, Redmine]
+  - [CentOS7, Redmine]
 
 toc: true
 toc_sticky: true

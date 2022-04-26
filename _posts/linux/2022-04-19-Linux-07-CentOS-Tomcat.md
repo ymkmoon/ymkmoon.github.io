@@ -3,7 +3,7 @@ title:  "CentOS7 Tomcat 설치"
 excerpt: "리눅스 환경에 Tomcat 설치하기"
 
 tags:
-  - [Linux, CentOS7, VMWare, Tomcat]
+  - [CentOS7]
 
 toc: true
 toc_sticky: true

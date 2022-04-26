@@ -3,7 +3,7 @@ title:  "가상머신 설치하기"
 excerpt: "윈도우 환경에 리눅스 서버를 구축해보자."
 
 tags:
-  - [Linux, CentOS7, VMWare]
+  - [Linux, VMWare]
 
 toc: true
 toc_sticky: true

@@ -3,7 +3,7 @@ title:  "CentOS7 Apache와 Tomcat 연동"
 excerpt: "리눅스 환경에 Apache와 Tomcat 연동하기"
 
 tags:
-  - [Linux, CentOS7, VMWare, Apache, Tomcat]
+  - [CentOS7]
 
 toc: true
 toc_sticky: true

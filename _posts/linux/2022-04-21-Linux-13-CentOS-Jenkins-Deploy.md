@@ -3,7 +3,7 @@ title:  "CentOS7 Jenkins Git Repo 배포"
 excerpt: "Jenkins 에 Gitgub Repository 배포하기"
 
 tags:
-  - [Linux, CentOS7, VMWare, Jenkins]
+  - [CentOS7, Jenkins]
 
 toc: true
 toc_sticky: true

@@ -3,7 +3,7 @@ title:  "CentOS7 FTP 설정"
 excerpt: "리눅스 환경에 FTP 설정하기"
 
 tags:
-  - [Linux, CentOS7, VMWare, FTP]
+  - [CentOS7, FTP]
 
 toc: true
 toc_sticky: true
