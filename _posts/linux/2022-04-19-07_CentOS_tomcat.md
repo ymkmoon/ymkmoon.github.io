@@ -5,7 +5,7 @@ excerpt: "리눅스 환경에 Tomcat 설치하기"
 categories:
   - Linux
 tags:
-  - [Linux, CentOS7, VMWare]
+  - [Linux, CentOS7, VMWare, Tomcat]
 
 toc: true
 toc_sticky: true

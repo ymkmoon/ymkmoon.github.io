@@ -5,7 +5,7 @@ excerpt: "리눅스 환경에 Apche 설치하기"
 categories:
   - Linux
 tags:
-  - [Linux, CentOS7, VMWare]
+  - [Linux, CentOS7, VMWare, Apache]
 
 toc: true
 toc_sticky: true

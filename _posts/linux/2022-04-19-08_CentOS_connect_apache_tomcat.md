@@ -5,7 +5,7 @@ excerpt: "리눅스 환경에 Apache와 Tomcat 연동하기"
 categories:
   - Linux
 tags:
-  - [Linux, CentOS7, VMWare]
+  - [Linux, CentOS7, VMWare, Apache, Tomcat]
 
 toc: true
 toc_sticky: true
