@@ -86,9 +86,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag"  # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "G-QNE7J4WVK4"
     anonymize_ip         : # true, false (default)
 
 
@@ -280,13 +280,5 @@ defaults:
       comments: # true
       share: true
       related: true
-
-# Analytics
-analytics:
-  provider               : "google-gtag" 
-                          # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          : "G-QNE7J4WVK4"
-    anonymize_ip         : # true, false (default)
 
 theme: jekyll-theme-hacker
