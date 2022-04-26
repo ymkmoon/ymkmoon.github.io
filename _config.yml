@@ -11,6 +11,7 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
+theme                    : "jekyll-theme-hacker"
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -280,5 +281,3 @@ defaults:
       comments: # true
       share: true
       related: true
-
-theme: jekyll-theme-hacker
