@@ -1,8 +1,6 @@
 # main links
 main:
-  - title: "Home"
-    url: /index.html
-  - title: "Category"
-    url: /categories/
-  - title: "Tags"
+  - title: "posts"
+    url:
+  - title: "tags"
     url: /tags/
