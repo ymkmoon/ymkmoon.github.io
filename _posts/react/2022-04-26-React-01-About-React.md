@@ -3,7 +3,7 @@ title:  "React 란"
 excerpt: "React 에 대해 알아보자"
 
 tags:
-  - [Node, React]
+  - [React]
 
 toc: true
 toc_sticky: true
