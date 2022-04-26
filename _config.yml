@@ -289,3 +289,5 @@ analytics:
   google:
     tracking_id          : "G-QNE7J4WVK4"
     anonymize_ip         : # true, false (default)
+
+theme: jekyll-theme-hacker
