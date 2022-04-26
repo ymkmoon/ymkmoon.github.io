@@ -1,6 +1,6 @@
 # main links
 main:
   - title: "posts"
-    url:
+    url: /index.html
   - title: "tags"
     url: /tags/
