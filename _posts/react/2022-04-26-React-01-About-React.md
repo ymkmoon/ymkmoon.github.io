@@ -1,19 +1,19 @@
 ---
-title:  "리눅스에 대한 내용과 기본명령어"
-excerpt: "리눅스에 대해 알아보자"
+title:  "React 란"
+excerpt: "React 에 대해 알아보자"
 
 tags:
-  - [Linux, CentOS7]
+  - [Node, React]
 
 toc: true
 toc_sticky: true
-toc_label: "[리눅스 란]"
+toc_label: "[React 란]"
  
-date: 2021-03-25
-last_modified_at: 2021-03-25
+date: 2022-04-26
+last_modified_at: 2022-04-26
 ---
 
-## ``리눅스란 무엇인가``
+## ``React 란``
   > 리액트는 자바스크립트 라이브러리의 하나로서 사용자 인터페이스를 만들기 위해 사용된다. 
 
 #### 주요 특징
