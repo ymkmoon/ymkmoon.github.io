@@ -1,6 +1,6 @@
 ---
 title:  "React Web 개발 #1"
-excerpt: "React를 이용하여 Web 페이지를 만들어보자."
+excerpt: "React Navigation 만들기"
 
 tags:
   - [React]

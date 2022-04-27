@@ -1,13 +1,13 @@
 ---
-title:  "React Web 개발 #1"
-excerpt: "React를 이용하여 Web 페이지를 만들어보자."
+title:  "React Web 개발 #2"
+excerpt: "React Web Page 만들기"
 
 tags:
   - [React]
 
 toc: true
 toc_sticky: true
-toc_label: "[React Web 개발 #1]"
+toc_label: "[React Web 개발 #2]"
  
 date: 2022-04-26
 last_modified_at: 2022-04-26
