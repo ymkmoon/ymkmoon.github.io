@@ -22,14 +22,15 @@ Groovy와 유사한 도메인 언어를 채용하였으며, 현재 안드로이�
 ### 1. Gradle 설치
   > gradle 은 빌드 도구이며, 저는 추후 jenkins 를 이용해 배포 할 프로젝트의 버전과 동일한 버전을 다운로드 하겠습니다.
 
-  ```  
+  ```console  
   cd /usr/local/download
   sudo wget https://services.gradle.org/distributions/gradle-7.2-bin.zip
   sudo unzip -d /opt/gradle gradle-7.2-bin.zip
   ```
 
 ### 2. 환경 변수 설정
-  ```
+
+  ```console
   vi /etc/profile.d/gradle.sh
 
   # gradle.sh 파일에 아래 내용을 작성 후 저장한다.
@@ -41,7 +42,8 @@ Groovy와 유사한 도메인 언어를 채용하였으며, 현재 안드로이�
   ```
 
 ### 3. Gradle 설치 확인
-  ```
+
+  ```console
   gradle -v # 명령어 실행 시 아래와 같이 출력된다.
 
   Welcome to Gradle 7.2!

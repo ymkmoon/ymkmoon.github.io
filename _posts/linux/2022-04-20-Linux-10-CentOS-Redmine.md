@@ -20,7 +20,7 @@ last_modified_at: 2021-03-25
 
 ### 1. Redmine 용 Maria DB 설치
 
-  ```
+  ```console
   sudo yum -y install mariadb-server mariadb  # MariaDB 설치
   sudo systemctl start mariadb.service        # 서비스 시작
   sudo systemctl enable mariadb.service       # 재부팅 시 자동실행 설정
@@ -55,7 +55,7 @@ last_modified_at: 2021-03-25
 
 ### 2. Redmine 의존성 설치
 
-  ```
+  ```console
   sudo yum -y install libxslt-devel libyaml-devel libxml2-devel gdbm-devel libffi-devel pcre-devel git memcached-devel valgrind-devel mysql-devel 
   sudo yum -y install gcc g++ cpp gcc-c++
   sudo yum -y install openssl-devel readline-devel zlib-devel curl-devel 
@@ -69,7 +69,7 @@ last_modified_at: 2021-03-25
   > https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html <br>
   > https://rubygems.org/gems/rails/versions/6.0.4
 
-  ```
+  ```console
   cd /usr/local/download
 
   # 루비 설치 시 고려해야 할 사항은 rails 와 호환 버전 유무가 중요합니다.
@@ -89,7 +89,7 @@ last_modified_at: 2021-03-25
 
 ### 4. ruby-gems 설치
 
-  ```
+  ```console
   cd /usr/local/download
   sudo wget https://rubygems.org/rubygems/rubygems-3.1.2.tgz 
 	sudo tar xvf rubygems-3.1.2.tgz 
@@ -102,14 +102,14 @@ last_modified_at: 2021-03-25
 ### 5. bundler, chef ruby-shadow 설치
   > bundler(번들러)는 Ruby 어플리케이션을 위한 일관된 환경을 관리
 
-  ```
+  ```console
   sudo gem install bundler chef ruby-shadow
   ```
 
   > 위 내용에서 권한 등의 문제가 발생 시 아래 내용을 따라해주세요.<br>
   > git clone repository 가 404 일 경우 fork 떠 놨으니 제 레포에서 찾으시면 됩니다.
 
-  ```
+  ```console
   # ruby-build 플러그인 설치
   sudo yum groupinstall development
   sudo yum install git
@@ -156,13 +156,13 @@ last_modified_at: 2021-03-25
   > https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html <br>
   > https://rubygems.org/gems/rails/versions/6.0.4
 
-  ```
+  ```console
   gem install rails -v 6.0.4
   ```
 
 ### 7. Redmine 설치
 
-  ```
+  ```console
   cd /usr/local/download
   sudo wget https://www.redmine.org/releases/redmine-4.1.0.tar.gz --no-check-certificate
   sudo tar xvfz redmine-4.1.0.tar.gz
@@ -171,7 +171,7 @@ last_modified_at: 2021-03-25
 
 ### 8. Redmine DB 연동
 
-  ```
+  ```console
   cd /usr/local/redmine/config
   cp database.yml.example config/database.yml 
 
@@ -188,7 +188,7 @@ last_modified_at: 2021-03-25
 
 ### 9. 구동에 필요한 패키지 설치
 
-  ```
+  ```console
   bundle install --without development test --path vendor/bundle
   bundle install --without development test 
 
@@ -201,7 +201,7 @@ last_modified_at: 2021-03-25
 
 ### 10. Redmine 실행
 
-  ```
+  ```console
   sudo firewall-cmd --permanent --zone=public --add-port=3000/tcp # 방화벽 해제
   sudo firewall-cmd --reload 
 
@@ -214,7 +214,7 @@ last_modified_at: 2021-03-25
 
 ### 11. Apache Passenger 를 사용하여 아파치와 연동
 
-  ```
+  ```console
   sudo yum -y install httpd libcurl-devel httpd-devel apr-devel apr-util-devel
 
   

@@ -22,12 +22,13 @@ last_modified_at: 2021-03-25
 ### 1. Apache 설치하기
   > 필수 툴 설치
 
-  ```
+  ```console
   sudo yum install gcc gcc-c++ expat-devel.x86_64 pcre-devel
   ```
 
 ### 2. pcre 다운로드 및 컴파일
-  ```
+  
+  ```console
   sudo mkdir /usr/local/download
   cd /usr/local/download
 
@@ -46,7 +47,7 @@ last_modified_at: 2021-03-25
   <br>
   > http://mirror.apache-kr.org/apr
 
-  ```
+  ```console
   cd /usr/local/download
   sudo wget http://mirror.apache-kr.org/httpd/httpd-2.4.53.tar.gz
   sudo wget http://mirror.apache-kr.org/apr/apr-1.7.0.tar.gz
@@ -67,14 +68,18 @@ last_modified_at: 2021-03-25
 
 
 ### 4. httpd.conf의 ServerName 수정
-  > sudo vi /usr/local/apache2/conf/httpd.conf 파일의 193번째 라인
-  
+
+  ```console
+  sudo vi /usr/local/apache2/conf/httpd.conf # 파일의 193번째 라인
   ```
+  
+  ```console
   ServerName localhost:80
   ```
 
 ### 5. apache 실행 및 확인
-  ```
+  
+  ```console
   cd /usr/local/apache2/bin
   ./apachectl start
   ps -ef|grep httpd
@@ -86,7 +91,8 @@ last_modified_at: 2021-03-25
 
 ### 6. apache 테스트
   - 내부작동 테스트
-    ```
+
+    ```console
     cd /usr/local
     sudo wget http://127.0.0.1
     ```
@@ -100,7 +106,7 @@ last_modified_at: 2021-03-25
 
     > 방화벽이 실행되고 있고, 80포트에 대한 허가가 없다면 외부에서 접근할 수 없다.
 
-    ```
+    ```console
     # 방화벽 실행 확인
     sudo firewall-cmd --state
     -> running
@@ -129,13 +135,13 @@ last_modified_at: 2021-03-25
 
   - /etc/init.d (CentOS 6에서 주로 쓰임)
 
-    ```
+    ```console
     cd /etc/init.d
     cp /usr/local/apache2/bin/apachectl ./httpd
     vi httpd
     ```
 
-    ```
+    ```console
     맨 위에 다음과 같이 입력한다.
 
     #!/bin/sh 
@@ -148,27 +154,31 @@ last_modified_at: 2021-03-25
 
     ...
     ```
+
     저장 후 서비에스 등록한다
 
-    ```
+    ```console
     chkconfig --add httpd
     chkconfig --level 345 httpd on
     chkconfig --list
     ```
 
-    ```
+    ```console
     # service 명령어 테스트
     service httpd stop
     service httpd start
     ```
 
   - systemctl (CentOS 7에서 주로 쓰임)
-    ```
+
+    ```console
     cd /usr/lib/systemd/system
     sudo vi apache.service
     ```
+
     apache.service 파일에 아래와 같이 입력 후 저장.
-    ```
+    
+    ```console
     [Unit] 
     Description=apache2 Service 
     After=syslog.target 
@@ -187,7 +197,7 @@ last_modified_at: 2021-03-25
     WantedBy=multi-user.target
     ```
 
-    ```
+    ```console
     # 데몬 재시작
     systemctl daemon-reload
 

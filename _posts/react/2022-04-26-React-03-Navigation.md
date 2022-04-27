@@ -15,7 +15,7 @@ last_modified_at: 2022-04-26
 
 ### ``1. React 설치``
   
-  ```
+  ```console
   cd C:\ymk\toynumber\toyseven-react  # workspace 로 이동
   npm install -g create-react-app     # react 설치
   
@@ -28,7 +28,7 @@ last_modified_at: 2022-04-26
 
 ### ``2. React 실행``
 
-  ```
+  ```console
   cd C:\ymk\toynumber\toyseven-react
   npm start
   ```
@@ -40,13 +40,13 @@ last_modified_at: 2022-04-26
 
 ### ``3. Navigation bar 생성``
 
-  ```
+  ```console
   npm install react-router-dom --save   # 페이지를 이동할 때 필요한 라이브러리
   ```
 
 🛠 components/Button.css
 
-```
+```css
 :root {
     --primary: #fff;
 }
@@ -99,7 +99,7 @@ last_modified_at: 2022-04-26
 
 🛠 components/Button.js
 
-```
+```js
 import React from 'react';
 import './Button.css';
 import {Link} from 'react-router-dom';
@@ -134,7 +134,7 @@ export const Button = ({children, type, onClick, buttonStyle, buttonSize}) => {
 
 🛠 components/Navbar.css
 
-```
+```css
 .navbar {
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     height: 80px;
@@ -299,7 +299,7 @@ export const Button = ({children, type, onClick, buttonStyle, buttonSize}) => {
 
 🛠 components/Navbar.js
 
-```
+```js
 import React, { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {Button} from './Button';
@@ -379,7 +379,7 @@ export default Navbar
 
 🛠 App.js
 
-```
+```js
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from'./components/Navbar';

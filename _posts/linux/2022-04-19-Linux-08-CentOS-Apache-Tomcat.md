@@ -25,7 +25,8 @@ last_modified_at: 2021-03-25
 
 
 ### 1. perl 다운로드
-  ```
+
+  ```console
   cd /usr/local/download
   sudo wget https://www.cpan.org/src/5.0/perl-5.34.0.tar.gz --no-check-certificate
   sudo tar xvfz perl-5.34.0.tar.gz
@@ -39,7 +40,8 @@ last_modified_at: 2021-03-25
   ```
 
 ### 2. 커넥터 다운로드
-  ```
+  
+  ```console
   cd /usr/local/download
 
   sudo wget http://apache.mirror.cdnetworks.com/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.48-src.tar.gz
@@ -61,7 +63,8 @@ last_modified_at: 2021-03-25
 <br><br>
 
 ### 3. 연동 설정
-  ```
+
+  ```console
   vi /usr/local/apache/conf/httpd.conf
 
   ...
@@ -78,7 +81,8 @@ last_modified_at: 2021-03-25
 
   
   - mod_jk.conf 파일 생성
-    ```
+
+    ```console
     sudo vi /usr/local/apache2/conf/mod_jk.conf
 
 
@@ -108,8 +112,10 @@ last_modified_at: 2021-03-25
       JkMountFile conf/uriworkermap.properties
     </IfModule>
     ```
+
   - workers.properties 파일 생성
-      ```
+
+      ```console
       sudo vi /usr/local/apache2/conf/workers.properties
 
 
@@ -123,8 +129,10 @@ last_modified_at: 2021-03-25
       worker.worker1.host=127.0.0.1
       worker.worker1.port=8009
       ```
+
   - uriworkermap.properties 파일 생성
-      ```
+
+      ```console
       sudo vi /usr/local/apache2/conf/uriworkermap.propertie
 
       # /docs 경로가 들어오면 workers.properties에 정의한
@@ -139,7 +147,7 @@ last_modified_at: 2021-03-25
 
 ### 4. Was 설정
 
-  ```
+  ```console
   sudo vi /usr/local/tomcat9/conf/server.xml
 
 
@@ -162,7 +170,8 @@ last_modified_at: 2021-03-25
 
 ### 5. 연동 확인
   > Apache와 Tomcat을 재시작 해준다.
-  ```
+
+  ```console
   systemctl restart apache
   systemctl restart tomcat9
   ```

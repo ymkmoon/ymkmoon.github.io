@@ -22,7 +22,7 @@ last_modified_at: 2021-03-25
 
 > 진행 전에 앞서, 프로젝트의 build.gradle 파일의 최하단에 아래 내용을 작성
 
-```
+```console
 bootJar {
 	mainClassName = 'com.toyseven.ymk.ToysevenApplication'
 }

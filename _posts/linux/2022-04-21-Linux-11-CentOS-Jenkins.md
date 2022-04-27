@@ -21,7 +21,7 @@ last_modified_at: 2021-03-25
 
 ### 1. Jenkins 설치
 
-  ```
+  ```console
   sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo --no-check-certificate
   sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
   sudo yum install jenkins
@@ -29,7 +29,7 @@ last_modified_at: 2021-03-25
 
 ### 2. 포트 변경
 
-  ```
+  ```console
   sudo vi /etc/sysconfig/jenkins
 
   # 위 파일에서 아래내용 변경
@@ -39,14 +39,14 @@ last_modified_at: 2021-03-25
 
 ### 3. 방화벽 설정
 
-  ```
+  ```console
   sudo firewall-cmd --permanent --add-port=8089/tcp
   sudo firewall-cmd --reload
   ```
 
 ### 4. 실행 및 테스트
 
-  ```
+  ```console
   systemctl enable jenkins
   systemctl start jenkins
   ```

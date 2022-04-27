@@ -36,7 +36,8 @@ last_modified_at: 2021-03-25
 
 ### 기본 명령어
 #### 1. 서버의 환경정보 확인
-```
+
+```console
 OS Bit확인 -> getconf LONG_BIT
 OS 계열확인 -> cat /etc/issue
 상세 OS확인 -> cat /proc/version
@@ -46,7 +47,8 @@ DISK 용량 확인 -> df -h
 ```
 
 #### 2. 방화벽
-```
+
+```console
 포트확인 -> netstat -na / netstat -nap / netstat -nat
 열린 포트 확인 -> netstat -na | grep LISTEN
 SELinux 끄기 -> sudo setenforce 0		
@@ -55,7 +57,8 @@ iptables 규칙 만드는 순서 -> https://webdir.tistory.com/170
 ```
 
 #### 3. 네트워크 활성화
-```
+
+```console
 연결상태 확인 -> ping 8.8.8.8
 사용가능 네트워크 확인 -> ip addr / ifconfig -a
 네트워크 연결 -> centOS 6버젼 : ifup eth0 
@@ -65,7 +68,7 @@ iptables 규칙 만드는 순서 -> https://webdir.tistory.com/170
     경로의 파일을 열면 확인 가능  
 ```
 
-```
+```console
 BOOTPROTO=none     # 고정 IP 설정을 위해 none으로 설정
 . . .
 IPV6INIT=no        # IPV6 관련해서는 no로 설정 합니다.
@@ -88,7 +91,8 @@ DNS2=8.8.4.4                        # 2차 네임서버 설정
 - systemctl restart network 입력하여 네트워크 재시작.
 
 #### 4. 언어 확인 및 변경
-```
+
+```console
 언어셋변경 : localectl set-locale LANG=ko_KR.UTF-8
 언어셋확인 : locale
 ```

@@ -26,15 +26,21 @@ last_modified_at: 2021-03-25
 
 ### 2. SSH 설정 변경
   - ssh config 파일을 연다.
-    > sudo vi /etc/ssh/sshd_config
+
+    ```console
+    sudo vi /etc/ssh/sshd_config
+    ```
 
   - port 번호를 설정한다. (본인은 17라인에 주석처리 되어 있는 내용을 주석해제함.)
-    ```
+    
+    ```console
     #Port 22
     Port22
     ```
+
   - Root Login 을 막는다. (본인은 38라인에서 주석처리 되어 있는 내용을 변경.)
-    ```
+    
+    ```console
     PermitRootLogin yes
     PermitRootLogin no
     ```
@@ -42,23 +48,30 @@ last_modified_at: 2021-03-25
 
 ### 3. 방화벽 추가하기
   - 22번 포트를 열고, 반영을 위해 firewall 를 재기동.
-    > sudo firewall-cmd --permanent --zone=public --add-port=22/tcp
-
-    > sudo firewall-cmd --reload
+    
+    ```console
+    sudo firewall-cmd --permanent --zone=public --add-port=22/tcp
+    sudo firewall-cmd --reload
+    ```
   
 
 ### 4. ping 에 응답하지 않도록 설정하기
-  > sudo vi /etc/sysctl.conf
 
+  ```console
+  sudo vi /etc/sysctl.conf
   ```
+
+  ```console
   net.ipv4.icmp_echo_ignore_all=1
   ```
   위 내용을 작성 후 저장한다.
 
 ### 5. 재부팅 후 적용하기
-  > systemctl restart sshd
 
-  > shutdown -r now
+  ```console
+  systemctl restart sshd
+  shutdown -r now
+  ```
 
 ### 6. SSH 로 접속하기
   - ssh 툴을 설치하여 CLI 환경에 접속한다. (본인은 poderosa 이용)

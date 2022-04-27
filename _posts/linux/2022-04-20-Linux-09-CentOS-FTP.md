@@ -23,13 +23,13 @@ last_modified_at: 2021-03-25
 ### 2. FTP 설치
   - FTP 설치 확인
 
-    ```
+    ```console
     yum list installed | grep vsftpd
     ```
   
   - 설치가 안되어 있다면 설치
 
-    ```
+    ```console
     yum -y install vsftpd
     ```
   
@@ -37,7 +37,7 @@ last_modified_at: 2021-03-25
 ### 3. FTP 서버 설정
   - vsftpd.conf 파일 수정
 
-    ```
+    ```console
     sudo vi /etc/vsftpd/vsftpd.conf
 
     anonymous_enable=YES -> NO 로 수정 
@@ -54,7 +54,8 @@ last_modified_at: 2021-03-25
     ```
 
 - chroot_list 파일 생성
-  ```
+
+  ```console
   sudo vi /etc/vsftpd/chroot_list
 
   # chroot_list 파일에서 허용 할 계정을 입력 후 저장한다.
@@ -62,7 +63,7 @@ last_modified_at: 2021-03-25
 
 ### 4. 방화벽 설정
   
-  ```
+  ```console
   firewall-cmd --permanent --add-service=ftp
   firewall-cmd --permanent --add-port=21/tcp
   firewall-cmd --reload
@@ -70,7 +71,7 @@ last_modified_at: 2021-03-25
 
 ### 5. 접속 거부 리스트 수정
 
-  ```
+  ```console
   sudo vi /etc/vsftpd/ftpusers
   sudo vi /etc/vsftpd/user_list
 
@@ -79,7 +80,7 @@ last_modified_at: 2021-03-25
 
 ### 6. FTP 재시작
 
-  ```
+  ```console
   systemctl enable vsftpd
   systemctl restart vsftpd
   ```
@@ -95,7 +96,7 @@ last_modified_at: 2021-03-25
 ### 8. SELINUX 설정
   - 명령어 중 P 옵션은 영구설정을 의미하고, 1은 on, 0은 off 를 의미한다.
 
-    ```
+    ```console
     # FTP 서버가 홈 디렉토리에만 접근 가능하도록 하는 옵션
     setsebool -P ftp_home_dir 1
     # 위 명령어 실패 시 setsebool -P ftpd_full_access=1
@@ -130,7 +131,7 @@ last_modified_at: 2021-03-25
 
   > /etc/vsftpd.conf 관련 설정
 
-  ```
+  ```console
   1) 익명 접속 설정 옵션
 
   - anonymous_enable = yes         익명로그인허용여부
@@ -149,7 +150,7 @@ last_modified_at: 2021-03-25
   - ftp_username = ftp          익명 ftp에 사용될 사용자명 지정으로 기본값은 ftp 이다.
   ```
 
-  ```
+  ```console
   2) 실명 로그인 접속 설정 옵션
 
   - local_enable = no  /etc/passwd 파일에 명시되어 있는 계정사용 (기본값 no로 익명연결로 허용되어 있다.)
@@ -176,7 +177,7 @@ last_modified_at: 2021-03-25
                 단, 파일 위치를 알고있다면 직접 다운로드할 수 있다.
   ```
 
-  ```
+  ```console
   3) 접속제어 설정 옵션
 
   - one_process_model = no 익명 접속자에게 하나의 프로세스가 작동되도록 한다.
@@ -189,7 +190,7 @@ last_modified_at: 2021-03-25
   - accept_timeout = 60        수동모드에서 서버에 접속할때까지의 시간 설정
   ```
 
-  ```
+  ```console
   4) 보안 관련 설정 옵션
 
   - chroot_local_user = no 로컬경로에 대한 chroot를 적용할 것인지에 대한 설정
@@ -207,7 +208,7 @@ last_modified_at: 2021-03-25
   - check_shell = yes  사용자 로그인시 /etc/shell 파일에서 체크할지 설정
   ```
 
-  ```
+  ```console
   5) 데이터 연결 관련 설정
 
   - pasv_enable = yes        수동데이터 연결모드로 지원할지 설정
@@ -220,7 +221,7 @@ last_modified_at: 2021-03-25
   - connect_timeout = 60
   ```
 
-  ```
+  ```console
   6) 로그 관련 설정 옵션
 
   - xferlog_enable = no  파일 송/수신 결과를 xferlog_file 옵션으로 지정된 파일에 기록한다. (/var/log/vsftpd.log)
