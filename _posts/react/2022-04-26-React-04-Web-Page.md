@@ -19,12 +19,12 @@ last_modified_at: 2022-04-26
 
 ![VMWare](/assets/image/react/React_toyseven_react_03.PNG)
 
-🛠 components/Home.js
+🛠 pages/Home.js
 
 ```js
 import React, { Component } from 'react';
 
-class station extends Component {
+class Home extends Component {
 
     render() {
       return (
@@ -35,7 +35,7 @@ class station extends Component {
     }
   }
   
-  export default station;
+  export default Home;
 ```
 
 <br>
@@ -45,7 +45,7 @@ class station extends Component {
 App.js 파일에서 각 path 에 대한 element 를 설정한다.
 
 
-🛠 components/App.js
+🛠 App.js
 
 ```js
 import React from 'react';
