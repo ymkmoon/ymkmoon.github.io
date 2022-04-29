@@ -1,6 +1,6 @@
 ---
 title:  "React Web 개발 #5"
-excerpt: "React 게시판 상세보기"
+excerpt: "React 게시글 상세보기"
 
 tags:
   - [React]
