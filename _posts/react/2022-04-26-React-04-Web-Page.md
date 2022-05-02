@@ -52,8 +52,8 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Navbar from'./components/Navbar';
 import Home from'./pages/Home'; // 추가 된 내용
-import Station from'./pages/Station';
-import Voc from'./pages/Voc';
+import Station from'./pages/station/Station';
+import Voc from'./pages/voc/Voc';
 
 function App() {
 

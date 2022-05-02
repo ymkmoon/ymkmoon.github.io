@@ -20,7 +20,7 @@ last_modified_at: 2022-04-29
 
 - 목록 페이지에서 Link 를 생성해준다. (이동 하면서 매개변수를 가지고 이동)
 
-🛠 pages/Voc.js
+🛠 pages/voc/Voc.js
 
 ```js
 const item = (Object.values(data)).map((voc) => (
@@ -69,7 +69,7 @@ export default App;
 
 - 상세보기 페이지에서는 매개변수를 이용해 Api Request
 
-🛠 pages/VocView.js
+🛠 pages/voc/VocView.js
 
 ```js
 import React, { useEffect, useState } from 'react';
@@ -133,7 +133,7 @@ export default VocView;
 
 <br>
 
-🛠 pages/VocView.css
+🛠 pages/voc/VocView.css
 
 ```css
 .voc-view-wrapper {
