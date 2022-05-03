@@ -3,7 +3,7 @@ title:  "React Apollo GQL"
 excerpt: "React Web Apollo GQL 사용하기"
 
 tags:
-  - [React]
+  - [React, Apollo, GQL]
 
 toc: true
 toc_sticky: true
