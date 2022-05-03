@@ -27,7 +27,36 @@ Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
 하지만, Query 를 이용해도 별도의 설정을 해주지 않으면 Method 의 Default 값이 Post 로 넘어가는 걸 확인했다. <br>
 나는 `Apollo GQL` 을 이용해 `REST API`에 요청과 응답을 하고 싶기에, `apollo-link-rest` 의 `RestLink` 를 사용했다.
 
-### ``2. Route 설정``
+
+### ``2. 메뉴 생성``
+
+🛠 /components/Navbar.js
+
+```js
+<li className='nav-item'>
+    <Link to='/apollo/station' className='nav-links' onClick = {closeMobileMenu}>
+        Apollo Station
+    </Link>
+</li>
+<li className='nav-item'>
+    <Link to='/apollo/voc' className='nav-links' onClick = {closeMobileMenu}>
+        Apollo Voc
+    </Link>
+</li>
+```
+
+🛠 /components/Navbar.css
+
+```css
+.nav-menu {
+    ...
+    grid-template-columns: repeat(6, auto); # 4 -> 6 으로 수정
+    ...
+  }
+```
+
+
+### ``3. Route 설정``
 
 - 작성 페이지로 이동 할 수 있도록 Route 설정과 매개변수명을 지정한다.
 
@@ -60,7 +89,7 @@ export default App;
 ```
 
 
-### ``3. Apollo 페이지 생성``
+### ``4. Apollo Component 생성``
 
 🛠 pages/apollo/ApolloStation.js
 
@@ -126,7 +155,7 @@ export default ApolloStation;
 
 <br>
 
-### ``4. 에러 해결``
+### ``5. 에러 해결``
 
 - Module not found: Error: Can't resolve 'graphql-anywhere/lib/async' 에러 발생 시 아래 문서에 내용을 추가 한다.
 
@@ -169,7 +198,7 @@ node-sass 는 Node 버전에 의존적이니 아래 내용 참고.
 |Node <8|<5.0|<57|
 
 
-### 5. Axios 와 Apollo GQL 과의 차이점
+### ``6. Axios 와 Apollo GQL 과의 차이점``
 
 #### REST API(요청을 위해서 End point(url)을 가지고 API call을 생성해서 호출) 의 단점을 보완하기 위해 나온게 GraphQL 을 기반으로 한 Apollo Client 라고 한다.
 
@@ -182,8 +211,8 @@ node-sass 는 Node 버전에 의존적이니 아래 내용 참고.
   - 존의 API의 End point가 삭제될 경우 기존의 사용자가 문제가 발생할 위험이 있다.
 
 
-1) Response 의 형태가 다르다.
-  - Axios (endpoint 의 데이터가 모두 response 된다.)
+
+  1) Axios (endpoint 의 데이터가 모두 response 된다.)
 
     ```json
       {
@@ -207,7 +236,7 @@ node-sass 는 Node 버전에 의존적이니 아래 내용 참고.
       }
     ```
 
-  - Apollo (GQL을 이용해 내가 원하는 값만 받아 올 수 있다.)
+  2) Apollo (GQL을 이용해 내가 원하는 값만 받아 올 수 있다.)
 
     ```json
     {
