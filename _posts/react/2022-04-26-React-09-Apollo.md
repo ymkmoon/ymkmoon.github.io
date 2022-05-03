@@ -64,7 +64,7 @@ Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
 
 ```js
 # 추가 내용
-import ApolloSample from './pages/apollo/ApolloStation';
+import ApolloSample from './pages/apollo/station/ApolloStation';
 
 function App() {
 
@@ -91,7 +91,7 @@ export default App;
 
 ### ``4. Apollo Component 생성``
 
-🛠 pages/apollo/ApolloStation.js
+🛠 pages/apollo/station/ApolloStation.js
 
 ```js
 import React, {useState } from 'react';
