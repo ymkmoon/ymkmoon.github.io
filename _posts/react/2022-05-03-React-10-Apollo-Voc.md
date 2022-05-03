@@ -59,12 +59,10 @@ export default App;
 import React, {useState } from 'react';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import { RestLink } from 'apollo-link-rest';
-import { Link } from 'react-router-dom';
 
 import CommonTable from '../../../components/table/CommonTable';
 import CommonTableColumn from '../../../components/table/CommonTableColumn';
 import CommonTableRow from '../../../components/table/CommonTableRow';
-import VocHeader from '../../../components/voc/VocHeader';
 
 // Set `RestLink` with your endpoint
 const restLink = new RestLink({ uri: "http://127.0.0.1:8000/toyseven" });
@@ -101,11 +99,7 @@ function GetData() {
   const item = questions && Object.values(questions).map((voc) => (
     <CommonTableRow key={voc.id}>
       <CommonTableColumn>{voc.id}</CommonTableColumn>
-      <CommonTableColumn>
-        <Link to={`/apollo/voc/${voc.id}`}>
-          {voc.title}
-        </Link>
-      </CommonTableColumn>
+      <CommonTableColumn>{voc.title}</CommonTableColumn>
       <CommonTableColumn>{voc.createdAt}</CommonTableColumn>
       <CommonTableColumn>{voc.username}</CommonTableColumn>
     </CommonTableRow>
@@ -119,7 +113,6 @@ function ApolloVoc() {
   const item = GetData();
 
   return (<>
-    <VocHeader></VocHeader>
     <CommonTable headersName={['글번호', '제목', '등록일', '작성자']}>
       {item}
     </CommonTable>
