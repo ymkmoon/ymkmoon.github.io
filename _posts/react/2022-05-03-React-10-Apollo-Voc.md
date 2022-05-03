@@ -1,5 +1,5 @@
 ---
-title:  "React Apollo GQL #2 Voc"
+title:  "React Apollo GQL #2 게시판 목록"
 excerpt: "React Web Apollo GQL 사용하기"
 
 tags:
