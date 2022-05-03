@@ -1,5 +1,5 @@
 ---
-title:  "React Web 개발 #2"
+title:  "React Route 설정"
 excerpt: "React Web Page 만들기"
 
 tags:
@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[React Web 개발 #2]"
+toc_label: "[React Web Route 설정]"
  
 date: 2022-04-26
 last_modified_at: 2022-04-26

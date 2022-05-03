@@ -1,5 +1,5 @@
 ---
-title:  "React Web 개발 #6"
+title:  "React VOC #3 게시글 작성"
 excerpt: "React 게시글 입력하기"
 
 tags:
@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[React Web 개발 #6]"
+toc_label: "[React VOC #3]"
  
 date: 2022-04-29
 last_modified_at: 2022-04-29

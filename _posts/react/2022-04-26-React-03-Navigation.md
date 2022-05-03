@@ -1,5 +1,5 @@
 ---
-title:  "React Web 개발 #1"
+title:  "React Web Nagation"
 excerpt: "React Navigation 만들기"
 
 tags:
@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[React Web 개발 #1]"
+toc_label: "[React Web Nagation]"
  
 date: 2022-04-26
 last_modified_at: 2022-04-26

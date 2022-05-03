@@ -1,5 +1,5 @@
 ---
-title:  "React Web 개발 #5"
+title:  "React VOC #2 게시글 상세보기"
 excerpt: "React 게시글 상세보기"
 
 tags:
@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[React Web 개발 #5]"
+toc_label: "[React VOC #2]"
  
 date: 2022-04-29
 last_modified_at: 2022-04-29
