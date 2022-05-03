@@ -80,7 +80,7 @@ const client = new ApolloClient({
 
 const query = gql`
   query getStations {
-    station 
+    stations 
       @rest(
           type: "Station" 
           path: "/stations" 
@@ -100,7 +100,7 @@ function GetData() {
   });
 
   const item = stations && Object.values(stations).map((item) => (
-    <li key={item}>
+    <li key={item.stationId}>
       {item.stationName}
     </li> 
   ));
@@ -120,7 +120,11 @@ function ApolloStation() {
   
 export default ApolloStation;
 ```
+<br>
 
+![VMWare](/assets/image/react/React_toyseven_react_10.PNG)
+
+<br>
 
 ### ``4. 에러 해결``
 
