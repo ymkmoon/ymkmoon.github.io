@@ -27,9 +27,6 @@ Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
 하지만, Query 를 이용해도 별도의 설정을 해주지 않으면 Method 의 Default 값이 Post 로 넘어가는 걸 확인했다. <br>
 나는 `Apollo GQL` 을 이용해 `REST API`에 요청과 응답을 하고 싶기에, `apollo-link-rest` 의 `RestLink` 를 사용했다.
 
-
-apollo-link-rest 을 설치하는 이유는 
-
 ### ``2. Route 설정``
 
 - 작성 페이지로 이동 할 수 있도록 Route 설정과 매개변수명을 지정한다.
@@ -182,7 +179,7 @@ node-sass 는 Node 버전에 의존적이니 아래 내용 참고.
 
 
 1) Response 의 형태가 다르다.
-  - Axios 
+  - Axios (endpoint 의 데이터가 모두 response 된다.)
 
     ```json
       {
@@ -206,7 +203,7 @@ node-sass 는 Node 버전에 의존적이니 아래 내용 참고.
       }
     ```
 
-  - Apollo
+  - Apollo (GQL을 이용해 내가 원하는 값만 받아 올 수 있다.)
 
     ```json
     {
