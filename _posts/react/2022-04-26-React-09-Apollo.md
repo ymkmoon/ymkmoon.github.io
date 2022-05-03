@@ -1,5 +1,5 @@
 ---
-title:  "React Apollo GQL"
+title:  "React Apollo GQL #1 Station"
 excerpt: "React Web Apollo GQL 사용하기"
 
 tags:
@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[React Apollo GQL]"
+toc_label: "[React Apollo GQL #1]"
  
 date: 2022-05-03
 last_modified_at: 2022-05-03
