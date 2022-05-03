@@ -63,7 +63,7 @@ Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
 🛠 App.js
 
 ```js
-# 추가 내용
+//  추가내용
 import ApolloStation from './pages/apollo/station/ApolloStation';
 
 function App() {
@@ -78,7 +78,7 @@ function App() {
           <Route path='/voc' element={<Voc />} />
           <Route path='/voc/:vocId' element={<VocView />}  />
           <Route path='/voc/question' element={<VocQuestion />}  />
-          # 추가 내용
+          // 추가 내용
           <Route path='/apollo/station' element={<ApolloStation />}  />
         </Routes>
       </Router>

@@ -60,7 +60,7 @@ export default VocHeader;
 🛠 pages/voc/Voc.js
 
 ```js
-# 추가내용
+// 추가내용
 import VocHeader from '../../components/voc/VocHeader'; 
 
 
@@ -68,7 +68,7 @@ function Voc() {
   const item = GetData();
 
   return (<>
-    # 추가내용
+    // 추가내용
     <VocHeader></VocHeader>
     <CommonTable headersName={['글번호', '제목', '등록일', '작성자']}>
       {item}
@@ -86,7 +86,7 @@ export default Voc;
 🛠 App.js
 
 ```js
-# 추가내용
+// 추가내용
 import VocQuestion from './pages/voc/VocQuestion';
 
 function App() {
@@ -100,7 +100,7 @@ function App() {
           <Route path='/station' element={<Station />} />
           <Route path='/voc' element={<Voc />} />
           <Route path='/voc/:vocId' element={<VocView />}  />
-          # 추가내용
+          // 추가내용
           <Route path='/voc/question' element={<VocQuestion />}  />
         </Routes>
       </Router>

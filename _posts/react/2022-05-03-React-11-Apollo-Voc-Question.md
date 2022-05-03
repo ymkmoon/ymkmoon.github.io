@@ -24,7 +24,7 @@ const item = (Object.values(data)).map((voc) => (
   <CommonTableRow key={voc.id}>
     <CommonTableColumn>{voc.id}</CommonTableColumn>
     <CommonTableColumn>
-      # 추가내용
+      // 추가내용
       <Link to={`/apollo/voc/${voc.id}`}>
         {voc.title}
       </Link>
@@ -43,7 +43,7 @@ const item = (Object.values(data)).map((voc) => (
 🛠 App.js
 
 ```js
-# 추가 내용
+// 추가 내용
 import ApolloVoc from './pages/apollo/voc/ApolloVoc';
 
 function App() {
@@ -60,7 +60,7 @@ function App() {
           <Route path='/voc/question' element={<VocQuestion />}  />
           <Route path='/apollo/station' element={<ApolloStation />}  />
           <Route path='/apollo/voc' element={<ApolloVoc />}  />
-          # 추가내용 : 매개변수명을 vocId 로 지정
+          // 추가내용 : 매개변수명을 vocId 로 지정
           <Route path='/apollo/voc/:vocId' element={<ApolloVocView />}  />
         </Routes>
       </Router>

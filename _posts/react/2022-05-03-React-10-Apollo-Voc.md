@@ -24,7 +24,7 @@ last_modified_at: 2022-05-03
 🛠 App.js
 
 ```js
-# 추가 내용
+// 추가내용
 import ApolloVoc from './pages/apollo/voc/ApolloVoc';
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
           <Route path='/voc/:vocId' element={<VocView />}  />
           <Route path='/voc/question' element={<VocQuestion />}  />
           <Route path='/apollo/station' element={<ApolloStation />}  />
-          # 추가 내용
+          // 추가내용
           <Route path='/apollo/voc' element={<ApolloVoc />}  />
         </Routes>
       </Router>

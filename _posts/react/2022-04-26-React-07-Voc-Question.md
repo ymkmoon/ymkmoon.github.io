@@ -27,7 +27,7 @@ const item = (Object.values(data)).map((voc) => (
   <CommonTableRow key={voc.id}>
     <CommonTableColumn>{voc.id}</CommonTableColumn>
     <CommonTableColumn>
-      # 추가내용
+      // 추가내용
       <Link to={`/voc/${voc.id}`}>
         {voc.title}
       </Link>
@@ -55,7 +55,7 @@ function App() {
           <Route exact path='/' element={<Home />} />
           <Route path='/station' element={<Station />} />
           <Route path='/voc' element={<Voc />} />          
-          # 추가내용 : 매개변수명을 vocId 로 지정
+          // 추가내용 : 매개변수명을 vocId 로 지정
           <Route path='/voc/:vocId' element={<VocView />}  />
         </Routes>
       </Router>
