@@ -94,7 +94,7 @@ const client = new ApolloClient({
 
 const query = gql`
   query getVoc($vocId: Int!) { // 매개변수로 받은 vocId 의 타입 검증
-    voc(vocId: $vocId) // vocId 라는 변수명에 매개변수로 받은 값을 저장한다.
+    voc(vocId: $vocId) // vocId 라는 변수에 매개변수로 받은 값($vocId)을 저장한다.
       @rest(
           type: "Voc" 
           path: "/voc/search/{args.vocId}" // 아규먼트 중에서 값을 꺼낸다.
