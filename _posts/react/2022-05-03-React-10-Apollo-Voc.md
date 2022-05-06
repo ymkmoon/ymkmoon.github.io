@@ -78,7 +78,7 @@ const query = gql`
     questions 
       @rest(
           type: "Question" 
-          path: "/voc/questions" 
+          path: "/voc" 
           method: "GET"
       ) {
       id
