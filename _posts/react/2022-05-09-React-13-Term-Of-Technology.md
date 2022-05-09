@@ -53,7 +53,8 @@ React 컴포넌트는 페이지에 렌더링 할 React 엘리먼트를 반환하
 컴포넌트는 기능별로 나눌 수 있으며, 다른 컴포넌트 안에서 사용 할 수 있다.
 컴포넌트의 이름은 항상 대문자로 시작해야 한다. 
 
-(<span style="color:yellow">\<Wrapper/></span> (o) <span style="color:yellow">\<wrapper/></span> (x)).
+<font color="#F0E68C">\<Wrapper/></font> (o) 
+<font color="#F0E68C">\<wrapper/></font> (x)
 
 <br>
 
