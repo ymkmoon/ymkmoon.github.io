@@ -79,7 +79,7 @@ deps에 특정값을 넣게 되면 컴포넌트가 mount 될 때, 지정한 값�
 
 <br>
 
-1. Component가 Mount 되었을 때(나타날 때)
+1) Component가 Mount 되었을 때(나타날 때)
 
 ```js
 useEffect(() => {
@@ -97,7 +97,7 @@ useEffect(() => {
 
 <br>
 
-2. Component가 Update 되었을 때(props, state 변경)
+2) Component가 Update 되었을 때(props, state 변경)
 
 ```js
 useEffect(() => {
@@ -123,7 +123,7 @@ useEffect(() => {
 
 <br>
 
-3. Component가 Unmount 되었을때(사라질때) & update 되기 직전에
+3) Component가 Unmount 되었을때(사라질때) & update 되기 직전에
 
 ```js
 useEffect(() => {
