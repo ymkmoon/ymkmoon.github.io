@@ -1,5 +1,5 @@
 ---
-title:  "React Hooks : useEffect()"
+title:  "[React] Hooks : useEffect()"
 excerpt: "React 기술용어"
 
 tags:

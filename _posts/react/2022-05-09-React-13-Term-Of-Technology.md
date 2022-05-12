@@ -1,5 +1,5 @@
 ---
-title:  "React 기술용어"
+title:  "[React] 기술용어"
 excerpt: "React 기술용어"
 
 tags:

@@ -1,5 +1,5 @@
 ---
-title:  "CentOS7 Gradle 설치"
+title:  "[Linux] CentOS7 Gradle 설치"
 excerpt: "리눅스 환경에 Gradle 설치하기"
 
 tags:

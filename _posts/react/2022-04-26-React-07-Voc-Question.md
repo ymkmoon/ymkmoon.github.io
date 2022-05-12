@@ -1,5 +1,5 @@
 ---
-title:  "React Axios #2 게시글 상세보기"
+title:  "[React] Axios #2 게시글 상세보기"
 excerpt: "React 게시글 상세보기"
 
 tags:

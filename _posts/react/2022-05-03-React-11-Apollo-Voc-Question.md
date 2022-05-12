@@ -1,5 +1,5 @@
 ---
-title:  "React Apollo GQL #3 게시글 상세보기"
+title:  "[React] Apollo GQL #3 게시글 상세보기"
 excerpt: "React Web Apollo GQL 사용하기"
 
 tags:

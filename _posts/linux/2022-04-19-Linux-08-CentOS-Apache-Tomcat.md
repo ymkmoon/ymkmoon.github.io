@@ -1,5 +1,5 @@
 ---
-title:  "CentOS7 Apache와 Tomcat 연동"
+title:  "[Linux] CentOS7 Apache와 Tomcat 연동"
 excerpt: "리눅스 환경에 Apache와 Tomcat 연동하기"
 
 tags:

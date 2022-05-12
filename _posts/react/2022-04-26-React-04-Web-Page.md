@@ -1,5 +1,5 @@
 ---
-title:  "React Route 설정"
+title:  "[React] Route 설정"
 excerpt: "React Web Page 만들기"
 
 tags:
