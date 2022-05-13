@@ -5,10 +5,6 @@ excerpt: "About Me"
 search: true
 last_modified_at: 2022-05-13
 toc: true
-
-author_profile: true
-sidebar_main: true
-
 --- 
 
 ## Profile
