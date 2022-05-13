@@ -1,9 +1,10 @@
 ---
-title: "About"
-layout: about
 permalink: /about/
-author_profile: true
-sidebar_main: true
+title: "About"
+excerpt: "About Me"
+search: true
+last_modified_at: 2022-05-13
+toc: true
 
 --- 
 
