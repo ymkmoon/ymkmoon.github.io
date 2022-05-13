@@ -1,9 +1,9 @@
 ---
-permalink: /about/
 title: "About"
-excerpt: "About Me"
-search: true
-toc: true
+layout: about
+permalink: /about/
+author_profile: true
+sidebar_main: true
 
 --- 
 
