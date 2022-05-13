@@ -13,8 +13,8 @@ date: 2022-05-03
 last_modified_at: 2022-05-03
 ---
 
-- 참고 사이트
-  - https://www.apollographql.com/docs/react/api/link/apollo-link-rest/
+- 참고사이트
+  - <https://www.apollographql.com/docs/react/api/link/apollo-link-rest/>
 
 
 ### ``1. Apollo 설치``
@@ -171,8 +171,8 @@ export default ApolloStation;
 ```
 
 - Error: ENOENT: no such file or directory, open 'C:\ymk\toynumber\toyseven-react\node_modules\@apollo\client\node_modules\ts-invariant\src\invariant.ts' 에러 발생 시 아래 명령어를 터미널에 입력한다.
-  - 참고 사이트 
-    - https://www.npmjs.com/package/node-sass
+  - 참고사이트 
+    - <https://www.npmjs.com/package/node-sass>
 
 ```console
 npm i node-sass

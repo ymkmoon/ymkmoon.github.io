@@ -15,11 +15,10 @@ last_modified_at: 2021-03-25
 
 ## CentOS7 에 Apache와 Tomcat 연동하기
 - Apache 와 Tomcat 연동
-> 참고 블로그
-<br>
-> https://velog.io/@nari120/2-tier-WEB-Apach2.4-Tomcat8-%EC%97%B0%EB%8F%99
-<br>
-> https://hoing.io/archives/178
+
+- 참고사이트
+  - <https://velog.io/@nari120/2-tier-WEB-Apach2.4-Tomcat8-%EC%97%B0%EB%8F%99>
+  - <https://hoing.io/archives/178>
 
 <br>
 

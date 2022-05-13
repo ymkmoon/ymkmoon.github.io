@@ -15,8 +15,8 @@ last_modified_at: 2022-05-12
 
 ### ``React StrictMode``
 
-- 참고 사이트
-  - https://ko.reactjs.org/docs/strict-mode.html
+- 참고사이트
+  - <https://ko.reactjs.org/docs/strict-mode.html>
 
 <br>
 
