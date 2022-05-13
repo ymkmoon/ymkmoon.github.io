@@ -19,7 +19,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 locale                   : "en-US"
 title                    : "직접쓰는 개발노트"
 title_separator          : "-"
-subtitle                 : "YMK" # site tagline that appears below site title in masthead
+subtitle                 : "MyungKi You" # site tagline that appears below site title in masthead
 name                     : "YMK"
 description              : "YMK BLOG"
 url                      : "https://ymkmoon.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -95,7 +95,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "YMK"
+  name             : "MyungKi You"
   avatar           : "/assets/image/author/profile_with_dog.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : ""
   location         : "Seoul, Republic of Korea"
