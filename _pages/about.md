@@ -32,7 +32,7 @@ padding: 5px;
  * React
 
 ## Contact
- * Email : ymkmoon@naver.com.com
+ * Email : ymkmoon@naver.com
  * Git : [https://github.com/ymkmoon](https://github.com/ymkmoon)
  * Blog : [https://ymkmoon.github.io/](https://ymkmoon.github.io/)
 
