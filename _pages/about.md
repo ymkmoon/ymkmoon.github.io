@@ -8,7 +8,7 @@ sidebar_main: true
 --- 
 
 ## Profile
-<center><img src="/assets/image/profile_with_dog.jpg" width="30%" height="30%" style="
+<center><img src="/assets/image/author/profile_with_dog.jpg" width="30%" height="30%" style="
 border: 1px solid #cab6de;
 border-radius: 50%;
 padding: 5px;
