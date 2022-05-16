@@ -1,5 +1,5 @@
 ---
-title:  "[React] Nagation"
+title:  "[React] Navigation"
 excerpt: "React Navigation 만들기"
 
 tags:
@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[React Nagation]"
+toc_label: "[React Navigation]"
  
 date: 2022-04-26
 last_modified_at: 2022-04-26
