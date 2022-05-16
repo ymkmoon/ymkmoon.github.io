@@ -1,6 +1,6 @@
 ---
 title:  "[React] Axios #3 게시글 작성"
-excerpt: "React 게시글 입력하기"
+excerpt: "React & Axios 게시글 입력하기"
 
 tags:
   - [React, Axios]
