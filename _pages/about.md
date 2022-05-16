@@ -33,6 +33,6 @@ padding: 5px;
 
 ## Contact
  * Email : ymkmoon@naver.com
- * Git : [https://github.com/ymkmoon](https://github.com/ymkmoon)
- * Blog : [https://ymkmoon.github.io/](https://ymkmoon.github.io/)
+ * Git : [https://github.com/ymkmoon](https://github.com/ymkmoon){:target="_blank"}
+ * Blog : [https://ymkmoon.github.io/](https://ymkmoon.github.io/){:target="_blank"}
 
