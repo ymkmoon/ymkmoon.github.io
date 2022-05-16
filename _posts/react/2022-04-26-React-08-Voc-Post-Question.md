@@ -14,7 +14,7 @@ last_modified_at: 2022-04-29
 ---
 
 - 참고사이트
-  - <https://antdev.tistory.com/80>
+  - <https://antdev.tistory.com/80>{:target="_blank"}
 
 ### ``1. Voc List에 링크 추가``
 

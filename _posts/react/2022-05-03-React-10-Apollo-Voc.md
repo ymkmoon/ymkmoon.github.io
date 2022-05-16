@@ -14,7 +14,7 @@ last_modified_at: 2022-05-03
 ---
 
 - 참고사이트
-  - <https://www.apollographql.com/docs/react/api/link/apollo-link-rest/>
+  - <https://www.apollographql.com/docs/react/api/link/apollo-link-rest/>{:target="_blank"}
 
 
 ### ``1. Route 설정``

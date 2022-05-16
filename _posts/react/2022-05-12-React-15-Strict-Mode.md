@@ -16,7 +16,7 @@ last_modified_at: 2022-05-12
 ### ``React StrictMode``
 
 - 참고사이트
-  - <https://ko.reactjs.org/docs/strict-mode.html>
+  - <https://ko.reactjs.org/docs/strict-mode.html>{:target="_blank"}
 
 <br>
 

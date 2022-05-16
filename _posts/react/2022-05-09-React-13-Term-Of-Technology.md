@@ -16,7 +16,7 @@ last_modified_at: 2022-05-09
 ### ``React 기술 용어``
 
 - 참고사이트
-  - <https://ko.reactjs.org/docs/glossary.html>
+  - <https://ko.reactjs.org/docs/glossary.html>{:target="_blank"}
 
 
 #### `Bundler (번들러)`
