@@ -1,6 +1,6 @@
 ---
 title:  "[React] StrictMode : useEffect 한번만 호출하기"
-excerpt: "React 기술용어"
+excerpt: "React useEffect 한번만 호출하기"
 
 tags:
   - [React]
