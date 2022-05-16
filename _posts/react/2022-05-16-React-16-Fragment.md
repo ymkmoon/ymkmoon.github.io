@@ -131,6 +131,8 @@ class Columns extends React.Component {
 
 #### `4. Fragment key 값 주기`
 
+key 값을 주기 위해서는 빈태그를 사용하면 안되고, Fragment 태그를 직접 명시해줘야 한다.
+
 ```js
 function Voc(props) {
   return (
