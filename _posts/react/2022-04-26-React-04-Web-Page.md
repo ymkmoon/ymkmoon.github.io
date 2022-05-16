@@ -17,8 +17,6 @@ last_modified_at: 2022-04-26
 
 ### ``1. 페이지 생성``
 
-> src/pages 경로에 페이지를 생성한다.
-
 ![VMWare](/assets/image/react/React_toyseven_react_03.PNG)
 
 🛠 pages/Home.js
