@@ -1,6 +1,6 @@
 ---
 title:  "[React] Apollo GQL #2 게시판 목록"
-excerpt: "React Web Apollo GQL 사용하기"
+excerpt: "React Apollo & Rest API 게시판 목록 만들기"
 
 tags:
   - [React, Apollo, GQL]

@@ -1,6 +1,6 @@
 ---
 title:  "[React] Apollo GQL #3 게시글 상세보기"
-excerpt: "React Web Apollo GQL 사용하기"
+excerpt: "React Apollo & Rest API 게시글 상세보기"
 
 tags:
   - [React, Apollo, GQL]

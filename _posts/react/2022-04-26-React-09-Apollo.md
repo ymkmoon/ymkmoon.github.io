@@ -1,6 +1,6 @@
 ---
 title:  "[React] Apollo GQL #1 Station"
-excerpt: "React Web Apollo GQL 사용하기"
+excerpt: "React Apollo GQL 로 Rest API 에 Get 요청 날리기"
 
 tags:
   - [React, Apollo, GQL]
@@ -25,7 +25,7 @@ npm install --save @apollo/client apollo-link-rest graphql qs
 
 Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
 하지만, Query 를 이용해도 별도의 설정을 해주지 않으면 Method 의 Default 값이 Post 로 넘어가는 걸 확인했다. <br>
-나는 `Apollo GQL` 을 이용해 `REST API`에 요청과 응답을 하고 싶기에, `apollo-link-rest` 의 `RestLink` 를 사용했다.
+나는 `Apollo GQL` 을 이용해 `React` 에서 `REST API` 에 요청을 넣고 응답을 받고 싶기에, `apollo-link-rest` 의 `RestLink` 를 사용했다.
 
 
 ### ``2. 메뉴 생성``
@@ -200,7 +200,7 @@ node-sass 는 Node 버전에 의존적이니 아래 내용 참고.
 
 ### ``6. Axios 와 Apollo GQL 과의 차이점``
 
-#### REST API(요청을 위해서 End point(url)을 가지고 API call을 생성해서 호출) 의 단점을 보완하기 위해 나온게 GraphQL 을 기반으로 한 Apollo Client 라고 한다.
+REST API(요청을 위해서 End point(url)을 가지고 API call을 생성해서 호출) 의 단점을 보완하기 위해 나온게 GraphQL 을 기반으로 한 Apollo Client 라고 한다.
 
 - REST API의 단점
   - 오버패칭(과도한 데이터를 로딩)의 문제점<br>
