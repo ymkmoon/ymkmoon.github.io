@@ -13,11 +13,7 @@ date: 2022-05-16
 last_modified_at: 2022-05-16
 ---
 
-### ``GraphQL mutation``
-
 > 모든 소스코드는 [Github](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 확인 가능합니다.
-
-<br>
 
 ### ``1. mutation 란?``
 
