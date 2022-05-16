@@ -238,8 +238,8 @@ export default ApolloVocQuestion;
 
 <br>
 
-![VMWare](/assets/image/react/React_toyseven_react_13.PNG)
+![React](/assets/image/react/React_toyseven_react_13.PNG)
 
 <br>
 
-![VMWare](/assets/image/react/React_toyseven_react_14.PNG)
+![React](/assets/image/react/React_toyseven_react_14.PNG)

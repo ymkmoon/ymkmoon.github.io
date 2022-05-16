@@ -204,4 +204,4 @@ export default VocView;
 }
 ```
 
-![VMWare](/assets/image/react/React_toyseven_react_12.PNG)
+![React](/assets/image/react/React_toyseven_react_12.PNG)

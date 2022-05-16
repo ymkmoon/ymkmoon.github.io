@@ -37,7 +37,7 @@ last_modified_at: 2022-04-26
 
   위 명령어를 실행 후 http://localhost:3000/ 로 접속했을때 React 페이지가 나오면 서버가 정상적으로 실행 된 것
 
-![VMWare](/assets/image/react/React_toyseven_react_01.PNG)
+![React](/assets/image/react/React_toyseven_react_01.PNG)
 
 
 ### ``3. Navigation bar 생성``
@@ -403,4 +403,4 @@ function App() {
 export default App;
 ```
 
-![VMWare](/assets/image/react/React_toyseven_react_02.PNG)
+![React](/assets/image/react/React_toyseven_react_02.PNG)

@@ -211,8 +211,8 @@ export default VocQuestion;
 
 <br>
 
-![VMWare](/assets/image/react/React_toyseven_react_08.PNG)
+![React](/assets/image/react/React_toyseven_react_08.PNG)
 
 <br>
 
-![VMWare](/assets/image/react/React_toyseven_react_09.PNG)
+![React](/assets/image/react/React_toyseven_react_09.PNG)

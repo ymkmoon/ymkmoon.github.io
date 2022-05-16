@@ -125,7 +125,7 @@ export default ApolloVoc;
 ```
 <br>
 
-![VMWare](/assets/image/react/React_toyseven_react_11.PNG)
+![React](/assets/image/react/React_toyseven_react_11.PNG)
 
 <br>
 

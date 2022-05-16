@@ -64,8 +64,8 @@ const HandleQuestionSubmit = async({body}) => {
 
 ### ``3. 테스트``
 
-![VMWare](/assets/image/react/React_toyseven_react_15.PNG)
+![React](/assets/image/react/React_toyseven_react_15.PNG)
 
 <br>
 
-![VMWare](/assets/image/react/React_toyseven_react_16.PNG)
+![React](/assets/image/react/React_toyseven_react_16.PNG)

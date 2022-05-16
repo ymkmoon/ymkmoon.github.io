@@ -75,7 +75,7 @@ last_modified_at: 2021-03-25
   sudo /usr/local/tomcat9/bin/startup.sh
   ```
 
-![VMWare](/assets/image/linux/Centos_install_tomcat_01.PNG)
+![CentOS7](/assets/image/linux/Centos_install_tomcat_01.PNG)
 
   ```console
   # 톰캣 프로세스 확인
@@ -156,4 +156,4 @@ last_modified_at: 2021-03-25
 
   - http://아이피:8080/manager  로 접속하면 아래와 같은 페이지가 노출된다.
 
-![VMWare](/assets/image/linux/Centos_install_tomcat_02.PNG)
+![CentOS7](/assets/image/linux/Centos_install_tomcat_02.PNG)

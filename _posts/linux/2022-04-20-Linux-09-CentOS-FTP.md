@@ -91,7 +91,7 @@ last_modified_at: 2021-03-25
   <br>
   > (본인은 FileZilla 툴을 설치하여 사용)
   
-![VMWare](/assets/image/linux/Centos_setting_ftp_01.PNG)
+![CentOS7](/assets/image/linux/Centos_setting_ftp_01.PNG)
 
 ### 8. SELINUX 설정
   - 명령어 중 P 옵션은 영구설정을 의미하고, 1은 on, 0은 off 를 의미한다.

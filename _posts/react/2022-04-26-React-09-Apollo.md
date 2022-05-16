@@ -153,7 +153,7 @@ export default ApolloStation;
 ```
 <br>
 
-![VMWare](/assets/image/react/React_toyseven_react_10.PNG)
+![React](/assets/image/react/React_toyseven_react_10.PNG)
 
 <br>
 

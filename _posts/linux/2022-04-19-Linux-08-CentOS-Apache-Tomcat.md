@@ -56,7 +56,7 @@ last_modified_at: 2021-03-25
   ls
   ```
 
-![VMWare](/assets/image/linux/Centos_connect_apache_tomcat_01.PNG)
+![CentOS7](/assets/image/linux/Centos_connect_apache_tomcat_01.PNG)
 
 잘 설치 되었다면, 위 처럼 mod_jk.so 이 확인 가능하다
 <br><br>
@@ -177,4 +177,4 @@ last_modified_at: 2021-03-25
 
   > http://IP_ADDRESS/index.jsp 로 접속 했을때, 톰캣화면(고양이)가 뜨면 완료.
 
-![VMWare](/assets/image/linux/Centos_connect_apache_tomcat_02.PNG)
+![CentOS7](/assets/image/linux/Centos_connect_apache_tomcat_02.PNG)

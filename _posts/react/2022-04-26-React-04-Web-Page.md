@@ -17,7 +17,7 @@ last_modified_at: 2022-04-26
 
 ### ``1. 페이지 생성``
 
-![VMWare](/assets/image/react/React_toyseven_react_03.PNG)
+![React](/assets/image/react/React_toyseven_react_03.PNG)
 
 🛠 pages/Home.js
 
@@ -73,7 +73,7 @@ function App() {
 export default App;
 ```
 
-![VMWare](/assets/image/react/React_toyseven_react_04.PNG)
+![React](/assets/image/react/React_toyseven_react_04.PNG)
 
 
 > 정상적으로 페이지가 표시되는걸 확인 할 수 있다.

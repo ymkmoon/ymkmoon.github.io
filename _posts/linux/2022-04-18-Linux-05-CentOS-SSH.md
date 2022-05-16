@@ -76,8 +76,8 @@ last_modified_at: 2021-03-25
 ### 6. SSH 로 접속하기
   - ssh 툴을 설치하여 CLI 환경에 접속한다. (본인은 poderosa 이용)
 
-  ![VMWare](/assets/image/linux/Centos_setting_ssh_01.PNG)
-  ![VMWare](/assets/image/linux/Centos_setting_ssh_02.PNG)
+  ![CentOS7](/assets/image/linux/Centos_setting_ssh_01.PNG)
+  ![CentOS7](/assets/image/linux/Centos_setting_ssh_02.PNG)
 
   
 

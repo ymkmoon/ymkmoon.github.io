@@ -39,7 +39,7 @@ bootRun {
 
 ### 1. 플러그인 설치
 
-![VMWare](/assets/image/linux/Centos_jenkins_01.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_01.PNG)
 
   > http://[서버ip]:port 로 젠킨스 웹 페이지에 접속한다. <br>
   > 사이드메뉴에서 ***[Jenkins 관리]*** -> ***[플러그인 관리]*** 선택 <br>
@@ -50,7 +50,7 @@ bootRun {
 
 ### 2. Global Tool 설정
 
-![VMWare](/assets/image/linux/Centos_jenkins_02.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_02.PNG)
 
   > 사이드메뉴에서 ***[Jenkins 관리]*** -> ***[Global Tool Configuration]*** 선택 <br>
 
@@ -58,7 +58,7 @@ bootRun {
 <br>
 
 
-![VMWare](/assets/image/linux/Centos_jenkins_03.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_03.PNG)
 
   > JDK 부분에 앞서 java 설치 후 환경변수에 등록했던 JAVA_HOME 의 내용을 입력 <br>
   > ***[Add JDK]*** 선택 <br>
@@ -69,7 +69,7 @@ bootRun {
 <br>
 <br>
 
-![VMWare](/assets/image/linux/Centos_jenkins_04.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_04.PNG)
 
   > Gradle 부분에 앞서 설치 후 환경변수에 등록했던 GRADLE_HOME 의 내용을 입력 <br>
   > ***[Add Gradle]*** 선택 <br>
@@ -84,16 +84,16 @@ bootRun {
 
 ### 3. 프로젝트 등록
 
-![VMWare](/assets/image/linux/Centos_jenkins_05.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_05.PNG)
 
-![VMWare](/assets/image/linux/Centos_jenkins_06.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_06.PNG)
 
   > Dashboard 에서 ***[새로운 item]*** 선택 <br>
   > ***[item name]*** 을 입력하고, ***[Freestyle project]*** 선택 후 ***[OK]*** <br>
 
 <br><br>
 
-![VMWare](/assets/image/linux/Centos_jenkins_07.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_07.PNG)
 
   > ***[General]*** 의 설명 란에는 프로젝트에 대한 설명을 기입. <br>
   > 아래의 선택에서는 GitHub project 를 체크 한 뒤 Git Repository url 을 입력 합니다. <br>
@@ -103,7 +103,7 @@ bootRun {
 
 <br><br>
 
-![VMWare](/assets/image/linux/Centos_jenkins_08.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_08.PNG)
   
   > ***[소스코드 관리]*** 에서는 **[Git]** 을 선택하고, Repository URL 을 입력 <br>
   > ***[Branches to build -> Branch Specifier (blank for'any')]*** 에는 어떤 브랜치를 배포 할 것인지 입력합니다. <br>
@@ -113,7 +113,7 @@ bootRun {
 
 <br><br>
 
-![VMWare](/assets/image/linux/Centos_jenkins_09.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_09.PNG)
 
   > ***[빌드유발]*** 에서는 **[Build periodically]** 를 선택 <br>
   > **[Schedule]** 란에 30 10,14 * * * 를 입력  <br>
@@ -122,9 +122,9 @@ bootRun {
 
 <br><br>
 
-![VMWare](/assets/image/linux/Centos_jenkins_10.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_10.PNG)
 
-![VMWare](/assets/image/linux/Centos_jenkins_11.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_11.PNG)
 
   > ***[Build]***  에서는 **Invoke Gradle script** 를 선택 <br>
   > Gradle Version : GRADLE_HOME <br>
@@ -133,9 +133,9 @@ bootRun {
 
 <br><br>
 
-![VMWare](/assets/image/linux/Centos_jenkins_12.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_12.PNG)
 
-![VMWare](/assets/image/linux/Centos_jenkins_13.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_13.PNG)
 
   > ***[빌드 후 조치]*** 에서는 **Post build tast** 선택 <br>
   > Log text : BUILD SUCCESS (원하는 로그 메세지를 지정) <br>
@@ -148,10 +148,10 @@ bootRun {
 
 ### 4. 빌드 및 배포
 
-![VMWare](/assets/image/linux/Centos_jenkins_14.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_14.PNG)
 
 
-![VMWare](/assets/image/linux/Centos_jenkins_15.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_15.PNG)
 
 
   > 성공적으로 빌드가 마무리 되고, 배포가 완료 
@@ -159,7 +159,7 @@ bootRun {
 <br><br>
 
 
-![VMWare](/assets/image/linux/Centos_jenkins_16.PNG)
+![CentOS7](/assets/image/linux/Centos_jenkins_16.PNG)
 
   > Postman 을 이용하여 성공적으로 api 접근이 가능한 걸 확인 할 수 있다. <br>
   > 만약 api 접근이 안된다면, 임베디드 톰켓이 이용하는 port 번호에 대한 방화벽을 해제해 줄 필요가 있다 <br>
