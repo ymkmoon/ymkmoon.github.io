@@ -22,7 +22,7 @@ last_modified_at: 2022-05-16
 
 <br>
 
-#### `1. Fragment 란?`
+### `1. Fragment 란?`
 
 블로그를 찾아보니 모두 아래와 같이 설명하고 있었다.
 
@@ -33,7 +33,7 @@ last_modified_at: 2022-05-16
 
 <br>
 
-##### div 태그를 사용 할 때의 문제점
+#### div 태그를 사용 할 때의 문제점
 
 - DOM 크기가 증가해서 로딩 시간이 느려지고, 결국 페이지 속도가 늦어진다.
 - 추가 노드가 생성되어 메모리 사용량이 높아진다.
@@ -45,7 +45,7 @@ last_modified_at: 2022-05-16
 
 <br>
 
-#### `2. Fragment 사용예시`
+### `2. Fragment 사용예시`
 
 컴포넌트가 여러 엘리먼트를 반환하는 것은 흔한 패턴이다.
 
@@ -123,7 +123,7 @@ class Columns extends React.Component {
 ```
 
 
-#### `3. 단축 문법`
+### `3. 단축 문법`
 
 \<React.Fragment> \</React.Fragment> 대신 빈태그 <> </> 를 이용한다.
 
@@ -140,7 +140,7 @@ class Columns extends React.Component {
 }
 ```
 
-#### `4. Fragment key 값 주기`
+### `4. Fragment key 값 주기`
 
 key 값을 주기 위해서는 빈태그를 사용하면 안되고, Fragment 태그를 직접 명시해줘야 한다.
 
