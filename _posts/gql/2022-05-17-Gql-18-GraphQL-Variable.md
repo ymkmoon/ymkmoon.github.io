@@ -51,7 +51,6 @@ query getVoc($vocId: Int!) { -- 매개변수로 받는 vocId의 타입을 검증
 `React` 는 단방향 통신이기 때문에, 상위 컴포넌트에서 쿼리에 사용 될 매겨변수를 받아와야 한다.
 이를 위해선 `Route` 설정시 path variable 로 매개변수명을 설정 해야 한다.
 
-<br>
 
 🛠 src/App.js
 
