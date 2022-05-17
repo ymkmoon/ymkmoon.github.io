@@ -99,6 +99,7 @@ const query = gql`
 `;
 
 function GetData(vocId) {
+  const [question, setQuestion] = useState({});
   client.query({ query, variables: {vocId: vocId} }).then(response => { 
     setQuestion(response.data.voc.question);
   });
