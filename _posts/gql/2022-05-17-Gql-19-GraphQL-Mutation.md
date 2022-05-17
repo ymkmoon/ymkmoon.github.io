@@ -1,5 +1,5 @@
 ---
-title:  "[React] Apollo mutation"
+title:  "[GQL] GraphQL mutation"
 excerpt: "Apollo mutation 사용하기"
 
 tags:
