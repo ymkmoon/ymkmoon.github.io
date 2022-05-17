@@ -60,12 +60,12 @@ query getStations {
 본인은 [프론트](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 
 직접 개발한 [Rest API](https://github.com/ymkmoon/toyseven){:target="_blank"} 서버에 `Axios` 와 `Apollo 를 통한 GQL` 두 개의 Request 를 날려 보았고, 그에 따른 Response 데이터 이니 참고 바람.
 
-<br>
+
 
 여기서 눈여겨 볼 부분은 `Axios` 는 API 의 Endpoint 를 그대로 Return 받지만, <br>
 `GQL` 을 이용 할 경우에는 내가 원하는 데이터만을 가지고 올 수 있다는 점이다.
 
-<br>
+
 
 #### Response 가 JSON Array 형식 인 경우
 
