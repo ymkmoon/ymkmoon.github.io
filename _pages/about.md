@@ -31,6 +31,10 @@ padding: 5px;
  * Azure
  * React
 
+ ## Toy Project
+ * [BackEnd](https://github.com/ymkmoon/toyseven){:target="_blank"}
+ * [FrontEnd](https://github.com/ymkmoon/toyseven-react){:target="_blank"}
+
 ## Contact
  * Email : ymkmoon@naver.com
  * Git : [https://github.com/ymkmoon](https://github.com/ymkmoon){:target="_blank"}
