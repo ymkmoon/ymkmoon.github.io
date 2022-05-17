@@ -20,7 +20,7 @@ last_modified_at: 2022-05-16
 GraphQL 에서 일반적인 Get 요청에는 `query` 를 사용하고, 
 Get 요청을 제외한 나머지 요청 Post, Put, Delete 등의 `mutation` 을 사용한다.
 
-실제 테스트를 해보니 query 를 사용해도 `@rest` 옵션을 이용하면 원하는 Http Method (POST 등) 로 통신이 가능했기에 앞서 [Apollo 게시글 작성](https://ymkmoon.github.io/React-12-Apollo-Voc-Post-Question/){:target="_blank"} 에서는 query 를 이용했지만, GQL의 규약ㄴ에 따라 mutation 으로 변경해보겠다.
+실제 테스트를 해보니 query 를 사용해도 `@rest` 옵션을 이용하면 원하는 Http Method (POST 등) 로 통신이 가능했기에 앞서 [Apollo 게시글 작성](https://ymkmoon.github.io/React-12-Apollo-Voc-Post-Question/){:target="_blank"} 에서는 query 를 이용했지만, GQL의 규약에 따라 mutation 으로 변경해보겠다.
 
 <br>
 
