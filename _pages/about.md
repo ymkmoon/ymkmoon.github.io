@@ -31,7 +31,7 @@ padding: 5px;
  * Azure
  * React
 
- ## Toy Project
+## Toy Project
  * [BackEnd](https://github.com/ymkmoon/toyseven){:target="_blank"}
  * [FrontEnd](https://github.com/ymkmoon/toyseven-react){:target="_blank"}
 
