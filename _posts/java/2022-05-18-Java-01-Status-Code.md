@@ -14,8 +14,8 @@ last_modified_at: 2022-05-18
 ---
 
 - 참고사이트
-  - https://developer.mozilla.org/ko/docs/Web/HTTP/Status
-  - https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C
+  - [mozilla](https://developer.mozilla.org/ko/docs/Web/HTTP/Status){:target="_blank"}
+  - [wikipedia](https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C){:target="_blank"}
 
 <br>
 
