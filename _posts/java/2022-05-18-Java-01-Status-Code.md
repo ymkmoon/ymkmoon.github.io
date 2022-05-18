@@ -3,7 +3,7 @@ title:  "[Java] Http Status Code"
 excerpt: "자주쓰는 Http 상태 코드를 알아보자"
 
 tags:
-  - [Java, Error, HttpStatus]
+  - [Java, Error]
 
 toc: true
 toc_sticky: true
@@ -17,7 +17,7 @@ last_modified_at: 2022-05-18
   - https://developer.mozilla.org/ko/docs/Web/HTTP/Status
   - https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C
 
-
+<br>
 
 Http 상태코드는 3자리의 숫자로 구성되어 있고, 5개의 그룹으로 나눌 수 있다.
 
