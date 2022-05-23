@@ -72,6 +72,7 @@ last_modified_at: 2022-05-23
 
 ![AWS](/assets/image/aws/AWS_Cognito_OAuth2_03.PNG)
 
+![AWS](/assets/image/aws/AWS_Cognito_OAuth2_11.PNG)
 
 #### 승인된 자바스크립트 원본
 
@@ -80,15 +81,13 @@ cognito console 에서 도에인 부분을 입력합니다.<br>
 
 ![AWS](/assets/image/aws/AWS_Cognito_OAuth2_10.PNG)
 
-![AWS](/assets/image/aws/AWS_Cognito_OAuth2_11.PNG)
+![AWS](/assets/image/aws/AWS_Cognito_OAuth2_12.PNG)
 
 
 #### 승인된 리다이렉션 URI
 
 congnito console 의 도메인 뒤에 Endpoint(/oauth2/idpresponse) 를 추가합니다.<br>
 (https://toyseven-domain.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse)
-
-![AWS](/assets/image/aws/AWS_Cognito_OAuth2_12.PNG)
 
 ![AWS](/assets/image/aws/AWS_Cognito_OAuth2_13.PNG)
 
