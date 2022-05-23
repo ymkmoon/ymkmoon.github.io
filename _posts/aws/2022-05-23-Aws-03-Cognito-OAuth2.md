@@ -87,7 +87,8 @@ cognito console 에서 도에인 부분을 입력합니다.<br>
 #### 승인된 리다이렉션 URI
 
 congnito console 의 도메인 뒤에 Endpoint(/oauth2/idpresponse) 를 추가합니다.<br>
-(https://toyseven-domain.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse)
+ - https://toyseven-domain.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse
+ - https://toyseven-domain.auth.ap-northeast-2.amazoncognito.com/oauth2/token
 
 ![AWS](/assets/image/aws/AWS_Cognito_OAuth2_13.PNG)
 
