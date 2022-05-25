@@ -9,8 +9,8 @@ toc: true
 toc_sticky: true
 toc_label: "[AWS Cognito #3]"
  
-date: 2022-05-23
-last_modified_at: 2022-05-23
+date: 2022-05-25
+last_modified_at: 2022-05-25
 ---
 
 
