@@ -15,6 +15,7 @@ last_modified_at: 2022-05-23
 
 - 참고사이트
   - [AWS Document](https://aws.amazon.com/ko/premiumsupport/knowledge-center/cognito-google-social-identity-provider/){:target="_blank"}
+  - [AWS Document](https://aws.amazon.com/ko/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/){:target="_blank"}
 
 
 ### ``1. OAuth2 동의화면``
@@ -90,7 +91,8 @@ cognito console 에서 도에인 부분을 입력합니다.<br>
 
 congnito console 의 도메인 뒤에 Endpoint(/oauth2/idpresponse) 를 추가합니다.<br>
  - https://toyseven-domain.auth.ap-northeast-2.amazoncognito.com/oauth2/idpresponse
- - https://toyseven-domain.auth.ap-northeast-2.amazoncognito.com/oauth2/token
+
+ [AWS Document](https://aws.amazon.com/ko/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/){:target="_blank"}
 
 ![AWS](/assets/image/aws/AWS_Cognito_OAuth2_13.PNG)
 
