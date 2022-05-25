@@ -13,6 +13,8 @@ date: 2022-05-23
 last_modified_at: 2022-05-23
 ---
 
+- 참고사이트
+  - [AWS Document](https://aws.amazon.com/ko/premiumsupport/knowledge-center/cognito-google-social-identity-provider/){:target="_blank"}
 
 
 ### ``1. OAuth2 동의화면``
