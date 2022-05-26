@@ -1,6 +1,6 @@
 ---
 title:  "[AWS] React 에서 Cognito OAuth2 사용하기"
-excerpt: "React 에서 Cognito 사용하기"
+excerpt: "React 에서 Cognito 사용하여 OAuth2 로그인과 이메일 인증을 통한 회원가입, 로그인을 해보자"
 
 tags:
   - [AWS, Cognito, OAuth2, React]
@@ -120,7 +120,7 @@ import SignUp from'./pages/SignUp';
 <br>
 
 
-### ``5. 테스트``
+### ``5. OAuth2 로그인 테스트``
 
 자세한 Response 값은 브라우저 콘솔에 남기도록 했으니 확인하면 된다.
 
@@ -129,4 +129,31 @@ import SignUp from'./pages/SignUp';
 ![COGNITO](/assets/image/aws/AWS_Cognito_React_02.PNG)
 
 ![COGNITO](/assets/image/aws/AWS_Cognito_React_03.PNG)
+
+<br>
+
+
+### ``6. 이메일 인증을 사용한 회원가입 및 로그인 테스트``
+
+자세한 Response 값은 브라우저 콘솔에 남기도록 했으니 확인하면 된다.
+
+#### 회원가입
+
+![COGNITO](/assets/image/aws/AWS_Cognito_React_04.PNG)
+
+#### 정보입력
+
+![COGNITO](/assets/image/aws/AWS_Cognito_React_05.PNG)
+
+#### 인증번호 확인
+
+![COGNITO](/assets/image/aws/AWS_Cognito_React_06.PNG)
+
+#### 인증번호 입력
+
+![COGNITO](/assets/image/aws/AWS_Cognito_React_07.PNG)
+
+#### 회원가입과 동시에 로그인 완료 
+
+![COGNITO](/assets/image/aws/AWS_Cognito_React_08.PNG)
 
