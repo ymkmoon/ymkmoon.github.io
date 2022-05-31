@@ -228,7 +228,7 @@ public class CognitoController {
 
 여기서 중요한점은 Security 구성을 OAuth2 를 사용 할 때와 아닐 떄 총 두가지의 Security 구성을 해야하고, `@Order` 어노테이션을 이용해 우선순위도 함께 지정해줘야 한다. 
 
-별도로 구성하지 않으면 OAuth2 Resources Server 만을 이용해 객체를 생성하려고 해서 필터가 정상적으로 처리 돼도 아래왜 같이 토큰 복호화 부분에서 시그니처 오류가 발생한다.
+별도로 구성하지 않으면 OAuth2 Resources Server 만을 이용해 객체를 생성하려고 해서 필터가 정상적으로 처리 돼도 아래와 같이 토큰 복호화 부분에서 시그니처 오류가 발생한다.
 
 Response Hedaer <br>
 Key : WWW-Authenticate <br>
