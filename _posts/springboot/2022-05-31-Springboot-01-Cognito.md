@@ -214,7 +214,9 @@ public class CognitoController {
 
 ### ``6. 테스트``
 
-아래와 같이 직접 발급한 JWT 인증도, Cognito 의 OAuth2 Access token 을 이용한 인증처리도 작동 되는 걸 확인 할 수 있다.
+아래와 같이 직접 발급한 `JWT 인증`도, Cognito 의 `OAuth2 Access token` 을 이용한 인증처리도 작동 되는 걸 확인 할 수 있다.
+
+Cognito 에서 발급받은 access token 이 필요하다면 [여기](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 레포를 클론 한 뒤 `amplifyConfig.js` 파일에서 Cognito 설정을 본인에 맞게 변경 후 로그인 하면 브라우저 콘솔에서 확인 할 수 있다.
 
 ![COGNITO](/assets/image/springboot/Springboot_cognito_01.PNG)
 
