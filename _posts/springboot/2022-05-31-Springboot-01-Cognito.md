@@ -178,7 +178,41 @@ public class SecurityConfig {
 <br>
 
 
-### ``4. 테스트``
+### ``4. OAuth2 Resources server 정보 설정``
+
+```yaml
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://toyseven-domain.auth.ap-northeast-2.amazoncognito.com/ap-northeast-2_xxxxxxxxx
+          jwk-set-uri: https://cognito-idp.ap-northeast-2.amazonaws.com/ap-northeast-2_xxxxxxxxx/.well-known/jwks.json
+        opaquetoken:
+          client-id: ap-northeast-2_xxxxxxxxx
+```
+
+<br>
+
+
+### ``5. 컨트롤러 생성``
+
+```java
+@RestController
+@RequestMapping("cognito")
+public class CognitoController {
+
+  @GetMapping("/1")
+  public ResponseEntity<String> message(Principal principal) {
+	  return new ResponseEntity<>(principal.getName(), HttpStatus.OK);
+  }
+}
+```
+
+<br>
+
+
+### ``6. 테스트``
 
 아래와 같이 직접 발급한 JWT 인증도, Cognito 의 OAuth2 Access token 을 이용한 인증처리도 작동 되는 걸 확인 할 수 있다.
 
@@ -190,7 +224,7 @@ public class SecurityConfig {
 <br>
 
 
-### ``5. 마치며``
+### ``7. 마치며``
 
 여기서 중요한점은 Security 구성을 OAuth2 를 사용 할 때와 아닐 떄 총 두가지의 Security 구성을 해야하고, `@Order` 어노테이션을 이용해 우선순위도 함께 지정해줘야 한다. 
 
