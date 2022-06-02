@@ -154,7 +154,12 @@ function GetCategory() {
 }
 
 const HandleQuestionSubmit = async({body}) => {
-  const response = await axios.post('http://127.0.0.1:8000/toyseven/voc', body).then((response) => {
+  const headers = {
+    'Content-Type' : 'application/json',
+    'Authorization' : "Bearer cognito 의 access token 값"
+  }
+
+  const response = await axios.post('http://127.0.0.1:8000/toyseven/voc/question', body, {headers: headers}).then((response) => {
     console.log('status : '+response.status);
   }).catch((error) => {
     console.log('error : '+error);
@@ -168,14 +173,12 @@ function VocQuestion() {
   const [title, setTitle] = useState('');
   const [email, setEmail] = useState('');
   const [content, setContent] = useState('');
-  const [username, setUsername] = useState('unknown');
   const [stationId, setStationId] = useState('ST-4');
 
   const body = {
       categoryId : categoryId,
       title: title,
       content: content,
-      username: username,
       email: email,
       stationId: stationId
     }
