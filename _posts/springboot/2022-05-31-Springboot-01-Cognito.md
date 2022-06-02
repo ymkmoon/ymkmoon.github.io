@@ -56,7 +56,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
   private static final List<String> EXCLUDE_URL =
           Collections.unmodifiableList(
                   Arrays.asList(
-                      "/cognito/1"
+                      "/cognito/payload/sub"
                   ));
 
   // EXCLUDE_URL 에 명시 된 엔드포인트에서는 doFilterInternal 가 작동하지 않도록 한다.
@@ -189,7 +189,7 @@ spring:
           issuer-uri: https://toyseven-domain.auth.ap-northeast-2.amazoncognito.com/ap-northeast-2_xxxxxxxxx
           jwk-set-uri: https://cognito-idp.ap-northeast-2.amazonaws.com/ap-northeast-2_xxxxxxxxx/.well-known/jwks.json
         opaquetoken:
-          client-id: ap-northeast-2_xxxxxxxxx
+          client-id: xxxxxxxxxxxxxxxxxx
 ```
 
 <br>
@@ -202,7 +202,7 @@ spring:
 @RequestMapping("cognito")
 public class CognitoController {
 
-  @GetMapping("/1")
+  @GetMapping("/payload/sub")
   public ResponseEntity<String> message(Principal principal) {
 	  return new ResponseEntity<>(principal.getName(), HttpStatus.OK);
   }
