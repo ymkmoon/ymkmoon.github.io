@@ -156,7 +156,7 @@ function GetCategory() {
 const HandleQuestionSubmit = async({body}) => {
   const headers = {
     'Content-Type' : 'application/json',
-    'Authorization' : "Bearer cognito 의 access token 값"
+    'Authorization' : "Bearer cognito 의 access token"
   }
 
   const response = await axios.post('http://127.0.0.1:8000/toyseven/voc/question', body, {headers: headers}).then((response) => {

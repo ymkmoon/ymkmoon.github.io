@@ -152,7 +152,7 @@ const questionSubmitQuery = gql`
     question(body: $body) 
       @rest(
           type: "Question" 
-          path: "/voc" 
+          path: "/voc/question" 
           method: "POST"
           bodyKey: "body"
       ) {
@@ -181,7 +181,13 @@ function GetCategory() {
 }
 
 const HandleQuestionSubmit = async({body}) => {
-  const response = await client.query({ query: questionSubmitQuery, variables: {body: body} }).then(response => {
+
+  const headers = {
+    'Content-Type' : 'application/json',
+    'Authorization' : "Bearer cognito 의 access token"
+  }
+  
+  const response = await client.mutate({ mutation: questionSubmitQuery, variables: {body: body}, context: {headers: headers} }).then(response => {
     console.log('response : '+JSON.stringify(response));
   }).catch((error) => {
     console.log('error : '+error);
@@ -195,14 +201,12 @@ function ApolloVocQuestion() {
   const [title, setTitle] = useState('');
   const [email, setEmail] = useState('');
   const [content, setContent] = useState('');
-  const [username, setUsername] = useState('unknown');
   const [stationId, setStationId] = useState('ST-4');
 
   const body = {
       categoryId : categoryId,
       title: title,
       content: content,
-      username: username,
       stationId: stationId,
       email: email
     }  
