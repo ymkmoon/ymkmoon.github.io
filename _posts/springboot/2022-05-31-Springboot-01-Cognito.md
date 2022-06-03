@@ -238,3 +238,22 @@ Value : Bearer error="invalid_token" <br>
 error_description : "An error occurred while attempting to decode the Jwt: Signed JWT rejected: Another algorithm expected, or no matching key(s) found", 
 error_uri="https://tools.ietf.org/html/rfc6750#section-3.1"
 
+
+위 내용은 Response 에서 Body 가 아닌 Header 에 담겨오는 내용이라 에러를 한 눈에 파악하기 어렵기 때문에, OAuth2 부분에 예외 핸들링을 할 수 있게 아래 내용을 추가해주자.
+
+
+```java
+http
+	.authorizeRequests()
+	.antMatchers("/**/**")
+		.permitAll()
+	.anyRequest().authenticated()
+	.and()
+	.cors() // cross-origin
+	.and()
+	.oauth2ResourceServer()
+		.authenticationEntryPoint(jwtAuthenticationEntryPoint) // 추가 된 내용
+		.accessDeniedHandler(jwtAccessDeniedHandler) // 추가 된 내용
+		.jwt()
+		.jwkSetUri(jwkSetUri);
+```
