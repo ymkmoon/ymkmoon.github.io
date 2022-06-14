@@ -23,13 +23,13 @@ last_modified_at: 2022-06-14
 
 ```java
 public static void main(String[] args) {		
-		// Example 1 : Consumer
-		Consumer<String> testFoo = (@NotBlank var testString) -> {
-			System.out.println("s : "+testString);
-			return;
-		};
+  // Example 1 : Consumer
+  Consumer<String> testFoo = (@NotBlank var testString) -> {
+    System.out.println("s : "+testString);
+    return;
+  };
 
-    testFoo.accept("1"); // "s : 1" 이 출력된다.
+  testFoo.accept("1"); // "s : 1" 이 출력된다.
 }
 ```
 
@@ -41,13 +41,13 @@ public static void main(String[] args) {
 
 ```java
 public static void main(String[] args) {		
-		// Example 2 : Primitive Consumer
-		// IntConsumer 외에 DoubleConsumer, LongConsumer가 있다.
-		IntConsumer intConsumer = n -> { 
-			System.out.println(n * 100); 
-		};
-		intConsumer.accept(5); // 5 * 100 인 "500" 이 출력된다.
-		intConsumer.accept(10); // 10 * 100 인 "1000" 이 출력된다.
+  // Example 2 : Primitive Consumer
+  // IntConsumer 외에 DoubleConsumer, LongConsumer가 있다.
+  IntConsumer intConsumer = n -> { 
+    System.out.println(n * 100); 
+  };
+  intConsumer.accept(5); // 5 * 100 인 "500" 이 출력된다.
+  intConsumer.accept(10); // 10 * 100 인 "1000" 이 출력된다.
 }
 ```
 
@@ -57,10 +57,10 @@ public static void main(String[] args) {
 
 ```java
 public static void main(String[] args) {		
-		// Example 3 : List.forEach()
-		Consumer<String> consumer = s -> System.out.println(s.toUpperCase());
-    List<String> fruits = Arrays.asList("apple", "kiwi", "orange");
-    fruits.forEach(consumer); 
+  // Example 3 : List.forEach()
+  Consumer<String> consumer = s -> System.out.println(s.toUpperCase());
+  List<String> fruits = Arrays.asList("apple", "kiwi", "orange");
+  fruits.forEach(consumer); 
 }
 ```
 
@@ -70,21 +70,21 @@ public static void main(String[] args) {
 
 ```java
 public static void main(String[] args) {		
-    // Example 4 : andThen()
-		List<String> fruits = Arrays.asList("apple", "kiwi", "orange");
-    Consumer<List<String>> addNumber = list -> {
-        for (int i = 0; i < list.size(); i++) {
-            list.set(i, (i + 1) + ". " + list.get(i));
-        }
-    };
+  // Example 4 : andThen()
+  List<String> fruits = Arrays.asList("apple", "kiwi", "orange");
+  Consumer<List<String>> addNumber = list -> {
+      for (int i = 0; i < list.size(); i++) {
+          list.set(i, (i + 1) + ". " + list.get(i));
+      }
+  };
 
-    Consumer<List<String>> printList = list -> {
-        for (String fruit : list) {
-            System.out.println(fruit);
-        }
-    };
+  Consumer<List<String>> printList = list -> {
+      for (String fruit : list) {
+          System.out.println(fruit);
+      }
+  };
 
-    addNumber.andThen(printList).accept(fruits); // fruits 의 요소들이 인덱스와 함께 줄바꿈되어 출력된다.
+  addNumber.andThen(printList).accept(fruits); // fruits 의 요소들이 인덱스와 함께 줄바꿈되어 출력된다.
 }
 ```
 
