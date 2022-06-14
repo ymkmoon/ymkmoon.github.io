@@ -17,6 +17,7 @@ last_modified_at: 2022-06-14
 - 참고사이트
   - [Oracle Docs java8](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html){:target="_blank"}
   - [Oracle Docs java9](https://docs.oracle.com/javase/9/docs/api/java/util/Optional.html){:target="_blank"}
+  - [블로그](https://kdhyo98.tistory.com/40){:target="_blank"}
 
 
 ### ``1. Optional 이란? ``
@@ -94,3 +95,125 @@ Optional은 주로 "결과 없음"을 나타낼 필요가 있고 null을 사용�
 - Optional 을 생성자나 매개변수로 사용 금지
 - Optional을 컬렉션의 원소로 사용 금지
 - of() 와 ofNullable() 차이점 파악
+
+<br>
+
+### ``4. of 와 ofNullable ``
+
+객체를 Optional 로 감싸기 위해서는 Optional 에서 제공하는 `of` 와 `ofNullable` 를 사용 해야한다.
+
+`of` 는 인자로서 null 값이 허용되지 않는다는 의미이고, <br>
+`ofNullable` 은 null 을 허용 한다는 의미이다.
+
+```java
+String str = null;
+Optional ofNullableStr = Optional.ofNullable(str); // NPE 발생 X
+Optional ofStr = Optional.of(str); // NPE 발생
+```
+
+of 를 사용하면 null 데이터에 대해 NPE 가 발생하고, 에러를 직관적으로 보기 힘들기 때문에 난 아래와 같이 사용한다.
+
+```java
+String str = null;
+Optional ofNullableStr = Optional.ofNullable(str)
+    .orElseThrow(() -> new BusinessException("str 값이 존재하지 않습니다.", ErrorCode.UNAUTHORIZED))
+```
+
+위와 같이 사용하면 보다 직관적인 예외를 확인 할 수 있고, 응답할 때 커스텀 된 에러메세지를 응답하기 수월해진다.
+
+<br>
+
+### ``5. orElse 와 orElseGet ``
+
+```java
+public T orElse(T other)
+
+public T orElseGet(Supplier<? extends T> other)
+```
+
+```java
+public T orElse(T other) {
+    return value != null ? value : other;
+}
+
+public T orElseGet(Supplier<? extends T> other) {
+    return value != null ? value : other.get();
+}
+```
+
+`orElse` 는 `T의 모든 매개 변수`를 사용하고, <br>
+`orElseGet` 은 t 유형의 개체를 반환하는 `Supplier 유형의 인터페이스`를 허용한다.
+
+따라서 두개의 차이점은 <br>
+`orElse()` : T 클래스를 인수로 받는다.<br>
+`orElseGet()` : T 클래스를 상속받은 하위 클래스를 return 해주는 Supplier 함수 인터페이스를 받는다.
+
+> `Supplier` 은 함수적 인터페이스로 get 을 호출하여 결과를 리턴하는 역할을 한다.
+
+<br>
+
+#### orElse()
+
+```java
+// orElse 
+public static void main(String[] args) {
+  String name = Optional.of("baeldung")
+        .orElse(getRandomName());
+  System.out.println("name : "+name);
+}
+
+
+public static String getRandomName() {
+  System.out.println("getRandomName() method - start");	    		    
+  System.out.println("getRandomName() method - end");
+  return "temp";
+}
+
+// 위 메인메소드를 실행 시 콘솔에는 아래와 같이 출력된다.
+getRandomName() method - start
+getRandomName() method - end
+name : baeldung
+```
+
+위 출력 된 콘솔메세지에서 알 수 있듯이<br>
+`orElse()` 는 메소드를 인수로 받지 않고 바로, 값을 인수로 받는다. 
+
+결국, `orElse()` 메소드 인수를 할당하기 위해 getRandomName() 메소드가 실행된 후 해당 결과 값을 `orElse()` 메소드 인수로 할당하기 때문에 Optional의 값과 상관 없이 메소드가 실행되게 되는 것이다.
+
+<br>
+
+#### orElseGet()
+
+```java
+// orElse 
+public static void main(String[] args) {
+  String name = Optional.of("baeldung")
+        .orElseGet(getRandomName());
+  System.out.println("name : "+name);
+}
+
+
+public static String getRandomName() {
+  System.out.println("getRandomName() method - start");	    		    
+  System.out.println("getRandomName() method - end");
+  return "temp";
+}
+
+// 위 메인메소드를 실행 시 콘솔에는 아래와 같이 출력된다.
+name : baeldung
+```
+
+위 출력 된 콘솔메세지에서 알 수 있듯이<br>
+`orElseGet()` 에서는 getRandomName() 메소드를 호출하지 않는다.
+
+그 이유는 `인수로 전달 된 Supplier 메소드 경우 Optional의 값이 없을 때만 get()을 통해 실행되기 때문` 이다.
+
+<br>
+
+#### 결론
+
+`orElseGet()`
+- null일 경우 메소드를 실행해야 할 때 
+
+`orElse()`
+- null일 때 값을 넘겨야 할 때
