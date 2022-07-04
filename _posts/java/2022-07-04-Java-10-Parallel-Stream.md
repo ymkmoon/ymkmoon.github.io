@@ -42,7 +42,7 @@ last_modified_at: 2022-07-04
 <br>
 
 ```java
-private String getStringArray(List<Map<String, Object>> list, String key) {
+private String getString(List<Map<String, Object>> list, String key) {
 	return StreamSupport.stream(list.spliterator(), false)
 			.map(map -> map)
 			.filter(map -> !map.isEmpty())
