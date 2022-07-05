@@ -84,17 +84,17 @@ System.out.println("doNotHave : " + doNotHave);
 ```java
 List<Integer> sampleList = Arrays.asList(17,19,28,37,16);
 		
-sampleList.
-	stream().
-	filter(n -> n % 2 == 0).
-	findAny().
-	ifPresent(n -> System.out.println("2의 배소의 요소 찾기 : " + n));
+sampleList
+	.stream()
+	.filter(n -> n % 2 == 0)
+	.findAny()
+	.ifPresent(n -> System.out.println("2의 배소의 요소 찾기 : " + n));
 		
-sampleList.
-	stream().
-	filter(n -> n % 2 == 0).
-	findFirst().
-	ifPresent(n -> System.out.println("2의 배소의 첫번째 요소 찾기 : " + n));
+sampleList
+	.stream()
+	.filter(n -> n % 2 == 0)
+	.findFirst()
+	.ifPresent(n -> System.out.println("2의 배소의 첫번째 요소 찾기 : " + n));
 ```
 
 ```console
@@ -115,17 +115,17 @@ Collection 클래스에서 Stream 추출 시, parallelStream 을 통해 병렬 �
 ```java
 List<Integer> sampleList = Arrays.asList(17,19,28,37,16);
 	
-sampleList.
-	parallelStream().
-	filter(n -> n % 2 == 0).
-	findAny().
-	ifPresent(n -> System.out.println("2의 배소의 요소 찾기 : " + n));
+sampleList
+	.parallelStream()
+	.filter(n -> n % 2 == 0)
+	.findAny()
+	.ifPresent(n -> System.out.println("2의 배소의 요소 찾기 : " + n));
 		
-sampleList.
-	parallelStream().
-	filter(n -> n % 2 == 0).
-	findFirst().
-	ifPresent(n -> System.out.println("2의 배소의 첫번째 요소 찾기 : " + n));
+sampleList
+	.parallelStream()
+	.filter(n -> n % 2 == 0)
+	.findFirst()
+	.ifPresent(n -> System.out.println("2의 배소의 첫번째 요소 찾기 : " + n));
 ```
 
 <br>
