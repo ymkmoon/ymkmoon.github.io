@@ -28,11 +28,16 @@ last_modified_at: 2022-07-05
 ### ``2. FlatMap 사용하기 ``
 
 ```java
-List<MemberVo> memberList = Arrays.asList(new MemberVo(1, 27, "남두현"), new MemberVo(2, 20, "유형주"),
-				new MemberVo(3, 20, "태재영"), new MemberVo(4, 40, "남궁계홍"));
-List<BoardDetailVo> boardList = Arrays.asList(new BoardDetailVo(1, "람다게시판입니다.", "람다에 관련된 클만 올려주세요."),
-				new BoardDetailVo(1, "람다란 무엇이니가?", "함수형 프로그래밍의 꽃?"),
-				new BoardDetailVo(2, "물어볼 게 있습니다.", "람다공부는 어떻게 하죠?"));
+List<MemberVo> memberList = Arrays.asList(
+	new MemberVo(1, 27, "남두현"), 
+	new MemberVo(2, 20, "유형주"),
+	new MemberVo(3, 20, "태재영"), 
+	new MemberVo(4, 40, "남궁계홍"));
+
+List<BoardDetailVo> boardList = Arrays.asList(
+	new BoardDetailVo(1, "람다게시판입니다.", "람다에 관련된 클만 올려주세요."),
+	new BoardDetailVo(1, "람다란 무엇이니가?", "함수형 프로그래밍의 꽃?"),
+	new BoardDetailVo(2, "물어볼 게 있습니다.", "람다공부는 어떻게 하죠?"));
  
 memberList.stream()
 	.flatMap(i ->
