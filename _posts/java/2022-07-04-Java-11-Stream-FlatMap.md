@@ -90,12 +90,12 @@ filter(j -> j.getSn() == i.getSn().intValue())
 
 ```java
 map(j -> {
-		MemberBoardResultVo result = new MemberBoardResultVo();
-		result.setSn(i.getSn());
-		result.setName(i.getName());
-		result.setContents(j.getContens());
-		result.setTitle(j.getTitle());
-		return result;
+	MemberBoardResultVo result = new MemberBoardResultVo();
+	result.setSn(i.getSn());
+	result.setName(i.getName());
+	result.setContents(j.getContens());
+	result.setTitle(j.getTitle());
+	return result;
 })
 ```
 
@@ -104,10 +104,11 @@ map(j -> {
 
 ```java
 forEach(ret -> {
-		System.out.println(String.format("[%s]%s:%s", 
-			ret.getName(), 
-			ret.getTitle(), 
-			ret.getContents()));
-	}
-);
+	System.out.println(
+		String.format("[%s]%s:%s", 
+		ret.getName(), 
+		ret.getTitle(), 
+		ret.getContents())
+	);
+});
 ```
