@@ -44,11 +44,11 @@ last_modified_at: 2022-07-04
 ```java
 private String getString(List<Map<String, Object>> list, String key) {
 	return StreamSupport.stream(list.spliterator(), false)
-			.map(map -> map)
-			.filter(map -> !map.isEmpty())
-			.filter(map -> !map.get(key).toString().isBlank())
-			.map(map -> map.get(key).toString())
-			.collect(Collectors.joining("_"));
+		.map(map -> map)
+		.filter(map -> !map.isEmpty())
+		.filter(map -> !map.get(key).toString().isBlank())
+		.map(map -> map.get(key).toString())
+		.collect(Collectors.joining("_"));
 }
 ```
 
