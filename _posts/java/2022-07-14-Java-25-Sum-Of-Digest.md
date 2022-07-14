@@ -9,8 +9,8 @@ toc: true
 toc_sticky: true
 toc_label: "[자연수 자릿수의 합]"
  
-date: 2022-07-12
-last_modified_at: 2022-07-12
+date: 2022-07-14
+last_modified_at: 2022-07-14
 ---
 
 ### ``샘플코드 ``
