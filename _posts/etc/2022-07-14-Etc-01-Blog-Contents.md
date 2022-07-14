@@ -1,9 +1,9 @@
 ---
-title:  "[Java] 코드농장"
+title:  "[ETC] 블로그 글 한방에 보기"
 excerpt: "코드농장"
 
 tags:
-  - [Java]
+  - [etc, java, aws, linux, react]
 
 toc: true
 toc_sticky: true
