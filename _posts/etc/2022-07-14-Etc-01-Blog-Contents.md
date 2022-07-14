@@ -15,6 +15,29 @@ last_modified_at: 2022-07-14
 
 ## JAVA
 
+- [String 형변환](https://ymkmoon.github.io/Java-17-String-Conversion/){:target="_blank"}
+- [StringBuffer 와 StringBuilder](https://ymkmoon.github.io/Java-16-StringBuffer-StringBuilder/){:target="_blank"}
+
+<br>
+
+- [Collcetion 이란](https://ymkmoon.github.io/Java-03-Collection/){:target="_blank"}
+- [Consumer 예제](https://ymkmoon.github.io/Java-03-Collection/){:target="_blank"}
+- [Restful API 모범설계](https://ymkmoon.github.io/Java-06-Rest-API/){:target="_blank"}
+- [암호화 복호화](https://ymkmoon.github.io/Java-07-Encryption/){:target="_blank"}
+- [암호화 복호화 예제](https://ymkmoon.github.io/Java-08-Encryption-Example/){:target="_blank"}
+
+<br>
+
+- [Stream 이란](https://ymkmoon.github.io/Java-09-Stream/){:target="_blank"}
+- [병렬스트림](https://ymkmoon.github.io/Java-10-Parallel-Stream/){:target="_blank"}
+- [Stream FlatMap - 객체 묶기](https://ymkmoon.github.io/Java-11-Stream-FlatMap/){:target="_blank"}
+- [Stream Match & Find - 검색과 매칭](https://ymkmoon.github.io/Java-12-Stream-Match-Find/){:target="_blank"}
+- [Stream Reduce - 가공과 연산](https://ymkmoon.github.io/Java-13-Stream-Reduce/){:target="_blank"}
+- [Stream - 숫자형 스트림](https://ymkmoon.github.io/Java-14-Stream-Numeric/){:target="_blank"}
+
+<br>
+
+
 - [날짜 더하기 빼기](https://ymkmoon.github.io/Java-18-Date-Conversion/){:target="_blank"}
 - [랜덤 알파벳+숫자 생성하기](https://ymkmoon.github.io/Java-19-Random-String/){:target="_blank"}
 - [배열의 최대값 찾기](https://ymkmoon.github.io/Java-20-Maximum-Of-Array/){:target="_blank"}
@@ -23,6 +46,12 @@ last_modified_at: 2022-07-14
 - [두 배열 인수의 곱셈](https://ymkmoon.github.io/Java-23-Array-Multiplication/){:target="_blank"}
 - [배열의 평균값 구하기](https://ymkmoon.github.io/Java-24-Array-Average/){:target="_blank"}
 - [자연수 자릿수의 합](https://ymkmoon.github.io/Java-25-Sum-Of-Digest/){:target="_blank"}
+
+<br>
+
+- [Static 은 지양해야 하나?](https://ymkmoon.github.io/Java-15-Static/){:target="_blank"}
+
+
 
 <br>
 <br>
@@ -56,10 +85,25 @@ last_modified_at: 2022-07-14
 
 ## React
 
+- [React Fragment](https://ymkmoon.github.io/React-16-Fragment/){:target="_blank"}
+- [React 기술용어](https://ymkmoon.github.io/React-13-Term-Of-Technology/){:target="_blank"}
+
+
+<br>
+
 - [React Navigation](https://ymkmoon.github.io/React-03-Navigation/){:target="_blank"}
 - [React Route](https://ymkmoon.github.io/React-04-Route/){:target="_blank"}
 - [React 게시판](https://ymkmoon.github.io/React-06-Voc/){:target="_blank"}
 - [React Apollo GraphQL](https://ymkmoon.github.io/React-09-Apollo/){:target="_blank"}
+- [React Hooks - useEffect()](https://ymkmoon.github.io/React-14-useEffect/){:target="_blank"}
+- [React StrictMode - useEffect 한번만 호출하기](https://ymkmoon.github.io/React-15-Strict-Mode/){:target="_blank"}
+
+<br>
+<br>
+
+## Database
+
+- [DB Modeling](https://ymkmoon.github.io/DB-01-Modeling/){:target="_blank"}
 
 <br>
 <br>
