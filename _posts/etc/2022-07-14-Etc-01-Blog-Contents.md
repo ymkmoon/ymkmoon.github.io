@@ -25,7 +25,6 @@ last_modified_at: 2022-07-14
 - [자연수 자릿수의 합](https://ymkmoon.github.io/Java-25-Sum-Of-Digest/){:target="_blank"}
 
 <br>
-<hr/>
 <br>
 
 ## AWS
@@ -37,7 +36,6 @@ last_modified_at: 2022-07-14
 - [AWS Cognito SpringBoot(API) 에서 사용하기](https://ymkmoon.github.io/Springboot-01-Cognito/){:target="_blank"}
 
 <br>
-<hr/>
 <br>
 
 ## Linux
@@ -54,7 +52,6 @@ last_modified_at: 2022-07-14
 - [CentOS7 Jenkins Git 배포](https://ymkmoon.github.io/Linux-13-CentOS-Jenkins-Deploy/){:target="_blank"}
 
 <br>
-<hr/>
 <br>
 
 ## React
@@ -65,5 +62,4 @@ last_modified_at: 2022-07-14
 - [React Apollo GraphQL](https://ymkmoon.github.io/React-09-Apollo/){:target="_blank"}
 
 <br>
-<hr/>
 <br>
