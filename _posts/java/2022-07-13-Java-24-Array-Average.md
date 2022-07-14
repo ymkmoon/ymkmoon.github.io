@@ -22,6 +22,9 @@ public static void main(String[] args) {
 	
     System.out.println("average : "+average(A));
     System.out.println("average : "+average(B));
+    
+    System.out.println("average : "+averageUseStream(A));
+    System.out.println("average : "+averageUseStream(B));
 }
 
 public static double average(int[] arr) {
@@ -34,6 +37,10 @@ public static double average(int[] arr) {
     result = result / arr.length;
     
     return result;
+}
+
+public static double averageUseStream(int[] arr) {
+	return Arrays.stream(arr).average().getAsDouble();
 }
 ```
 
