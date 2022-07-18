@@ -39,6 +39,7 @@ last_modified_at: 2022-07-14
 - [두 배열 인수의 곱셈](https://ymkmoon.github.io/Java-23-Array-Multiplication/){:target="_blank"}
 - [배열의 평균값 구하기](https://ymkmoon.github.io/Java-24-Array-Average/){:target="_blank"}
 - [자연수 자릿수의 합](https://ymkmoon.github.io/Java-25-Sum-Of-Digest/){:target="_blank"}
+- [알파벳 대소문자 변환](https://ymkmoon.github.io/Java-25-Sum-Of-Digest/){:target="_blank"}
 
 - [Static 은 지양해야 하나?](https://ymkmoon.github.io/Java-15-Static/){:target="_blank"}
 
