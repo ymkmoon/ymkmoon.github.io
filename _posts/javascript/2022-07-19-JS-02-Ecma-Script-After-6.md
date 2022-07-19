@@ -538,7 +538,7 @@ console.log(service.port) // 3000
 
 ### ``ES 8``
 
-#### ``비동기 처리 패턴(async & await) ``
+#### ``async & await``
 
 callback 함수와 promise 함수의 단점을 보완하고 가독성 향상
 
@@ -565,7 +565,7 @@ async function logItems() {
 <br>
 
 
-#### ``values() 와 entries() 등장``
+#### ``values() 와 entries()``
 
 - Object.keys()에 대응되는 메소드인 `Object.values()`
 - Object.keys()와 Object.values()를 합쳐 놓은 `Object.entries()` 등
