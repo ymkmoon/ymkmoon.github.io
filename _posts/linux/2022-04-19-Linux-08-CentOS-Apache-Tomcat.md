@@ -23,7 +23,7 @@ last_modified_at: 2021-03-25
 <br>
 
 
-### 1. perl 다운로드
+### perl 다운로드
 
   ```console
   cd /usr/local/download
@@ -38,7 +38,7 @@ last_modified_at: 2021-03-25
   perl -v 
   ```
 
-### 2. 커넥터 다운로드
+### 커넥터 다운로드
   
   ```console
   cd /usr/local/download
@@ -61,7 +61,7 @@ last_modified_at: 2021-03-25
 잘 설치 되었다면, 위 처럼 mod_jk.so 이 확인 가능하다
 <br><br>
 
-### 3. 연동 설정
+### 연동 설정
 
   ```console
   vi /usr/local/apache/conf/httpd.conf
@@ -144,7 +144,7 @@ last_modified_at: 2021-03-25
       /*.ico=worker1
       ```
 
-### 4. Was 설정
+### Was 설정
 
   ```console
   sudo vi /usr/local/tomcat9/conf/server.xml
@@ -167,7 +167,7 @@ last_modified_at: 2021-03-25
   connectionTimeout="20000" disableUploadTimeout="true" protocol="AJP/1.3" />
   ```
 
-### 5. 연동 확인
+### 연동 확인
   > Apache와 Tomcat을 재시작 해준다.
 
   ```console

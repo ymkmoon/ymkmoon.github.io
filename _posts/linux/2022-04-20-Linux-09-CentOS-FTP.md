@@ -14,13 +14,13 @@ last_modified_at: 2021-03-25
 ---
 
 
-### 1. FTP 란?
+### FTP 란?
 > 파일 전송 프로토콜(File Transfer Protocol)의 약자 이며, 
 <br>
 > 파일 전송 프로토콜은 TCP/IP 프로토콜을 가지고 서버와 클라이언트 사이의 파일 전송을 하기 위한 프로토콜이다. 파일 전송 프로토콜은 TCP/IP 프로토콜 테이블의 응용 계층에 속한다.
 <br>
 
-### 2. FTP 설치
+### FTP 설치
   - FTP 설치 확인
 
     ```console
@@ -34,7 +34,7 @@ last_modified_at: 2021-03-25
     ```
   
 
-### 3. FTP 서버 설정
+### FTP 서버 설정
   - vsftpd.conf 파일 수정
 
     ```console
@@ -61,7 +61,7 @@ last_modified_at: 2021-03-25
   # chroot_list 파일에서 허용 할 계정을 입력 후 저장한다.
   ```
 
-### 4. 방화벽 설정
+### 방화벽 설정
   
   ```console
   firewall-cmd --permanent --add-service=ftp
@@ -69,7 +69,7 @@ last_modified_at: 2021-03-25
   firewall-cmd --reload
   ```
 
-### 5. 접속 거부 리스트 수정
+### 접속 거부 리스트 수정
 
   ```console
   sudo vi /etc/vsftpd/ftpusers
@@ -78,14 +78,14 @@ last_modified_at: 2021-03-25
   # 위 2개의 파일에서 내가 사용할 계정을 삭제 후 저장하고 종료
   ```
 
-### 6. FTP 재시작
+### FTP 재시작
 
   ```console
   systemctl enable vsftpd
   systemctl restart vsftpd
   ```
 
-### 7. FTP 접속하기
+### FTP 접속하기
 
   > FTP 툴을 설치하여 접속이 잘 되는지 테스트 해본다.
   <br>
@@ -93,7 +93,7 @@ last_modified_at: 2021-03-25
   
 ![CentOS7](/assets/image/linux/Centos_setting_ftp_01.PNG)
 
-### 8. SELINUX 설정
+### SELINUX 설정
   - 명령어 중 P 옵션은 영구설정을 의미하고, 1은 on, 0은 off 를 의미한다.
 
     ```console
@@ -106,7 +106,7 @@ last_modified_at: 2021-03-25
     ```
 
 
-### 9. FTP 서버 관련 파일
+### FTP 서버 관련 파일
   > FTP 서버 관련 파일
 
   - /etc/vsftpd/vsftpd.conf

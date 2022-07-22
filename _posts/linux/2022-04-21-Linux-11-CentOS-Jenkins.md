@@ -19,7 +19,7 @@ last_modified_at: 2021-03-25
  다수의 개발자들이 하나의 프로그램을 개발할 때 버전 충돌을 방지하기 위해 각자 작업한 내용을 공유 영역에 있는 Git등의 저장소에 빈번히 업로드함으로써 지속적 통합이 가능하도록 해 준다.
 
 
-### 1. Jenkins 설치
+### Jenkins 설치
 
   ```console
   sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo --no-check-certificate
@@ -27,7 +27,7 @@ last_modified_at: 2021-03-25
   sudo yum install jenkins
   ```
 
-### 2. 포트 변경
+### 포트 변경
 
   ```console
   sudo vi /etc/sysconfig/jenkins
@@ -37,14 +37,14 @@ last_modified_at: 2021-03-25
   -> JENKINS_HTTPS_PORT="8089"
   ```
 
-### 3. 방화벽 설정
+### 방화벽 설정
 
   ```console
   sudo firewall-cmd --permanent --add-port=8089/tcp
   sudo firewall-cmd --reload
   ```
 
-### 4. 실행 및 테스트
+### 실행 및 테스트
 
   ```console
   systemctl enable jenkins

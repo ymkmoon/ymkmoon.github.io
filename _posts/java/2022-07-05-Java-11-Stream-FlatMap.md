@@ -17,7 +17,7 @@ last_modified_at: 2022-07-05
   - [블로그](https://doohyun.tistory.com/24?category=592214){:target="_blank"}
 
 
-### ``1. FlatMap 이란?``
+### ``FlatMap 이란?``
 
 중복된 스트림을 1차원으로 평면화 시키는 메소드 이다. <br>
 -> 두 객체의 스트림을 하나로 묶는 것 (SQL의 JOIN과 같다고 볼 수 있다.)
@@ -25,7 +25,7 @@ last_modified_at: 2022-07-05
 
 <br>
 
-### ``2. FlatMap 사용하기 ``
+### ``FlatMap 사용하기 ``
 
 ```java
 List<MemberVo> memberList = Arrays.asList(
@@ -69,7 +69,7 @@ memberList.stream()
 
 <br>
 
-### ``3. 로직 설명 ``
+### ``로직 설명 ``
 
 1) memberList의 stream이 주가 되어, flatMap 내부에서 boardList의 Stream을 사용하고 있다. <br> 
 

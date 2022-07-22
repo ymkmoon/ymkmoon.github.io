@@ -19,7 +19,7 @@ last_modified_at: 2021-03-25
 Groovy와 유사한 도메인 언어를 채용하였으며, 현재 안드로이드 앱을 만드는데 필요한 안드로이드 스튜디오의 공식 빌드 시스템이기도 하다. Java, C/C++, 파이썬 등과 같은 여러 가지 언어를 지원한다.
 
 
-### 1. Gradle 설치
+### Gradle 설치
   > gradle 은 빌드 도구이며, 저는 추후 jenkins 를 이용해 배포 할 프로젝트의 버전과 동일한 버전을 다운로드 하겠습니다.
 
   ```console  
@@ -28,7 +28,7 @@ Groovy와 유사한 도메인 언어를 채용하였으며, 현재 안드로이�
   sudo unzip -d /opt/gradle gradle-7.2-bin.zip
   ```
 
-### 2. 환경 변수 설정
+### 환경 변수 설정
 
   ```console
   vi /etc/profile.d/gradle.sh
@@ -41,7 +41,7 @@ Groovy와 유사한 도메인 언어를 채용하였으며, 현재 안드로이�
   source /etc/profile.d/gradle.sh # 환경변수 로드
   ```
 
-### 3. Gradle 설치 확인
+### Gradle 설치 확인
 
   ```console
   gradle -v # 명령어 실행 시 아래와 같이 출력된다.

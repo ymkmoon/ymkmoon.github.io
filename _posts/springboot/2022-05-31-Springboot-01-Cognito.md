@@ -29,7 +29,7 @@ JWT 을 이용한 자체 인증 + Cognito 의 OAuth2 Access token
 <br>
 
 
-### ``1. 의존성 추가``
+### ``의존성 추가``
 
 OAuth2 에 대한 의존성을 추가해준다.
 
@@ -41,7 +41,7 @@ implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-a
 <br>
 
 
-### ``2. Exclude Url 설정``
+### ``Exclude Url 설정``
 
 `OncePerRequestFilter` 를 상속받는 Class 인 `JwtRequestFilter.java` 파일에서 제외 할 url 을 추가해준 후 shouldNotFilter 를 오버라이드 한다.
 
@@ -72,7 +72,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 <br>
 
 
-### ``3. Security 설정``
+### ``Security 설정``
 
 ```java
 @EnableWebSecurity
@@ -178,7 +178,7 @@ public class SecurityConfig {
 <br>
 
 
-### ``4. OAuth2 Resources server 정보 설정``
+### ``OAuth2 Resources server 정보 설정``
 
 ```yaml
 spring:
@@ -195,7 +195,7 @@ spring:
 <br>
 
 
-### ``5. 컨트롤러 생성``
+### ``컨트롤러 생성``
 
 ```java
 @RestController
@@ -212,7 +212,7 @@ public class CognitoController {
 <br>
 
 
-### ``6. 테스트``
+### ``테스트``
 
 아래와 같이 직접 발급한 `JWT 인증`도, Cognito 의 `OAuth2 Access token` 을 이용한 인증처리도 작동 되는 걸 확인 할 수 있다.
 
@@ -226,7 +226,7 @@ Cognito 에서 발급받은 access token 이 필요하다면 [여기](https://gi
 <br>
 
 
-### ``7. 마치며``
+### ``마치며``
 
 여기서 중요한점은 Security 구성을 OAuth2 를 사용 할 때와 아닐 떄 총 두가지의 Security 구성을 해야하고, `@Order` 어노테이션을 이용해 우선순위도 함께 지정해줘야 한다. 
 

@@ -28,13 +28,13 @@ last_modified_at: 2021-03-25
 <br>
 
 
-### 1. VMWare Worksation 설치하기.
+### VMWare Worksation 설치하기.
   > https://www.vmware.com/kr.html
 
 - VMWare 공식 홈페이지 접속 후 다운로드 -> 무료 다운로드 -> Workstation Player 를 설치하자.  
 <br>   
 
-### 2. Player Install
+### Player Install
 - 라이센스, 제품 경로 변경 등 개인에 맞게 세팅 후 계속 진행.
 - User Experience 설정에서 모두 체크 해제 후 Next   
 (사용 통계 정보등을 VMWare 측에 보낼지에 대한 여부등에 대한 내용이 있다.)

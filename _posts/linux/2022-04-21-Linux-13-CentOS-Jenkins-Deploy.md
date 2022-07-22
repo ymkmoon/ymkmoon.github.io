@@ -37,7 +37,7 @@ bootRun {
 
 
 
-### 1. 플러그인 설치
+### 플러그인 설치
 
 ![CentOS7](/assets/image/linux/Centos_jenkins_01.PNG)
 
@@ -48,7 +48,7 @@ bootRun {
 <br>
 <br>
 
-### 2. Global Tool 설정
+### Global Tool 설정
 
 ![CentOS7](/assets/image/linux/Centos_jenkins_02.PNG)
 
@@ -82,7 +82,7 @@ bootRun {
 <br>
 <br>
 
-### 3. 프로젝트 등록
+### 프로젝트 등록
 
 ![CentOS7](/assets/image/linux/Centos_jenkins_05.PNG)
 
@@ -146,7 +146,7 @@ bootRun {
 
 <br><br>
 
-### 4. 빌드 및 배포
+### 빌드 및 배포
 
 ![CentOS7](/assets/image/linux/Centos_jenkins_14.PNG)
 

@@ -18,7 +18,7 @@ last_modified_at: 2022-05-23
   - [AWS Document](https://aws.amazon.com/ko/blogs/mobile/understanding-amazon-cognito-user-pool-oauth-2-0-grants/){:target="_blank"}
 
 
-### ``1. OAuth2 동의화면``
+### ``OAuth2 동의화면``
 
 #### 프로젝트 생성
 구글에 접속하여 개발자 콘솔을 이용해 프로젝트를 생성한다.
@@ -68,7 +68,7 @@ last_modified_at: 2022-05-23
 <br> 
 
 
-### ``2. 사용자 인증정보``
+### ``사용자 인증정보``
 
 
 #### 이름
@@ -107,7 +107,7 @@ congnito console 의 도메인 뒤에 Endpoint(/oauth2/idpresponse) 를 추가�
 <br>
 
 
-### ``3. Congito OAuth2 설정``
+### ``Congito OAuth2 설정``
 
 #### 자격 증명 공급자
 

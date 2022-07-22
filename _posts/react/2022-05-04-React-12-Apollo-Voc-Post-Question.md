@@ -16,7 +16,7 @@ last_modified_at: 2022-05-03
 > 모든 소스코드는 [여기](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 확인 가능합니다.
 
 
-### ``1. Voc List에 링크 추가``
+### ``Voc List에 링크 추가``
 
 - 목록 페이지에서 Link 를 생성해준다.
 
@@ -79,7 +79,7 @@ function ApolloVoc() {
 export default ApolloVoc;
 ```
 
-### ``2. Route 설정``
+### ``Route 설정``
 
 - 작성 페이지로 이동 할 수 있도록 Route 설정과 매개변수명을 지정한다.
 
@@ -115,7 +115,7 @@ export default App;
 ```
 
 
-### ``3. 게시글 작성 페이지 생성``
+### ``게시글 작성 페이지 생성``
 
 🛠 src/pages/apollo/voc/ApolloVocQuestion.js
 

@@ -15,7 +15,7 @@ last_modified_at: 2022-05-16
 
 > 모든 소스코드는 [여기](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 확인 가능합니다.
 
-### ``1. mutation 란?``
+### ``mutation 란?``
 
 GraphQL 에서 일반적인 Get 요청에는 `query` 를 사용하고, 
 Get 요청을 제외한 나머지 요청 Post, Put, Delete 등의 `mutation` 을 사용한다.
@@ -24,7 +24,7 @@ Get 요청을 제외한 나머지 요청 Post, Put, Delete 등의 `mutation` 을
 
 <br>
 
-### ``2. query -> mutation 수정하기``
+### ``query -> mutation 수정하기``
 
 
 🛠 src/pages/apollo/voc/ApolloVocQuestion.js
@@ -62,7 +62,7 @@ const HandleQuestionSubmit = async({body}) => {
 
 <br>
 
-### ``3. 테스트``
+### ``테스트``
 
 ![React](/assets/image/react/React_toyseven_react_15.PNG)
 

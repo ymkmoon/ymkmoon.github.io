@@ -24,7 +24,7 @@ last_modified_at: 2022-04-26
 - Props and State
 
 
-### ``1. Data Flow``
+### ``Data Flow``
 React는 데이터의 흐름이 한 방향으로만 흐르는 단방향 데이터 흐름을 가진다.
 
 양방향 데이터 바인딩은 규모가 커질수록 데이터의 흐름을 추적하기가 힘들고 복잡해지는 경향이 있어, 데이터 흐름에서 일어나는 변화를 보다 예측 가능할 수 있도록 단방햘 흐름을 채택.
@@ -32,7 +32,7 @@ React는 데이터의 흐름이 한 방향으로만 흐르는 단방향 데이�
 <br>
 
 
-### ``2. Component 기반 구조``
+### ``Component 기반 구조``
 
 > Component 는 독립적인 단위의 소프트웨어 모듈을 의미 <br>
 
@@ -41,7 +41,7 @@ html 에서 사용 했던 \<button> 태그, \<div> 태그 등을 독립적인 �
 
 <br>
 
-### ``3. Virtual Dom``
+### ``Virtual Dom``
 
 #### Dom 이란
 브라우저는 화면을 그리기 위해서 `DOM(Document Object Model)`이라는 개념을 사용한다. DOM은 HTML 파일 내용을 토대로 만들어지는데, JavaScript와 같은 스크립팅 언어로 수정할 수 있도록 만들어진, 웹 페이지의 객체 지향 표현.
@@ -50,7 +50,7 @@ html 에서 사용 했던 \<button> 태그, \<div> 태그 등을 독립적인 �
 
 <br>
 
-### ``4. Props and State``
+### ``Props and State``
 
 #### Props 란
 

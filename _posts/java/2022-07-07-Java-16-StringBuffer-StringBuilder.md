@@ -16,13 +16,13 @@ last_modified_at: 2022-07-07
 - 참고사이트
   - [블로그](https://unabated.tistory.com/entry/%EC%99%9C-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-static%EC%9D%98-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%A7%80%EC%96%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80){:target="_blank"}
 
-### ``1. String vs StringBuffer & StringBuilder ``
+### ``String vs StringBuffer & StringBuilder ``
 
 String 과 StringBuffer, StringBuilder 와의 차이점은 `불변성` 이다. <br>
 
 <br>
 
-### ``2. StringBuffer vs StringBuilder``
+### ``StringBuffer vs StringBuilder``
 
 둘의 가장 큰 차이점은 `동기화 유무` 이다. <br>
 
@@ -33,7 +33,7 @@ String 과 StringBuffer, StringBuilder 와의 차이점은 `불변성` 이다. <
 <br>
 
 
-### ``3. 그럼 뭘 써야할까?``
+### ``그럼 뭘 써야할까?``
 
 - String
   - 문자열 연산이 적고 멀티쓰레드 환경인 경우

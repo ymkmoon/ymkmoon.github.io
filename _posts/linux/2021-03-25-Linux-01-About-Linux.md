@@ -35,7 +35,7 @@ last_modified_at: 2021-03-25
 <br>
 
 ### 기본 명령어
-#### 1. 서버의 환경정보 확인
+#### 서버의 환경정보 확인
 
 ```console
 OS Bit확인 -> getconf LONG_BIT
@@ -46,7 +46,7 @@ RAM 용량 확인 ->	cat /proc/meminfo
 DISK 용량 확인 -> df -h
 ```
 
-#### 2. 방화벽
+#### 방화벽
 
 ```console
 포트확인 -> netstat -na / netstat -nap / netstat -nat
@@ -56,7 +56,7 @@ iptables 규칙 만드는 순서 -> https://webdir.tistory.com/170
 특정 ip / port 허용 및 차단 -> http://blog.plura.io/?p=4519
 ```
 
-#### 3. 네트워크 활성화
+#### 네트워크 활성화
 
 ```console
 연결상태 확인 -> ping 8.8.8.8
@@ -90,7 +90,7 @@ DNS2=8.8.4.4                        # 2차 네임서버 설정
   
 - systemctl restart network 입력하여 네트워크 재시작.
 
-#### 4. 언어 확인 및 변경
+#### 언어 확인 및 변경
 
 ```console
 언어셋변경 : localectl set-locale LANG=ko_KR.UTF-8

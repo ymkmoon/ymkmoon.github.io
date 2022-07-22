@@ -19,7 +19,7 @@ last_modified_at: 2021-03-25
 <br>
 
 
-### 1. Tomcat 설치하기
+### Tomcat 설치하기
   > https://tomcat.apache.org/ 에서 원하는 버젼의 tar.gz 링크주소 복사 후 작성 
 
   ```console
@@ -27,7 +27,7 @@ last_modified_at: 2021-03-25
   sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz --no-check-certificate
   ```
 
-### 2. 압축 해제 및 폴더 이동
+### 압축 해제 및 폴더 이동
 
   ```console
   cd /usr/local/download
@@ -35,7 +35,7 @@ last_modified_at: 2021-03-25
   sudo mv apache-tomcat-9.0.62 /usr/local/tomcat9
   ```
 
-### 3. Tomcat 설정
+### Tomcat 설정
 
   ```console
   sudo vi /usr/local/tomcat9/conf/server.xml
@@ -48,14 +48,14 @@ last_modified_at: 2021-03-25
               URIEncoding="UTF-8" />
   ```
 
-### 4. 방화벽 설정
+### 방화벽 설정
 
   ```console
   firewall-cmd --permanent --add-port=8080/tcp
   firewall-cmd --reload
   ```
 
-### 5. 환경변수 설정
+### 환경변수 설정
   > 환경변수 CATALINA_HOME 을 추가하고 CLASSPATH 의 변수에도 아래 내용을 추가해준다.
 
   ```console
@@ -69,7 +69,7 @@ last_modified_at: 2021-03-25
   source /etc/profile
   ```
 
-### 6. Tomcat 실행
+### Tomcat 실행
 
   ```console
   sudo /usr/local/tomcat9/bin/startup.sh
@@ -86,7 +86,7 @@ last_modified_at: 2021-03-25
   # 위 명령어 입력시 index.html이 다운로드 되면 tomcat이 정상적으로 실행되는 것
   ```
 
-### 7. 서비스 등록
+### 서비스 등록
   - tomcat9.service 파일 생성 후 아래 내용을 입력 후 저장한다.
 
   ```console
@@ -123,7 +123,7 @@ last_modified_at: 2021-03-25
   systemctl list-unit-files --type service |grep tomcat9 # 등록된 서비스 등록
   ```
 
-### 8. Tomcat 유저 설정
+### Tomcat 유저 설정
 
   ```console
   sudo vi /usr/local/tomcat9/conf/tomcat-users.xml
@@ -141,7 +141,7 @@ last_modified_at: 2021-03-25
   <user name="아이디" password="패스워드" roles="admin,manager,manager-gui,manager-script,manager-jmx,manager-status" />
   ```
 
-### 9. 외부접근 허용 설정
+### 외부접근 허용 설정
   - 관리파일을 별도로 생성한다.
 
   ```console

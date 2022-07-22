@@ -17,7 +17,7 @@ last_modified_at: 2022-07-04
   - [블로그](https://velog.io/@seungmoo/Java-Stream-%EB%B3%91%EB%A0%AC-%EC%B2%98%EB%A6%AC-2-%EB%B0%98%EB%B3%B5%EB%AC%B8-vs-%EC%88%9C%EC%B0%A8%EC%8A%A4%ED%8A%B8%EB%A6%BC-vs-%EB%B3%91%EB%A0%AC%EC%8A%A4%ED%8A%B8%EB%A6%BC-IntelliJ-Plugin%EC%9C%BC%EB%A1%9C-%EC%84%B1%EB%8A%A5-%EA%B3%84%EC%82%B0%EB%B9%84%EA%B5%90-%ED%95%98%EA%B8%B0){:target="_blank"}
 
 
-### ``1. 병렬 스트림(Parallel Stream) 이란?``
+### ``병렬 스트림(Parallel Stream) 이란?``
 
 병렬 스트림이란 각각의 스레드에서 처리할 수 있도록 스트림 요소를 여러 청크로 분할한 스트이다. <br>
 병렬 스트림을 이용하면 모든 멀티코어 프로세서가 각각의 청크를 처리하도록 할당할 수 있다. 
@@ -25,7 +25,7 @@ last_modified_at: 2022-07-04
 
 <br>
 
-### ``2. 병렬 스트림의 단점``
+### ``병렬 스트림의 단점``
 
 - 반복 결과로 박싱 된 객체가 만들어 지므로 숫자를 더하려면 언박싱을 해야한다.(단순 for-loop 대비 단점)
 - 반복 작업은 병렬로 수행 할 수 있는 독립 단위로 나누기가 어렵다. (반복 계산 iterate 작업 시, 병렬 Task 단위로 독립적으로 쪼개기가 어렵다.)
@@ -35,7 +35,7 @@ last_modified_at: 2022-07-04
 위 의 문제들 때문에 비용을 상쇄할 만큼의 큰 데이터들에 대해서만 병렬로 수행 하도록 해야한다.
 
 
-### ``3. 샘플코드 ``
+### ``샘플코드 ``
 
 아래 코드는 순차적으로 List 내부의 Map 에서 특정 데이터를 뽑아 String Array 로 return 해주는 내용이다. 
 

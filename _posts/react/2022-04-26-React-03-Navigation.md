@@ -15,7 +15,7 @@ last_modified_at: 2022-04-26
 
 > 모든 소스코드는 [여기](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 확인 가능합니다.
 
-### ``1. React 설치``
+### ``React 설치``
   
   ```console
   cd C:\ymk\toynumber\toyseven-react  # workspace 로 이동
@@ -28,7 +28,7 @@ last_modified_at: 2022-04-26
 
   ``create-react-app toyseven-react`` 명령어 에서 ``toyseven-react`` 는 애플리케이션 폴더이름이며, React 애플리케이션을 만들고 의존 라이브러리를 설치하는 내용이다.
 
-### ``2. React 실행``
+### ``React 실행``
 
   ```console
   cd C:\ymk\toynumber\toyseven-react
@@ -40,7 +40,7 @@ last_modified_at: 2022-04-26
 ![React](/assets/image/react/React_toyseven_react_01.PNG)
 
 
-### ``3. Navigation bar 생성``
+### ``Navigation bar 생성``
 
   ```console
   npm install react-router-dom --save   # 페이지를 이동할 때 필요한 라이브러리

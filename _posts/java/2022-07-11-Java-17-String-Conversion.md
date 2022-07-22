@@ -18,7 +18,7 @@ last_modified_at: 2022-07-11
   - [stack overflow](https://stackoverflow.com/questions/27465731/string-valueof-vs-object-tostring){:target="_blank"}
   - [Okky](https://okky.kr/article/303538){:target="_blank"}
 
-### ``1. Object.toString() 과 String.valueOf(Object) 의 차이``
+### ``Object.toString() 과 String.valueOf(Object) 의 차이``
 
 둘 의 차이점은 Object 가 null 일 경우 NPE 가 발생하는지, 아니면 null 을 리턴하는지 이다.
 
@@ -38,7 +38,7 @@ public static void main(String args[]) {
 
 <br>
 
-### ``2. 뭘 써야 할까?``
+### ``뭘 써야 할까?``
 
 블로그를 검색해보니 NPE 를 방지하는 String.valueOf(Object) 사용을 권한다고 한다. <br>
 

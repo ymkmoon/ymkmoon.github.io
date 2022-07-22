@@ -18,7 +18,7 @@ last_modified_at: 2022-04-29
 - 참고사이트
   - <https://antdev.tistory.com/80>{:target="_blank"}
 
-### ``1. Voc List에 링크 추가``
+### ``Voc List에 링크 추가``
 
 - 목록 페이지에서 Link 를 생성해준다.
 
@@ -81,7 +81,7 @@ function Voc() {
 export default Voc;
 ```
 
-### ``2. Route 설정``
+### ``Route 설정``
 
 - 작성 페이지로 이동 할 수 있도록 Route 설정과 매개변수명을 지정한다.
 
@@ -113,7 +113,7 @@ export default App;
 ```
 
 
-### ``3. 작성 페이지 생성``
+### ``작성 페이지 생성``
 
 🛠 src/pages/voc/VocQuestion.css
 

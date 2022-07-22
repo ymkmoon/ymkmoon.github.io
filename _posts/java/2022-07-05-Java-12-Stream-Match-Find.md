@@ -17,13 +17,13 @@ last_modified_at: 2022-07-05
   - [블로그](https://doohyun.tistory.com/30?category=592214){:target="_blank"}
 
 
-### ``1. Match 이란?``
+### ``Match 이란?``
 
 특정 속성이 데이터 집합에 있는지, 있다면 해당 객체를 추출할 수 있는 다양한 유틸 메소드이다.
 
 <br>
 
-### ``2. Match 사용하기 ``
+### ``Match 사용하기 ``
 
 #### 기존코드
 
@@ -76,7 +76,7 @@ System.out.println("doNotHave : " + doNotHave);
 <br>
 
 
-### ``3. 검색 (findAny, findFirst) 사용하기 ``
+### ``검색 (findAny, findFirst) 사용하기 ``
 
 `filter(), distinct()` 등 중간연산을 수행 한 다음 `findAny(), findFirst()` 등의 최종연산 메소드로 조건에 맞는 요소를 선택 할 수 있다.
 

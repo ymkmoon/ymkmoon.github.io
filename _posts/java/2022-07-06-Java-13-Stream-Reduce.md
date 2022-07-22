@@ -17,13 +17,13 @@ last_modified_at: 2022-07-06
   - [블로그](https://doohyun.tistory.com/35?category=592214){:target="_blank"}
 
 
-### ``1. reduce() 란?``
+### ``reduce() 란?``
 
 Stream의 데이터를 변환하지 않고, 더하거나 빼는 등의 연산을 수행하여 하나의 값으로 만들어주는 메소드
 
 <br>
 
-### ``2. reduce() 사용하기``
+### ``reduce() 사용하기``
 
 #### 기존코드
 

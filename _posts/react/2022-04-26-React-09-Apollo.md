@@ -19,7 +19,7 @@ last_modified_at: 2022-05-03
   - <https://www.apollographql.com/docs/react/api/link/apollo-link-rest/>{:target="_blank"}
 
 
-### ``1. Apollo 설치``
+### ``Apollo 설치``
 
 ```console
 npm install --save @apollo/client apollo-link-rest graphql qs
@@ -30,7 +30,7 @@ Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
 나는 `Apollo GQL` 을 이용해 `React` 에서 `REST API` 에 요청을 넣고 응답을 받고 싶기에, `apollo-link-rest` 의 `RestLink` 를 사용했다.
 
 
-### ``2. 메뉴 생성``
+### ``메뉴 생성``
 
 🛠 /components/Navbar.js
 
@@ -58,7 +58,7 @@ Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
 ```
 
 
-### ``3. Route 설정``
+### ``Route 설정``
 
 - 작성 페이지로 이동 할 수 있도록 Route 설정과 매개변수명을 지정한다.
 
@@ -91,7 +91,7 @@ export default App;
 ```
 
 
-### ``4. Apollo Component 생성``
+### ``Apollo Component 생성``
 
 🛠 pages/apollo/station/ApolloStation.js
 
@@ -157,7 +157,7 @@ export default ApolloStation;
 
 <br>
 
-### ``5. 에러 해결``
+### ``에러 해결``
 
 - Module not found: Error: Can't resolve 'graphql-anywhere/lib/async' 에러 발생 시 아래 문서에 내용을 추가 한다.
 
@@ -200,7 +200,7 @@ node-sass 는 Node 버전에 의존적이니 아래 내용 참고.
 |Node <8|<5.0|<57|
 
 
-### ``6. Axios 와 Apollo GQL 과의 차이점``
+### ``Axios 와 Apollo GQL 과의 차이점``
 
 REST API(요청을 위해서 End point(url)을 가지고 API call을 생성해서 호출) 의 단점을 보완하기 위해 나온게 GraphQL 을 기반으로 한 Apollo Client 라고 한다.
 

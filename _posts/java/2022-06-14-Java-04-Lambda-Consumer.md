@@ -19,7 +19,7 @@ last_modified_at: 2022-06-14
   - [블로그](https://kudl.tistory.com/entry/JAVA-var-%ED%82%A4%EC%9B%8C%EB%93%9C){:target="_blank"}
 
 
-### ``1. Consumer ``
+### ``Consumer ``
 
 ```java
 public static void main(String[] args) {		
@@ -37,7 +37,7 @@ public static void main(String[] args) {
 
 <br>
 
-### ``2. Primitive Consumer``
+### ``Primitive Consumer``
 
 ```java
 public static void main(String[] args) {		
@@ -53,7 +53,7 @@ public static void main(String[] args) {
 
 <br>
 
-### ``3. List.forEach()``
+### ``List.forEach()``
 
 ```java
 public static void main(String[] args) {		
@@ -66,7 +66,7 @@ public static void main(String[] args) {
 
 <br>
 
-### ``4. andThen()``
+### ``andThen()``
 
 ```java
 public static void main(String[] args) {		

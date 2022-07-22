@@ -26,7 +26,7 @@ last_modified_at: 2022-05-25
 <br>
 
 
-### ``1. Amplify 라이브러리 설치``
+### ``Amplify 라이브러리 설치``
 
 특증 버전을 설치하는 이유는 최선 버전에서 ui 이슈가 있기 때문이다. 
 
@@ -38,7 +38,7 @@ npm install aws-amplify-react@^2.5.4 --save
 <br>
 
 
-### ``2. Amplify 설정 파일 생성``
+### ``Amplify 설정 파일 생성``
 
 🛠 src/assets/js/amplifyConfig.js
 
@@ -71,7 +71,7 @@ export default AmplifyConfig;
 <br>
 
 
-### ``3. 회원가입 페이지 생성``
+### ``회원가입 페이지 생성``
 
 🛠 src/pages/SignUp.js
 
@@ -107,7 +107,7 @@ export default SignUp;
 <br>
 
 
-### ``4. 라우트 설정``
+### ``라우트 설정``
 
 🛠 App.js
 
@@ -120,7 +120,7 @@ import SignUp from'./pages/SignUp';
 <br>
 
 
-### ``5. OAuth2 로그인 테스트``
+### ``OAuth2 로그인 테스트``
 
 자세한 Response 값은 브라우저 콘솔에 남기도록 했으니 확인하면 된다.
 
@@ -133,7 +133,7 @@ import SignUp from'./pages/SignUp';
 <br>
 
 
-### ``6. 이메일 인증을 사용한 회원가입 및 로그인 테스트``
+### ``이메일 인증을 사용한 회원가입 및 로그인 테스트``
 
 자세한 Response 값은 브라우저 콘솔에 남기도록 했으니 확인하면 된다.
 

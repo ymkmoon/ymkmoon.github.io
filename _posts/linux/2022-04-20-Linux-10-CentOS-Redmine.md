@@ -18,7 +18,7 @@ last_modified_at: 2021-03-25
 > 레드마인은 오픈 소스 프로그램으로 웹 기반의 프로젝트 관리와 버그 추적 기능을 제공하는 도구이다. 화면기반의 프로젝트 관리에 도움이 되도록 달력과 간트 차트를 제공하고 일정관리 기능을 제공한다. 또한 레드마인은 통합된 프로젝트관리 기능과 이슈추적, 여러가지 형상 관리 기능을 제공한다
 
 
-### 1. Redmine 용 Maria DB 설치
+### Redmine 용 Maria DB 설치
 
   ```console
   sudo yum -y install mariadb-server mariadb  # MariaDB 설치
@@ -53,7 +53,7 @@ last_modified_at: 2021-03-25
   - 마지막으로 privileges table을 reload 할지 물으면 Y를 입력해서 reload 해줍니다.
 
 
-### 2. Redmine 의존성 설치
+### Redmine 의존성 설치
 
   ```console
   sudo yum -y install libxslt-devel libyaml-devel libxml2-devel gdbm-devel libffi-devel pcre-devel git memcached-devel valgrind-devel mysql-devel 
@@ -64,7 +64,7 @@ last_modified_at: 2021-03-25
 
   ```
 
-### 3. Ruby 설치
+### Ruby 설치
   > 아래 페이지에서 권장환경과 호환 버전을 꼭 확인 할 것.<br>
   > https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html <br>
   > https://rubygems.org/gems/rails/versions/6.0.4
@@ -87,7 +87,7 @@ last_modified_at: 2021-03-25
   ruby -v
   ```
 
-### 4. ruby-gems 설치
+### ruby-gems 설치
 
   ```console
   cd /usr/local/download
@@ -99,7 +99,7 @@ last_modified_at: 2021-03-25
   /usr/local/bin/ruby setup.rb
   ```
 
-### 5. bundler, chef ruby-shadow 설치
+### bundler, chef ruby-shadow 설치
   > bundler(번들러)는 Ruby 어플리케이션을 위한 일관된 환경을 관리
 
   ```console
@@ -151,7 +151,7 @@ last_modified_at: 2021-03-25
   gem install mysql2
   ```
 
-### 6. rails 설치
+### rails 설치
   > Ruby 2.6.5 버전을 설치 하였고, Rails 6.0.X 버전의 권장 환경이 Ruby 2.6.X 이기에 6.0.4 버전을 설치한다. <br>
   > https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html <br>
   > https://rubygems.org/gems/rails/versions/6.0.4
@@ -160,7 +160,7 @@ last_modified_at: 2021-03-25
   gem install rails -v 6.0.4
   ```
 
-### 7. Redmine 설치
+### Redmine 설치
 
   ```console
   cd /usr/local/download
@@ -169,7 +169,7 @@ last_modified_at: 2021-03-25
   sudo mv redmine-4.1.0 /usr/local/redmine
   ```
 
-### 8. Redmine DB 연동
+### Redmine DB 연동
 
   ```console
   cd /usr/local/redmine/config
@@ -186,7 +186,7 @@ last_modified_at: 2021-03-25
 
   ```
 
-### 9. 구동에 필요한 패키지 설치
+### 구동에 필요한 패키지 설치
 
   ```console
   bundle install --without development test --path vendor/bundle
@@ -199,7 +199,7 @@ last_modified_at: 2021-03-25
   bundle exec rake redmine:load_default_data RAILS_ENV=production REDMINE_LANG=ko # 기본언어를 한국어로 설정
   ```
 
-### 10. Redmine 실행
+### Redmine 실행
 
   ```console
   sudo firewall-cmd --permanent --zone=public --add-port=3000/tcp # 방화벽 해제
@@ -212,7 +212,7 @@ last_modified_at: 2021-03-25
   > http://[서버ip]:3000 로 Redmine 접속 가능
 
 
-### 11. Apache Passenger 를 사용하여 아파치와 연동
+### Apache Passenger 를 사용하여 아파치와 연동
 
   ```console
   sudo yum -y install httpd libcurl-devel httpd-devel apr-devel apr-util-devel

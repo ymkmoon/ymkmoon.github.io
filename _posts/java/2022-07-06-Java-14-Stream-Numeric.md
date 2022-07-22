@@ -18,14 +18,14 @@ last_modified_at: 2022-07-06
   - [블로그](https://cornswrold.tistory.com/545){:target="_blank"}
 
 
-### ``1. 숫자형 스트림 이란?``
+### ``숫자형 스트림 이란?``
 
 Stream은 숫자들에 대한 스트림을 지원하며 이 기본형 특화 스트림들은 `sum, max, min 등` 자주 사용하는 리듀싱 메소드를 제공한다. <br>
 숫자 스트림을 사용하기 위해서는 map 의 파생 메소드인 `mapToInt, mapToDouble, mapToLong` 등의 메소드를 사용해야 한다.
 
 <br>
 
-### ``2. reduce() 와의 차이``
+### ``reduce() 와의 차이``
 
 메뉴에 있는 음식의 칼로리 합계를 구한다고 했을때 `reduce()` 로 구현하면 아래와 같을 수 있다.
 
@@ -78,7 +78,7 @@ int max = maxCalories.orElse(1);
 
 <br>
 
-### ``3. range() 와 rangeClosed() ``
+### ``range() 와 rangeClosed() ``
 
 JAVA8 에서는 숫자형스트림에서 특정 범위안의 숫자 집합을 출력해주는 정적메소드인 range() 와 rangeClosed() 를 제공한다. 두 메소드 모두 범위에 대한 인수를 받으며, 차이는 시작값과 종료값이 결과에 포함하는 여부이다. (range 의 경우 결과에 포함되지 않음)
 
@@ -104,7 +104,7 @@ flatMap 을 통해 두 숫자 스크림을 엮었다. 첫번째 범위 에서는
 
 <br>
 
-### ``4. 스트림 만들기``
+### ``스트림 만들기``
 
 컬렉션이나 배열은 아래와 같이 데이터를 만들 수 있다.
 
@@ -124,7 +124,7 @@ Stream<String> arrayStream = Arrays.stream(dataArray);
 
 <br>
 
-### ``5. Unbounded Stream (언바운드 스트림)``
+### ``Unbounded Stream (언바운드 스트림)``
 
 고정되지 않은 크기(무한한)의 스트림 만드는 방법은 아래와 같다.
 

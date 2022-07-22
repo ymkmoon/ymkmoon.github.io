@@ -22,7 +22,7 @@ last_modified_at: 2021-03-25
 <br>
 
 
-### 1. VMWare Worksation 시작하기.
+### VMWare Worksation 시작하기.
 ![VMWare](/assets/image/linux/vmware_top.PNG)
   > 빨간 네모 부분을 선택하여 가상환경을 생성합니다.
 
@@ -39,7 +39,7 @@ last_modified_at: 2021-03-25
   
 <br>   
 
-### 2. CentOS 설치하기
+### CentOS 설치하기
 - 위에서 설치한 환경을 더블클릭하고 기다리면 아래의 화면이 나옵니다.
 
 ![VMWare](/assets/image/linux/vmware_Centos_install03.PNG)

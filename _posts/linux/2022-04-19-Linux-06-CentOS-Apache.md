@@ -19,14 +19,14 @@ last_modified_at: 2021-03-25
 <br>
 
 
-### 1. Apache 설치하기
+### Apache 설치하기
   > 필수 툴 설치
 
   ```console
   sudo yum install gcc gcc-c++ expat-devel.x86_64 pcre-devel
   ```
 
-### 2. pcre 다운로드 및 컴파일
+### pcre 다운로드 및 컴파일
   
   ```console
   sudo mkdir /usr/local/download
@@ -40,7 +40,7 @@ last_modified_at: 2021-03-25
   sudo make install
   ```
 
-### 3. apr-util, apr, httpd 다운로드 및 컴파일
+### apr-util, apr, httpd 다운로드 및 컴파일
   - 만약 404가 발생한다면 버전이 변경됐을 경우가 있으니, 아래의 페이지에 접속해서 존재하는 버전으로 변경해준다.
 
   > http://mirror.apache-kr.org/httpd
@@ -67,7 +67,7 @@ last_modified_at: 2021-03-25
   ```
 
 
-### 4. httpd.conf의 ServerName 수정
+### httpd.conf의 ServerName 수정
 
   ```console
   sudo vi /usr/local/apache2/conf/httpd.conf # 파일의 193번째 라인
@@ -77,7 +77,7 @@ last_modified_at: 2021-03-25
   ServerName localhost:80
   ```
 
-### 5. apache 실행 및 확인
+### apache 실행 및 확인
   
   ```console
   cd /usr/local/apache2/bin
@@ -89,7 +89,7 @@ last_modified_at: 2021-03-25
 
 
 
-### 6. apache 테스트
+### apache 테스트
   - 내부작동 테스트
 
     ```console
@@ -130,7 +130,7 @@ last_modified_at: 2021-03-25
     > 외부에서 접근이 되는지 테스트해보려면 브라우저에 IP 또는 도메인을 입력하면 된다. 
 
 
-### 7. httpd service 를 등록 (init.d, systemctl)
+### httpd service 를 등록 (init.d, systemctl)
   아래중 한가지를 선택해서 진행하면 된다.
 
   - /etc/init.d (CentOS 6에서 주로 쓰임)

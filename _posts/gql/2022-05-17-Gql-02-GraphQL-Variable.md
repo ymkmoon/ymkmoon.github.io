@@ -15,7 +15,7 @@ last_modified_at: 2022-05-16
 
 > 모든 소스코드는 [여기](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 확인 가능합니다.
 
-### ``1. GraphQL 에 변수주기``
+### ``GraphQL 에 변수주기``
 
 게시글 목록과 달리 게시글 상세보기를 구현해야 할 때는 쿼리에 사용 할 조건문이 필요하다. React 에서 GQL 에 조건문을 작성해보자.
 
@@ -46,7 +46,7 @@ query getVoc($vocId: Int!) { -- 매개변수로 받는 vocId의 타입을 검증
 
 <br>
 
-### ``2. React 에서 사용하기``
+### ``React 에서 사용하기``
 
 `React` 는 단방향 통신이기 때문에, 상위 컴포넌트에서 쿼리에 사용 될 매겨변수를 받아와야 한다.
 이를 위해선 `Route` 설정시 path variable 로 매개변수명을 설정 해야 한다.

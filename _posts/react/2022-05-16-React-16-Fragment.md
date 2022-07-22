@@ -22,7 +22,7 @@ last_modified_at: 2022-05-16
 
 <br>
 
-### `1. Fragment 란?`
+### `Fragment 란?`
 
 블로그를 찾아보니 모두 아래와 같이 설명하고 있었다.
 
@@ -45,7 +45,7 @@ last_modified_at: 2022-05-16
 
 <br>
 
-### `2. Fragment 사용예시`
+### `Fragment 사용예시`
 
 컴포넌트가 여러 엘리먼트를 반환하는 것은 흔한 패턴이다.
 
@@ -123,7 +123,7 @@ class Columns extends React.Component {
 ```
 
 
-### `3. 단축 문법`
+### `단축 문법`
 
 \<React.Fragment> \</React.Fragment> 대신 빈태그 <> </> 를 이용한다.
 
@@ -140,7 +140,7 @@ class Columns extends React.Component {
 }
 ```
 
-### `4. Fragment key 값 주기`
+### `Fragment key 값 주기`
 
 key 값을 주기 위해서는 빈태그를 사용하면 안되고, Fragment 태그를 직접 명시해줘야 한다.
 

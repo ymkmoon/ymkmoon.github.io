@@ -20,7 +20,7 @@ last_modified_at: 2022-06-14
   - [블로그](https://kdhyo98.tistory.com/40){:target="_blank"}
 
 
-### ``1. Optional 이란? ``
+### ``Optional 이란? ``
 
 A container object which may or may not contain a non-null value. If a value is present, isPresent() will return true and get() will return the value.
 Additional methods that depend on the presence or absence of a contained value are provided, such as orElse() (return a default value if value not present) and ifPresent() (execute a block of code if the value is present).
@@ -36,7 +36,7 @@ NPE(NullPointException)은 대게 런타임중에 발생하기 때문에 예측�
 
 <br>
 
-### ``2. Optional 사용 예시 ``
+### ``Optional 사용 예시 ``
 
 우리는 text 에 뭐가 담겨있는지 알 수 없기 때문에 이 전까지는 직접 null 체크를 했지만,
 Optional 을 사용하면 isPresent() 함수를 이용해 아래와 같이 사용 가능하며, 익숙해지면 코드를 훨씬 클린하게 작성 할 수 있게된다.
@@ -72,7 +72,7 @@ int length = Optional.ofNullable(text).map(String::length).orElse(0);
 
 <br>
 
-### ``3. Optional 의 사용목적 ``
+### ``Optional 의 사용목적 ``
 
 Optional 사용할 때 주의 할 점이 있다.
 <br>
@@ -98,7 +98,7 @@ Optional은 주로 "결과 없음"을 나타낼 필요가 있고 null을 사용�
 
 <br>
 
-### ``4. of 와 ofNullable ``
+### ``of 와 ofNullable ``
 
 객체를 Optional 로 감싸기 위해서는 Optional 에서 제공하는 `of` 와 `ofNullable` 를 사용 해야한다.
 
@@ -123,7 +123,7 @@ Optional ofNullableStr = Optional.ofNullable(str)
 
 <br>
 
-### ``5. orElse 와 orElseGet ``
+### ``orElse 와 orElseGet ``
 
 ```java
 public T orElse(T other)
