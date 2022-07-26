@@ -25,7 +25,9 @@ last_modified_at: 2022-05-13
 
 
 
-#### `1. 커맨드 창에서 rebase 를 사용해 수정모드로 진입한다.`
+#### `커맨드 창에서 rebase 를 사용해 수정모드로 진입한다.`
+
+커맨드 창에서 rebase 를 사용해 수정모드로 진입한다.
 
 ![GIT](/assets/image/git/Git_Commit_Message_01.PNG)
 
@@ -39,7 +41,7 @@ HEAD~{몇번째 전의 commit인지} 입력하면 된다.
 
 <br>
 
-#### `2. pick 을 reword 로 수정한다.`
+#### `pick 을 reword 로 수정한다.`
 
 ![GIT](/assets/image/git/Git_Commit_Message_02.PNG)
 
@@ -56,7 +58,7 @@ reword 는 내용을 그대로 둔 뒤 `커밋메세지` 만을 수정하는 명
 
 <br>
 
-#### `3. commit message 수정`
+#### `commit message 수정`
 
 2번까지 완료 후 화면에서 커밋 메세지를 수정 변경 한 다음 `esc` 를 눌러 편집을 종료하고 `:wq` 를 입력 후 엔터키를 눌러 변경한 commit message 를 저장 및 vi를 종료 한다.
 
@@ -64,7 +66,7 @@ reword 는 내용을 그대로 둔 뒤 `커밋메세지` 만을 수정하는 명
 
 <br>
 
-#### `4. 메세지 덮어씌우기`
+#### `메세지 덮어씌우기`
 
 ![GIT](/assets/image/git/Git_Commit_Message_07.PNG)
 
