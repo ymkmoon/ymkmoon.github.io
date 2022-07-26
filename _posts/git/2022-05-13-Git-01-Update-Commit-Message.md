@@ -39,8 +39,6 @@ git rebase HEAD~1 -i
 만약 더 이전의 내용 수정을 원한다면 `HEAD~2, HEAD~3` 와 같이 
 HEAD~{몇번째 전의 commit인지} 입력하면 된다.
 
-<br>
-
 <hr/>
 
 #### `pick 을 reword 로 수정한다.`
@@ -58,8 +56,6 @@ reword 는 내용을 그대로 둔 뒤 `커밋메세지` 만을 수정하는 명
 
 ![GIT](/assets/image/git/Git_Commit_Message_05.PNG)
 
-<br>
-
 <hr/>
 
 #### `commit message 수정`
@@ -67,8 +63,6 @@ reword 는 내용을 그대로 둔 뒤 `커밋메세지` 만을 수정하는 명
 2번까지 완료 후 화면에서 커밋 메세지를 수정 변경 한 다음 `esc` 를 눌러 편집을 종료하고 `:wq` 를 입력 후 엔터키를 눌러 변경한 commit message 를 저장 및 vi를 종료 한다.
 
 ![GIT](/assets/image/git/Git_Commit_Message_06.PNG)
-
-<br>
 
 <hr/>
 
@@ -83,8 +77,6 @@ git push --force
 ```
 
 git bash 에서 위 명령어를 입력하면 내가 원하던 커밋 메세지가 변경 된 걸 확인 가능하다.
-
-<br>
 
 <hr/>
 
