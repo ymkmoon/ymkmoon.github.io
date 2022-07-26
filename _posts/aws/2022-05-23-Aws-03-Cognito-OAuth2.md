@@ -65,7 +65,7 @@ last_modified_at: 2022-05-23
 
 
 
-<br> 
+<hr/>
 
 
 ### ``사용자 인증정보``
@@ -104,7 +104,7 @@ congnito console 의 도메인 뒤에 Endpoint(/oauth2/idpresponse) 를 추가�
 ![AWS](/assets/image/aws/AWS_Cognito_OAuth2_14.PNG)
 
 
-<br>
+<hr/>
 
 
 ### ``Congito OAuth2 설정``
@@ -124,6 +124,7 @@ Cognito 콘솔에서 `자격 증명 공급자` 탭을 선택합니다. <br>
 ![AWS](/assets/image/aws/AWS_Cognito_OAuth2_16.PNG)
 
 
+<hr/>
 
 ### ``4. 마치며 ``
 

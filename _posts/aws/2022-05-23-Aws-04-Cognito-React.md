@@ -35,8 +35,8 @@ npm install @aws-amplify/ui-react^1.2.5 --save
 npm install aws-amplify --save
 npm install aws-amplify-react@^2.5.4 --save
 ```
-<br>
 
+<hr/>
 
 ### ``Amplify 설정 파일 생성``
 
@@ -68,8 +68,7 @@ export default AmplifyConfig;
 
 ```
 
-<br>
-
+<hr/>
 
 ### ``회원가입 페이지 생성``
 
@@ -104,7 +103,7 @@ function SignUp() {
 export default SignUp;
 ```
 
-<br>
+<hr/>
 
 
 ### ``라우트 설정``
@@ -117,7 +116,7 @@ import SignUp from'./pages/SignUp';
 <Route path='/sign-up' element={<SignUp />}  />
 ```
 
-<br>
+<hr/>
 
 
 ### ``OAuth2 로그인 테스트``
@@ -130,7 +129,7 @@ import SignUp from'./pages/SignUp';
 
 ![COGNITO](/assets/image/aws/AWS_Cognito_React_03.PNG)
 
-<br>
+<hr/>
 
 
 ### ``이메일 인증을 사용한 회원가입 및 로그인 테스트``
