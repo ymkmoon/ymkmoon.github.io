@@ -16,7 +16,7 @@ last_modified_at: 2022-04-29
 > 모든 소스코드는 [여기](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 확인 가능합니다.
 
 - 참고사이트
-  - <https://antdev.tistory.com/80>{:target="_blank"}
+  - [블로그](https://antdev.tistory.com/80){:target="_blank"}
 
 ### ``Voc List에 링크 추가``
 

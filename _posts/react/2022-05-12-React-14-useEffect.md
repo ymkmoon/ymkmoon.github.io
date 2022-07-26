@@ -16,10 +16,10 @@ last_modified_at: 2022-05-12
 ### ``React useEffect``
 
 - 참고사이트
-  - <https://ko.reactjs.org/docs/hooks-overview.html>{:target="_blank"}
-  - <https://cocoon1787.tistory.com/796>{:target="_blank"}
-  - <https://ingg.dev/hook-work/>{:target="_blank"}
-  - <https://devbirdfeet.tistory.com/52>{:target="_blank"}
+  - [React DOCS](https://ko.reactjs.org/docs/hooks-overview.html){:target="_blank"}
+  - [블로그](https://cocoon1787.tistory.com/796){:target="_blank"}
+  - [블로그](https://ingg.dev/hook-work/){:target="_blank"}
+  - [블로그](https://devbirdfeet.tistory.com/52){:target="_blank"}
 
 <br>
 

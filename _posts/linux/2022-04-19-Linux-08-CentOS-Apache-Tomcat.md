@@ -17,8 +17,8 @@ last_modified_at: 2021-03-25
 - Apache 와 Tomcat 연동
 
 - 참고사이트
-  - <https://velog.io/@nari120/2-tier-WEB-Apach2.4-Tomcat8-%EC%97%B0%EB%8F%99>{:target="_blank"}
-  - <https://hoing.io/archives/178>{:target="_blank"}
+  - [블로그](https://velog.io/@nari120/2-tier-WEB-Apach2.4-Tomcat8-%EC%97%B0%EB%8F%99){:target="_blank"}
+  - [블로그](https://hoing.io/archives/178){:target="_blank"}
 
 <br>
 

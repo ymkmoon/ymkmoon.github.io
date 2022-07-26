@@ -16,7 +16,8 @@ last_modified_at: 2022-05-03
 > 모든 소스코드는 [여기](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 확인 가능합니다.
 
 - 참고사이트
-  - <https://www.apollographql.com/docs/react/api/link/apollo-link-rest/>{:target="_blank"}
+  - [APOLLO DOCS](https://www.apollographql.com/docs/react/api/link/apollo-link-rest/){:target="_blank"}
+  
 
 
 ### ``Route 설정``
