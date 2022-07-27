@@ -9,8 +9,8 @@ toc: true
 toc_sticky: true
 toc_label: "[CentOS7 #11 Jenkins Deploy]"
  
-date: 2021-03-25
-last_modified_at: 2021-03-25
+date: 2022-04-21
+last_modified_at: 2022-04-21
 ---
 
 ## Jenkins를 통한 프로젝트 배포

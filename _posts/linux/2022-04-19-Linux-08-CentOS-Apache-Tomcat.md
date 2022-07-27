@@ -9,8 +9,8 @@ toc: true
 toc_sticky: true
 toc_label: "[CentOS7 #6 Apache Tomcat]"
  
-date: 2021-03-25
-last_modified_at: 2021-03-25
+date: 2022-04-19
+last_modified_at: 2022-04-19
 ---
 
 ## CentOS7 에 Apache와 Tomcat 연동하기

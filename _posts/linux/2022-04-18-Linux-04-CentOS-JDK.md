@@ -9,8 +9,8 @@ toc: true
 toc_sticky: true
 toc_label: "[CentOS7 #2 JDK]"
  
-date: 2021-03-25
-last_modified_at: 2021-03-25
+date: 2022-04-18
+last_modified_at: 2022-04-18
 ---
 
 ## CentOS7 에 Java 설치하기
