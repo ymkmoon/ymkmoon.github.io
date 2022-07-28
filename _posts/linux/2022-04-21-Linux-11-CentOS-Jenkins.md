@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Jenkins 설치"
 excerpt: "리눅스 환경에 Jenkins 설치하기"
 
 tags:
-  - [CentOS7, Jenkins]
+  - [CentOS7, Linux, Jenkins]
 
 toc: true
 toc_sticky: true

@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 SSH 설정"
 excerpt: "리눅스 환경에 SSH 설정하기"
 
 tags:
-  - [CentOS7, SSH]
+  - [CentOS7, Linux, SSH]
 
 toc: true
 toc_sticky: true
