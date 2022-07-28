@@ -37,6 +37,11 @@ last_modified_at: 2022-04-21
   -> JENKINS_HTTPS_PORT="8089"
   ```
 
+  위 내용으로 변경이 되지 않는다면 해당 설정보다 우선되는 설정을 변경해야 한다. <br>
+  아래 파일에서 Environment의 JENKINS_PORT 번호를 변경하자. <br>
+
+  /usr/lib/systemd/system/jenkins.service
+
 ### 방화벽 설정
 
   ```console
