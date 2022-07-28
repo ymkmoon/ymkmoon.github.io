@@ -20,7 +20,7 @@ last_modified_at: 2022-07-07
 
 String 과 StringBuffer, StringBuilder 와의 차이점은 `불변성` 이다. <br>
 
-<hr/>
+<br>
 
 ### ``StringBuffer vs StringBuilder``
 
@@ -30,7 +30,8 @@ String 과 StringBuffer, StringBuilder 와의 차이점은 `불변성` 이다. <
 
 `StringBuilder` 는 동기화를 지원하지 않기 때문에 멀티쓰레드 환경에서의 사용은 적합하지 않지만, 단일쓰레드에서의 성능은 StringBuffer 보다 뛰어나다. 
 
-<hr/>
+<br>
+
 
 ### ``그럼 뭘 써야할까?``
 

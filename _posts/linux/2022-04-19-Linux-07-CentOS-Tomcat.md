@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Tomcat 설치"
 excerpt: "리눅스 환경에 Tomcat 설치하기"
 
 tags:
-  - [CentOS7, Linux]
+  - [CentOS7]
 
 toc: true
 toc_sticky: true
@@ -16,7 +16,8 @@ last_modified_at: 2022-04-19
 ## CentOS7 에 Tomcat 설치하기
 - Tomcat 을 설치 후 apache 와 연동을 진행합니다.
 
-<hr/>
+<br>
+
 
 ### Tomcat 설치하기
   > https://tomcat.apache.org/ 에서 원하는 버젼의 tar.gz 링크주소 복사 후 작성 
@@ -26,8 +27,6 @@ last_modified_at: 2022-04-19
   sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz --no-check-certificate
   ```
 
-<hr/>
-
 ### 압축 해제 및 폴더 이동
 
   ```console
@@ -35,8 +34,6 @@ last_modified_at: 2022-04-19
   sudo tar xvfz apache-tomcat-9.0.62.tar.gz
   sudo mv apache-tomcat-9.0.62 /usr/local/tomcat9
   ```
-
-<hr/>
 
 ### Tomcat 설정
 

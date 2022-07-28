@@ -53,7 +53,6 @@ function App() {
 export default App;
 ```
 
-<hr/>
 
 ### ``Component 생성``
 

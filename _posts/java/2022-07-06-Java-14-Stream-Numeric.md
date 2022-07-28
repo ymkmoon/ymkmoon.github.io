@@ -23,7 +23,7 @@ last_modified_at: 2022-07-06
 Stream은 숫자들에 대한 스트림을 지원하며 이 기본형 특화 스트림들은 `sum, max, min 등` 자주 사용하는 리듀싱 메소드를 제공한다. <br>
 숫자 스트림을 사용하기 위해서는 map 의 파생 메소드인 `mapToInt, mapToDouble, mapToLong` 등의 메소드를 사용해야 한다.
 
-<hr/>
+<br>
 
 ### ``reduce() 와의 차이``
 
@@ -76,7 +76,7 @@ OptionalInt maxCalories = menu.stream().mapToInt(Dish::getCalories).max();
 int max = maxCalories.orElse(1);
 ```
 
-<hr/>
+<br>
 
 ### ``range() 와 rangeClosed() ``
 
@@ -102,7 +102,7 @@ IntStream.rangeClosed(1, 100)
 
 flatMap 을 통해 두 숫자 스크림을 엮었다. 첫번째 범위 에서는 Stream 연산의 결과를 객체로 받기 위해 `boxed 메소드`를 사용했는데, boxed() 를 사용하지 않으면 `IntStream` 은 오직 중간연산 결과로 숫자 타입의 스트림만 생성 가능하기 때문이다.
 
-<hr/>
+<br>
 
 ### ``스트림 만들기``
 
@@ -122,7 +122,7 @@ Stream<String> ofStream = Stream.of("남두현", "윤석진", "성지윤",�
 Stream<String> arrayStream = Arrays.stream(dataArray);
 ```
 
-<hr/>
+<br>
 
 ### ``Unbounded Stream (언바운드 스트림)``
 

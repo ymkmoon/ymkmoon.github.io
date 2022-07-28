@@ -34,7 +34,7 @@ This is a value-based class; use of identity-sensitive operations (including ref
 
 NPE(NullPointException)은 대게 런타임중에 발생하기 때문에 예측하기 까다롭기 마련인데, Optional 을 사용하면 좀 더 클린하게 코드를 작성 할 수 있고 직접 NPE 를 유발 할 수 있는 null 을 다루지 않아도 된다.
 
-<hr/>
+<br>
 
 ### ``Optional 사용 예시 ``
 
@@ -70,7 +70,7 @@ String text = getText();
 int length = Optional.ofNullable(text).map(String::length).orElse(0);
 ```
 
-<hr/>
+<br>
 
 ### ``Optional 의 사용목적 ``
 
@@ -96,7 +96,7 @@ Optional은 주로 "결과 없음"을 나타낼 필요가 있고 null을 사용�
 - Optional을 컬렉션의 원소로 사용 금지
 - of() 와 ofNullable() 차이점 파악
 
-<hr/>
+<br>
 
 ### ``of 와 ofNullable ``
 
@@ -121,7 +121,7 @@ Optional ofNullableStr = Optional.ofNullable(str)
 
 위와 같이 사용하면 보다 직관적인 예외를 확인 할 수 있고, 응답할 때 커스텀 된 에러메세지를 응답하기 수월해진다.
 
-<hr/>
+<br>
 
 ### ``orElse 와 orElseGet ``
 
@@ -150,7 +150,7 @@ public T orElseGet(Supplier<? extends T> other) {
 
 > `Supplier` 은 함수적 인터페이스로 get 을 호출하여 결과를 리턴하는 역할을 한다.
 
-<hr/>
+<br>
 
 #### orElse()
 
@@ -180,7 +180,7 @@ name : baeldung
 
 결국, `orElse()` 메소드 인수를 할당하기 위해 getRandomName() 메소드가 실행된 후 해당 결과 값을 `orElse()` 메소드 인수로 할당하기 때문에 Optional의 값과 상관 없이 메소드가 실행되게 되는 것이다.
 
-<hr/>
+<br>
 
 #### orElseGet()
 
@@ -208,7 +208,7 @@ name : baeldung
 
 그 이유는 `인수로 전달 된 Supplier 메소드 경우 Optional의 값이 없을 때만 get()을 통해 실행되기 때문` 이다.
 
-<hr/>
+<br>
 
 #### 결론
 

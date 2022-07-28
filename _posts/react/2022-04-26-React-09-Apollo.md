@@ -29,7 +29,6 @@ Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
 하지만, Query 를 이용해도 별도의 설정을 해주지 않으면 Method 의 Default 값이 Post 로 넘어가는 걸 확인했다. <br>
 나는 `Apollo GQL` 을 이용해 `React` 에서 `REST API` 에 요청을 넣고 응답을 받고 싶기에, `apollo-link-rest` 의 `RestLink` 를 사용했다.
 
-<hr/>
 
 ### ``메뉴 생성``
 
@@ -58,7 +57,6 @@ Apollo Query 가 Restful API의 Get Method 역할을 한다고 한다. <br>
   }
 ```
 
-<hr/>
 
 ### ``Route 설정``
 
@@ -92,7 +90,6 @@ function App() {
 export default App;
 ```
 
-<hr/>
 
 ### ``Apollo Component 생성``
 
@@ -158,7 +155,7 @@ export default ApolloStation;
 
 ![React](/assets/image/react/React_toyseven_react_10.PNG)
 
-<hr/>
+<br>
 
 ### ``에러 해결``
 
@@ -202,7 +199,6 @@ node-sass 는 Node 버전에 의존적이니 아래 내용 참고.
 |Node 8|4.5.3+, <5.0|57|
 |Node <8|<5.0|<57|
 
-<hr/>
 
 ### ``Axios 와 Apollo GQL 과의 차이점``
 

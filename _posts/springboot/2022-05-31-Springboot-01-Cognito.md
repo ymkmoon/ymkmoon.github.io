@@ -38,7 +38,7 @@ implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-ser
 implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.5.2'
 ```
 
-<hr/>
+<br>
 
 
 ### ``Exclude Url 설정``
@@ -69,7 +69,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
 ```
 
-<hr/>
+<br>
 
 
 ### ``Security 설정``
@@ -175,7 +175,7 @@ public class SecurityConfig {
 ```
 
 
-<hr/>
+<br>
 
 
 ### ``OAuth2 Resources server 정보 설정``
@@ -192,7 +192,7 @@ spring:
           client-id: xxxxxxxxxxxxxxxxxx
 ```
 
-<hr/>
+<br>
 
 
 ### ``컨트롤러 생성``
@@ -209,7 +209,7 @@ public class CognitoController {
 }
 ```
 
-<hr/>
+<br>
 
 
 ### ``테스트``
@@ -223,7 +223,7 @@ Cognito 에서 발급받은 access token 이 필요하다면 [여기](https://gi
 ![COGNITO](/assets/image/springboot/Springboot_cognito_02.PNG)
 
 
-<hr/>
+<br>
 
 
 ### ``마치며``

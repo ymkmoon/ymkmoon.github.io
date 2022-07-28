@@ -37,7 +37,6 @@ const item = (Object.values(data)).map((voc) => (
 ));
 ```
 
-<hr/>
 
 ### ``Route 설정``
 
@@ -73,7 +72,6 @@ function App() {
 export default App;
 ```
 
-<hr/>
 
 ### ``상세보기 페이지 생성``
 

@@ -38,7 +38,7 @@ StrictMode 의 장점
 - 레거시 context API 검사
 
 
-<hr/>
+<br>
 
 
 #### `StrictMode 끄는 방법`

@@ -81,8 +81,6 @@ function Voc() {
 export default Voc;
 ```
 
-<hr/>
-
 ### ``Route 설정``
 
 - 작성 페이지로 이동 할 수 있도록 Route 설정과 매개변수명을 지정한다.
@@ -114,7 +112,6 @@ function App() {
 export default App;
 ```
 
-<hr/>
 
 ### ``작성 페이지 생성``
 

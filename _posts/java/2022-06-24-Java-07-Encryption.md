@@ -29,7 +29,8 @@ last_modified_at: 2022-06-24
 DIGEST ALGORITHMS: [MD2, MD5, SHA, SHA-256, SHA-384, SHA-512] <br>
 PBE ALGORITHMS: [PBEWITHMD5ANDDES, PBEWITHMD5ANDTRIPLEDES, PBEWITHSHA1ANDDESEDE, PBEWITHSHA1ANDRC2_40
 
-<hr/>
+
+<br>
 
 ### ``암호란? ``
 
@@ -47,7 +48,8 @@ ex) 평문("123456") → 암호화 → 암호문("aBD#fefa$fae!")
 `복호화(Decryption)` : 암호문을 평문으로 변환하는 과정 <br>
 ex) 암호문("aBD#fefa$fae!!") → 복호화 → 평문("123456")
 
-<hr/>
+
+<br>
 
 ### ``암호화의 종류 ``
 
@@ -61,7 +63,7 @@ ex) 사용자 비밀번호 - 사용자가 입력한 비밀번호를 암호화 �
 - 참고사이트
   - [유튜브](https://www.youtube.com/watch?v=TeIVhioUAXs){:target="_blank"}
 
-<hr/>
+<br>
 
 #### `양방향 암호화`
 
@@ -88,7 +90,7 @@ ex) 사용자 주소, 이메일, 번호 또는 전자서명 같이 재사용성�
 - 참고사이트 
   - [유튜브](https://www.youtube.com/watch?v=Qc1OqFv8b5Y){:target="_blank"}
 
-<hr/>
+<br>
 
 ### ``암호 알고리즘 ``
 

@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Redmine 설치"
 excerpt: "리눅스 환경에 Redmin 설치하기"
 
 tags:
-  - [CentOS7, Linux, Redmine]
+  - [CentOS7, Redmine]
 
 toc: true
 toc_sticky: true
@@ -52,7 +52,6 @@ last_modified_at: 2022-04-20
 
   - 마지막으로 privileges table을 reload 할지 물으면 Y를 입력해서 reload 해줍니다.
 
-<hr/>
 
 ### Redmine 의존성 설치
 
@@ -64,8 +63,6 @@ last_modified_at: 2022-04-20
   sudo yum -y install ImageMagick ImageMagick-devel
 
   ```
-
-<hr/>
 
 ### Ruby 설치
   > 아래 페이지에서 권장환경과 호환 버전을 꼭 확인 할 것.<br>
@@ -90,8 +87,6 @@ last_modified_at: 2022-04-20
   ruby -v
   ```
 
-<hr/>
-
 ### ruby-gems 설치
 
   ```console
@@ -103,8 +98,6 @@ last_modified_at: 2022-04-20
 
   /usr/local/bin/ruby setup.rb
   ```
-
-<hr/>
 
 ### bundler, chef ruby-shadow 설치
   > bundler(번들러)는 Ruby 어플리케이션을 위한 일관된 환경을 관리
@@ -158,8 +151,6 @@ last_modified_at: 2022-04-20
   gem install mysql2
   ```
 
-<hr/>
-
 ### rails 설치
   > Ruby 2.6.5 버전을 설치 하였고, Rails 6.0.X 버전의 권장 환경이 Ruby 2.6.X 이기에 6.0.4 버전을 설치한다. <br>
   > https://www.fastruby.io/blog/ruby/rails/versions/compatibility-table.html <br>
@@ -169,8 +160,6 @@ last_modified_at: 2022-04-20
   gem install rails -v 6.0.4
   ```
 
-<hr/>
-
 ### Redmine 설치
 
   ```console
@@ -179,8 +168,6 @@ last_modified_at: 2022-04-20
   sudo tar xvfz redmine-4.1.0.tar.gz
   sudo mv redmine-4.1.0 /usr/local/redmine
   ```
-
-<hr/>
 
 ### Redmine DB 연동
 
@@ -199,8 +186,6 @@ last_modified_at: 2022-04-20
 
   ```
 
-<hr/>
-
 ### 구동에 필요한 패키지 설치
 
   ```console
@@ -214,8 +199,6 @@ last_modified_at: 2022-04-20
   bundle exec rake redmine:load_default_data RAILS_ENV=production REDMINE_LANG=ko # 기본언어를 한국어로 설정
   ```
 
-<hr/>
-
 ### Redmine 실행
 
   ```console
@@ -228,7 +211,6 @@ last_modified_at: 2022-04-20
 
   > http://[서버ip]:3000 로 Redmine 접속 가능
 
-<hr/>
 
 ### Apache Passenger 를 사용하여 아파치와 연동
 
