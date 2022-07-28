@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Java 설치"
 excerpt: "리눅스 환경에 Java 설치하기"
 
 tags:
-  - [CentOS7]
+  - [CentOS7, Linux]
 
 toc: true
 toc_sticky: true
@@ -30,7 +30,7 @@ last_modified_at: 2022-04-18
   sudo yum install wget
   ```
 
-<br>
+<hr/>
 
 ### 환경변수 등록하기
 - /usr/bin/java 경로에 심볼릭링크가 걸려있기 때문에 실제 경로를 찾아서 환경변수에 등록해주어야 한다.
@@ -58,6 +58,7 @@ last_modified_at: 2022-04-18
   source /etc/profile
   ```
 
+<hr/>
 
 ### 환경변수 확인하기
   
@@ -66,6 +67,8 @@ last_modified_at: 2022-04-18
   echo $PATH
   echo $CLASSPATH
   ```
+
+<hr/>
 
 ### 컴파일 테스트
 - jvm 이 정상적으로 작동하는지 간단한 class 를 생성하여 실행해보자.

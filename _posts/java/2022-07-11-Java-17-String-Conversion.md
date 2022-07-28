@@ -33,10 +33,7 @@ public static void main(String args[]) {
 } 
 ```
 
-
-
-
-<br>
+<hr/>
 
 ### ``뭘 써야 할까?``
 

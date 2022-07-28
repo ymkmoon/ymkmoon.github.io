@@ -3,7 +3,7 @@ title:  "[Linux] 가상머신에 리눅스 환경 구축하기"
 excerpt: "가상머신에 CentOS7 설치"
 
 tags:
-  - [CentOS7]
+  - [CentOS7, Linux]
 
 toc: true
 toc_sticky: true
@@ -19,8 +19,8 @@ last_modified_at: 2021-03-25
 - VMWare에 CentOS7 환경을 만들기 위해서는 ISO 파일이 필요하다.   
 위 링크에서 CentOS7 의 ISO 파일을 다운받자.
 - 작성자는 x86_64 선택 후 `CentOS-7-x86_64-DVD-2009.iso` 파일 설치
-<br>
 
+<hr/>
 
 ### VMWare Worksation 시작하기.
 ![VMWare](/assets/image/linux/vmware_top.PNG)
@@ -36,8 +36,7 @@ last_modified_at: 2021-03-25
 
 - 위 작업이 끝나면 VMWare Workstation 에 방금 설치한 CentOS 환경이 생성됩니다.
 
-  
-<br>   
+<hr/>
 
 ### CentOS 설치하기
 - 위에서 설치한 환경을 더블클릭하고 기다리면 아래의 화면이 나옵니다.

@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Apache와 Tomcat 연동"
 excerpt: "리눅스 환경에 Apache와 Tomcat 연동하기"
 
 tags:
-  - [CentOS7]
+  - [CentOS7, Linux]
 
 toc: true
 toc_sticky: true
@@ -38,6 +38,8 @@ last_modified_at: 2022-04-19
   perl -v 
   ```
 
+<hr/>
+
 ### 커넥터 다운로드
   
   ```console
@@ -59,7 +61,8 @@ last_modified_at: 2022-04-19
 ![CentOS7](/assets/image/linux/Centos_connect_apache_tomcat_01.PNG)
 
 잘 설치 되었다면, 위 처럼 mod_jk.so 이 확인 가능하다
-<br><br>
+
+<hr/>
 
 ### 연동 설정
 
@@ -144,6 +147,8 @@ last_modified_at: 2022-04-19
       /*.ico=worker1
       ```
 
+<hr/>
+
 ### Was 설정
 
   ```console
@@ -166,6 +171,8 @@ last_modified_at: 2022-04-19
   enableLookups="false" acceptCount="100" redirectPort="8443"
   connectionTimeout="20000" disableUploadTimeout="true" protocol="AJP/1.3" />
   ```
+
+<hr/>
 
 ### 연동 확인
   > Apache와 Tomcat을 재시작 해준다.

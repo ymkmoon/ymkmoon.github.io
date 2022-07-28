@@ -24,9 +24,7 @@ last_modified_at: 2022-07-18
 서버에 데이터를 보내기 전, 데이터 유효성 검사 등을 처리하는 스크립트 언어이다. <br>
 1995년 넷스케이프(Netscape)의 Brendan Eich에 의해 개발된 언어이고, Mocha -> LiveScript -> JavaScript의 네이밍 변천사를 갖고있다. 그리고 사실 우리가 알던 자바스크립트는 ECMAScript + BOM(Browser Object Model) + DOM(Document Object Model)라는 1개의 코어와 2개의 모델로 이루어져있다.
 
-<br>
-
-
+<hr/>
 
 ### ``ECMAScript 란 ``
 
@@ -35,9 +33,7 @@ last_modified_at: 2022-07-18
 `Ecma intenational 은 정보와 통신 시스템을 위한 국제적 표준화 기구`이다. <br>
 원래 이름은 European Computer Manufacturers Association 이었으나, 기구의 국제적 확장을 반영하여 현재의 이름으로 바뀌었다
 
-<br>
-
-
+<hr/>
 
 ### ``ECMAScript 의 히스토리 ``
 
@@ -49,7 +45,8 @@ last_modified_at: 2022-07-18
 우리가 익히 알고있는 자바스크립트의 기본적인 특징들을 갖고있다. <br>
 대부분의 브라우저에서 지원하며, 
 IE8까지 크로스브라우징을 지원하는 환경이라면 ES3을 쓰고 있다고 보면 된다.
-<br>
+
+<hr/>
 
 
 #### ES5 (2009)
@@ -71,7 +68,7 @@ Strict mode - JavaScript | MDN에서 자세한 특징을 확인 할 수 있다.
 bind() 메소드 this를 강제로 바인딩 시켜주는 메소드이다. 
 좀 더 명확하게 this 스코프를 지정 할 수 있게 되었다.
 
-<br>
+<hr/>
 
 
 #### ES6 (ES2015)
@@ -93,16 +90,13 @@ Node.js 위에서 돌아가고… Node.js를 설치하려면 NPM을 알아야하
 또 모듈화를 사용하려면 웹팩(WebPack)같은 모듈 번들러를 알아야하고…
 이런 다양한 장벽 때문에 사람들이 ES2015를 쉽게 접근하지 못하는 경향이 있는 것 같다. 
 
-<br>
-
-
+<hr/>
 
 #### ES7 (ES2016)
 제곱 연산자(**) 등장 <br>
 Array.includes 배열에 해당 요소가 존재하는지 확인하는 메소드 등장
-<br>
 
-
+<hr/>
 
 #### ES8 (ES2017)
 ES2017에서는 Promise 급의 중대한 변화인 async, await등이 발표되었다. <br>
@@ -117,8 +111,8 @@ Object.getOwnPropertyDescriptor의
 문자열 앞부분에 공백을 넣어 자리수를 맞춰주는 String.padStart(), 
 문자열 뒷부분에 공백을 넣어 자리수를 맞춰주는 String.padEnd()  <br>
 매개변수 마지막에 콤마를 붙이는걸 허용
-<br>
 
+<hr/>
 
 #### ES 2018
 체 리터럴, 비동기 반복 Promise.prototype.finally및 RegExp에 대한 추가를 위한 스프레드 연산자 및 나머지 매개변수( )가 포함 <br>
@@ -133,18 +127,15 @@ let objectClone = {...object} // ES2018 syntax
 let otherObject = {c: 3, ...object}
 console.log(otherObject) // -> {c: 3, a: 1, b: 2}
 ```
-<br>
 
-
+<hr/>
 
 #### ES 2019
 Array.prototype.flat에 Array.prototype.flatMap대한 변경 사항 이 포함 <br>
 Array.sort는 이제 안정적으로 보장된다. 즉, 정렬 우선 순위가 동일한 요소가 정렬된 배열에서 동일한 순서로 나타남. <br>
 다른 주목할만한 변화는 소위 `catch 바인딩 이 선택 사항이 된 것`
 
-<br>
-
-
+<hr/>
 
 #### ES 2020
 BigInt은 임의 크기의 정수에 대한 기본 유형, [nullish coalescing operator](https://en.wikipedia.org/wiki/Null_coalescing_operator){:target="_blank"} 및 [globalThis object](https://en.wikipedia.org/wiki/JavaScript_syntax#Declaration_and_assignment){:target="_blank"}
@@ -164,4 +155,3 @@ NaN ?? "string" // -> NaN
 `Optional chaining`을 사용하면 각 수준에서 AND 검사 없이 개체의 중첩 속성에 액세스할 수 있다. <br>
 예를 들어 const zipcode = person?.address?.zipcode 속성이 없는 경우 zipcode가 정의되지 않는ㄴ다.
 
-<br>

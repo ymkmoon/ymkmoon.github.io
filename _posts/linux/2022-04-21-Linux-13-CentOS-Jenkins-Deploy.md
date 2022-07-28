@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Jenkins Git Repo 배포"
 excerpt: "Jenkins 에 Gitgub Repository 배포하기"
 
 tags:
-  - [CentOS7, Jenkins, Git]
+  - [CentOS7, Linux, Jenkins, Git]
 
 toc: true
 toc_sticky: true
@@ -45,8 +45,7 @@ bootRun {
   > 사이드메뉴에서 ***[Jenkins 관리]*** -> ***[플러그인 관리]*** 선택 <br>
   > 플러그인에서 ***[Post build task]*** 를 검색하여 설치 합니다.
 
-<br>
-<br>
+<hr/>
 
 ### Global Tool 설정
 
@@ -79,8 +78,7 @@ bootRun {
 
   > 마지막으로 save 를 눌러 저장
 
-<br>
-<br>
+<hr/>
 
 ### 프로젝트 등록
 
@@ -144,7 +142,7 @@ bootRun {
   > Run script only if all previous steps were successful : 체크 <br>
 
 
-<br><br>
+<hr/>
 
 ### 빌드 및 배포
 

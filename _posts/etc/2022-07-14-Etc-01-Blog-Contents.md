@@ -45,14 +45,14 @@ last_modified_at: 2022-07-14
 
 - [Static 은 지양해야 하나?](https://ymkmoon.github.io/Java-15-Static/){:target="_blank"}
 
-<br>
+<hr/>
 
 ## Javascript
 
 - [Ecmascript](https://ymkmoon.github.io/Javascript-01-Ecma-Script/){:target="_blank"}
 - [ES6 ~ ES8](https://ymkmoon.github.io/Javascript-02-Ecma-Script-After-6/){:target="_blank"}
 
-<br>
+<hr/>
 
 ## AWS
 
@@ -62,7 +62,7 @@ last_modified_at: 2022-07-14
 - [AWS Cognito React 에서 사용하기](https://ymkmoon.github.io/Aws-04-Cognito-React/){:target="_blank"}
 - [AWS Cognito SpringBoot(API) 에서 사용하기](https://ymkmoon.github.io/Springboot-01-Cognito/){:target="_blank"}
 
-<br>
+<hr/>
 
 ## Linux
 
@@ -77,7 +77,7 @@ last_modified_at: 2022-07-14
 - [CentOS7 Jenkins](https://ymkmoon.github.io/Linux-11-CentOS-Jenkins/){:target="_blank"}
 - [CentOS7 Jenkins Git 배포](https://ymkmoon.github.io/Linux-13-CentOS-Jenkins-Deploy/){:target="_blank"}
 
-<br>
+<hr/>
 
 ## React
 
@@ -91,23 +91,23 @@ last_modified_at: 2022-07-14
 - [React Hooks - useEffect()](https://ymkmoon.github.io/React-14-useEffect/){:target="_blank"}
 - [React StrictMode - useEffect 한번만 호출하기](https://ymkmoon.github.io/React-15-Strict-Mode/){:target="_blank"}
 
-<br>
+<hr/>
 
 ## Database
 
 - [DB Modeling](https://ymkmoon.github.io/DB-01-Modeling/){:target="_blank"}
 
-<br>
+<hr/>
 
 ## Git
 
 - [커밋 메세지 수정하기](https://ymkmoon.github.io/Git-01-Update-Commit-Message/){:target="_blank"}
 - [자주쓰는 약어 모음](https://ymkmoon.github.io/Git-02-Abbreviation/){:target="_blank"}
 
-<br>
+<hr/>
 
 ## SVN
 
 - [SVN 설치하기](https://ymkmoon.github.io/Svn-01-Svn/){:target="_blank"}
 
-<br>
+<hr/>

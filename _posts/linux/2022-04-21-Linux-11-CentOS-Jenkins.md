@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Jenkins 설치"
 excerpt: "리눅스 환경에 Jenkins 설치하기"
 
 tags:
-  - [CentOS7, Jenkins]
+  - [CentOS7, Linux, Jenkins]
 
 toc: true
 toc_sticky: true
@@ -18,6 +18,7 @@ last_modified_at: 2022-04-21
 > 젠킨스는 소프트웨어 개발 시 지속적 통합 서비스를 제공하는 툴이다. <br>
  다수의 개발자들이 하나의 프로그램을 개발할 때 버전 충돌을 방지하기 위해 각자 작업한 내용을 공유 영역에 있는 Git등의 저장소에 빈번히 업로드함으로써 지속적 통합이 가능하도록 해 준다.
 
+<hr/>
 
 ### Jenkins 설치
 
@@ -26,6 +27,8 @@ last_modified_at: 2022-04-21
   sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
   sudo yum install jenkins
   ```
+
+<hr/>
 
 ### 포트 변경
 
@@ -42,12 +45,16 @@ last_modified_at: 2022-04-21
 
   /usr/lib/systemd/system/jenkins.service
 
+<hr/>
+
 ### 방화벽 설정
 
   ```console
   sudo firewall-cmd --permanent --add-port=8089/tcp
   sudo firewall-cmd --reload
   ```
+
+<hr/>
 
 ### 실행 및 테스트
 

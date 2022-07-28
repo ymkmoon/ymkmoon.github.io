@@ -35,7 +35,7 @@ public static void main(String[] args) {
 
 위 코드에서 testString 타입을 var 로 사용 한 이유는 @NotBlank 어노테이션을 사용 하기 위해서이다.
 
-<br>
+<hr/>
 
 ### ``Primitive Consumer``
 
@@ -51,7 +51,7 @@ public static void main(String[] args) {
 }
 ```
 
-<br>
+<hr/>
 
 ### ``List.forEach()``
 
@@ -64,7 +64,7 @@ public static void main(String[] args) {
 }
 ```
 
-<br>
+<hr/>
 
 ### ``andThen()``
 
@@ -98,4 +98,4 @@ public interface Consumer<T> {
   }
 }
 ```
-<br>
+

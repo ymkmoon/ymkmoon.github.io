@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Apache 설치"
 excerpt: "리눅스 환경에 Apche 설치하기"
 
 tags:
-  - [CentOS7]
+  - [CentOS7, Linux]
 
 toc: true
 toc_sticky: true
@@ -16,7 +16,7 @@ last_modified_at: 2022-04-19
 ## CentOS7 에 Apache 설치하기
 - Apache 를 설치 후 tomcat 과 연동을 진행합니다.
 
-<br>
+<hr/>
 
 
 ### Apache 설치하기
@@ -25,6 +25,8 @@ last_modified_at: 2022-04-19
   ```console
   sudo yum install gcc gcc-c++ expat-devel.x86_64 pcre-devel
   ```
+
+<hr/>
 
 ### pcre 다운로드 및 컴파일
   
@@ -39,6 +41,8 @@ last_modified_at: 2022-04-19
   sudo make
   sudo make install
   ```
+
+<hr/>
 
 ### apr-util, apr, httpd 다운로드 및 컴파일
   - 만약 404가 발생한다면 버전이 변경됐을 경우가 있으니, 아래의 페이지에 접속해서 존재하는 버전으로 변경해준다.
@@ -66,6 +70,7 @@ last_modified_at: 2022-04-19
   sudo make install
   ```
 
+<hr/>
 
 ### httpd.conf의 ServerName 수정
 
@@ -77,6 +82,8 @@ last_modified_at: 2022-04-19
   ServerName localhost:80
   ```
 
+<hr/>
+
 ### apache 실행 및 확인
   
   ```console
@@ -87,7 +94,7 @@ last_modified_at: 2022-04-19
 
 ![CentOS7](/assets/image/linux/Centos_install_apache_01.PNG)
 
-
+<hr/>
 
 ### apache 테스트
   - 내부작동 테스트
@@ -129,6 +136,7 @@ last_modified_at: 2022-04-19
 
     > 외부에서 접근이 되는지 테스트해보려면 브라우저에 IP 또는 도메인을 입력하면 된다. 
 
+<hr/>
 
 ### httpd service 를 등록 (init.d, systemctl)
   아래중 한가지를 선택해서 진행하면 된다.

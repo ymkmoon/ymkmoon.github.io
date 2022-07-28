@@ -21,7 +21,7 @@ last_modified_at: 2022-07-05
 
 특정 속성이 데이터 집합에 있는지, 있다면 해당 객체를 추출할 수 있는 다양한 유틸 메소드이다.
 
-<br>
+<hr/>
 
 ### ``Match 사용하기 ``
 
@@ -43,7 +43,7 @@ System.out.println("isHave  : " + isHave);
 // 출력 : isHave : true
 ```
 
-<br>
+<hr/>
 
 #### anyMatch
 
@@ -55,8 +55,7 @@ boolean isHave = sampleList.stream().anyMatch(n -> n % 5 == 0);
 System.out.println("isHave  : " + isHave);
 ```
 
-<br>
-
+<hr/>
 
 #### allMatch & noneMatch
 
@@ -73,8 +72,7 @@ System.out.println("isHave : " + isHave);
 System.out.println("doNotHave : " + doNotHave);
 ```
 
-<br>
-
+<hr/>
 
 ### ``검색 (findAny, findFirst) 사용하기 ``
 

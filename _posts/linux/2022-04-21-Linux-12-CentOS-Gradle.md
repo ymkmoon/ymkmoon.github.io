@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 Gradle 설치"
 excerpt: "리눅스 환경에 Gradle 설치하기"
 
 tags:
-  - [CentOS7, Gradle]
+  - [CentOS7, Linux, Gradle]
 
 toc: true
 toc_sticky: true
@@ -28,6 +28,8 @@ Groovy와 유사한 도메인 언어를 채용하였으며, 현재 안드로이�
   sudo unzip -d /opt/gradle gradle-7.2-bin.zip
   ```
 
+<hr/>
+
 ### 환경 변수 설정
 
   ```console
@@ -40,6 +42,8 @@ Groovy와 유사한 도메인 언어를 채용하였으며, 현재 안드로이�
   sudo chmod +x /etc/profile.d/gradle.sh # chmod 를 사용하여 스크립트 실행
   source /etc/profile.d/gradle.sh # 환경변수 로드
   ```
+
+<hr/>
 
 ### Gradle 설치 확인
 

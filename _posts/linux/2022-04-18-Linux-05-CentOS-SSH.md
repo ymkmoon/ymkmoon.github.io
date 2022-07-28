@@ -3,7 +3,7 @@ title:  "[Linux] CentOS7 SSH 설정"
 excerpt: "리눅스 환경에 SSH 설정하기"
 
 tags:
-  - [CentOS7, SSH]
+  - [CentOS7, Linux, SSH]
 
 toc: true
 toc_sticky: true
@@ -22,7 +22,7 @@ last_modified_at: 2022-04-18
 ### SSH 란?
 > 시큐어 셸(Secure SHell, SSH)은 네트워크 상의 다른 컴퓨터에 로그인하거나 원격 시스템에서 명령을 실행하고 다른 시스템으로 파일을 복사할 수 있도록 해 주는 응용 프로그램 또는 그 프로토콜을 가리킨다
 
-<br>
+<hr/>
 
 ### SSH 설정 변경
   - ssh config 파일을 연다.
@@ -44,7 +44,8 @@ last_modified_at: 2022-04-18
     PermitRootLogin yes
     PermitRootLogin no
     ```
-  
+
+<hr/>  
 
 ### 방화벽 추가하기
   - 22번 포트를 열고, 반영을 위해 firewall 를 재기동.
@@ -54,6 +55,7 @@ last_modified_at: 2022-04-18
     sudo firewall-cmd --reload
     ```
   
+<hr/>
 
 ### ping 에 응답하지 않도록 설정하기
 
@@ -66,12 +68,16 @@ last_modified_at: 2022-04-18
   ```
   위 내용을 작성 후 저장한다.
 
+<hr/>
+
 ### 재부팅 후 적용하기
 
   ```console
   systemctl restart sshd
   shutdown -r now
   ```
+
+<hr/>
 
 ### SSH 로 접속하기
   - ssh 툴을 설치하여 CLI 환경에 접속한다. (본인은 poderosa 이용)

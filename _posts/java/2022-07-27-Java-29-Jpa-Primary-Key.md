@@ -36,6 +36,7 @@ JPA 에서 기본키 매핑 전략은 아래와 같다.
 
 IDENTITY 전략을 사용하면 MySQL 의 AUTO INCREMENT 처럼 사용
 
+<hr/>
 
 #### IDENTITY
 
@@ -147,6 +148,7 @@ interleaved mode - 2
 뮤텍스 : 한 개 리소스에 대하여 Lock/Unlock 매커니즘을 사용하는 기술 (ex. 한칸짜리 전용 열쇠 화장실)
 세마포어 : 프로세스들이 여러개의 리소스에 접근할 수 있는 카운터 수를 표현하는 기술 (ex. 여러 칸 있는 화장실)
 
+<hr/>
 
 #### SEQUENCE
 
@@ -226,6 +228,7 @@ IDENTITY와는 다른 설정이 있다면 시퀀스생성기 어노테이션이�
 SEQUENCE 전략은 em.persist()를 호출할 때 먼저 데이터베이스 시퀀스를 사용해서 식별자를 조회한다.(실제 엔티티에 할당할 primary key값) <br>
 그리고 조회한 식별자를 엔티티에 할당한 후에 엔티티를 영속성 컨텍스트에 저장한다. 이후 커밋이 일어나게 되면 실제 데이터베이스에 INSERT되게 된다.<br>
 
+<hr/>
 
 #### TABLE
 
@@ -303,8 +306,7 @@ public class Member {
  
 ```
 
-
-<br>
+<hr/>
 
 ### ``allocationSize를 이용한 성능 최적화?``
 

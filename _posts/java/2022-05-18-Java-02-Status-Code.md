@@ -27,7 +27,7 @@ Http 상태코드는 3자리의 숫자로 구성되어 있고, 5개의 그룹으
 - 4xx : Client Error (클라이언트 오류)
 - 5xx : Server Error (서버 오류)
 
-<br>
+<hr/>
 
 ### ``1xx : Information (정보)``
 
@@ -37,7 +37,7 @@ Http 상태코드는 3자리의 숫자로 구성되어 있고, 5개의 그룹으
 |101|Switching Protocols <br>- 클라이언트가 보낸 요청 헤더에 대한 응답에 들어가며 서버에서 프로토콜을 변경할 것임을 알려준다.|
 |102|Processing <br>- 이 코드는 서버가 요청을 수신하였으며 이를 처리하고 있지만, 아직 제대로 된 응답을 알려줄 수 없음을 알려준다.|
 
-<br>
+<hr/>
 
 ### ``2xx : Successful (성공)``
 
@@ -52,7 +52,7 @@ Http 상태코드는 3자리의 숫자로 구성되어 있고, 5개의 그룹으
 |205|Reset Content <br>- No Content 상태라서 요청자의 document view의 reset이 필요한 상태이다.|
 |206|Partial Content <br>- 서버가 GET 요청의 일부만 성공적으로 처리했다.|
 
-<br>
+<hr/>
 
 ### ``3xx : Redirection (리다이렉션)``
 
@@ -66,7 +66,7 @@ Http 상태코드는 3자리의 숫자로 구성되어 있고, 5개의 그룹으
 |307|Temporary Redirect <br>- 302 Found HTTP 응답 코드와 동일한 의미를 가지고 있으며, 사용자 에이전트가 반드시 사용된 HTTP 메소드를 변경하지 말아야 하는 점만 다르다.|
 |308|Permanent Redirect <br>- 301 Moved Permanently HTTP 응답 코드와 동일한  의미를 가지고 있으며, 사용자 에이전트가 반드시 HTTP 메소드를 변경하지 말아야 하는 점만 다르다.|
 
-<br>
+<hr/>
 
 ### ``4xx : Client Error (클라이언트 오류)``
 
@@ -94,7 +94,7 @@ Http 상태코드는 3자리의 숫자로 구성되어 있고, 5개의 그룹으
 |431|Request Header Fields Too Large <br>- 요청한 헤더 필드가 너무 크기 때문에 서버는 요청을 처리하지 않는다. 요청은 크기를 줄인 다음에 다시 전송해야 하는 상태|
 |451|Unavailable For Legal Reasons <br>- 사용자가 요청한 것은 정부에 의해 검열된 웹 페이지와 같은 불법적인 리소스인 상태.|
 
-<br>
+<hr/>
 
 ### ``5xx : Server Error (서버 오류)``
 

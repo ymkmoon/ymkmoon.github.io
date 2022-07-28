@@ -41,8 +41,7 @@ var link = function(height = 50, color = 'red', url = 'http://azat.co') {
 
 단, 주의해야 할 점이 있다. 인자값으로 0 또는 false가 입력될 때 두 예시의 결과는 다르다. ES5에서는 || 처리 시 0 또는 false 값이 입력 되어도 거짓이 되므로 기본값으로 대체된다. 하지만 ES6의 기본 매개 변수를 사용하면 undefined 를 제외한 입력된 모든 값(0, false, null 등)을 인정한다.
 
-<br>
-
+<hr/>
 
 #### ``템플릿 리터럴 (Template Literals) ``
 
@@ -58,10 +57,7 @@ var name = `Your name is ${first} ${last}.`
 var url = `http://localhost:3000/api/messages/${id}`
 ```
 
-
-<br>
-
-
+<hr/>
 
 #### ``멀티 라인 문자열 (Multi-line Strings) ``
 
@@ -89,9 +85,7 @@ var fourAgreements = `You have the right to be you.
     You can only be you when you do your best.`
 ```
 
-<br>
-
-
+<hr/>
 
 #### ``비구조화 할당 (Destructuring Assignment) ``
 
@@ -126,8 +120,7 @@ var [col1, col2]  = $('.column'),
   [line1, line2, line3, , line5] = file.split('\n')
 ```
 
-<br>
-
+<hr/>
 
 #### ``향상된 객체 리터럴 (Enhanced Object Literals) ``
 
@@ -185,9 +178,7 @@ var accountService = {
 - getAccounts: getAccounts, 대신 getAccounts, 를 사용할 수 있다 (변수명으로 속성 이름을 지정).
 - [ 'valueOf_' + getAccounts().join('_') ] 와 같이 동적으로 속성 이름을 정의할 수 있다.
 
-<br>
-
-
+<hr/>
 
 #### ``화살표 함수 (Arrow Functions) ``
 
@@ -276,10 +267,7 @@ var ids = ['5632953c4e345e145fdf2df8','563295464e345e145fdf2df9']
 var messages = ids.map((value, index, ...abc) => ({v:value, i:index, a:abc}))
 ```
 
-
-<br>
-
-
+<hr/>
 
 #### ``Promises ``
 
@@ -339,9 +327,7 @@ wait1000()
     });
 ```
 
-<br>
-
-
+<hr/>
 
 #### ``블록 범위 생성자 Let 및 Const (Block-Scoped Constructs Let and Const) ``
 
@@ -404,10 +390,7 @@ function calculateTotalAmount (vip) {
 console.log(calculateTotalAmount(true))
 ```
 
-
-<br>
-
-
+<hr/>
 
 #### ``클래스 (Classes) ``
 
@@ -461,9 +444,7 @@ Class name: Account Model
 Data is %s 32113123123,524214691
 ```
 
-<br>
-
-
+<hr/>
 
 #### ``모듈 (Modules) ``
 
@@ -510,9 +491,7 @@ import * as service from 'module'
 console.log(service.port) // 3000
 ```
 
-<br>
-
-
+<hr/>
 
 ### ``ES 7``
 
@@ -532,9 +511,7 @@ console.log(service.port) // 3000
 [1, 2, 3, 4, 5].includes(1, 0) // true
 ```
 
-
-<br>
-
+<hr/>
 
 ### ``ES 8``
 
@@ -562,8 +539,7 @@ async function logItems() {
 
 ```
 
-<br>
-
+<hr/>
 
 #### ``values() 와 entries()``
 
@@ -594,7 +570,7 @@ Object.entries(datas).forEach((value) => {
 });
 ```
 
-<br>
+<hr/>
 
 #### ``문자열 편의 기능``
 
