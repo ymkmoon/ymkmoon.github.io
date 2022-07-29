@@ -1,6 +1,6 @@
 ---
 title:  "[자료구조] 스택? 큐? "
-excerpt: "자주사용하는 Git 협업 약어모음"
+excerpt: "스택, 큐에 대한 설명"
 
 tags:
   - [자료구조]
@@ -53,7 +53,7 @@ last_modified_at: 2022-07-28
 
 ![Queue](/assets/image/datastructure/DataStructure_Queue_01.PNG)
 
-[이미지출처](https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)#/media/%ED%8C%8C%EC%9D%BC:Data_Queue.svg){:target="_blank"}
+- 이미지출처 : https://ko.wikipedia.org/wiki/%ED%81%90_(%EC%9E%90%EB%A3%8C_%EA%B5%AC%EC%A1%B0)#/media/%ED%8C%8C%EC%9D%BC:Data_Queue.svg)
 
 
 위와 같은 구조이기 때문에 마지막에 삽입한 요소를 삭제하기 위해서는 앞에 있는 요소들이 전부 삭제되어야 한다. <br>
