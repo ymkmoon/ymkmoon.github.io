@@ -60,7 +60,7 @@ last_modified_at: 2022-07-14
 - [AWS Cognito 사용자 풀](https://ymkmoon.github.io/Aws-02-Cognito/){:target="_blank"}
 - [AWS Cognito OAuth2 연동](https://ymkmoon.github.io/Aws-03-Cognito-OAuth2/){:target="_blank"}
 - [AWS Cognito React 에서 사용하기](https://ymkmoon.github.io/Aws-04-Cognito-React/){:target="_blank"}
-- [AWS Cognito SpringBoot(API) 에서 사용하기](https://ymkmoon.github.io/Springboot-01-Cognito/){:target="_blank"}
+- [AWS Cognito SpringBoot(API) 에서 사용하기](https://ymkmoon.github.io/Aws-05-Springboot-Cognito/){:target="_blank"}
 
 <br>
 
