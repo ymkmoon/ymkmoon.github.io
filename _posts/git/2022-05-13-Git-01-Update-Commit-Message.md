@@ -24,6 +24,14 @@ last_modified_at: 2022-05-13
   - [블로그](https://holika.tistory.com/entry/Git-%EC%82%BD%EC%A7%88%EA%B8%B0%EB%A1%9D-Git-push-%EC%9D%B4%ED%9B%84%EC%97%90-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80%EB%A5%BC-%EC%88%98%EC%A0%95%ED%95%98%EA%B3%A0-%EC%8B%B6%EC%9D%84-%EB%95%8C){:target="_blank"}
 
 
+> 전에 리눅스를 다뤄봤다면 CLI(command-line interface) 환경에 익숙하겠지만, 처음이라면 다소 어려울 수 있으니 아래 이미지를 참고하자. <br> 사용하는 명령어에 대한 설명은 아래와 같다
+
+
+- vi 파일명(또는 경로/파일명) : 텍스트편집기
+- wq : 현재 내용을 `저장 후 편집기 종료` 
+- q! : 수정 내용을 `저장하지 않고 편집기 강제 종료`
+
+<hr>
 
 #### `커맨드 창에서 rebase 를 사용해 수정모드로 진입한다.`
 
