@@ -28,7 +28,7 @@ last_modified_at: 2022-05-25
 
 ### ``Amplify 라이브러리 설치``
 
-특증 버전을 설치하는 이유는 최선 버전에서 ui 이슈가 있기 때문이다. 
+특정 버전을 설치하는 이유는 최선 버전에서 ui 이슈가 있기 때문이다. 
 
 ```console
 npm install @aws-amplify/ui-react^1.2.5 --save
