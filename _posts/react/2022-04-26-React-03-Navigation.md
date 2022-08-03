@@ -41,8 +41,8 @@ last_modified_at: 2022-04-26
   npm install -g create-react-app     # react 설치
   
   # 본인이 설치 할 경로에 따라 cra(create react app) 실행
-  create-react-app toyseven-react     # toyseven-react 경로에 cra
-  create-react-app .                  # 현재 경로에 cra
+  npx create-react-app toyseven-react     # toyseven-react 경로에 cra
+  npx create-react-app .                  # 현재 경로에 cra
   ```
 
   ``create-react-app toyseven-react`` 명령어 에서 ``toyseven-react`` 는 애플리케이션 폴더이름이며, React 애플리케이션을 만들고 의존 라이브러리를 설치하는 내용이다.
