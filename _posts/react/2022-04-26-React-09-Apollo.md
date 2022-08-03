@@ -1,5 +1,5 @@
 ---
-title:  "[React] 리액트 게시판 만들기 #8 : Apollo & GraphQL 설치 및 사용"
+title:  "[React] 게시판 만들기 #8 : Apollo & GraphQL 설치 및 사용"
 excerpt: "React Apollo GQL 로 Rest API 에 Get 요청 날리기"
 
 tags:

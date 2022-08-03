@@ -1,5 +1,5 @@
 ---
-title:  "[React] 리액트 게시판 만들기 #11 : Apollo & GraphQL 을 이용한 게시글 작성"
+title:  "[React] 게시판 만들기 #11 : Apollo & GraphQL 을 이용한 게시글 작성"
 excerpt: "React Apollo & Rest API 게시글 작성하기"
 
 tags:

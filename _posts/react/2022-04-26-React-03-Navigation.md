@@ -1,5 +1,5 @@
 ---
-title:  "[React] 리액트 게시판 만들기 #2 : 리액트 프로젝트와 네비에이션(Navigation) 생성"
+title:  "[React] 게시판 만들기 #2 : 리액트 프로젝트와 네비에이션(Navigation) 생성"
 excerpt: "React Navigation 만들기"
 
 tags:
