@@ -3,7 +3,7 @@ title:  "[AWS] SpringBoot 에서 AWS Cognito OAuth2 와 JWT 동시에 사용하�
 excerpt: "AWS Cognito OAuth2 와 JWT 토큰을 이용한 인증처리"
 
 tags:
-  - [AWS, Cognito, OAuth2, Springboot]
+  - [AWS, Cognito, OAuth2, Java, Springboot]
 
 toc: true
 toc_sticky: true
@@ -13,12 +13,23 @@ date: 2022-05-31
 last_modified_at: 2022-05-31
 ---
 
+- AWS 활용하기
+  1.  [AWS EC2 이용하여 Git Repository 배포하기](https://ymkmoon.github.io/Aws-01-Ec2/)
+  2.  [AWS Cognito 사용자 풀 생성하기](https://ymkmoon.github.io/Aws-02-Cognito/)
+  3.  [AWS Cognito OAuth2(Google) 설정하기](https://ymkmoon.github.io/Aws-03-Cognito-OAuth2/)
+  4.  [React 에서 Cognito 사용하기](https://ymkmoon.github.io/Aws-04-Cognito-React/)
+  5.  [SpringBoot(Restful API) 에서 Cognito 로 토큰 검증하여 인증받기](https://ymkmoon.github.io/Aws-05-Springboot-Cognito/)
+  6.  [AWS SQS(Simple Queue Service) 란?](https://ymkmoon.github.io/Aws-06-Sqs/)
+  7.  [SQS 대기열 생성하기](https://ymkmoon.github.io/Aws-07-Sqs-Create/)
+  8.  [AWS Access Key 발급받기](https://ymkmoon.github.io/Aws-08-Access-Key/)
+  9.  [SpringBoot 에서 SQS 사용해보기](https://ymkmoon.github.io/Aws-09-Sqs-Message/)
+
+<hr/>
+
 JWT 을 이용한 자체 인증 + Cognito 의 OAuth2 Access token 
 
 
 > 모든 소스코드는 [여기](https://github.com/ymkmoon/toyseven){:target="_blank"} 에서 확인 가능합니다.
-
-진행전에 앞서 Cognito, OAuth2 설정 이슈가 발생했다면 [여기](https://ymkmoon.github.io/Aws-02-Cognito/){:target="_blank"} 를 참고바란다.
 
 
 - 참고사이트

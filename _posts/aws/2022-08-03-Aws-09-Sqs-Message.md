@@ -13,15 +13,21 @@ date: 2022-08-03
 last_modified_at: 2022-08-03
 ---
 
+- AWS 활용하기
+  1.  [AWS EC2 이용하여 Git Repository 배포하기](https://ymkmoon.github.io/Aws-01-Ec2/)
+  2.  [AWS Cognito 사용자 풀 생성하기](https://ymkmoon.github.io/Aws-02-Cognito/)
+  3.  [AWS Cognito OAuth2(Google) 설정하기](https://ymkmoon.github.io/Aws-03-Cognito-OAuth2/)
+  4.  [React 에서 Cognito 사용하기](https://ymkmoon.github.io/Aws-04-Cognito-React/)
+  5.  [SpringBoot(Restful API) 에서 Cognito 로 토큰 검증하여 인증받기](https://ymkmoon.github.io/Aws-05-Springboot-Cognito/)
+  6.  [AWS SQS(Simple Queue Service) 란?](https://ymkmoon.github.io/Aws-06-Sqs/)
+  7.  [SQS 대기열 생성하기](https://ymkmoon.github.io/Aws-07-Sqs-Create/)
+  8.  [AWS Access Key 발급받기](https://ymkmoon.github.io/Aws-08-Access-Key/)
+  9.  [SpringBoot(Restful API) 에서 SQS 사용해보기](https://ymkmoon.github.io/Aws-09-Sqs-Message/)
+
+<hr/>
 
 - 참고사이트
   - [AWS Document](https://aws.amazon.com/ko/sqs/){:target="_blank"}
-
-
-시작 전에 SQS 대기열 생성과 Access Key 발급이 필요하니 아래 글을 참고 부탁드립니다. <br>
-
-- [대기열 생성](https://aws.amazon.com/ko/sqs/){:target="_blank"}
-- [Access Key 발급](https://aws.amazon.com/ko/sqs/){:target="_blank"}
 
 
 직접 Restful API 적용한 내용을 참고하고 싶으면 [여기](https://github.com/ymkmoon/toyseven){:target="_blank"} 에서 확인 가능합니다.
