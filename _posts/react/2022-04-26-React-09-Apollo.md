@@ -1,5 +1,5 @@
 ---
-title:  "[React] Apollo GQL #1 Station"
+title:  "[React] 리액트 게시판 만들기 #8 : Apollo & GraphQL 설치 및 사용"
 excerpt: "React Apollo GQL 로 Rest API 에 Get 요청 날리기"
 
 tags:
@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[React Apollo GQL #1]"
+toc_label: "[Apollo]"
  
 date: 2022-05-03
 last_modified_at: 2022-05-03
@@ -19,12 +19,14 @@ last_modified_at: 2022-05-03
   3.  [페이지 이동을 위한 Route 설정하기](https://ymkmoon.github.io/React-04-Route/)
   4.  [Axios 설치 및 사용해보기](https://ymkmoon.github.io/React-05-Axios/)
   5.  [Axios 를 이용하여 게시판 목록 만들기](https://ymkmoon.github.io/React-06-Voc/)
-  6.  [Axios 를 이용하여 게시글 상세보기 만들기](https://ymkmoon.github.io/React-07-Voc-Question/)
-  7.  [Axios 를 이용하여 게시글 작성 만들기](https://ymkmoon.github.io/React-08-Voc-Post-Question/)
+  6.  [Axios 를 이용하여 게시판 상세보기 만들기](https://ymkmoon.github.io/React-07-Voc-Question/)
+  7.  [Axios 를 이용하여 게시판 작성 만들기](https://ymkmoon.github.io/React-08-Voc-Post-Question/)
   8.  [Apollo GraphQL 을 설치 및 사용해보기](https://ymkmoon.github.io/React-09-Apollo/)
   9.  [Apollo GraphQL 을 이용하여 게시판 목록 만들기](https://ymkmoon.github.io/React-10-Apollo-Voc/)
-  10.  [Apollo GraphQL 을 이용하여 게시글 상세보기 만들기](https://ymkmoon.github.io/React-11-Apollo-Voc-Question/)
-  11.  [Apollo GraphQL 을 이용하여 게시글 작성 만들기](https://ymkmoon.github.io/React-12-Apollo-Voc-Post-Question/)
+  10.  [Apollo GraphQL 을 이용하여 게시판 상세보기 만들기](https://ymkmoon.github.io/React-11-Apollo-Voc-Question/)
+  11.  [Apollo GraphQL 을 이용하여 게시판 작성 만들기](https://ymkmoon.github.io/React-12-Apollo-Voc-Post-Question/)
+
+<hr/>
 
 > React 소스코드는 [여기](https://github.com/ymkmoon/toyseven-react){:target="_blank"} 에서 확인 가능합니다.
 
