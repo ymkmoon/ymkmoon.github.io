@@ -150,4 +150,6 @@ last_modified_at: 2022-08-02
 
 ### 완료
 
+![AWS](/assets/image/aws/AWS_SQS_20.PNG)
+
 이제 대기열을 생성하면 완료되며 확인이 가능하다.
