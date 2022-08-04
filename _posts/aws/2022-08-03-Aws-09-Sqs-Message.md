@@ -30,7 +30,7 @@ last_modified_at: 2022-08-03
   - [AWS Document](https://aws.amazon.com/ko/sqs/){:target="_blank"}
 
 
-직접 Restful API 적용한 내용을 참고하고 싶으면 [여기](https://github.com/ymkmoon/toyseven){:target="_blank"} 에서 확인 가능합니다.
+직접 Restful API 적용한 내용을 참고하고 싶으면 [여기](https://github.com/ymkmoon/toyseven/commit/23affa3bab2e8d9ebdeac0a0e4d2acba4bb71075){:target="_blank"} 와 [여기](https://github.com/ymkmoon/toyseven/commit/719fb7887abe2cc23890207bf83331fc97bdf567){:target="_blank"}에서 확인 가능합니다.
 
 
 ### 시작하기 전에 앞서
