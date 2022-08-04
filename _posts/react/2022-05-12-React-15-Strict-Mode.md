@@ -20,6 +20,13 @@ last_modified_at: 2022-05-12
 
 <br>
 
+#### `⚡️왜 두번 호출될까?`
+
+바로 `StrictMode` 때문이다. 개발 환경에서 자동으로 활성화 되어 있기 때문에 useEffect 가 두 번 호출되고,
+Strict 모드가 뭔지, 어떻게 꺼야하는지 알아보자.
+
+<hr/>
+
 #### `⚡️StrictMode 란?`
 
 `StrictMode` 는 애플리케이션 내의 잠재적인 문제를 알아내기 위한 도구이다.<br>
@@ -37,9 +44,7 @@ StrictMode 의 장점
 - 예상치 못한 부작용 검사
 - 레거시 context API 검사
 
-
-<br>
-
+<hr/>
 
 #### `StrictMode 끄는 방법`
 
