@@ -13,6 +13,21 @@ date: 2022-04-20
 last_modified_at: 2022-04-20
 ---
 
+- 가상머신을 이용해 윈도우에 리눅스 서버 구축하기
+  1.  [가상머신(Virtual machine) 설치](https://ymkmoon.github.io/Linux-02-VMWare/)
+  2.  [가상머신에 리눅스 환경 구축하기](https://ymkmoon.github.io/Linux-03-CentOS/)
+  3.  [Java 설치](https://ymkmoon.github.io/Linux-04-CentOS-JDK/)
+  4.  [SSH 설정](https://ymkmoon.github.io/Linux-05-CentOS-SSH/)
+  5.  [Apache 설치](https://ymkmoon.github.io/Linux-06-CentOS-Apache/)
+  6.  [Tomcat 설치](https://ymkmoon.github.io/Linux-07-CentOS-Tomcat/)
+  7.  [Apache 와 Tomcat 연동](https://ymkmoon.github.io/Linux-08-CentOS-Apache-Tomcat/)
+  8.  [FTP 설정](https://ymkmoon.github.io/Linux-09-CentOS-FTP/)
+  9.  [Redmine 설치](https://ymkmoon.github.io/Linux-10-CentOS-Redmine/)
+  10. [Jenkins 설치](https://ymkmoon.github.io/Linux-11-CentOS-Jenkins/)
+  11. [Gradle 설치](https://ymkmoon.github.io/Linux-12-CentOS-Gradle/)
+  12. [Jenkins를 이용해 Git Repository 배포하기](https://ymkmoon.github.io/Linux-13-CentOS-Jenkins-Deploy/)
+
+<hr/>
 
 ## Redmine 이란?
 > 레드마인은 오픈 소스 프로그램으로 웹 기반의 프로젝트 관리와 버그 추적 기능을 제공하는 도구이다. 화면기반의 프로젝트 관리에 도움이 되도록 달력과 간트 차트를 제공하고 일정관리 기능을 제공한다. 또한 레드마인은 통합된 프로젝트관리 기능과 이슈추적, 여러가지 형상 관리 기능을 제공한다

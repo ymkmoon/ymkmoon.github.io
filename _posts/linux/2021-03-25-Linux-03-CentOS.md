@@ -13,6 +13,22 @@ date: 2021-03-25
 last_modified_at: 2021-03-25
 ---
 
+- 가상머신을 이용해 윈도우에 리눅스 서버 구축하기
+  1.  [가상머신(Virtual machine) 설치](https://ymkmoon.github.io/Linux-02-VMWare/)
+  2.  [가상머신에 리눅스 환경 구축하기](https://ymkmoon.github.io/Linux-03-CentOS/)
+  3.  [Java 설치](https://ymkmoon.github.io/Linux-04-CentOS-JDK/)
+  4.  [SSH 설정](https://ymkmoon.github.io/Linux-05-CentOS-SSH/)
+  5.  [Apache 설치](https://ymkmoon.github.io/Linux-06-CentOS-Apache/)
+  6.  [Tomcat 설치](https://ymkmoon.github.io/Linux-07-CentOS-Tomcat/)
+  7.  [Apache 와 Tomcat 연동](https://ymkmoon.github.io/Linux-08-CentOS-Apache-Tomcat/)
+  8.  [FTP 설정](https://ymkmoon.github.io/Linux-09-CentOS-FTP/)
+  9.  [Redmine 설치](https://ymkmoon.github.io/Linux-10-CentOS-Redmine/)
+  10. [Jenkins 설치](https://ymkmoon.github.io/Linux-11-CentOS-Jenkins/)
+  11. [Gradle 설치](https://ymkmoon.github.io/Linux-12-CentOS-Gradle/)
+  12. [Jenkins를 이용해 Git Repository 배포하기](https://ymkmoon.github.io/Linux-13-CentOS-Jenkins-Deploy/)
+
+<hr/>
+
 ## CentOS 이미지 파일 다운로드
   > https://www.centos.org/download/
 
