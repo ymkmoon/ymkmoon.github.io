@@ -1,6 +1,6 @@
 ---
 title:  "[Java] 객제치향(Object Oriented) 이란?"
-excerpt: "JMS 에 대한 설명"
+excerpt: "객체지향에 대한 설명"
 
 tags:
   - [Java]
