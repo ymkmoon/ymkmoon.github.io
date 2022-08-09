@@ -34,6 +34,12 @@ JWT 을 이용한 자체 인증 + Cognito 의 OAuth2 Access token
 
 <br>
 
+## 시작하기 전에 
+
+SpringBoot 기반의 RestAPI 에 AWS 의 Cognito 를 연동하는 부분을 진행합니다.
+
+제 소스코드는 `관리자 유저데이터는 DB`로, `회원 데이터는 AWS의 Cognito` 를 이용하여 관리 합니다. 모두 토큰 인증 기반이며, Request Header 의 Authorization 에 대한 값으로 검증하기 때문에 `관리자일때와 일반유저일때 필터를 구분` 해 줄 필요가 있었습니다. 그러기 위해 Security 설정을 나누었고 그에대한 진행 상황을 기록하였으니 참고 부탁드립니다.
+
 
 ### ``의존성 추가``
 
