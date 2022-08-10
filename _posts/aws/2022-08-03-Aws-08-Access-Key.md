@@ -27,6 +27,9 @@ last_modified_at: 2022-08-03
 
 ## Access Key 발급받기
 
+이 게시글은 IAM Access Key 를 발급받는 내용이며, Root 에 대한 Access key 발급은 자제해주시길 바랍니다. 해커한테 털리게 되면 비용폭탄을 맞을 수 있으며, 비용에 대해서 전액 환불이 안되는 경우도 있으니 꼭 Root 대신 IAM 을 사용하고, 사용하는 서비스에 대한 권한만 허용해주셔야 됩니다. 꼭!!
+
+
 ### AWS Console 로 이동
 
 [https://ap-northeast-2.console.aws.amazon.com/console/home?region=ap-northeast-2](https://ap-northeast-2.console.aws.amazon.com/console/home?region=ap-northeast-2){:target="_blank"}
