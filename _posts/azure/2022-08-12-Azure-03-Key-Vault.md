@@ -14,7 +14,7 @@ last_modified_at: 2022-08-12
 ---
 
 - 참고사이트
-  - [Azure Docs](https://docs.microsoft.com/ko-kr/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault)
+  - [Azure Docs](https://docs.microsoft.com/ko-kr/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault){:target="_blank"}
 
 
 ### Azure Key Valut 란?
@@ -27,7 +27,7 @@ Key Vault를 사용하면 개발자가 코드에 보안 정보를 저장할 필�
 
 ### 키 자격 증명 모음 만들기
 
-> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home) 에서 `Azure Cloud Shell`을 연다.
+> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home){:target="_blank"} 에서 `Azure Cloud Shell`을 연다.
 
 ![Azure](/assets/image/azure/Azure_Key_Vault_01.PNG)
 

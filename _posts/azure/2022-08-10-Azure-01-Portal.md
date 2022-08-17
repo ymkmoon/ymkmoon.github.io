@@ -23,7 +23,7 @@ AWS와 비슷하게 신규계정에 대해서는 평가판을 이용해 일정�
 
 ### Azure 계정 설정
 
-> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home) 로 접속하여 계정을 생성하면 아래와 같은 화면을 확인 할 수 있다.
+> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home){:target="_blank"} 로 접속하여 계정을 생성하면 아래와 같은 화면을 확인 할 수 있다.
 
 ![Azure](/assets/image/azure/Azure_Portal_01.PNG)
 

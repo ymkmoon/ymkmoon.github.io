@@ -13,13 +13,9 @@ date: 2022-08-16
 last_modified_at: 2022-08-16
 ---
 
-- 참고사이트
-  - [Azure Docs](https://docs.microsoft.com/ko-kr/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault)
-
-
 ### Client id 찾기
 
-> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home) 에 접속한다.
+> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home){:target="_blank"} 에 접속한다.
 
 ![Azure](/assets/image/azure/Azure_Find_Information_01.PNG)
 
@@ -50,7 +46,7 @@ last_modified_at: 2022-08-16
 secret 은 기존 값에 대해 접근이 불가능하다. 즉 새로 생성해야 된다. <br>
 그럼 새로 생성하는 방법에 대해 알아보자
 
-> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home) 에 접속한다.
+> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home){:target="_blank"} 에 접속한다.
 
 ![Azure](/assets/image/azure/Azure_Find_Information_01.PNG)
 
@@ -80,7 +76,7 @@ secret 은 기존 값에 대해 접근이 불가능하다. 즉 새로 생성해�
 
 ### tenant id 찾기
 
-> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home) 에 접속한다.
+> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home){:target="_blank"} 에 접속한다.
 
 ![Azure](/assets/image/azure/Azure_Find_Information_01.PNG)
 

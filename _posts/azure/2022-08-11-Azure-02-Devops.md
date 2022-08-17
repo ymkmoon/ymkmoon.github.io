@@ -31,7 +31,7 @@ last_modified_at: 2022-08-11
 
 ### organizations 생성
 
-> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home) 로 접속하여 DevOps Organizations 을 생성해보자
+> [Azure Portal(https://portal.azure.com/#home)](https://portal.azure.com/#home){:target="_blank"} 로 접속하여 DevOps Organizations 을 생성해보자
 
 ![Azure](/assets/image/azure/Azure_DevOps_01.PNG)
 
