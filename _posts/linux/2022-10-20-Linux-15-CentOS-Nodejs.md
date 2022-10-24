@@ -32,7 +32,7 @@ last_modified_at: 2022-10-20
     Node 를 설치하면 같이 install 된다고 하는데, 나는 npm 설치가 되지 않아 따로 설치했다.
 
     ```console
-    npm install npm
+    yum install npm
     ```
 
     만약 인스톨이 되지 않는다면 아래 명령어를 실행 후 인스톨 해보자
