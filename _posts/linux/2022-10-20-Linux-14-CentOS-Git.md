@@ -33,12 +33,19 @@ last_modified_at: 2022-10-20
     (--global 옵션을 제거해서 git 저장소마다 다른 설정도 가능)
 
   - Clone
+  
     ```console
     cd /usr/workspace ## 클론 할 위치로 이동
-    git clone 깃허브URL
+    git clone 깃허브URL 
+
+    # 아니면 아래 명령어로 원하는 위치에 클론
+    git clone 깃허브URL 원하는경로
+
+    git clone 깃허브URL /usr/workspace
     ```
   
   - 브랜치 변경
+
     ```conole
     git checkout 변경할브랜치이름
     ```
