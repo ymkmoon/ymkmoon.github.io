@@ -242,12 +242,12 @@ public ResponseEntity<List<StationInformationDto.Response>> getStations(
 
 > 정렬하지 않은 결과
 
-![AWS](/assets/image/springboot/Springboot_jpa_03.PNG)
+![JPA](/assets/image/springboot/Springboot_jpa_03.PNG)
 
 > station ID 값을 DESC 정렬 한 결과
 
-![AWS](/assets/image/springboot/Springboot_jpa_01.PNG)
+![JPA](/assets/image/springboot/Springboot_jpa_01.PNG)
 
 > station ID 값을 ASC 정렬 한 결과
 
-![AWS](/assets/image/springboot/Springboot_jpa_02.PNG)
+![JPA](/assets/image/springboot/Springboot_jpa_02.PNG)
