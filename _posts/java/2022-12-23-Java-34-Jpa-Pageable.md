@@ -48,6 +48,27 @@ JPA 에서는 페이징처리를 편하게 사용 할 수 있도록 `Pagealbe` �
 
 위와 같은 요청을 받아 페이징, 정렬을 처리 할 수 있고, Pageable 구현 방법은 JPA 의 제공 객체를 그대로 사용해도 되고, 직접 커스텀하여 사용 할 수 있다.
 
+#### 의존성 추가
+
+> Gradle
+
+```gradle
+// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+implementation 'org.apache.commons:commons-lang3:3.12.0'
+```
+
+
+> Maven
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.12.0</version>
+</dependency>
+```
+
 
 #### Pageable 커스텀
 
