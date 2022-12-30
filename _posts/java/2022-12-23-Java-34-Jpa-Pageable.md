@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[JMS(Java Message Service)]"
+toc_label: "[JPA Pageable]"
  
 date: 2022-12-23
 last_modified_at: 2022-12-23
