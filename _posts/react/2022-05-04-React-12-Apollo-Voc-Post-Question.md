@@ -3,7 +3,7 @@ title:  "[React] 게시판 만들기 #11 : Apollo & GraphQL 을 이용한 게시
 excerpt: "React Apollo & Rest API 게시글 작성하기"
 
 tags:
-  - [React, Apollo, GQL]
+  - [React, Apollo, GraphQL]
 
 toc: true
 toc_sticky: true
