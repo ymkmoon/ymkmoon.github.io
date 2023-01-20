@@ -63,12 +63,12 @@ JPA 를 사용하면, 기본적인 CRUD 에 대해서는 아주 훌륭하지만 
 
 ```gradle
 plugins {
-	id 'com.ewerk.gradle.plugins.querydsl' version '1.0.10' // Querydsl
+  id 'com.ewerk.gradle.plugins.querydsl' version '1.0.10' // Querydsl
 }
 
 dependencies {
   implementation "com.querydsl:querydsl-jpa" // Querydsl
-	implementation "com.querydsl:querydsl-apt" // Querydsl
+  implementation "com.querydsl:querydsl-apt" // Querydsl
 }
 ```
 
@@ -238,11 +238,11 @@ public class VocQuestionDto {
 @Getter
 public class VocQuestionSearchCondition {
 	
-	private String categoryId;
-    private String title;
-    private String username;
-    private String email;
-    private String stationId;
+  private String categoryId;
+  private String title;
+  private String username;
+  private String email;
+  private String stationId;
 }
 ```
 
@@ -323,65 +323,65 @@ public class VocQuestionRepositoryCustom {
 	private final QVocQuestionEntity question = QVocQuestionEntity.vocQuestionEntity; // QEntity 클래스에서 엔티티를 가지고온다.
 	
 	public Page<VocQuestionDto.Response> searchVocQuestion(final VocQuestionSearchCondition condition, final Pageable pageable) {
-    QueryResults<VocQuestionDto.Response> result = queryFactory
-        .select(
-          // 조회 한 데이터를 DTO 로 변환시켜주는 부분이다.
-          new QVocQuestionDto_Response(
-              question.id,
-              question.category.displayName,
-              question.title,
-              question.content,
-              
-              question.email,
-              question.username,
-              question.stationId.stationId,
-              question.needReply,
-              
-              question.createdAt,
-              question.updatedAt,
-              question.active
-          )
+    QueryResults<VocQuestionDto.Response> result = 
+      queryFactory.select(
+        // 조회 한 데이터를 DTO 로 변환시켜주는 부분이다.
+        new QVocQuestionDto_Response(
+            question.id,
+            question.category.displayName,
+            question.title,
+            question.content,
+            
+            question.email,
+            question.username,
+            question.stationId.stationId,
+            question.needReply,
+            
+            question.createdAt,
+            question.updatedAt,
+            question.active
         )
-        .from(question)
-        .where(
-          // 조건절에 해당하는 부분이다.
-          stationIdEq(condition.getStationId()),
-          titleEq(condition.getTitle()),
-          usernameEq(condition.getUsername()),
-          emailEq(condition.getEmail()),
-          categoryIdEq(condition.getCategoryId())
-        )
-        // 데이터는 누적이고, 전체 검색은 매우 위험하다.
-        // 결과의 row 제한을 추가하는 부분이다.
-        // 결과적으로 페이징 처리와 같다고 보면 된다.
-        .offset(pageable.getOffset())
-        .limit(pageable.getPageSize())
-        .fetchResults();
+      )
+      .from(question)
+      .where(
+        // 조건절에 해당하는 부분이다.
+        stationIdEq(condition.getStationId()),
+        titleEq(condition.getTitle()),
+        usernameEq(condition.getUsername()),
+        emailEq(condition.getEmail()),
+        categoryIdEq(condition.getCategoryId())
+      )
+      // 데이터는 누적이고, 전체 검색은 매우 위험하다.
+      // 결과의 row 제한을 추가하는 부분이다.
+      // 결과적으로 페이징 처리와 같다고 보면 된다.
+      .offset(pageable.getOffset())
+      .limit(pageable.getPageSize())
+      .fetchResults();
       
     List<VocQuestionDto.Response> content = result.getResults();
-//    	long total = result.getTotal();
-//    	return new PageImpl<>(content, pageable, total);
+//  long total = result.getTotal();
+//  return new PageImpl<>(content, pageable, total);
     
     return new PageImpl<>(content);
   }
 
-	private BooleanExpression categoryIdEq(final String categoryId) { 
+  private BooleanExpression categoryIdEq(final String categoryId) { 
     return StringUtils.hasText(categoryId) ? question.category.displayName.eq(categoryId) : null;
   }
-	
-	private BooleanExpression titleEq(final String title) { 
+
+  private BooleanExpression titleEq(final String title) { 
 		return StringUtils.hasText(title) ? question.title.eq(title) : null;
 	}
-	
-	private BooleanExpression usernameEq(final String username) { 
+
+  private BooleanExpression usernameEq(final String username) { 
 		return StringUtils.hasText(username) ? question.username.eq(username) : null;
 	}
-	
-	private BooleanExpression emailEq(final String email) { 
+
+  private BooleanExpression emailEq(final String email) { 
 		return StringUtils.hasText(email) ? question.email.eq(email) : null;
 	}
-	
-	private BooleanExpression stationIdEq(final String stationId) { 
+
+  private BooleanExpression stationIdEq(final String stationId) { 
     return StringUtils.hasText(stationId) ? question.stationId.stationId.eq(stationId) : null;
   }
 
