@@ -10,7 +10,7 @@ toc_sticky: true
 toc_label: "[Querydsl]"
  
 date: 2023-01-20
-last_modified_at: 2023-01-20
+last_modified_at: 2023-01-26
 ---
 
 - 참고사이트
@@ -18,6 +18,7 @@ last_modified_at: 2023-01-20
   - [Querydsl Github](https://github.com/querydsl/querydsl){:target="_blank"}
   - [우아한형제들 블로그](https://velog.io/@youngerjesus/%EC%9A%B0%EC%95%84%ED%95%9C-%ED%98%95%EC%A0%9C%EB%93%A4%EC%9D%98-Querydsl-%ED%99%9C%EC%9A%A9%EB%B2%95#1-extends--implements-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EA%B8%B0){:target="_blank"}
   - [Github Sample Repository](https://github.com/DolphaGo/spring-querydsl-example){:target="_blank"}
+  - [블로그](https://dico.me/java/articles/290/ko){:target="_blank"}
 
 ### Querydsl 이란?
 
@@ -392,7 +393,7 @@ public class VocQuestionRepositoryCustom {
 <hr/>
 
 
-### 서버시작
+### 검색 테스트
 
 위까지 진행 후 서버를 올려보면 무리없이 작동할 것 이라고 생각하지만, 만약 안된다면 아래내용을 참고하여 @EnableJpaRepositories 어노테이션을 추가하시면 될거라고 생각합니다.
 
@@ -417,9 +418,104 @@ public class ToysevenApplication {
 ```
 
 
+### 정렬 기능 추가
+
+정렬에 대한 기능추가를 위해 유틸클래스를 추가한다. 
+
+> QuerydslUtil.java
+
+```java
+import com.querydsl.core.types.Order;
+import com.querydsl.core.types.OrderSpecifier;
+import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.Expressions;
+
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
+public class QuerydslUtil {
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static OrderSpecifier<?> getSortedColumn(Order order, Path<?> parent, String fieldName) {
+        Path<Object> fieldPath = Expressions.path(Object.class, parent, fieldName);
+        return new OrderSpecifier(order, fieldPath);
+    }
+}
+```
+
+
+추가 된 유틸클래스를 이용하여 기능 구현
+
+> VocQuestionRepositoryCustom.java
+
+```java
+public Page<VocQuestionDto.Response> searchVocQuestion(final VocQuestionSearchCondition condition, final Pageable pageable) {
+	
+	List<OrderSpecifier<?>> orders = getAllOrderSpecifiers(pageable);
+	
+	QueryResults<VocQuestionDto.Response> result = queryFactory
+			.select(
+				new QVocQuestionDto_Response(
+						question.id,
+						question.category.displayName,
+						question.title,
+						question.content,
+						
+						question.email,
+						question.username,
+	    				question.stationId.stationId,
+	    				question.needReply,
+	    				
+	    				question.createdAt,
+	    				question.updatedAt,
+	    				question.active
+				)
+			)
+			.from(question)
+			.where(
+				stationIdEq(condition.getStationId()),
+				titleEq(condition.getTitle()),
+				usernameEq(condition.getUsername()),
+				emailEq(condition.getEmail()),
+				categoryIdEq(condition.getCategoryId())
+			)
+			.offset(pageable.getOffset())
+			.limit(pageable.getPageSize())
+			.orderBy(orders.stream().toArray(OrderSpecifier[]::new))
+			.fetchResults();
+    
+	List<VocQuestionDto.Response> content = result.getResults();
+	
+	return new PageImpl<>(content);
+}
+
+private List<OrderSpecifier<?>> getAllOrderSpecifiers(Pageable pageable) {
+    List<OrderSpecifier<?>> orders = new ArrayList<>();
+    OrderSpecifier<?> updatedAt = QuerydslUtil.getSortedColumn(Order.DESC, question, "updatedAt");
+    orders.add(updatedAt);
+    return orders;
+}
+```
+
+
+
 ### 마치며
 
-현재 정렬 기능에 대해선 작업 마무리가 되지 않았지만, 일정상의 이유로 현재까지의 내용을 먼저 업로드 합니다. 정렬에 대한 기능은 작업 후 추가 예정 입니다. <br>
+Querydsl 이 특정 부분에선 간편하지만 만능은 아니다. <br>
+
+예를 들면 검색부분에서 확실히 간편하게 구현 가능하다고 생각 된다. <br>
+<br>
+일반적인 방법으로 JPA Repository Interface 을 이용한다면, findById() 나 save() 등 과 같은 기본적인 인터페이스가 아니라면 가독성이 떨어진다. 코드를 작성하는 당사자는 가이드대로 메소드명만 만들면 되니, 편할 지 몰라도 추가적인 조건이 둘 이상이 되면 메소드 명을 보고 목적이 직관적으로 파악되지 않는다.
+
+```java
+List<Board> findByIdOrUsernameAndActive
+```
+
+그리고 통계와 같은 복잡한 쿼리를 위해서는 SQLMapper(MyBatis) 방식이 필요 할 수 있다. <br>
+<br>
+무조건 하나의 방식을 고집하기 보다는 상황에 맞게 사용 할 줄 알아야 되고, 그걸 위해 모두 미리 공부하여 경험을 해보는 게 중요하다고 생각한다. 내가 언제 어디서 어떤 기술을 사용 할 지 알 수 없기 때문에 <br>
+<br>
+
 
 
 모든소스는 아래 github 을 클릭하여 확인 가능 합니다. <br>
