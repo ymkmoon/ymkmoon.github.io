@@ -251,14 +251,15 @@ public class ReadableRequestWrapper extends HttpServletRequestWrapper { // 상�
 ```
 
 
-상속받아 사용 할 구현체는 완성 됐다. <br>
-Filter 에서의 핵심은 `HttpServletRequest 대신 Wrapper 클래스를 사용`하도록 변경을 해줘야한다. <br>
-기존에는 `chain.doFilter(request, response)` 로 사용되고 있었고, wrapper 클래스를 사용하도록 변경해줬다.
-
 <hr/>
 
 
 #### Filter 수정
+
+상속받아 사용 할 구현체는 완성 됐다. <br>
+Filter 에서의 핵심은 `HttpServletRequest 대신 Wrapper 클래스를 사용`하도록 변경을 해줘야한다. <br>
+기존에는 `chain.doFilter(request, response)` 로 사용되고 있었고, wrapper 클래스를 사용하도록 변경해야 한다.
+
 
 > JwtRequestFilter.java
 
