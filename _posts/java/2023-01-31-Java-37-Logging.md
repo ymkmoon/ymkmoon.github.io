@@ -298,13 +298,12 @@ import io.jsonwebtoken.SignatureException;
 import lombok.RequiredArgsConstructor;
 
 public class JwtRequestFilter extends OncePerRequestFilter {
-  @Override
-protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
-    throws ServletException, IOException {
-    
-    ReadableRequestWrapper wrapper = new ReadableRequestWrapper(request);
-    chain.doFilter(wrapper, response);
-}
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
+		
+		ReadableRequestWrapper wrapper = new ReadableRequestWrapper(request);
+		chain.doFilter(wrapper, response);
+	}
 }
 ```
 
