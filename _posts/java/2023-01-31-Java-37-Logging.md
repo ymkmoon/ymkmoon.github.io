@@ -500,25 +500,25 @@ DefaultRequestFilter 의 코드는 아래와 같다.
 ```java
 import java.io.IOException;
 
-import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.toyseven.ymk.common.ReadableRequestWrapper;
 
 @Component
-public class DefaultRequestFilter implements Filter {
-	
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        ReadableRequestWrapper rereadableRequestWrapper = new ReadableRequestWrapper((HttpServletRequest)request);
-        chain.doFilter(rereadableRequestWrapper, response);
-    }
+public class DefaultRequestFilter extends OncePerRequestFilter {
+
+	@Override
+	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+			throws ServletException, IOException {
+		ReadableRequestWrapper wrapper = new ReadableRequestWrapper((HttpServletRequest)request);
+		chain.doFilter(wrapper, response);
+	}
 }
 ```
 
