@@ -7,7 +7,7 @@ tags:
 
 toc: true
 toc_sticky: true
-toc_label: "[ORM]"
+toc_label: "[Mongodb]"
  
 date: 2023-09-14
 last_modified_at: 2023-09-14
