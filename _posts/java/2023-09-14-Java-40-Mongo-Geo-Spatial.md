@@ -398,6 +398,7 @@ import open.platform.model.entity.NearTestEntity;
 @Repository
 public interface NearTestRepository extends MongoRepository<NearTestEntity, String>, QuerydslPredicateExecutor<NearTestEntity> {
 	List<NearTestEntity> findByLocationNear(Point point, Distance distance);
+   NearTestEntity findTopByLocationNear(Point point, Distance distance);
 }
 ```
 
@@ -407,7 +408,8 @@ public interface NearTestRepository extends MongoRepository<NearTestEntity, Stri
 ```java
 Point point = new Point(127.37066163281584, 36.38321571451524);
 Distance distance = new Distance(100.0, Metrics.KILOMETERS);
-List<NearTestEntity> entity = nearTestRepository.findByLocationNear(point, distance);
+List<NearTestEntity> entities = nearTestRepository.findByLocationNear(point, distance);
+NearTestEntity entity = nearTestRepository.findTopByLocationNear(point, distance);
 ```
 
 
