@@ -3,7 +3,7 @@ title:  "[Java] Mongodb 에서 가장 가까운 위치 데이터 조회하기"
 excerpt: "Mongodb 의 Geo-Spatial query 활용"
 
 tags:
-  - [Java]
+  - [Java, Mongodb, Coordinate]
 
 toc: true
 toc_sticky: true
@@ -292,6 +292,25 @@ db.places.aggregate( [
 
 
 ### Java 환경에서의 적용 방법
+
+
+#### DB 데이터 저장
+
+![CentOS7](/assets/image/java/Mongodb_Geo_Spatial_01.PNG)
+
+```json
+{
+    "_id" : ObjectId("~~~~~~~~~~~~~~~~~"),
+    "timestamp" : NumberLong(1680761550671),
+    "location" : {
+        "x" : 127.37032685268868,
+        "y" : 36.383848914463414
+    }
+}
+```
+
+
+
 
 #### DB 지리공간 인덱스 설정
 
