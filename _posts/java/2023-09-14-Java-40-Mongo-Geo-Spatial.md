@@ -406,6 +406,10 @@ public interface NearTestRepository extends MongoRepository<NearTestEntity, Stri
 #### 데이터 조회
 
 ```java
+import org.springframework.data.geo.Distance;
+import org.springframework.data.geo.Metrics;
+import org.springframework.data.geo.Point;
+
 Point point = new Point(127.37066163281584, 36.38321571451524);
 Distance distance = new Distance(100.0, Metrics.KILOMETERS);
 List<NearTestEntity> entities = nearTestRepository.findByLocationNear(point, distance);
