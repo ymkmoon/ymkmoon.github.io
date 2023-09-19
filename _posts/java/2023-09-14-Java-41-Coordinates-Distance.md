@@ -36,4 +36,14 @@ private Double deg2rad(Double deg){
 private Double rad2deg(Double rad){
     return (rad * 180 / Math.PI);
 }
+
+
+
+
+
+public double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
+    double latDiff = lat2 - lat1;
+    double lonDiff = lon2 - lon1;
+    return Math.sqrt(latDiff * latDiff + lonDiff * lonDiff);
+}
 ```
