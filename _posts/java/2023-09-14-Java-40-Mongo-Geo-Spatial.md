@@ -121,7 +121,7 @@ MongoDB 는 geospatial queries 를 지원하기 위해 다음과 같은 geospati
 db.collection.createIndex( { <location field> : "2dsphere" } )
 ```
 
-<location field> 는 GeoJSON 객체 혹은 legacy coordinate paris 를 값으로 가질 수 있는 필드이다.
+`<location field>` 는 GeoJSON 객체 혹은 legacy coordinate paris 를 값으로 가질 수 있는 필드이다.
 관련된 더 많은 정보는 [2dsphere indexes](https://www.mongodb.com/docs/manual/core/indexes/index-types/geospatial/2dsphere/){:target="_blank"} 에서 볼 수 있습니다.
 
 
@@ -130,7 +130,7 @@ db.collection.createIndex( { <location field> : "2dsphere" } )
 2d index 는 2차원 평면상에서의 geometry 를 계산하는 쿼리를 지원한다. 비록 이 인덱스가 구체 상에서 계산하는 쿼리인 [$nearSphere](https://www.mongodb.com/docs/manual/reference/operator/query/nearSphere/#op._S_nearSphere){:target="_blank"} 를 지원 가능하지만, 구와 관련된 쿼리 사용시에는 2dsphere index 를 사용하는게 좋다.
 
 
-<location field> 는 legacy coordinate paris 를 값으로 갖는 필드입니다.
+`<location field>` 는 legacy coordinate paris 를 값으로 갖는 필드입니다.
 
 관련된 더 많은 정보는 [2d Indexes](https://www.mongodb.com/docs/manual/core/indexes/index-types/geospatial/2d/){:target="_blank"} 에서 볼 수 있습니다.
 
@@ -296,7 +296,7 @@ db.places.aggregate( [
 
 #### DB 데이터 저장
 
-![CentOS7](/assets/image/java/Mongodb_Geo_Spatial_01.PNG)
+![Mongodb](/assets/image/java/Mongodb_Geo_Spatial_01.PNG)
 
 ```json
 {
