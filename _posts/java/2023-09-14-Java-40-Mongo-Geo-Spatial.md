@@ -294,27 +294,21 @@ db.places.aggregate( [
 ### Java 환경에서의 적용 방법
 
 
-#### DB 데이터 저장
+인덱스에 사용 될 필드 생성이 되어 있지 않으면서, 
+컬렉션이 복잡한 경우에는 꼭 인덱스 설정을 미리 하고 필드생성을 해주시길 바랍니다. <br>
+location 필드를 생성 후 인덱스 설정을 하니 아래와 같이 인덱스를 찾을 수 없다는 예외가 발생했습니다.
 
-![Mongodb](/assets/image/java/Mongodb_Geo_Spatial_01.PNG)
-
-```json
-{
-    "_id" : ObjectId("~~~~~~~~~~~~~~~~~"),
-    "timestamp" : NumberLong(1680761550671),
-    "location" : {
-        "x" : 127.37032685268868,
-        "y" : 36.383848914463414
-    }
-}
 ```
-
+unable to find index for $geoNear query", "code": 291, "codeName": "NoQueryExecutionPlans"
+```
 
 
 
 #### DB 지리공간 인덱스 설정
 
 Mongodb 컬렉션의 필드에 지리공간 인덱스를 설정하자
+
+> 컬렉션이 단순한경우에는 아래와 같이 사용 가능합니다.
 
 ```json
 // 둘 중 하나를 사용해야 하고, 2dphere 를 사용하는 걸 추천한다.
@@ -324,7 +318,109 @@ db.컬렉션명.createIndex({ "필드명": "2dsphere" })
 
 
 db.NearTest.createIndex({ "location": "2dsphere" })
+db.Parents.createIndex({ "child.field3.location": "2dsphere" })
 ```
+
+<br/>
+
+> 컬렉션이 복잡한 경우에는 아래와 같이 사용해야 합니다. <br> 
+
+
+Mongodb 는 자유도가 몹시 높기 때문에 위경도가 존재하지 않는 데이터가 있다는 가정하에 <br/>
+location 값이 null 인 경우 BE 에서 NPE 익셉션이 발생하기 때문에
+위경도가 존재하지 않는다면 해당 필드 자체를 생성하지 말아야 합니다.
+
+
+```json
+Parents : {
+    "_id" : ObjectId("111111"),
+    "child" : [
+        {"field1": "field1"},
+        {"field2": "field2"},
+        {
+         "field3": [
+            {
+               "latitude" : 36.111111,
+               "longitude" : 127.111111
+            },
+            {
+               "latitude" : null,
+               "longitude" : null
+            }
+         ]
+
+      }
+   ]
+}
+
+```
+
+<br/>
+
+아래의 경우에 해당된다면 2d 인덱스에 사용 될 필드를 아래와 같이 $cond(조건문) 를 이용해 location 필드를 생성 합니다. <br>
+
+- 위경도 데이터가 따로 존재
+- 2d(sphere) index 에 null 이 존재 할 경우
+
+
+
+```json
+db.Parents.aggregate([
+  {
+    $set: {
+      "childs": {
+        $map: {
+          input: "$childs",
+          as: "data",
+          in: {
+            "field1" : "$$data.field1",
+			   "field2" : "$$data.field2",
+            "field3": {
+              $cond: {
+                if: { $eq: [{ $size: "$$data.field3" }, 0] },
+                then: [],
+                else: {
+                  $map: {
+                    input: "$$data.field3",
+                    as: "coord",
+                    in: {
+                      $cond: {
+                        if: {
+                          $and: [
+                            { $ne: [ "$$coord.latitude", null ] },
+                            { $ne: [ "$$coord.longitude", null ] }
+                          ]
+                        },
+                        then: {
+                          "location": {
+                            x: "$$coord.longitude",
+                            y: "$$coord.latitude"
+                          },
+        				        "timestamp": "$$coord.timestamp"
+                        },
+                        else: null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    $out: "Parents"
+  }
+])
+
+```
+
+
+
+
+
 
 #### Entity(Document) 지리공간 인덱스 설정
 
@@ -378,6 +474,20 @@ public class NearTestEntity {
 ```
 
 
+#### DB 데이터 저장
+
+![Mongodb](/assets/image/java/Mongodb_Geo_Spatial_01.PNG)
+
+```json
+{
+    "_id" : ObjectId("~~~~~~~~~~~~~~~~~"),
+    "timestamp" : NumberLong(1680761550671),
+    "location" : {
+        "x" : 127.37032685268868,
+        "y" : 36.383848914463414
+    }
+}
+```
 
 #### Repository 함수 추가
 
