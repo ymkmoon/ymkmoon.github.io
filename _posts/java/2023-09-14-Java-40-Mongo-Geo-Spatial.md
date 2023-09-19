@@ -296,7 +296,7 @@ db.places.aggregate( [
 
 인덱스에 사용 될 필드 생성이 되어 있지 않으면서, 
 컬렉션이 복잡한 경우에는 꼭 인덱스 설정을 미리 하고 필드생성을 해주시길 바랍니다. <br>
-location 필드를 생성 후 인덱스 설정을 하니 아래와 같이 인덱스를 찾을 수 없다는 예외가 발생했습니다.
+location 필드를 생성 후 인덱스 설정을 하니 서버(Springboot)에서 아래와 같이 인덱스를 찾을 수 없다는 예외가 발생했습니다.
 
 ```
 unable to find index for $geoNear query", "code": 291, "codeName": "NoQueryExecutionPlans"
