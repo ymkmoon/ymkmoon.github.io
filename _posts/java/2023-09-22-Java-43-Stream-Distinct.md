@@ -84,10 +84,15 @@ public static void main(String args[]) {
     cigarettes.add(malboro2);
 
     // Stream 의 map을 이용해  특정 값만 남겨 둔 상태에서 중복제거
-    ListMap<String, String> distinctVer1 = cigarettes.stream().map(cigarette -> cigarette.get("name")).distinct();
+    ListMap<String, String> distinctVer1 = 
+      cigarettes.stream()
+      .map(cigarette -> cigarette.get("name"))
+      .distinct();
 
     // Predicate 을 이용해 중복 제거하는 방법
-    ListMap<String, String> distinctVer2 = cigarettes.stream().filter(cigarette -> distinctByKey(cigarette.get("name")));
+    ListMap<String, String> distinctVer2 = 
+      cigarettes.stream()
+      .filter(cigarette -> distinctByKey(cigarette.get("name")));
 
 }
 
