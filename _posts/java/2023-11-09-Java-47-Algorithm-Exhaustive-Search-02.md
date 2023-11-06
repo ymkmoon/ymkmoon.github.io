@@ -73,7 +73,7 @@ last_modified_at: 2023-11-06
 
 <br/>
 
-1. 배열탐색
+- 배열탐색
 
 💡 배열에서 특정 값을 찾는 문제에서 브루트 포스 알고리즘은 배열을 모두 탐색하여 값을 찾는 방식으로 문제를 해결합니다.
 
@@ -90,7 +90,7 @@ public static int findIndex(int[] arr, int target) {
 
 <br/>
 
-2. 문자열 비교
+- 문자열 비교
 
 💡 문자열 비교 문제에서 브루트 포스 알고리즘은 가능한 모든 문자열 쌍을 비교하여 최소값 또는 최대값을 찾는 방식으로 문제를 해결합니다.
 
@@ -149,7 +149,7 @@ public static int stringCompare(String s1, String s2) {
 |연산자|설명|
 |------|------|
 |&|두 비트 모두 1일 때 1을 반환, 그 외에는 0을 반환|
-|\||두 비트 중 하나라도 1일 때 1을 반환, 둘 다 0일 때 0을 반환|
+||두 비트 중 하나라도 1일 때 1을 반환, 둘 다 0일 때 0을 반환|
 |^|두 비트가 다를 때 1을 반환, 같을 때 0을 반환|
 |~|비트를 반전시켜 반환|
 |<<|비트를 왼쪽으로 이동|
@@ -189,7 +189,7 @@ int groupPermission = PERMISSION_READ | PERMISSION_EXECUTE; // 1001
 
 boolean hasReadPermission = (userPermission & PERMISSION_READ) != 0; // true
 boolean hasDeletePermission = (groupPermission & PERMISSION_DELETE) != 0; // false
- ```
+```
 
 <br/>
 
