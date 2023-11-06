@@ -22,8 +22,8 @@ last_modified_at: 2023-10-24
   - [선형탐색](https://ymkmoon.github.io/Java-44-Algorithm-Linear-Search/)
   - [이진탐색](https://ymkmoon.github.io/Java-45-Algorithm-Binary-Search/)
   - [완전탐색 #1 정의 및 종류](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-01/)
-  - [완전탐색 #2 종류별설명](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-02/)
-  - [완전탐색 #3 예시](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-03/)
+  - [완전탐색 #2 종류별설명](https://ymkmoon.github.io/Java-47-Algorithm-Exhaustive-Search-02/)
+  - [완전탐색 #3 예시](https://ymkmoon.github.io/Java-48-Algorithm-Exhaustive-Search-03/)
 
 
 
