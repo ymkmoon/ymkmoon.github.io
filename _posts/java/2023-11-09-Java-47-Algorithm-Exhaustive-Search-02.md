@@ -581,7 +581,7 @@ DFS를 코드로 구현하는 방법은 재귀로 구현하는 방법과 Stack�
 <br/>
 
 
-#### 재귀(Recursion) 형태로 구현
+#### 재귀함수로 구현
 
 ```java
 public class Main {
