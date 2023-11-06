@@ -17,6 +17,14 @@ last_modified_at: 2023-10-24
   - [블로그](https://adjh54.tistory.com/193){:target="_blank"}
 
 
+- 자료구조와 알고리즘
+  - [재귀함수](https://ymkmoon.github.io/Java-30-Recursion-Function/)
+  - [선형탐색](https://ymkmoon.github.io/Java-44-Algorithm-Linear-Search/)
+  - [이진탐색](https://ymkmoon.github.io/Java-45-Algorithm-Binary-Search/)
+
+
+
+
 ![Algorithm](/assets/image/java/Java_Algorithm_Linear_Search_01.PNG)
 
 
