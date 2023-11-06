@@ -1,5 +1,5 @@
 ---
-title:  "[Java] 선형 탐색 알고리즘 이해하기"
+title:  "[Java/알고리즘] 선형탐색(Linear Search) 이란?"
 excerpt: "선형탐색(Linear Search) 이해하기"
 
 tags:
@@ -21,6 +21,9 @@ last_modified_at: 2023-10-24
   - [재귀함수](https://ymkmoon.github.io/Java-30-Recursion-Function/)
   - [선형탐색](https://ymkmoon.github.io/Java-44-Algorithm-Linear-Search/)
   - [이진탐색](https://ymkmoon.github.io/Java-45-Algorithm-Binary-Search/)
+  - [완전탐색 #1 정의 및 종류](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-01/)
+  - [완전탐색 #2 종류별설명](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-02/)
+  - [완전탐색 #3 예시](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-03/)
 
 
 
@@ -36,14 +39,15 @@ last_modified_at: 2023-10-24
 `( 이진 탐색과 비교가 되며 정렬이 된 상태에서 사용하는 이진 탐색과 사용되는 방식이 다릅니다)`
 
 
+<br/>
+
 ### 이진 탐색(Binary Search) 이란?
 
 - ‘정렬된 배열’에서 ‘특정 값’을 찾는 알고리즘을 의미
 - 해당 탐색 방식은 정렬이 된 배열에서 사용
 
 
-
-
+<br/>
 
 ### 선형 탐색 동작 과정
 
@@ -55,6 +59,7 @@ last_modified_at: 2023-10-24
 3. 원하는 값을 찾은 경우 순회를 멈추고 값을 반환한다.
 
 
+<br/>
 
 #### 선형 탐색과 이진 탐색의 차이점
 
@@ -65,6 +70,7 @@ last_modified_at: 2023-10-24
 - 이에 비해 선형 탐색은 배열 전체를 순회하면서 값을 찾기 때문에 배열의 크기와 상관없이 속도가 일정하게 증가한다.
 
 
+<br/>
 
 #### 선형 탐색과 순차적 탐색의 차이점
 
@@ -73,6 +79,7 @@ last_modified_at: 2023-10-24
 - 선형 탐색의 경우 찾고자 하는 값이 나오지 않으면 종료가 되지만, 순차적 탐색의 경우는 반복을 멈추지 않고 값이 나올 때까지 반복한다.
 
 
+<br/>
 
 #### 선형 탐색과 이진 탐색의 차이점
 
@@ -85,6 +92,7 @@ last_modified_at: 2023-10-24
 |시간복잡도|O(n)|O(log n)|
 
 
+<br/>
 
 ### 선형탐색의 사용처
 
@@ -93,8 +101,15 @@ last_modified_at: 2023-10-24
 - 하지만 데이터의 크기가 커지면 검색 속도가 급격히 느려지므로, 큰 데이터셋에서는 다른 탐색 알고리즘을 사용하는 것을 추천
 
 
+<br/>
 
 ### 선형 탐색의 성능
+
+💡 시간 복잡도(Time Complexity)란?
+
+- 알고리즘이 실행될 때 필요한 ‘입력 값’과 ‘연산 수행 시간’에 따라 효율적인 알고리즘을 나타내는 척도를 의미합니다.
+
+<br/>
 
 선형 탐색의 경우 시간 복잡도의 '빅오 표기법'을 이용하여 확인 하였을때 선형 시간인 O(n) 으로써 이진 탐색보다는 느리지만, 상대적으로 빠른 속도를 가지고 있다.
 
@@ -127,8 +142,11 @@ last_modified_at: 2023-10-24
 |깊이 우선 탐색|O(V + E)|
 
 
+<br/>
 
 ### 선형 탐색의 예시
+
+<br/>
 
 #### 배열 내의 숫자를 찾는 예시
 
@@ -148,6 +166,8 @@ public static int linearSearch(int[] arr, int x) {
 }
 ```
 
+
+<br/>
 
 #### 배열 내의 문자열을 찾는 예시
 

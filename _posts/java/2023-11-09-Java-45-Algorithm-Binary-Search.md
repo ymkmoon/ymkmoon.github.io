@@ -1,5 +1,5 @@
 ---
-title:  "[Java] 이진 탐색 알고리즘 이해하기"
+title:  "[Java/알고리즘] 이진탐색(Binary Search) 이란?"
 excerpt: "이진탐색(Binary Search) 이해하기"
 
 tags:
@@ -21,6 +21,9 @@ last_modified_at: 2023-11-06
   - [재귀함수](https://ymkmoon.github.io/Java-30-Recursion-Function/)
   - [선형탐색](https://ymkmoon.github.io/Java-44-Algorithm-Linear-Search/)
   - [이진탐색](https://ymkmoon.github.io/Java-45-Algorithm-Binary-Search/)
+  - [완전탐색 #1 정의 및 종류](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-01/)
+  - [완전탐색 #2 종류별설명](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-02/)
+  - [완전탐색 #3 예시](https://ymkmoon.github.io/Java-46-Algorithm-Exhaustive-Search-03/)
   
 
 
@@ -36,6 +39,7 @@ last_modified_at: 2023-11-06
 `이진탐색은 탐색 범위를 절반씩 줄여나가기 때문에 선형탐색에 비해 빠른 속도를 보장한다. 하지만 배열이 정렬되어 있어야 한다는 조건이 필요하기 때문에 배열이 정렬되어 있지 않은 경우에는 정렬 작업이 필요하다.`
 
 
+<br/>
 
 ### 선형 탐색(Linear Search) 이란?
 
@@ -47,6 +51,7 @@ last_modified_at: 2023-11-06
 
 
 
+<br/>
 
 ### 선형 탐색 동작 과정
 
@@ -58,6 +63,7 @@ last_modified_at: 2023-11-06
 3. 이 과정하게 찾고자 하는 값이 나올 때까지 반복한다.
 
 
+<br/>
 
 #### 이진 탐색과 선형 탐색의 차이점
 
@@ -67,6 +73,7 @@ last_modified_at: 2023-11-06
 
 - 이에 비해 선형 탐색은 배열 전체를 순회하면서 값을 찾기 때문에 배열의 크기와 상관없이 속도가 일정하게 증가한다.
 
+<br/>
 
 #### 이진 탐색과 선형 탐색의 차이점
 
@@ -80,6 +87,7 @@ last_modified_at: 2023-11-06
 
 
 
+<br/>
 
 ### 이진 탐색의 사용처
 
@@ -90,8 +98,15 @@ last_modified_at: 2023-11-06
 
 
 
+<br/>
 
 ### 이진 탐색의 성능
+
+💡 시간 복잡도(Time Complexity)란?
+
+- 알고리즘이 실행될 때 필요한 ‘입력 값’과 ‘연산 수행 시간’에 따라 효율적인 알고리즘을 나타내는 척도를 의미합니다.
+
+<br/>
 
 이진 탐색의 경우 시간 복잡도의 '빅오 표기법'을 이용하여 확인 하였을때 로그 시간인 O(log n) 으로써 다른 정렬에 비해 상대적으로 매우 빠르다.
 
@@ -124,8 +139,11 @@ last_modified_at: 2023-11-06
 |깊이 우선 탐색|O(V + E)|
 
 
+<br/>
 
 ### 이진 탐색의 숫자 탐색
+
+<br/>
 
 #### 배열 내의 숫자를 찾는 예시
 
@@ -190,6 +208,7 @@ public static int binarySearch() {
 ```
 
 
+<br/>
 
 #### 재귀 함수를 이용한 이진 탐색
 
@@ -236,11 +255,13 @@ public static int binarySearch(int[] arr, int low, int high, int key) {
 }
 ```
 
+<br/>
 
 ### 이진 탐색의 문자열 탐색
 
 - 문자열 배열의 경우 이진/이분 탐색을 사용하는 경우 `Arrays.binarySarch()` 함수를 이용한다.
 
+<br/>
 
 #### Arrays.binarySearch()
 
@@ -261,6 +282,7 @@ public static int binarySearch(Object[] a, Object key)
 |Object|배열에서 찾으려는 값|
 
 
+<br/>
 
 #### Arrays.binarySearch()를 이용한 이진 탐색 예시
 
