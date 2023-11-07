@@ -1,5 +1,5 @@
 ---
-title:  "[Java/알고리즘] 완전탐색(Exhaustive Search) 이란? #1 정의 및 종류"
+title:  "[Java] 완전탐색(Exhaustive Search) 이란? #1 정의 및 종류"
 excerpt: "완전탐색(Exhaustive Search) 정의 및 종류"
 
 tags:

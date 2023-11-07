@@ -1,5 +1,5 @@
 ---
-title:  "[Java/알고리즘] 선형탐색(Linear Search) 이란?"
+title:  "[Java] 선형탐색(Linear Search) 이란?"
 excerpt: "선형탐색(Linear Search) 이해하기"
 
 tags:

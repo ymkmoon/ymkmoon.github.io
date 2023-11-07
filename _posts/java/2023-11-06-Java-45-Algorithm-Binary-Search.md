@@ -1,5 +1,5 @@
 ---
-title:  "[Java/알고리즘] 이진탐색(Binary Search) 이란?"
+title:  "[Java] 이진탐색(Binary Search) 이란?"
 excerpt: "이진탐색(Binary Search) 이해하기"
 
 tags:

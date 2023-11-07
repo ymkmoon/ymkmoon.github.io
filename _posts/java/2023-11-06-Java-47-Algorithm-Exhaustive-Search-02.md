@@ -1,5 +1,5 @@
 ---
-title:  "[Java/알고리즘] 완전탐색(Exhaustive Search) 이란? #2 종류별설명"
+title:  "[Java] 완전탐색(Exhaustive Search) 이란? #2 종류별설명"
 excerpt: "완전탐색(Exhaustive Search) 종류별설명"
 
 tags:
@@ -14,7 +14,7 @@ last_modified_at: 2023-11-06
 ---
 
 - 참고사이트
-  - [블로그](https://adjh54.tistory.com/196){:target="_blank"}
+  - [블로그](https://adjh54.tistory.com/197){:target="_blank"}
 
 
 - 자료구조와 알고리즘
