@@ -599,5 +599,22 @@ public class Main {
         // 방문처리에 사용 할 배열선언    
 		depthFirstSearch(vistied, graph, 1);
 	}
+
+    public static void depthFirstSearch(boolean[] vistied, int[][] graph, int nodeIndex) {
+        
+		// 방문 처리
+		vistied[nodeIndex] = true;
+		
+		// 방문 노드 출력
+		System.out.print(nodeIndex + " -> ");
+		
+		// 방문한 노드에 인접한 노드 찾기
+		for (int node : graph[nodeIndex]) {
+			// 인접한 노드가 방문한 적이 없다면 DFS 수행
+			if(!vistied[node]) {
+				depthFirstSearch(vistied, graph, node);
+			}
+		}
+	}
 }
 ```
