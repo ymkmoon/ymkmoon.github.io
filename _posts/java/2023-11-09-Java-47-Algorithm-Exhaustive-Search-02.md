@@ -590,32 +590,175 @@ DFS를 코드로 구현하는 방법은 재귀로 구현하는 방법과 Stack�
 ```java
 public class Main {
 	
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         boolean[] vistied = new boolean[9];
-	
+
         // 그림예시 그래프의 연결상태를 2차원 배열로 표현
         // 인덱스가 각각의 노드번호가 될 수 있게 
         // 0번인덱스는 아무것도 없는 상태라고 가정
         int[][] graph = { {}, {2,3,8}, {1,6,8}, {1,5}, {5,7}, {3,4,7}, {2}, {4,5}, {1,2} };
         // 방문처리에 사용 할 배열선언    
-		depthFirstSearch(vistied, graph, 1);
-	}
+        depthFirstSearch(vistied, graph, 1);
+    }
 
     public static void depthFirstSearch(boolean[] vistied, int[][] graph, int nodeIndex) {
-        
-		// 방문 처리
-		vistied[nodeIndex] = true;
+
+        // 방문 처리
+        vistied[nodeIndex] = true;
+
+        // 방문 노드 출력
+        System.out.print(nodeIndex + " -> ");
+
+        // 방문한 노드에 인접한 노드 찾기
+        for (int node : graph[nodeIndex]) {
+            // 인접한 노드가 방문한 적이 없다면 DFS 수행
+            if(!vistied[node]) {
+                depthFirstSearch(vistied, graph, node);
+            }
+        }
+    }
+}
+```
+
+<br/>
+
+#### Stack 을 이용한 구현
+
+```java
+public class Main {
+
+	// 방문처리에 사용 할 배열선언
+	static boolean[] vistied = new boolean[9];
+	
+	// 그림예시 그래프의 연결상태를 2차원 배열로 표현
+	// 인덱스가 각각의 노드번호가 될 수 있게 0번인덱스는 아무것도 없는 상태라고 가정
+	static int[][] graph = { {}, {2,3,8}, {1,6,8}, {1,5}, {5,7}, {3,4,7}, {2}, {4,5}, {1,2} };
+	
+	// DFS 사용 할 스택
+	static Stack<Integer> stack = new Stack<>();
+	
+	public static void main(String[] args) {
 		
-		// 방문 노드 출력
-		System.out.print(nodeIndex + " -> ");
+		// 시작 노드를 스택에 넣는다
+		stack.push(1);
+		// 시작 노드 방문처리
+		vistied[1] = true;
 		
-		// 방문한 노드에 인접한 노드 찾기
-		for (int node : graph[nodeIndex]) {
-			// 인접한 노드가 방문한 적이 없다면 DFS 수행
-			if(!vistied[node]) {
-				depthFirstSearch(vistied, graph, node);
+		// 스택이 비어있지 않으면 계속 반복
+		while(!stack.isEmpty()) {
+			
+			// 스택에서 하나를 꺼낸다.
+			int nodeIndex = stack.pop();
+			
+			// 방문 노드 출력
+			System.out.print(nodeIndex + " -> ");
+			
+			// 꺼낸 노드와 인접한 노드 찾기
+			for (int LinkedNode : graph[nodeIndex]) {
+				// 인접한 노드를 방문하지 않았을 경우에 스택에 넣고 방문처리 
+				if(!vistied[LinkedNode]) {
+					stack.push(LinkedNode);
+					vistied[LinkedNode] = true;
+				}
 			}
 		}
 	}
 }
 ```
+
+
+
+
+### 너비 우선 탐색(Breadth-First Search: BFS)
+
+💡 너비 우선 탐색(Breadth-First Search: BFS) 이란?
+
+- 루트 노드에서 시작하여 인접한 노드를 먼저 탐색하는 방법을 의미
+- 해당 방식은 자료구조의 ‘큐’를 이용하여서 구현할 수 있다
+- 기본적으로 그래프 탐색에 사용되며, 가까운 노드부터 우선적으로 탐색하는 알고리즘
+
+<br/>
+
+|분류|깊이우선탐색(DFS)|너비우선탐색(BFS)|
+|------|------|------|
+|자료구조|스택|큐|
+|탐색방식|깊이 우선|너비 우선|
+|모든 경로 탐색|O|X|
+|최단 경로 탐색|X|O|
+|재귀 구현 가능|O|X|
+|반복문 구현 가능|X|O|
+|메모리 사용량|적음|많음|
+
+<br/>
+
+
+![Algorithm](/assets/image/java/Java_Algorithm_Exhaustive_Search_04.PNG)
+
+
+위와 같은 그래프가 존재하고 노드의 탐색은 1번부터 시작한다고 가정
+
+- 큐에 1번 노드를 넣고 방문 처리 (여기서 방문처리라는 것은 내가 해당 노드에 방문했음을 기록하는 것)
+- 1번 노드와 가까운 노드를 큐에 넣고 방문 처리합니다. (2번, 3번 8번 노드) (어떻게 넣어도 상관 없다. 오름차순으로 넣는다.)
+- 큐에서 노드를 하나 꺼낸다.
+- 연결된 노드가 없으면 3번으로 다시 돌아간다.
+- 연결된 노드가 있고 방문하지 않았으면 큐에 넣고 방문처리 후 3번으로 돌아간다.
+- 연결된 노드가 있지만 방문을 이미 한 경우에는 3번으로 돌아간다.
+- 3~6을 큐가 빌 때까지 반복하며 큐가 비었으면 종료한다.
+- 이러한 순서로 BFS를 진행하면 위의 그래프에서 탐색 순서는 다음과 같다. <br/> 1 -> 2 -> 3 -> 8 -> 6 -> 5 -> 4 -> 7
+- BFS알고리즘은 각 노드 간의 간선의 길이가 동일할 경우 최단거리를 구하는 알고리즘으로도 사용할 수 있다.
+
+#### BFS 구현
+
+```java
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// 그래프를 2차원 배열로 표현한다.
+		// 배열의 인덱스를 노드와 매칭시켜서 사용하기 위해 인덱스 0은 아무것도 저장하지 않는다.
+		// 1번인덱스는 1번노드를 뜻하고 노드의 배열의 값은 연결된 노드들이다.
+        // {}, {1번노드와 연결된 노드}, {2번노드와 연결된 노드}, {3번노드와 연결된 노드}, {4번노드와 연결된 노드}, ...
+		int[][] graph = { {}, {2,3,8}, {1,6,8}, {1,5}, {5,7}, {3,4,7}, {2}, {4,5}, {1,2} };
+		
+		// 방문처리를 위한 boolean배열 선언
+		boolean[] visited = new boolean[9];
+		
+		System.out.println(bfs(1, graph, visited));
+		//출력 내용 : 1 -> 2 -> 3 -> 8 -> 6 -> 5 -> 4 -> 7 -> 
+	}
+	
+	static String bfs(int start, int[][] graph, boolean[] visited) {
+		// 탐색 순서를 출력하기 위한 용도
+		StringBuilder sb = new StringBuilder();
+		// BFS에 사용할 큐를 생성
+		Queue<Integer> q = new LinkedList<Integer>();
+		 
+		// 큐에 BFS를 시작 할 노드 번호를 넣는다
+		q.offer(start);
+		
+		// 시작노드 방문처리
+		visited[start] = true;
+		
+		// 큐가 빌 때까지 반복
+		while(!q.isEmpty()) {
+			int nodeIndex = q.poll();
+			sb.append(nodeIndex + " -> ");
+			//큐에서 꺼낸 노드와 연결된 노드들 체크
+			for(int i=0; i<graph[nodeIndex].length; i++) {
+				int temp = graph[nodeIndex][i];
+				// 방문하지 않았으면 방문처리 후 큐에 넣기
+				if(!visited[temp]) {
+					visited[temp] = true;
+					q.offer(temp);
+				}
+			}
+		}
+		// 탐색순서 리턴
+		return sb.toString() ;
+	}
+
+    
+}
+```
+
+
