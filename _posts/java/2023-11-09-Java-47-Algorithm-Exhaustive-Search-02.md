@@ -595,8 +595,9 @@ public class Main {
 	
         // 그림예시 그래프의 연결상태를 2차원 배열로 표현
         // 인덱스가 각각의 노드번호가 될 수 있게 0번인덱스는 아무것도 없는 상태라고 가정
-        int[][] graph = {};
-
+```
+![Algorithm](/assets/image/java/Java_Algorithm_Exhaustive_Search_05.PNG)
+```java
         // 방문처리에 사용 할 배열선언    
 		depthFirstSearch(vistied, graph, 1);
 	}
