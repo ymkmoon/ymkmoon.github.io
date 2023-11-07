@@ -316,3 +316,84 @@ public static void main(String[] args) {
     Arrays.asList(answer).forEach(i -> System.out.println("i : "+i));
 }
 ```
+
+<br/>
+
+### 4. 브루트포스 - 카펫
+
+💡 문제 설명 <br/> 
+<br/>
+Leo는 카펫을 사러 갔다가 아래 그림과 같이 중앙에는 노란색으로 칠해져 있고 테두리 1줄은 갈색으로 칠해져 있는 격자 모양 카펫을 봤다. <br/>
+<br/>
+
+![Algorithm](/assets/image/java/Java_Algorithm_Exhaustive_Search_06.PNG)
+
+Leo는 집으로 돌아와서 아까 본 카펫의 노란색과 갈색으로 색칠된 격자의 개수는 기억했지만, 전체 카펫의 크기는 기억하지 못했다. <br/>
+Leo가 본 카펫에서 갈색 격자의 수 brown, 노란색 격자의 수 yellow가 매개변수로 주어질 때 카펫의 가로, 세로 크기를 순서대로 배열에 담아 return 하도록 solution 함수를 작성하라.<br/>
+
+<br/>
+
+💡 제한사항
+
+- 갈색 격자의 수 brown은 8 이상 5,000 이하인 자연수이다.
+- 노란색 격자의 수 yellow는 1 이상 2,000,000 이하인 자연수이다
+- 카펫의 가로 길이는 세로 길이와 같거나, 세로 길이보다 길다.
+
+<br/>
+
+💡 입출력 예제 
+
+
+|brown|yellow|return|
+|------|------|------|
+|10|2|[4, 3]|
+|8|1|[3, 3]|
+|24|24|[8, 6]|
+
+<br/>
+
+💡 해당 문제의 요점은 ‘브루트 포스’ 알고리즘을 통해 역순으로 배열을 순회하면서 모든 경우의 수를 다 확인하여 결과를 찾는다는 점이다.
+
+- [STEP1] 갈색 격자와 노란 격자를 합하여 전체의 개수를 구한다.
+- [STEP2] 그 합의 제곱근부터 1이 될 때까지 반복 수행 (브루트 포스)
+- [STEP3] 반복 수행을 하면서 그 중 합의 약수인 경우를 찾는다.
+- [STEP4] 약수 중 합에서 가로의 길이를 나누어서 세로(j)의 길이를 계산
+- [STEP5] 가로(i)와 세로(j)의 길이를 이용하여 노란색 타일의 개수가 맞는지 확인하고, 맞을 경우에는 해당 크기를 반환
+
+<br/>
+
+```java
+public static void main(String[] args) {
+
+    int[] answer = new int[2];
+//		int brown = 10;
+//		int yellow = 2;
+    
+//		int brown = 8;
+//		int yellow = 1;
+    
+    int brown = 24;
+    int yellow = 24;
+
+    // [STEP1] 갈색 격자와 노란 격자를 합하여 전체의 개수를 구합니다.
+    int sum = brown + yellow;
+
+    // [STEP2] 그 합의 제곱근부터 1이 될 때까지 반복 수행합니다. (브루트 포스)
+    for (int i = (int) Math.sqrt(sum); i >= 1; i--) {
+
+        // [STEP3] 그 중 합의 약수인 경우를 찾습니다.
+        if (sum % i == 0) {
+
+            // [STEP4] 약수 중 합에서 가로의 길이를 나누어서 세로의 길이를 계산합니다.
+            int j = sum / i;
+
+            // [STEP5] 가로와 세로의 길이를 이용하여 노란색 타일의 개수가 맞는지 확인하고, 맞을 경우에는 해당 크기를 반환합니다.
+            if ((i - 2) * (j - 2) == yellow) {
+                answer = new int[]{j, i};
+            }
+        }
+    }
+    
+    Arrays.stream(answer).forEach(System.out::println);
+}
+```
