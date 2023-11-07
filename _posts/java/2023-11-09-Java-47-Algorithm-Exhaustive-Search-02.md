@@ -594,10 +594,9 @@ public class Main {
         boolean[] vistied = new boolean[9];
 	
         // 그림예시 그래프의 연결상태를 2차원 배열로 표현
-        // 인덱스가 각각의 노드번호가 될 수 있게 0번인덱스는 아무것도 없는 상태라고 가정
-```
-![Algorithm](/assets/image/java/Java_Algorithm_Exhaustive_Search_05.PNG)
-```java
+        // 인덱스가 각각의 노드번호가 될 수 있게 
+        // 0번인덱스는 아무것도 없는 상태라고 가정
+        int[][] graph = { {}, {2,3,8}, {1,6,8}, {1,5}, {5,7}, {3,4,7}, {2}, {4,5}, {1,2} };
         // 방문처리에 사용 할 배열선언    
 		depthFirstSearch(vistied, graph, 1);
 	}
