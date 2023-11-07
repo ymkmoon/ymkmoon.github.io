@@ -583,36 +583,43 @@ DFS를 코드로 구현하는 방법은 재귀로 구현하는 방법과 Stack�
 
 #### 재귀함수로 구현
 
-<br/>
+재귀함수를 이용해 구현하면 아래와 같다.
+
+
 
 ```java
-public class Main {
+public static int binarySearch() {
+    int[] arr = {1, 3, 5, 8, 11, 15, 30, 32, 45}; // 전체 배열
+    int key = 8; // 찾고자 하는 요소
+    int answer = 0;
 
-	// 방문처리에 사용 할 배열선언
-	static boolean[] vistied = new boolean[9];
-	
-	// 그림예시 그래프의 연결상태를 2차원 배열로 표현
-	// 인덱스가 각각의 노드번호가 될 수 있게 0번인덱스는 아무것도 없는 상태라고 가정
-	static int[][] graph = {{}, {2,3,8}, {1,6,8}, {1,5}, {5,7}, {3,4,7}, {2}, {4,5}, {1,2}};
-	
-	public static void main(String[] args) {
-		dfs(1);
-	}
-	
-	static void dfs(int nodeIndex) {
-		// 방문 처리
-		vistied[nodeIndex] = true;
-		
-		// 방문 노드 출력
-		System.out.print(nodeIndex + " -> ");
-		
-		// 방문한 노드에 인접한 노드 찾기
-		for (int node : graph[nodeIndex]) {
-			// 인접한 노드가 방문한 적이 없다면 DFS 수행
-			if(!vistied[node]) {
-				dfs(node);
-			}
-		}
-	}
+    // 시작 인덱스와 마지막 인덱스 값을 지정
+    int low = 0;
+    int high = arr.length - 1;
+
+    // 마지막 인덱스를 보다 첫번째 인덱스가 같아지거나 작을 경우까지 순회
+    while (low <= high) {
+
+        // 중간 값을 구한다.
+        int mid = (low + high) / 2;
+
+        // 중간 값보다 찾으려는 값(key)가 큰 경우 : 중간 값에 1을 더하여 오른쪽 절반을 탐색합니다.
+        if (arr[mid] < key) {
+            low = mid + 1;
+        }
+        // 중간 값보다 찾으려는 값(key)가 작은 경우 : 중간값에 1을 빼서 왼쪽 절반을 탐색합니다.
+        else if (arr[mid] > key) {
+            high = mid - 1;
+        }
+        // 해당 경우가 아니면 중간값을 최종 값으로 반환합니다.
+        else {
+            answer = mid;
+        }
+    }
+
+    // 최종 탐색을 하지 못할 경우 -1을 반환
+    if (answer == 0) answer = -1;
+
+    return answer;
 }
 ```
