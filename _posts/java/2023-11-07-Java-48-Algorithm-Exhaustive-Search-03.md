@@ -145,7 +145,6 @@ public static void main(String[] args) {
 
 ### 2. 브루트포스 - 모의고사
 
-
 <br/>
 
 💡 문제 설명 <br>
@@ -228,7 +227,10 @@ public static void main(String[] args) {
 
 ### 3. 비트마스크 - 비밀지도
 
+<br/> 
+
 💡 문제 설명 <br/>
+
 <br/>
 
 - 네오는 평소 프로도가 비상금을 숨겨놓는 장소를 알려줄 비밀지도를 손에 넣었다. 
@@ -330,7 +332,10 @@ public static void main(String[] args) {
 
 ### 4. 브루트포스 - 카펫
 
+<br/> 
+
 💡 문제 설명 <br/> 
+
 <br/>
 Leo는 카펫을 사러 갔다가 아래 그림과 같이 중앙에는 노란색으로 칠해져 있고 테두리 1줄은 갈색으로 칠해져 있는 격자 모양 카펫을 봤다. <br/>
 <br/>
