@@ -63,19 +63,7 @@ npm i react-dnd react-dnd-html5-backend
 
 ### 프로젝트 구조
 
-```
-src
- ┣ constants
- ┃ ┣ dnd.ts
- ┣ components
- ┃ ┣ draganddrop
- ┃   ┣ Column.tsx
- ┃   ┣ DraggableComponent.tsx
- ┃   ┣ MovableItem.tsx
- ┃   ┣ tasks.ts
- ┣ types
- ┃ ┣ DragAndDrop.ts
-```
+
 
 
 <br/>
