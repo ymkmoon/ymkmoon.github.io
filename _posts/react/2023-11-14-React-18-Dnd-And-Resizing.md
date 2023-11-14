@@ -1,6 +1,6 @@
 ---
-title:  "[React] DragAndDrop(DND) 와 Resizing 사용하기 (Typescript)"
-excerpt: "Fragment 의 사용이유와 사용법"
+title:  "[React] DragAndDrop(DND) 와 Resizing 사용하기 #1 (Typescript)"
+excerpt: "DND 와 Resizing 사용하기"
 
 tags:
   - [React]
@@ -46,6 +46,770 @@ src
 ```
 
 <br/>
+
+### css 추가
+
+> resize.css
+
+```css
+/*
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+*/
+*,
+
+
+:-moz-focusring {
+  outline: auto
+}
+
+:-moz-ui-invalid {
+  box-shadow: none
+}
+
+progress {
+  vertical-align: baseline
+}
+
+
+.visible {
+  visibility: visible
+}
+
+.fixed {
+  position: fixed
+}
+
+.absolute {
+  position: absolute
+}
+
+.relative {
+  position: relative
+}
+
+.top-16 {
+  top: 4rem
+}
+
+.-top-1 {
+  top: -.25rem
+}
+
+.-left-1 {
+  left: -.25rem
+}
+
+.-right-1 {
+  right: -.25rem
+}
+
+.-bottom-1 {
+  bottom: -.25rem
+}
+
+.-top-0\.5 {
+  top: -.125rem
+}
+
+.left-3 {
+  left: .75rem
+}
+
+.right-3 {
+  right: .75rem
+}
+
+.-top-0 {
+  top: 0
+}
+
+.-bottom-0\.5 {
+  bottom: -.125rem
+}
+
+.-bottom-0 {
+  bottom: 0
+}
+
+.bottom-3 {
+  bottom: .75rem
+}
+
+.top-3 {
+  top: .75rem
+}
+
+.-right-0\.5 {
+  right: -.125rem
+}
+
+.-right-0 {
+  right: 0
+}
+
+.-left-0\.5 {
+  left: -.125rem
+}
+
+.-left-0 {
+  left: 0
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto
+}
+
+.mb-2 {
+  margin-bottom: .5rem
+}
+
+.ml-4 {
+  margin-left: 1rem
+}
+
+.mt-16 {
+  margin-top: 4rem
+}
+
+.mt-4 {
+  margin-top: 1rem
+}
+
+.flex {
+  display: flex
+}
+
+.grid {
+  display: grid
+}
+
+.hidden {
+  display: none
+}
+
+.h-12 {
+  height: 3rem
+}
+
+.h-64 {
+  height: 16rem
+}
+
+.h-full {
+  height: 100%
+}
+
+.h-24 {
+  height: 6rem
+}
+
+.h-4 {
+  height: 1rem
+}
+
+.h-2 {
+  height: .5rem
+}
+
+.min-h-\[700px\] {
+  min-height: 700px
+}
+
+.w-full {
+  width: 100%
+}
+
+.w-24 {
+  width: 6rem
+}
+
+.w-4 {
+  width: 1rem
+}
+
+.w-2 {
+  width: .5rem
+}
+
+.max-w-3xl {
+  max-width: 48rem
+}
+
+.max-w-lg {
+  max-width: 32rem
+}
+
+.flex-1 {
+  flex: 1 1 0%
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0
+}
+
+.-rotate-12 {
+  --tw-rotate: -12deg
+}
+
+.-rotate-12,
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.cursor-move {
+  cursor: move
+}
+
+.cursor-grab {
+  cursor: -webkit-grab;
+  cursor: grab
+}
+
+.cursor-pointer {
+  cursor: pointer
+}
+
+.cursor-nw-resize {
+  cursor: nw-resize
+}
+
+.cursor-ne-resize {
+  cursor: ne-resize
+}
+
+.cursor-se-resize {
+  cursor: se-resize
+}
+
+.cursor-n-resize {
+  cursor: n-resize
+}
+
+.cursor-s-resize {
+  cursor: s-resize
+}
+
+.cursor-e-resize {
+  cursor: e-resize
+}
+
+.cursor-w-resize {
+  cursor: w-resize
+}
+
+.select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none
+}
+
+.resize {
+  resize: both
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+.flex-col {
+  flex-direction: column
+}
+
+.flex-wrap {
+  flex-wrap: wrap
+}
+
+.items-center {
+  align-items: center
+}
+
+.justify-center {
+  justify-content: center
+}
+
+.gap-4 {
+  gap: 1rem
+}
+
+.gap-1 {
+  gap: .25rem
+}
+
+.gap-16 {
+  gap: 4rem
+}
+
+.gap-6 {
+  gap: 1.5rem
+}
+
+.gap-2 {
+  gap: .5rem
+}
+
+.gap-3 {
+  gap: .75rem
+}
+
+.overflow-hidden {
+  overflow: hidden
+}
+
+.whitespace-nowrap {
+  white-space: nowrap
+}
+
+.rounded-xl {
+  border-radius: .75rem
+}
+
+.rounded-lg {
+  border-radius: .5rem
+}
+
+.border {
+  border-width: 1px
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235/var(--tw-bg-opacity))
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255/var(--tw-bg-opacity))
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9
+}
+
+.p-4 {
+  padding: 1rem
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1
+}
+
+.text-xs {
+  font-size: .75rem;
+  line-height: 1rem
+}
+
+.text-sm {
+  font-size: .875rem;
+  line-height: 1.25rem
+}
+
+.font-bold {
+  font-weight: 700
+}
+
+.font-black {
+  font-weight: 900
+}
+
+.font-semibold {
+  font-weight: 600
+}
+
+.uppercase {
+  text-transform: uppercase
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128/var(--tw-text-opacity))
+}
+
+.text-stone-700 {
+  --tw-text-opacity: 1;
+  color: rgb(68 64 60/var(--tw-text-opacity))
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity))
+}
+
+.opacity-50 {
+  opacity: .5
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 8px 10px -6px rgba(0, 0, 0, .1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color)
+}
+
+.shadow-lg,
+.shadow-xl {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color)
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color)
+}
+
+.shadow,
+.shadow-2xl {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color)
+}
+
+.shadow-gray-400 {
+  --tw-shadow-color: #9ca3af;
+  --tw-shadow: var(--tw-shadow-colored)
+}
+
+.ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+}
+
+.ring-gray-100 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(243 244 246/var(--tw-ring-opacity))
+}
+
+.ring-gray-300 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(209 213 219/var(--tw-ring-opacity))
+}
+
+.drop-shadow-xl {
+  --tw-drop-shadow: drop-shadow(0 20px 13px rgba(0, 0, 0, .03)) drop-shadow(0 8px 5px rgba(0, 0, 0, .08))
+}
+
+.drop-shadow,
+.drop-shadow-xl {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+.drop-shadow {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgba(0, 0, 0, .1)) drop-shadow(0 1px 1px rgba(0, 0, 0, .06))
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s
+}
+
+.transition-\[shadow\2c transform\] {
+  transition-property: shadow, transform;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s
+}
+
+.transition-shadow {
+  transition-property: box-shadow;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+}
+
+.will-change-\[filter\] {
+  will-change: filter
+}
+
+#__next,
+body,
+html {
+  width: 100%;
+  height: 100%
+}
+
+body,
+html {
+  position: fixed;
+  overflow: hidden
+}
+
+#__next {
+  overflow-y: scroll;
+  position: relative
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+::-webkit-scrollbar {
+  display: none
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark
+  }
+
+  body {
+    color: #eee;
+    background: #000
+  }
+}
+
+.text-shadow {
+  text-shadow: -1px 0 #ececec, 0 1px #ececec, 1px 0 #ececec, 0 -1px #ececec
+}
+
+@-webkit-keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0)
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0)
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0)
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0)
+  }
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0)
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0)
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0)
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0)
+  }
+}
+
+.shake {
+  -webkit-animation: shake .82s cubic-bezier(.36, .07, .19, .97) both;
+  animation: shake .82s cubic-bezier(.36, .07, .19, .97) both
+}
+
+@-webkit-keyframes confetti-slow {
+  0% {
+    transform: translateZ(0) rotateX(0) rotateY(0)
+  }
+
+  to {
+    transform: translate3d(25px, 105vh, 0) rotateX(1turn) rotateY(180deg)
+  }
+}
+
+@keyframes confetti-slow {
+  0% {
+    transform: translateZ(0) rotateX(0) rotateY(0)
+  }
+
+  to {
+    transform: translate3d(25px, 105vh, 0) rotateX(1turn) rotateY(180deg)
+  }
+}
+
+@-webkit-keyframes confetti-medium {
+  0% {
+    transform: translateZ(0) rotateX(0) rotateY(0)
+  }
+
+  to {
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(1turn)
+  }
+}
+
+@keyframes confetti-medium {
+  0% {
+    transform: translateZ(0) rotateX(0) rotateY(0)
+  }
+
+  to {
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(1turn)
+  }
+}
+
+@-webkit-keyframes confetti-fast {
+  0% {
+    transform: translateZ(0) rotateX(0) rotateY(0)
+  }
+
+  to {
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg)
+  }
+}
+
+@keyframes confetti-fast {
+  0% {
+    transform: translateZ(0) rotateX(0) rotateY(0)
+  }
+
+  to {
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg)
+  }
+}
+
+.confetti {
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  border-radius: 0
+}
+
+.confetti--animation-slow {
+  -webkit-animation: confetti-slow 2.25s linear 1 forwards;
+  animation: confetti-slow 2.25s linear 1 forwards
+}
+
+.confetti--animation-medium {
+  -webkit-animation: confetti-medium 1.75s linear 1 forwards;
+  animation: confetti-medium 1.75s linear 1 forwards
+}
+
+.confetti--animation-fast {
+  -webkit-animation: confetti-fast 1.25s linear 1 forwards;
+  animation: confetti-fast 1.25s linear 1 forwards
+}
+
+.todo .dnd-item {
+  border-width: 1px;
+  border-color: transparent
+}
+
+.todo .dnd-item.placeholder {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246/var(--tw-border-opacity));
+  opacity: .5;
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(96 165 250/var(--tw-ring-opacity))
+}
+
+.todo .dnd-item:not(.ghost) {
+  cursor: -webkit-grab;
+  cursor: grab;
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.hover\:drop-shadow-lg:hover {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, .04)) drop-shadow(0 4px 3px rgba(0, 0, 0, .1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)
+}
+
+.active\:scale-95:active {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95
+}
+
+.active\:scale-95:active,
+.active\:scale-\[0\.97\]:active {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+.active\:scale-\[0\.97\]:active {
+  --tw-scale-x: 0.97;
+  --tw-scale-y: 0.97
+}
+
+.active\:shadow-lg:active {
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(0, 0, 0, .1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-\[\#121212\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(18 18 18/var(--tw-bg-opacity))
+  }
+
+  .dark\:bg-\[\#000000\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0/var(--tw-bg-opacity))
+  }
+}
+```
+
+
+<br/>
+
+
 
 
 ### 드래그 이벤트 등록
@@ -547,3 +1311,45 @@ export default DragMenu;
 
 <br/>
 
+
+### 컴포넌트 호출
+
+
+```ts
+import { FC, useRef, useState, useMemo } from 'react';
+import "./css/resize.css";
+import BoundaryLayout from "components/dragandresize/BoundaryLayout";
+
+const [isShowFirstMenu, setIsShowFirstMenu] = useState(false);
+
+const openFirstMenu = () => {
+    setIsShowFirstMenu(!isShowFirstMenu);
+}
+
+const bundaryLayout = useMemo(
+    () => {
+        return (<BoundaryLayout
+            isShowFirstMenu={isShowFirstMenu}
+        />)
+    },
+    [isShowFirstMenu]
+);
+
+return (
+    <>
+        <div className="wrapper-home-custom">
+            {bundaryLayout}
+
+
+            <button
+                type="button"
+                className="btn btn-type-04 sm-btn"
+                onClick={openFirstMenu}
+            >
+                first menu
+            </button>
+        </div>
+    </>
+);
+
+```

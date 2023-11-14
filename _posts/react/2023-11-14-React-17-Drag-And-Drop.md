@@ -1,6 +1,6 @@
 ---
 title:  "[React] DragAndDrop(DND) 사용하기 (Typescript)"
-excerpt: "Fragment 의 사용이유와 사용법"
+excerpt: "DND 사용해보기"
 
 tags:
   - [React]
