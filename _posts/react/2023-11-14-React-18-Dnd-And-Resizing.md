@@ -963,6 +963,7 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
 
     const boundaryRef = useRef<HTMLDivElement>(null);
 
+    // element의 config(위치, 크기) 상태를 정의
     const [{ x, y, w, h }, setConfig] = useState({
         x: 0,
         y: 0,
@@ -970,6 +971,9 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
         h: 0,
     });
 
+
+    // element의 config을 초기
+    // boundary를 기준으로 중앙정렬
     useEffect(() => {
         const boundary = boundaryRef.current?.getBoundingClientRect();
 
@@ -1019,10 +1023,12 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
                     <div
                         style={{ width: firstMenuW, height: firstMenuH, left: firstMenuX, top: firstMenuY }}
                         className="absolute"
+                        // position drag 이벤트를 등록
                         {...registDragEvent((deltaX: number, deltaY: number) => {
                             if (!boundaryRef.current) return;
 
                             const boundary = boundaryRef.current.getBoundingClientRect();
+                            // config 상태를 변경하여 element의 크기를 변화
                             setFirstMenuConfig({
                                 firstMenuX: inrange(firstMenuX + deltaX, BOUNDARY_MARGIN, boundary.width - firstMenuW - BOUNDARY_MARGIN),
                                 firstMenuY: inrange(firstMenuY + deltaY, BOUNDARY_MARGIN, boundary.height - firstMenuH - BOUNDARY_MARGIN),
@@ -1093,6 +1099,7 @@ const DragLayout: React.FC<DragLayoutProps> = ({
             <div
                 className="absolute -top-1 -left-1 h-4 w-4 cursor-nw-resize"
                 style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                // resize되는 범위를 잘 설정
                 {...registDragEvent((deltaX, deltaY) => {
                     setConfig({
                         firstMenuX: inrange(x + deltaX, BOUNDARY_MARGIN, x + w - MIN_W),
@@ -1100,7 +1107,7 @@ const DragLayout: React.FC<DragLayoutProps> = ({
                         firstMenuW: inrange(w - deltaX, MIN_W, x + w - BOUNDARY_MARGIN),
                         firstMenuH: inrange(h - deltaY, MIN_H, y + h - BOUNDARY_MARGIN),
                     });
-                }, true)}
+                }, true)} // resize의 클릭 이벤트가 부모로 전파되지 않도록 stopPropagation
             />
             {/* 우상단 */}
             <div
