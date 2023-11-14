@@ -221,7 +221,7 @@ const Column: FC<ColumnProps> = ({ children, className, title }: ColumnProps) =>
 
     const [, drop] = useDrop({
         accept: ITEM_TYPE,
-        drop: () => ({ name: title }),
+        drop: () => ( { name: title } ),
     });
 
     return (
