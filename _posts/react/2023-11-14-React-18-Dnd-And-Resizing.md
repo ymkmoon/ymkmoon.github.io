@@ -151,7 +151,7 @@ export const DEFAULT_H = 120;
 
 ### 바운더리 설정
 
-> Boundary.ysx
+> Boundary.tsx
 
 ```ts
 import React from 'react';
