@@ -1,5 +1,5 @@
 ---
-title:  "[React] Typescript DragAndDrop(DND) 사용하기"
+title:  "[React] DragAndDrop(DND) 사용하기 (Typescript)"
 excerpt: "Fragment 의 사용이유와 사용법"
 
 tags:
@@ -375,6 +375,8 @@ export const COLUMN_NAMES = {
     AWAITING_REVIEW: "Awaiting review",
     DONE: "Done",
 };
+
+export const ITEM_TYPE = "BOARD_VIEW";
 ```
 
 <br/>
