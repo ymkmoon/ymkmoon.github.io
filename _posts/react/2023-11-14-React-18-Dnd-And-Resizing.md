@@ -34,7 +34,7 @@ src
  ┣ constants
  ┃ ┣ dnd.ts
  ┣ components
- ┃ ┣ dragandresize
+ ┃ ┣ DragAndResize
  ┃   ┣ Boundary.tsx
  ┃   ┣ BoundaryLayout.tsx
  ┃   ┣ DragLayout.tsx
@@ -49,7 +49,11 @@ src
 
 ### css 추가
 
-> resize.css
+
+
+<details>
+<summary>resize.css</summary>
+
 
 ```css
 /*
@@ -805,6 +809,7 @@ html {
   }
 }
 ```
+</details>
 
 
 <br/>
