@@ -53,7 +53,7 @@ src
 
 <details>
 <summary>resize.css</summary>
-
+<div markdown="1">
 
 ```css
 /*
@@ -809,6 +809,8 @@ html {
   }
 }
 ```
+
+</div>
 </details>
 
 
