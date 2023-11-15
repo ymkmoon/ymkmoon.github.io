@@ -28,20 +28,23 @@ last_modified_at: 2023-11-14
 
 ### 프로젝트 구조
 
+동일한 컴포넌트는 제외하고 작성을 하겠다.
+
+
 ```
 src
  ┣ constants
  ┃ ┣ dnd.ts
  ┣ components
- ┃ ┣ dragandresize
- ┃   ┣ Boundary.tsx
- ┃   ┣ BoundaryLayout.tsx ## 수정
+ ┃ ┣ DragAndResizeMultiple
+ ┃   ┣ Boundary.tsx ## 동일
+ ┃   ┣ BoundaryLayout.tsx
  ┃   ┣ DragLayout.tsx
- ┃   ┣ DragLayoutSecond.tsx ## 추가
+ ┃   ┣ DragLayoutSecond.tsx
  ┃   ┣ DragMenu.tsx
- ┃   ┣ DragMenuSecond.tsx ## 추가
- ┃   ┣ ResizeModal.tsx
- ┃   ┣ ResizeModalSecond.tsx ## 추가
+ ┃   ┣ DragMenuSecond.tsx
+ ┃   ┣ ResizeModal.tsx ## 동일
+ ┃   ┣ ResizeModalSecond.tsx 
  ┣ utils
  ┃ ┣ Resize.ts
  ┃ ┣ registDragEvent.ts
@@ -56,7 +59,7 @@ src
 
 ```ts
 import { useEffect, useRef, useState } from 'react';
-import { inrange } from 'utils/Resize';
+import { inrange } from 'utils/resize';
 import Boundary from './Boundary';
 import registDragEvent from 'utils/registDragEvent';
 import { BOUNDARY_MARGIN, DEFAULT_W, DEFAULT_H } from 'constants/dnd';
@@ -110,16 +113,6 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
         }
     }, []);
 
-
-
-
-    useEffect(() => {
-        console.log('useEffect')
-        console.log('isShowFirstMenu : ' + isShowFirstMenu)
-        console.log('isFirstMenuOpen : ' + isFirstMenuOpen)
-        if (isShowFirstMenu || !isFirstMenuOpen) setFirstMenuIsOpen(true)
-    }, [isShowFirstMenu])
-
     const [{ firstMenuX, firstMenuY, firstMenuW, firstMenuH }, setFirstMenuConfig] = useState({
         firstMenuX: 0,
         firstMenuY: 0,
@@ -128,22 +121,6 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
     });
     const [firstMenuShow, setFirstMenuShow] = useState(true);
     const [isFirstMenuOpen, setFirstMenuIsOpen] = useState<boolean>(false);
-    const openFirstModal = () => {
-        setFirstMenuIsOpen((prevState) => {
-            if (!prevState) return true;
-            return prevState;
-        });
-    };
-    const closeFirstModal = () => {
-        setFirstMenuIsOpen((prevState) => {
-            if (prevState) return false;
-            return prevState;
-        });
-    };
-
-    useEffect(() => {
-        if (isShowSecondMenu || !isSecondMenuOpen) setSecondMenuIsOpen(true)
-    }, [isShowSecondMenu])
 
     const [{ secondMenuX, secondMenuY, secondMenuW, secondMenuH }, setSecondMenuConfig] = useState({
         secondMenuX: 0,
@@ -153,18 +130,6 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
     });
     const [secondMenuShow, setSecondMenuShow] = useState(true);
     const [isSecondMenuOpen, setSecondMenuIsOpen] = useState<boolean>(false);
-    const openSecondModal = () => {
-        setSecondMenuIsOpen((prevState) => {
-            if (!prevState) return true;
-            return prevState;
-        });
-    };
-    const closeSecondModal = () => {
-        setSecondMenuIsOpen((prevState) => {
-            if (prevState) return false;
-            return prevState;
-        });
-    };
 
     return (
         <>
@@ -177,23 +142,17 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
                             if (!boundaryRef.current) return;
 
                             const boundary = boundaryRef.current.getBoundingClientRect();
-
-                            // setConfig({
-                            //     x: inrange(x + deltaX, BOUNDARY_MARGIN, boundary.width - w - BOUNDARY_MARGIN),
-                            //     y: inrange(y + deltaY, BOUNDARY_MARGIN, boundary.height - h - BOUNDARY_MARGIN),
-                            //     w,
-                            //     h,
-                            // });
                             setFirstMenuConfig({
                                 firstMenuX: inrange(firstMenuX + deltaX, BOUNDARY_MARGIN, boundary.width - firstMenuW - BOUNDARY_MARGIN),
                                 firstMenuY: inrange(firstMenuY + deltaY, BOUNDARY_MARGIN, boundary.height - firstMenuH - BOUNDARY_MARGIN),
                                 firstMenuW,
                                 firstMenuH,
                             });
+                            console.log('first ' + firstMenuX + " / " + firstMenuY + " / " + firstMenuW + " / " + firstMenuH)
                         })}
                     >
                         {isShowFirstMenu && <DragMenu
-                            isOpen={isFirstMenuOpen} openModal={openFirstModal} closeModal={closeFirstModal}
+                            isOpen={isFirstMenuOpen}
                             setConfig={setFirstMenuConfig}
                             x={firstMenuX}
                             y={firstMenuY}
@@ -206,28 +165,22 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
 
                     <div
                         style={{ width: secondMenuW, height: secondMenuH, left: secondMenuX, top: secondMenuY }}
-                        className="relative"
+                        className="absolute"
                         {...registDragEvent((deltaX: number, deltaY: number) => {
                             if (!boundaryRef.current) return;
 
                             const boundary = boundaryRef.current.getBoundingClientRect();
-
-                            // setConfig({
-                            //     x: inrange(x + deltaX, BOUNDARY_MARGIN, boundary.width - w - BOUNDARY_MARGIN),
-                            //     y: inrange(y + deltaY, BOUNDARY_MARGIN, boundary.height - h - BOUNDARY_MARGIN),
-                            //     w,
-                            //     h,
-                            // });
                             setSecondMenuConfig({
                                 secondMenuX: inrange(secondMenuX + deltaX, BOUNDARY_MARGIN, boundary.width - secondMenuW - BOUNDARY_MARGIN),
                                 secondMenuY: inrange(secondMenuY + deltaY, BOUNDARY_MARGIN, boundary.height - secondMenuH - BOUNDARY_MARGIN),
                                 secondMenuW,
                                 secondMenuH,
                             });
+                            console.log('second ' + secondMenuX + " / " + secondMenuY + " / " + secondMenuW + " / " + secondMenuH)
                         })}
                     >
                         {isShowSecondMenu && <DragMenuSecond
-                            isOpen={isSecondMenuOpen} openModal={openSecondModal} closeModal={closeSecondModal}
+                            isOpen={isSecondMenuOpen}
                             setConfig={setSecondMenuConfig}
                             x={secondMenuX}
                             y={secondMenuY}
@@ -248,12 +201,184 @@ export default BoundaryLayout;
 
 
 
-### Drag Layout 추가
+### Drag Layout 추가 및 추가
 
-> DragLayoutSecond.tsxn
+<details>
+<summary>DragLayout.tsx</summary>
+<div markdown="1">
 
 ```ts
-import { inrange } from 'utils/Resize';
+import { inrange } from 'utils/resize';
+import registDragEvent from 'utils/registDragEvent';
+import { BOUNDARY_MARGIN, MIN_W, MIN_H } from 'constants/dnd';
+
+
+interface DragLayoutProps {
+    setConfig: React.Dispatch<React.SetStateAction<{
+        firstMenuX: number;
+        firstMenuY: number;
+        firstMenuW: number;
+        firstMenuH: number;
+    }>>;
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+    boundaryRef: React.RefObject<HTMLDivElement>;
+    show: boolean;
+}
+
+const DragLayout: React.FC<DragLayoutProps> = ({
+    setConfig,
+    x, y, w, h,
+    boundaryRef,
+    show,
+}: DragLayoutProps) => {
+
+    return (
+        <>
+
+            {/* 좌상단  */}
+            <div
+                className="absolute -top-1 -left-1 h-4 w-4 cursor-nw-resize"
+                style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                {...registDragEvent((deltaX, deltaY) => {
+                    setConfig({
+                        firstMenuX: inrange(x + deltaX, BOUNDARY_MARGIN, x + w - MIN_W),
+                        firstMenuY: inrange(y + deltaY, BOUNDARY_MARGIN, y + h - MIN_H),
+                        firstMenuW: inrange(w - deltaX, MIN_W, x + w - BOUNDARY_MARGIN),
+                        firstMenuH: inrange(h - deltaY, MIN_H, y + h - BOUNDARY_MARGIN),
+                    });
+                }, true)}
+            />
+            {/* 우상단 */}
+            <div
+                className="absolute -top-1 -right-1 h-4 w-4 cursor-ne-resize"
+                style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                {...registDragEvent((deltaX, deltaY) => {
+                    if (!boundaryRef.current) return;
+
+                    const boundary = boundaryRef.current.getBoundingClientRect();
+
+                    setConfig({
+                        firstMenuX: x,
+                        firstMenuY: inrange(y + deltaY, BOUNDARY_MARGIN, y + h - MIN_H),
+                        firstMenuW: inrange(w + deltaX, MIN_W, boundary.width - x - BOUNDARY_MARGIN),
+                        firstMenuH: inrange(h - deltaY, MIN_H, y + h - BOUNDARY_MARGIN),
+                    });
+                }, true)}
+            />
+            {/* 좌하단 */}
+            <div
+                className="absolute -bottom-1 -left-1 h-4 w-4 cursor-ne-resize"
+                style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                {...registDragEvent((deltaX, deltaY) => {
+                    if (!boundaryRef.current) return;
+
+                    const boundary = boundaryRef.current.getBoundingClientRect();
+
+                    setConfig({
+                        firstMenuX: inrange(x + deltaX, BOUNDARY_MARGIN, x + w - MIN_W),
+                        firstMenuY: y,
+                        firstMenuW: inrange(w - deltaX, MIN_W, x + w - BOUNDARY_MARGIN),
+                        firstMenuH: inrange(h + deltaY, MIN_H, boundary.height - y - BOUNDARY_MARGIN),
+                    });
+                }, true)}
+            />
+            {/* 우하단 */}
+            <div
+                className="absolute -bottom-1 -right-1 h-4 w-4 cursor-se-resize"
+                style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                {...registDragEvent((deltaX, deltaY) => {
+                    if (!boundaryRef.current) return;
+
+                    const boundary = boundaryRef.current.getBoundingClientRect();
+
+                    setConfig({
+                        firstMenuX: x,
+                        firstMenuY: y,
+                        firstMenuW: inrange(w + deltaX, MIN_W, boundary.width - x - BOUNDARY_MARGIN),
+                        firstMenuH: inrange(h + deltaY, MIN_H, boundary.height - y - BOUNDARY_MARGIN),
+                    });
+                }, true)}
+            />
+            {/* 상단 */}
+            <div
+                className="absolute -top-0.5 left-3 right-3 h-2 cursor-n-resize"
+                style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                {...registDragEvent((_, deltaY) => {
+                    setConfig({
+                        firstMenuX: x,
+                        firstMenuY: inrange(y + deltaY, BOUNDARY_MARGIN, y + h - MIN_H),
+                        firstMenuW: w,
+                        firstMenuH: inrange(h - deltaY, MIN_H, y + h - BOUNDARY_MARGIN),
+                    });
+                }, true)}
+            />
+            {/* 하단 */}
+            <div
+                className="absolute -bottom-0.5 left-3 right-3 h-2 cursor-s-resize"
+                style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                {...registDragEvent((_, deltaY) => {
+                    if (!boundaryRef.current) return;
+
+                    const boundary = boundaryRef.current.getBoundingClientRect();
+
+                    setConfig({
+                        firstMenuX: x,
+                        firstMenuY: y,
+                        firstMenuW: w,
+                        firstMenuH: inrange(h + deltaY, MIN_H, boundary.height - y - BOUNDARY_MARGIN),
+                    });
+                }, true)}
+            />
+            {/* 우측 */}
+            <div
+                className="absolute bottom-3 top-3 -right-0.5 w-2 cursor-e-resize"
+                style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                {...registDragEvent((deltaX) => {
+                    if (!boundaryRef.current) return;
+
+                    const boundary = boundaryRef.current.getBoundingClientRect();
+
+                    setConfig({
+                        firstMenuX: x,
+                        firstMenuY: y,
+                        firstMenuW: inrange(w + deltaX, MIN_W, boundary.width - x - BOUNDARY_MARGIN),
+                        firstMenuH: h,
+                    });
+                }, true)}
+            />
+            {/* 좌측 */}
+            <div
+                className="absolute bottom-3 top-3 -left-0.5 w-2 cursor-w-resize"
+                style={{ backgroundColor: show ? '#12121250' : 'transparent' }}
+                {...registDragEvent((deltaX) => {
+                    setConfig({
+                        firstMenuX: inrange(x + deltaX, BOUNDARY_MARGIN, x + w - MIN_W),
+                        firstMenuY: y,
+                        firstMenuW: inrange(w - deltaX, MIN_W, x + w - BOUNDARY_MARGIN),
+                        firstMenuH: h,
+                    });
+                }, true)}
+            />
+        </>
+
+    );
+}
+
+export default DragLayout;
+```
+
+</div>
+</details>
+
+<details>
+<summary>DragLayoutSecond.tsx</summary>
+<div markdown="1">
+
+```ts
+import { inrange } from 'utils/resize';
 import registDragEvent from 'utils/registDragEvent';
 import { BOUNDARY_MARGIN, MIN_W, MIN_H } from 'constants/dnd';
 
@@ -415,44 +540,81 @@ const DragLayoutSecond: React.FC<DragLayoutProps> = ({
 export default DragLayoutSecond;
 ```
 
+</div>
+</details>
+
 
 <br/>
 
 
 ### 모달 추가
 
-> ResizeModalSecond.tsx
+
+<details>
+<summary>ResizeModal.tsx</summary>
+<div markdown="1">
 
 ```ts
-const ResizeModalSecond: React.FC = () => {
+const ResizeModal = () => {
     return (<>
-        <div className="absolute h-full w-full cursor-move rounded-xl bg-white shadow-xl ring-1 ring-gray-100 transition-[shadow,transform] active:scale-[0.97] active:shadow-lg" >
-            <div className="modal-header dark">
-                <h5 className="modal-title dark f14">테스트 모달 1</h5>
+        <>
+            <div className="absolute h-full w-full cursor-move rounded-xl bg-white shadow-xl ring-1 ring-gray-100 transition-[shadow,transform] active:scale-[0.97] active:shadow-lg" >
+                <div className="modal-header dark">
+                    <h5 className="modal-title dark f14">테스트 모달 1</h5>
+                </div>
             </div>
-        </div>
-        <br />
+            <br />
+        </>
+    </>)
+}
+
+export default ResizeModal;
+```
+
+</div>
+</details>
+
+
+<details>
+<summary>ResizeModalSecond.tsx</summary>
+<div markdown="1">
+
+```ts
+const ResizeModalSecond = () => {
+
+    return (<>
+        <>
+            <div className="absolute h-full w-full cursor-move rounded-xl bg-white shadow-xl ring-1 ring-gray-100 transition-[shadow,transform] active:scale-[0.97] active:shadow-lg" >
+                <div className="modal-header dark">
+                    <h5 className="modal-title dark f14">테스트 모달 2</h5>
+                </div>
+            </div>
+            <br />
+        </>
     </>)
 }
 
 export default ResizeModalSecond;
 ```
 
+</div>
+</details>
+
 <br/>
 
 
-### 모달 등록
+### 모달 추가
 
-> DragMenu.tsx
+<details>
+<summary>DragMenu.tsx</summary>
+<div markdown="1">
 
 ```ts
-import ResizeModal from "components/dragandresize/ResizeModal";
-import DragLayout from "components/dragandresize/DragLayout";
+import ResizeModal from "components/DragAndResizeMultiple/ResizeModal";
+import DragLayout from "components/DragAndResizeMultiple/DragLayout";
 
 interface DragMenuProps {
     isOpen: boolean;
-    openModal: () => void;
-    closeModal: () => void;
     setConfig: React.Dispatch<React.SetStateAction<{
         firstMenuX: number;
         firstMenuY: number;
@@ -467,8 +629,8 @@ interface DragMenuProps {
     show: boolean;
 }
 
-const DragMenuSecond: React.FC<DragMenuProps> = ({
-    isOpen, openModal, closeModal,
+const DragMenu: React.FC<DragMenuProps> = ({
+    isOpen,
     setConfig,
     x, y, w, h,
     boundaryRef,
@@ -480,7 +642,7 @@ const DragMenuSecond: React.FC<DragMenuProps> = ({
             {isOpen &&
                 <>
                     <div className="absolute h-full w-full cursor-move rounded-xl bg-white shadow-xl ring-1 ring-gray-100 transition-[shadow,transform] active:scale-[0.97] active:shadow-lg">
-                        <ResizeModal isOpen={isOpen} close={closeModal} />
+                        <ResizeModal />
                     </div>
 
                     <DragLayout
@@ -500,64 +662,74 @@ const DragMenuSecond: React.FC<DragMenuProps> = ({
     );
 }
 
+export default DragMenu;
+```
+
+</div>
+</details>
+
+<details>
+<summary>DragMenuSecond.tsx</summary>
+<div markdown="1">
+
+```ts
+import ResizeModalSecond from "components/DragAndResizeMultiple/ResizeModalSecond";
+import DragLayoutSecond from "components/DragAndResizeMultiple/DragLayoutSecond";
+
+interface DragMenuSecondProps {
+    isOpen: boolean;
+    setConfig: React.Dispatch<React.SetStateAction<{
+        secondMenuX: number;
+        secondMenuY: number;
+        secondMenuW: number;
+        secondMenuH: number;
+    }>>;
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+    boundaryRef: React.RefObject<HTMLDivElement>
+    show: boolean;
+}
+
+const DragMenuSecond: React.FC<DragMenuSecondProps> = ({
+    isOpen,
+    setConfig,
+    x, y, w, h,
+    boundaryRef,
+    show,
+}: DragMenuSecondProps) => {
+
+    return (
+        <>
+            {isOpen &&
+                <>
+                    <div className="absolute h-full w-full cursor-move rounded-xl bg-white shadow-xl ring-1 ring-gray-100 transition-[shadow,transform] active:scale-[0.97] active:shadow-lg">
+                        <ResizeModalSecond />
+                    </div>
+
+                    <DragLayoutSecond
+                        setConfig={setConfig}
+                        x={x}
+                        y={y}
+                        w={w}
+                        h={h}
+                        boundaryRef={boundaryRef}
+                        show={show}
+                    />
+                </>
+            }
+
+        </>
+
+    );
+}
+
 export default DragMenuSecond;
 ```
 
-<br/>
-
-### 컴포넌트 호출
-
-
-```ts
-import { FC, useRef, useState, useMemo } from 'react';
-import "./css/resize.css";
-import BoundaryLayout from "components/dragandresize/BoundaryLayout";
-
-const [isShowFirstMenu, setIsShowFirstMenu] = useState(false);
-const [isShowSecondMenu, setIsShowSecondMenu] = useState(false);
-
-const openFirstMenu = () => {
-    setIsShowFirstMenu(!isShowFirstMenu);
-}
-
-const openSecondMenu = () => {
-    setIsShowSecondMenu(!isShowSecondMenu);
-}
-
-const bundaryLayout = useMemo(
-    () => {
-        return (<BoundaryLayout
-            isShowFirstMenu={isShowFirstMenu}
-            isShowSecondMenu={isShowSecondMenu}
-        />)
-    },
-    [isShowFirstMenu, isShowSecondMenu]
-);
-
-return (
-    <>
-        <div className="wrapper-home-custom">
-            {bundaryLayout}
-
-
-            <button
-                type="button"
-                className="btn btn-type-04 sm-btn"
-                onClick={openFirstMenu}
-            >
-                first menu
-            </button>
-
-            <button
-                type="button"
-                className="btn btn-type-04 sm-btn"
-                onClick={openSecondMenu}
-            >
-                second menu
-            </button>
-        </div>
-    </>
-);
+</div>
+</details>
 
 
 
