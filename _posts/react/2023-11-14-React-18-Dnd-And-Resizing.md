@@ -821,7 +821,9 @@ html {
 
 ### 드래그 이벤트 등록
 
-> registDragEvent.ts
+<details>
+<summary>registDragEvent.ts</summary>
+<div markdown="1">
 
 ```ts
 const isTouchScreen =
@@ -883,12 +885,17 @@ export default function registDragEvent(
 
 ```
 
+</div>
+</details>
+
 <br/>
 
 
 ### 거리계산 함수 추가
 
-> Resize.ts
+<details>
+<summary>Resize.ts</summary>
+<div markdown="1">
 
 ```ts
 export const $ = (...classnames: any[]) => {
@@ -903,10 +910,14 @@ export const inrange = (v: number, min: number, max: number) => {
 
 ```
 
+</div>
+</details>
 
 ### 기본 넓이&높이, 최소 넓이&높이 설정
 
-> dnd.ts
+<details>
+<summary>dnd.ts</summary>
+<div markdown="1">
 
 ```ts
 export const BOUNDARY_MARGIN = 12;
@@ -916,13 +927,17 @@ export const DEFAULT_W = 240;
 export const DEFAULT_H = 120;
 ```
 
+</div>
+</details>
 
 <br/>
 
 
 ### 바운더리 설정
 
-> Boundary.tsx
+<details>
+<summary>Boundary.tsx</summary>
+<div markdown="1">
 
 ```ts
 import React from 'react';
@@ -941,15 +956,19 @@ export default React.forwardRef<HTMLDivElement, React.ComponentProps<'div'>>(fun
     />
   );
 });
-
 ```
+
+</div>
+</details>
 
 <br/>
 
 
 ### 바운더리의 레이아웃 설정
 
-> BoundaryLayout.tsx
+<details>
+<summary>BoundaryLayout.tsx</summary>
+<div markdown="1">
 
 ```ts
 import { useEffect, useRef, useState } from 'react';
@@ -1064,12 +1083,17 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
 export default BoundaryLayout;
 ```
 
+</div>
+</details>
+
 <br/>
 
 
 ### Drag Layout 설정
 
-> DragLayout.tsx
+<details>
+<summary>DragLayout.tsx</summary>
+<div markdown="1">
 
 ```ts
 import { inrange } from 'utils/Resize';
@@ -1235,13 +1259,17 @@ const DragLayout: React.FC<DragLayoutProps> = ({
 export default DragLayout;
 ```
 
+</div>
+</details>
 
 <br/>
 
 
 ### 모달 생성
 
-> ResizeModal.tsx
+<details>
+<summary>ResizeModal.tsx</summary>
+<div markdown="1">
 
 ```ts
 const ResizeModal: React.FC = () => {
@@ -1258,12 +1286,17 @@ const ResizeModal: React.FC = () => {
 export default ResizeModal;
 ```
 
+</div>
+</details>
+
 <br/>
 
 
 ### 모달 등록
 
-> DragMenu.tsx
+<details>
+<summary>DragMenu.tsx</summary>
+<div markdown="1">
 
 ```ts
 import ResizeModal from "components/dragandresize/ResizeModal";
@@ -1322,6 +1355,9 @@ const DragMenu: React.FC<DragMenuProps> = ({
 
 export default DragMenu;
 ```
+
+</div>
+</details>
 
 <br/>
 
