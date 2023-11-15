@@ -55,7 +55,9 @@ src
 
 ### 바운더리 레아이웃 수정
 
-> BoundaryLayout.tsx
+<details>
+<summary>BoundaryLayout.tsx</summary>
+<div markdown="1">
 
 ```ts
 import { useEffect, useRef, useState } from 'react';
@@ -199,7 +201,8 @@ const BoundaryLayout: React.FC<BoundaryLayoutProps> = ({
 export default BoundaryLayout;
 ```
 
-
+</div>
+</details>
 
 ### Drag Layout 추가 및 추가
 
