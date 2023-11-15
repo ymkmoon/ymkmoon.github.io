@@ -154,4 +154,4 @@ export default Dashboard;
 
 ### 결과화면
 
-![GridLayout](/assets/image/react/React_Grid_Layout_01.gif)
+<img src="https://ymkmoon.github.io/assets/image/react/React_Grid_Layout_01.gif" width="70%" height="70%"/>

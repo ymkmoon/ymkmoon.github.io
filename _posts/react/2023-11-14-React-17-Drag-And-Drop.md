@@ -47,7 +47,7 @@ React 환경에서 DND 기능을 제공해주는 모듈은 대표적으로 3개�
 
 학습 후 우리가 얻게 될 결과물은 아래와 같다.
 
-![React](/assets/image/react/React_DND_01.gif)
+<img src="https://ymkmoon.github.io/assets/image/react/React_DND_01.gif" width="70%" height="70%"/>
 
 <br/>
 
