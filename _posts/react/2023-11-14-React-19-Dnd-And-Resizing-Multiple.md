@@ -735,6 +735,6 @@ export default DragMenuSecond;
 </details>
 
 
-
+### 결과화면
 
 ![React](/assets/image/react/React_DND_02.PNG)
