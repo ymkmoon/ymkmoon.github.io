@@ -13,7 +13,7 @@ date: 2023-11-17
 last_modified_at: 2023-11-17
 ---
 
-### ``React Grid Layout``
+### ``React TreeView``
 
 - 참고사이트
     - [Document](https://mui.com/x/react-tree-view/){:target="_blank"}
