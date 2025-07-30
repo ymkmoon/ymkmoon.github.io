@@ -17,7 +17,7 @@ toc: false
   details summary {
     cursor: pointer;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 0.9em;
     position: relative;
     /* padding-left: 1.6em; */
     user-select: none;
@@ -45,6 +45,17 @@ toc: false
     border-radius: 3px;
     font-size: 0.9em;
     font-family: Consolas, monospace;
+  }
+
+  li {
+    font-size: 0.7em;
+    line-height: 1.6;
+    margin-bottom: 0.5em;
+  }
+
+  li strong {
+    font-size: 0.8em;
+    color: #222;
   }
 </style>
 
