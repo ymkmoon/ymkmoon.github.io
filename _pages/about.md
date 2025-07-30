@@ -158,7 +158,7 @@ padding: 5px;
 </details>
 
 <details>
-<summary><strong>국가연구과제</strong> <span style="color:#6a737d;">(2023.07 - 2023.11)</span> - Frontend & Backend / Spring Boot</summary>
+<summary><strong>국가연구과제</strong> <span style="color:#6a737d;">(2023.07 - 2023.11)</span> - Backend & Frontend/ Spring Boot</summary>
 
 <table>
   <thead>
