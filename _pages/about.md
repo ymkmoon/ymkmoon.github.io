@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: "About"
+title: "프로필"
 excerpt: "About Me"
 search: true
 last_modified_at: 2025-07-30
@@ -63,8 +63,6 @@ toc: false
   }
 </style>
 
-
-## 프로필
 
 <table>
 <tr>
