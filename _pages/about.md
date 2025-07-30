@@ -7,7 +7,7 @@ last_modified_at: 2022-05-13
 toc: false
 --- 
 
-## Profile
+## 프로필
 <center><img src="/assets/image/author/profile_with_dog.jpg" width="30%" height="30%" style="
 border: 1px solid #cab6de;
 border-radius: 50%;
@@ -25,33 +25,55 @@ padding: 5px;
  - Geosoft (2019.07 ~ )
 
 ## 기술스택
-### 🖥️ **백엔드**
+
+<details>
+<summary>🖥️ <strong>백엔드</strong></summary>
+
 - **Java**  
   JPA와 MyBatis를 활용한 RESTful API 개발 경험
 - **Node.js**  
   Express 기반의 서버 구축 및 GraphQL API 개발
 
-### 🧱 데이터베이스
+</details>
+
+<details>
+<summary>🧱 <strong>데이터베이스</strong></summary>
+
 - **PostgreSQL**, **MySQL**  
   복잡한 쿼리 작성 및 성능 튜닝 경험 보유
 
-### 🖼️ 프론트엔드
+</details>
+
+<details>
+<summary>🖼️ <strong>프론트엔드</strong></summary>
+
 - **React**  
   상태 관리 및 컴포넌트 기반 UI 개발
 
-### ☁️ 클라우드 & DevOps
+</details>
+
+<details>
+<summary>☁️ <strong>클라우드 & DevOps</strong></summary>
+
 - **AWS**  
-  EC2, S3, CodeDeploy를 활용한 인프라 구성 및 자동 배포
+  EC2, S3, CodeDeploy를 활용한 인프라 구성 및 자동 배포  
 - **Docker**  
-  개발 환경 컨테이너화 및 배포 자동화 경험
+  개발 환경 컨테이너화 및 배포 자동화 경험  
 - **Jenkins**  
-  CI/CD 파이프라인 구축 및 운영
+  CI/CD 파이프라인 구축 및 운영  
 - **Nginx**  
   정적 파일 서빙 및 리버스 프록시 설정 경험
 
-### 🧑‍💻 운영체제
+</details>
+
+<details>
+<summary>🧑‍💻 <strong>운영체제</strong></summary>
+
 - **Linux**  
   CentOS, Rocky Linux, Ubuntu 환경에서의 서버 운영 및 쉘 스크립트 작성 경험
+
+</details>
+
 
 ## 토이프로젝트
  * [BackEnd](https://github.com/ymkmoon/toyseven){:target="_blank"}
