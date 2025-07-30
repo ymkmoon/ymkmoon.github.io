@@ -48,18 +48,18 @@ toc: false
   }
 
   li {
-    font-size: 0.7em;
+    font-size: 0.8em;
     line-height: 1.6;
     margin-bottom: 0.5em;
   }
 
   li strong {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #222;
   }
 
   li span {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 </style>
 
