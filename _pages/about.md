@@ -8,7 +8,7 @@ toc: false
 --- 
 <style>
   details {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.8em;
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 0.8em 1em;
