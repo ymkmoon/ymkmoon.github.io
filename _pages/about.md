@@ -68,12 +68,14 @@ padding: 5px;
 <details>
 <summary><strong>데이터통합서비스 플랫폼</strong> <span style="color:#6a737d;">(2025.07 ~)</span> - Backend / NodeJS</summary>
 
+
 |구분|내용|
 |------|---|
 |📅 프로젝트 설명|각 업무에 대한 결과 입력 및 업무 싸이클을 통한 자동 생성|
 |🎯 담당분야|Backend, 인프라 관리, DB 구성|
 |🛠️ 사용기술|<code>NodeJS</code>, <code>GraphQL</code>, <code>Docker</code>, <code>Nginx</code>|
 |📝 업무내용|CRUD API 개발, 스케줄러 개발, 초기스크립트 정리, 도커를 이용한 이미지 생성과 컨테이너 실행 |
+
 
 </details>
 
