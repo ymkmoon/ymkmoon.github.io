@@ -3,7 +3,7 @@ permalink: /about/
 title: "About"
 excerpt: "About Me"
 search: true
-last_modified_at: 2022-05-13
+last_modified_at: 2025-07-30
 toc: false
 --- 
 
@@ -21,11 +21,7 @@ padding: 5px;
 * 이름 : 유명기
 * 전공 : 연성대학교 컴퓨터소프트웨어
 
-## 경력
-
-<summary><strong>지오소프트</strong> (2019.07 ~)</summary>
-
-<br/>
+## 경력 (지오소프트 : 2019.07 ~)
 
 <details>
 <summary><strong>데이터통합서비스 플랫폼</strong> (2025.07 ~)</summary>
