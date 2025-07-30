@@ -68,16 +68,12 @@ padding: 5px;
 <details>
 <summary><strong>데이터통합서비스 플랫폼</strong> <span style="color:#6a737d;">(2025.07 ~)</span> - Backend / NodeJS</summary>
 
-<!-- 공백 주석 -->
-
 |구분|내용|
 |------|---|
 |📅 프로젝트 설명|각 업무에 대한 결과 입력 및 업무 싸이클을 통한 자동 생성|
 |🎯 담당분야|Backend, 인프라 관리, DB 구성|
-|🛠️ 사용기술|<code>NodeJS</code>, <code>GraphQL</code>, <code>Docker</code>, <code>Nginx</code>|
+|🛠️ 사용기술|`NodeJS`, `GraphQL`, `Docker`, `Nginx`|
 |📝 업무내용|CRUD API 개발, 스케줄러 개발, 초기스크립트 정리, 도커를 이용한 이미지 생성과 컨테이너 실행 |
-
-<!-- 공백 주석 -->
 
 </details>
 
@@ -90,7 +86,7 @@ padding: 5px;
 |------|---|
 |📅 프로젝트 설명|차량 단말(IoT) 데이터를 이용해 차량 관제와 관리를 제공하는 서비스|
 |🎯 담당분야|Frontend, 담당 AWS 인프라 관리|
-|🛠️ 사용기술|<code>React</code>, <code>Nginx</code>, <code>AWS (S3, Codedeploy, EC2)</code>|
+|🛠️ 사용기술|`React`, `Nginx`, `AWS (S3, Codedeploy, EC2)`|
 |📝 업무내용|고객용 APP, 관리자용 WEB 신규 개발 및 Github Action과 AWS를 이용한 CICD 구축|
 
 </details>
@@ -104,7 +100,7 @@ padding: 5px;
 |------|---|
 |📅 프로젝트 설명|실내 측위 데이터를 이용해 원하는 위치의 예상 값을 계산(보간 처리)하여 제공하는 서비스|
 |🎯 담당분야|Frontend, Backend|
-|🛠️ 사용기술|<code>Spring Boot</code>, <code>Java</code>, <code>React</code>, <code>Typescript</code>, <code>MongoDB</code>, <code>JPA</code>, <code>Querydsl</code>|
+|🛠️ 사용기술|`Spring Boot`, `Java`, `React`, `Typescript`, `MongoDB`, `JPA`, `Querydsl`|
 |📝 업무내용|실내 측위 데이터 시각화 및 정제, 좌표계 변환과 IDW 보간법을 이용한 데이터 제공|
 
 </details>
@@ -118,7 +114,7 @@ padding: 5px;
 |------|---|
 |📅 프로젝트 설명|렌터카 APP의 관리와 운영을 제공하는 관리자 웹 서비스|
 |🎯 담당분야|Frontend|
-|🛠️ 사용기술|<code>React</code>, <code>Typescript</code>, <code>Apollo</code>, <code>GraphQL</code>, <code>Kakao Map</code>|
+|🛠️ 사용기술|`React`, `Typescript`, `Apollo`, `GraphQL`, `Kakao Map`|
 |📝 업무내용|고객의 추가 요구사항에 대해 수정 및 추가 개발(단말기관련)|
 
 </details>
@@ -132,7 +128,7 @@ padding: 5px;
 |------|---|
 |📅 프로젝트 설명|내부 인력을 위한 렌터카 예약 서비스   |
 |🎯 담당분야|Frontend|
-|🛠️ 사용기술|<code>React</code>, <code>Typescript</code>, <code>GraphQL</code>, <code>Naver Map</code>|
+|🛠️ 사용기술|`React`, `Typescript`, `GraphQL`, `Naver Map`|
 |📝 업무내용|로그인, 회원가입, 차량 예약, 예약 히스토리, 마이페이지 등 개발|
 
 </details>
@@ -145,7 +141,7 @@ padding: 5px;
 |구분|내용|
 |------|---|
 |🎯 담당분야|Backend, Frontend|
-|🛠️ 사용기술|<code>Java</code>, 전자정부 프레임워크, <code>jQuery</code>, <code>Javascript</code>|
+|🛠️ 사용기술|`Java`, 전자정부 프레임워크, `jQuery`, `Javascript`|
 |📝 업무내용|기존 환경 분석하여 로컬 환경 빌드 및 실행과 운영 환경 배포까지의 흐름 문서화|
 
 </details>
@@ -159,7 +155,7 @@ padding: 5px;
 |------|---|
 |📅 프로젝트 설명|실내 이미지를 이용한 파노라마 뷰 제공 및 이미지 거리·너비 계산 서비스|
 |🎯 담당분야|Frontend|
-|🛠️ 사용기술|<code>pannellum</code>, <code>Javascript</code>, HTML5-Canvas|
+|🛠️ 사용기술|`pannellum`, `Javascript`, HTML5-Canvas|
 |📝 업무내용|실내 이미지 시각화 및 이미지 내 거리 측정 웹 페이지 개발|
 
 </details>
@@ -173,7 +169,7 @@ padding: 5px;
 |------|---|
 |📅 프로젝트 설명|렌터카 APP의 관리와 운영을 제공하는 관리자 웹 서비스|
 |🎯 담당분야|Frontend|
-|🛠️ 사용기술|<code>React</code>, <code>Typescript</code>, <code>Apollo</code>, <code>GraphQL</code>, <code>Kakao Map</code>|
+|🛠️ 사용기술|`React`, `Typescript`, `Apollo`, `GraphQL`, `Kakao Map`|
 |📝 업무내용|렌터카 스케줄표 생성과 차량 예약 및 배차 화면 개발|
 
 </details>
@@ -187,7 +183,7 @@ padding: 5px;
 |------|---|
 |📅 프로젝트 설명|일본 내 열차 예약 서비스|
 |🎯 담당분야|Backend, Frontend|
-|🛠️ 사용기술|<code>Java</code>, <code>JSP</code>, <code>Spring Boot</code>, AWS Cognito|
+|🛠️ 사용기술|`Java`, `JSP`, `Spring Boot`, AWS Cognito|
 |📝 업무내용|AWS Cognito 기반 유저 관리, 특급 열차 티켓 변경 및 환불 개발|
 
 </details>
@@ -200,7 +196,7 @@ padding: 5px;
 |구분|내용|
 |------|---|
 |🎯 담당분야|Backend, Frontend|
-|🛠️ 사용기술|<code>Java</code>, <code>JSP</code>, Spring Framework, Geosoft Map, Olleh Map, Javascript|
+|🛠️ 사용기술|`Java`, `JSP`, Spring Framework, Geosoft Map, Olleh Map, Javascript|
 |📝 업무내용|차량 관제 시스템 고도화(지도 변경), 데이터 시각화 및 지도 기반 Polyline, Polygon 기능 추가|
 
 </details>
@@ -214,7 +210,7 @@ padding: 5px;
 |------|---|
 |📅 프로젝트 설명|일본 내 열차 예약 서비스|
 |🎯 담당분야|Backend, Frontend|
-|🛠️ 사용기술|<code>Java</code>, <code>JSP</code>, <code>Spring Boot</code>, AWS Cognito, Javascript|
+|🛠️ 사용기술|`Java`, `JSP`, `Spring Boot`, AWS Cognito, Javascript|
 |📝 업무내용|AWS Cognito 기반 유저 관리, 열차 티켓 예약, 구매, 마이페이지 개발|
 
 </details>
