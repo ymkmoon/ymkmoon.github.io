@@ -4,7 +4,7 @@ title: "About"
 excerpt: "About Me"
 search: true
 last_modified_at: 2022-05-13
-toc: true
+toc: false
 --- 
 
 ## Profile
