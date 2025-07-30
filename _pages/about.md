@@ -68,6 +68,8 @@ padding: 5px;
 <details>
 <summary><strong>데이터통합서비스 플랫폼</strong> <span style="color:#6a737d;">(2025.07 ~)</span> - Backend / NodeJS</summary>
 
+<!-- -->
+
 |구분|내용|
 |------|---|
 |📅 프로젝트 설명|각 업무에 대한 결과 입력 및 업무 싸이클을 통한 자동 생성|
@@ -75,12 +77,15 @@ padding: 5px;
 |🛠️ 사용기술|`NodeJS`, `GraphQL`, `Docker`, `Nginx`|
 |📝 업무내용|CRUD API 개발, 스케줄러 개발, 초기스크립트 정리, 도커를 이용한 이미지 생성과 컨테이너 실행 |
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>차량관제 FMS</strong> <span style="color:#6a737d;">(2024.01 - 2025.06)</span> - Frontend / React</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -89,12 +94,15 @@ padding: 5px;
 |🛠️ 사용기술|`React`, `Nginx`, `AWS (S3, Codedeploy, EC2)`|
 |📝 업무내용|고객용 APP, 관리자용 WEB 신규 개발 및 Github Action과 AWS를 이용한 CICD 구축|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>국가연구과제</strong> <span style="color:#6a737d;">(2023.07 - 2023.11)</span> - Frontend & Backend / Spring Boot</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -103,12 +111,15 @@ padding: 5px;
 |🛠️ 사용기술|`Spring Boot`, `Java`, `React`, `Typescript`, `MongoDB`, `JPA`, `Querydsl`|
 |📝 업무내용|실내 측위 데이터 시각화 및 정제, 좌표계 변환과 IDW 보간법을 이용한 데이터 제공|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>Mobility Service 2차</strong> <span style="color:#6a737d;">(2023.05 - 2023.07)</span> - Frontend / React</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -117,12 +128,15 @@ padding: 5px;
 |🛠️ 사용기술|`React`, `Typescript`, `Apollo`, `GraphQL`, `Kakao Map`|
 |📝 업무내용|고객의 추가 요구사항에 대해 수정 및 추가 개발(단말기관련)|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>Car Sharing</strong> <span style="color:#6a737d;">(2023.04 - 2023.05)</span> - Frontend / React</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -131,12 +145,15 @@ padding: 5px;
 |🛠️ 사용기술|`React`, `Typescript`, `GraphQL`, `Naver Map`|
 |📝 업무내용|로그인, 회원가입, 차량 예약, 예약 히스토리, 마이페이지 등 개발|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>상권분석 시스템</strong> <span style="color:#6a737d;">(2022.12 - 2023.04)</span> - Backend & Frontend / Java</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -144,12 +161,15 @@ padding: 5px;
 |🛠️ 사용기술|`Java`, 전자정부 프레임워크, `jQuery`, `Javascript`|
 |📝 업무내용|기존 환경 분석하여 로컬 환경 빌드 및 실행과 운영 환경 배포까지의 흐름 문서화|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>3D Camera Viewer</strong> <span style="color:#6a737d;">(2022.11 - 2022.12)</span> - Frontend / Javascript</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -158,12 +178,15 @@ padding: 5px;
 |🛠️ 사용기술|`pannellum`, `Javascript`, HTML5-Canvas|
 |📝 업무내용|실내 이미지 시각화 및 이미지 내 거리 측정 웹 페이지 개발|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>Mobility Service 1차</strong> <span style="color:#6a737d;">(2022.05 - 2022.11)</span> - Frontend / React</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -172,12 +195,15 @@ padding: 5px;
 |🛠️ 사용기술|`React`, `Typescript`, `Apollo`, `GraphQL`, `Kakao Map`|
 |📝 업무내용|렌터카 스케줄표 생성과 차량 예약 및 배차 화면 개발|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>Maas (열차 예약 시스템) 2차</strong> <span style="color:#6a737d;">(2021.12 - 2022.05)</span> - Backend & Frontend / Java</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -186,12 +212,15 @@ padding: 5px;
 |🛠️ 사용기술|`Java`, `JSP`, `Spring Boot`, AWS Cognito|
 |📝 업무내용|AWS Cognito 기반 유저 관리, 특급 열차 티켓 변경 및 환불 개발|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>차량관제 고도화</strong> <span style="color:#6a737d;">(2021.09 - 2021.12)</span> - Backend & Frontend / Java</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -199,12 +228,15 @@ padding: 5px;
 |🛠️ 사용기술|`Java`, `JSP`, Spring Framework, Geosoft Map, Olleh Map, Javascript|
 |📝 업무내용|차량 관제 시스템 고도화(지도 변경), 데이터 시각화 및 지도 기반 Polyline, Polygon 기능 추가|
 
+<!-- -->
+
 </details>
 
-<hr>
 
 <details>
 <summary><strong>Maas (열차 예약 시스템) 1차</strong> <span style="color:#6a737d;">(2021.04 - 2021.10)</span> - Backend & Frontend / Java</summary>
+
+<!-- -->
 
 |구분|내용|
 |------|---|
@@ -212,6 +244,8 @@ padding: 5px;
 |🎯 담당분야|Backend, Frontend|
 |🛠️ 사용기술|`Java`, `JSP`, `Spring Boot`, AWS Cognito, Javascript|
 |📝 업무내용|AWS Cognito 기반 유저 관리, 열차 티켓 예약, 구매, 마이페이지 개발|
+
+<!-- -->
 
 </details>
 
