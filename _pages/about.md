@@ -64,20 +64,30 @@ toc: false
 </style>
 
 
-
 ## 프로필
-<center><img src="/assets/image/author/profile_with_dog.jpg" width="30%" height="30%" style="
-border: 1px solid #cab6de;
-border-radius: 50%;
-padding: 5px;
--moz-border-radius: 50%;
--khtml-border-radius: 50%;
--webkit-border-radius: 50%;
-"></center>
 
+<table>
+<tr>
+<td style="width: 30%; vertical-align: top;">
 
-* 이름 : 유명기
-* 전공 : 연성대학교 컴퓨터소프트웨어
+<img src="/assets/image/author/profile_with_dog.jpg" width="100%" style="border: 1px solid #cab6de; border-radius: 50%; padding: 5px;" />
+
+**유명기**
+
+</td>
+<td style="vertical-align: top; padding-left: 20px;">
+
+### 연락처
+<ul>
+  <li><strong>Email:</strong> [ymkmoon@naver.com](mailto:ymkmoon@naver.com)</li>
+  <li><strong>Git:</strong> [https://github.com/ymkmoon](https://github.com/ymkmoon){:target="_blank"}</li>
+  <li><strong>Blog:</strong> [https://ymkmoon.github.io/](https://ymkmoon.github.io/){:target="_blank"}</li>
+</ul>
+
+</td>
+</tr>
+</table>
+
 
 ## 기술스택
 
@@ -309,14 +319,8 @@ padding: 5px;
 </details>
 
 
-
-
-
-## 토이프로젝트
+<!-- ## 토이프로젝트
  * [BackEnd](https://github.com/ymkmoon/toyseven){:target="_blank"}
- * [FrontEnd](https://github.com/ymkmoon/toyseven-react){:target="_blank"}
+ * [FrontEnd](https://github.com/ymkmoon/toyseven-react){:target="_blank"} -->
 
-## 연락처
- * Email : [ymkmoon@naver.com](mailto:ymkmoon@naver.com)
- * Git : [https://github.com/ymkmoon](https://github.com/ymkmoon){:target="_blank"}
- * Blog : [https://ymkmoon.github.io/](https://ymkmoon.github.io/){:target="_blank"}
+
