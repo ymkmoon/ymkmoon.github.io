@@ -29,9 +29,10 @@ padding: 5px;
 <details>
 <summary>🖥️ <strong>백엔드</strong></summary>
 
-- **Java**  
+- **Java** <br>
   JPA와 MyBatis를 활용한 RESTful API 개발 경험
-- **Node.js**  
+
+- **Node.js**  <br>
   Express 기반의 서버 구축 및 GraphQL API 개발
 
 </details>
@@ -39,7 +40,7 @@ padding: 5px;
 <details>
 <summary>🧱 <strong>데이터베이스</strong></summary>
 
-- **PostgreSQL**, **MySQL**  
+- **PostgreSQL**, **MySQL**  <br>
   복잡한 쿼리 작성 및 성능 튜닝 경험 보유
 
 </details>
@@ -47,7 +48,7 @@ padding: 5px;
 <details>
 <summary>🖼️ <strong>프론트엔드</strong></summary>
 
-- **React**  
+- **React**  <br>
   상태 관리 및 컴포넌트 기반 UI 개발
 
 </details>
@@ -55,13 +56,13 @@ padding: 5px;
 <details>
 <summary>☁️ <strong>클라우드 & DevOps</strong></summary>
 
-- **AWS**  
+- **AWS**  <br>
   EC2, S3, CodeDeploy를 활용한 인프라 구성 및 자동 배포  
-- **Docker**  
+- **Docker**  <br>
   개발 환경 컨테이너화 및 배포 자동화 경험  
-- **Jenkins**  
+- **Jenkins**  <br>
   CI/CD 파이프라인 구축 및 운영  
-- **Nginx**  
+- **Nginx**  <br>
   정적 파일 서빙 및 리버스 프록시 설정 경험
 
 </details>
@@ -69,7 +70,7 @@ padding: 5px;
 <details>
 <summary>🧑‍💻 <strong>운영체제</strong></summary>
 
-- **Linux**  
+- **Linux**  <br>
   CentOS, Rocky Linux, Ubuntu 환경에서의 서버 운영 및 쉘 스크립트 작성 경험
 
 </details>
