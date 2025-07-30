@@ -21,7 +21,7 @@ toc: false
     position: relative;
     /* padding-left: 1.6em; */
     user-select: none;
-    color: #0366d6;
+    color: #4A5568;
   }
 
   table {
