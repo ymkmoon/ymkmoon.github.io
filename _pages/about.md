@@ -6,6 +6,63 @@ search: true
 last_modified_at: 2025-07-30
 toc: false
 --- 
+<style>
+  details {
+    margin-bottom: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.8em 1em;
+    background: #fafafa;
+  }
+  details summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    position: relative;
+    padding-left: 1.6em;
+    user-select: none;
+    color: #0366d6;
+  }
+  /* 아이콘 만들기 (▶, ▼) */
+  details summary::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1em;
+    transition: transform 0.2s ease;
+    color: #0366d6;
+  }
+  details[open] summary::before {
+    content: "▼";
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.6em;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    vertical-align: top;
+  }
+  th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+    text-align: left;
+  }
+  td code {
+    background-color: #eaeaea;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    font-family: Consolas, monospace;
+  }
+</style>
+
+
 
 ## 프로필
 <center><img src="/assets/image/author/profile_with_dog.jpg" width="30%" height="30%" style="
