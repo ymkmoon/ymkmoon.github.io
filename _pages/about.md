@@ -19,23 +19,9 @@ toc: false
     font-weight: bold;
     font-size: 1.1em;
     position: relative;
-    padding-left: 1.6em;
+    /* padding-left: 1.6em; */
     user-select: none;
     color: #0366d6;
-  }
-  /* 아이콘 만들기 (▶, ▼) */
-  details summary::before {
-    content: "▶";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.1em;
-    transition: transform 0.2s ease;
-    color: #0366d6;
-  }
-  details[open] summary::before {
-    content: "▼";
   }
 
   table {
