@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name: "유명기"
-  avatar: "/assets/image/author/profile_with_dog.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: "/assets/image/author/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: ""
   location: "Seoul, Republic of Korea"
   email: "ymkmoon@naver.com"

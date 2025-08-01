@@ -5,7 +5,8 @@ excerpt: "About Me"
 search: true
 last_modified_at: 2025-07-30
 toc: false
---- 
+---
+
 <style>
   details {
     margin-bottom: 0.8em;
@@ -63,12 +64,11 @@ toc: false
   }
 </style>
 
-
 <table>
   <tr>
   <td style="width: 30%; vertical-align: top;">
 
-  <img src="/assets/image/author/profile_with_dog.jpg" width="100%" style="border: 1px solid #cab6de; border-radius: 50%; padding: 5px;" />
+  <img src="/assets/image/author/profile.jpg" width="100%" style="border: 1px solid #cab6de; border-radius: 50%; padding: 5px;" />
 
   <h4 style="text-align: center;">유명기</h4>
 
@@ -85,7 +85,6 @@ toc: false
   </td>
   </tr>
 </table>
-
 
 ## 기술스택
 
@@ -127,7 +126,6 @@ toc: false
   <li><strong>Linux</strong><br><span>CentOS, Rocky Linux, Ubuntu 환경에서의 서버 운영 및 쉘 스크립트 작성 경험</span></li>
 </ul>
 </details>
-
 
 ## 경력
 
@@ -316,9 +314,6 @@ toc: false
 
 </details>
 
-
 <!-- ## 토이프로젝트
  * [BackEnd](https://github.com/ymkmoon/toyseven){:target="_blank"}
  * [FrontEnd](https://github.com/ymkmoon/toyseven-react){:target="_blank"} -->
-
-
