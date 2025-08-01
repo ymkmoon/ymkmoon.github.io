@@ -65,25 +65,25 @@ toc: false
 
 
 <table>
-<tr>
-<td style="width: 30%; vertical-align: top;">
+  <tr>
+  <td style="width: 30%; vertical-align: top;">
 
-<img src="/assets/image/author/profile_with_dog.jpg" width="100%" style="border: 1px solid #cab6de; border-radius: 50%; padding: 5px;" />
+  <img src="/assets/image/author/profile_with_dog.jpg" width="100%" style="border: 1px solid #cab6de; border-radius: 50%; padding: 5px;" />
 
-<h4>유명기</h4>
+  <h4 style="text-align: center;">유명기</h4>
 
-</td>
-<td style="vertical-align: top; padding-left: 20px;">
+  </td>
+  <td style="vertical-align: top; padding-left: 20px;">
 
-<h4>연락처</h4>
-<ul>
-  <li><strong>Email:</strong> [ymkmoon@naver.com](mailto:ymkmoon@naver.com)</li>
-  <li><strong>Git:</strong> [https://github.com/ymkmoon](https://github.com/ymkmoon){:target="_blank"}</li>
-  <li><strong>Blog:</strong> [https://ymkmoon.github.io/](https://ymkmoon.github.io/){:target="_blank"}</li>
-</ul>
+  <h4>연락처</h4>
+  <ul>
+    <li><strong>Email:</strong> ymkmoon@naver.com</li>
+    <li><strong>Git:</strong> https://github.com/ymkmoon</li>
+    <li><strong>Blog:</strong> https://ymkmoon.github.io/</li>
+  </ul>
 
-</td>
-</tr>
+  </td>
+  </tr>
 </table>
 
 
