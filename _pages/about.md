@@ -99,7 +99,8 @@ toc: false
 <details>
 <summary>🧱 <strong>데이터베이스</strong></summary>
 <ul>
-  <li><strong>PostgreSQL</strong>, <strong>MySQL</strong><br><span>복잡한 쿼리 작성 및 성능 튜닝 경험 보유</span></li>
+  <li><strong>PostgreSQL</strong></li>
+  <li><strong>MySQL</strong></li>
 </ul>
 </details>
 
