@@ -165,7 +165,7 @@ toc: false
 </details>
 
 <details>
-<summary><strong>국가연구과제</strong> <span style="color:#6a737d;">(2023.07 - 2023.11)</span> - Backend (Spring Boot) & Frontend (React)</summary>
+<summary><strong>국가연구과제</strong> <span style="color:#6a737d;">(2023.07 - 2023.11)</span> - Backend (Springboot) & Frontend (React)</summary>
 
 <table>
   <thead>
@@ -174,7 +174,7 @@ toc: false
   <tbody>
     <tr><td>📅 프로젝트 설명</td><td>실내 측위 데이터를 이용해 원하는 위치의 예상 값을 계산(보간 처리)하여 제공하는 서비스</td></tr>
     <tr><td>🎯 담당분야</td><td>Frontend, Backend</td></tr>
-    <tr><td>🛠️ 사용기술</td><td>Spring Boot, Java, React, Typescript, MongoDB, JPA, Querydsl</td></tr>
+    <tr><td>🛠️ 사용기술</td><td>Springboot, Java, React, Typescript, MongoDB, JPA, Querydsl</td></tr>
     <tr><td>📝 업무내용</td><td>실내 측위 데이터 시각화 및 정제, 좌표계 변환과 IDW 보간법을 이용한 데이터 제공</td></tr>
   </tbody>
 </table>
@@ -275,7 +275,7 @@ toc: false
   <tbody>
     <tr><td>📅 프로젝트 설명</td><td>일본 내 열차 예약 서비스</td></tr>
     <tr><td>🎯 담당분야</td><td>Backend, Frontend</td></tr>
-    <tr><td>🛠️ 사용기술</td><td>Java, JSP, Spring Boot, AWS Cognito</td></tr>
+    <tr><td>🛠️ 사용기술</td><td>Java, JSP, Springboot, AWS Cognito</td></tr>
     <tr><td>📝 업무내용</td><td>AWS Cognito 기반 유저 관리, 특급 열차 티켓 변경 및 환불 개발</td></tr>
   </tbody>
 </table>
@@ -283,7 +283,7 @@ toc: false
 </details>
 
 <details>
-<summary><strong>차량관제 고도화</strong> <span style="color:#6a737d;">(2021.09 - 2021.12)</span> - Backend (Springboot) & Frontend (JSP)</summary>
+<summary><strong>차량관제 고도화</strong> <span style="color:#6a737d;">(2021.09 - 2021.12)</span> - Backend (Spring) & Frontend (JSP)</summary>
 
 <table>
   <thead>
@@ -299,7 +299,7 @@ toc: false
 </details>
 
 <details>
-<summary><strong>Maas (열차 예약 시스템) 1차</strong> <span style="color:#6a737d;">(2021.04 - 2021.10)</span> - Backend & Frontend / Java</summary>
+<summary><strong>Maas (열차 예약 시스템) 1차</strong> <span style="color:#6a737d;">(2021.04 - 2021.10)</span> - Backend (Springboot) & Frontend (JSP)</summary>
 
 <table>
   <thead>
@@ -308,7 +308,7 @@ toc: false
   <tbody>
     <tr><td>📅 프로젝트 설명</td><td>일본 내 열차 예약 서비스</td></tr>
     <tr><td>🎯 담당분야</td><td>Backend, Frontend</td></tr>
-    <tr><td>🛠️ 사용기술</td><td>Java, JSP, Spring Boot, AWS Cognito, Javascript</td></tr>
+    <tr><td>🛠️ 사용기술</td><td>Java, JSP, Springboot, AWS Cognito, Javascript</td></tr>
     <tr><td>📝 업무내용</td><td>AWS Cognito 기반 유저 관리, 열차 티켓 예약, 구매, 마이페이지 개발</td></tr>
   </tbody>
 </table>
