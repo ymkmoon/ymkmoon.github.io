@@ -2,7 +2,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Recent posts
+  - title: "Recent posts"
     url: /
   - title: "Tags"
     url: /tags/
