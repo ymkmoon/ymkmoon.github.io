@@ -92,7 +92,9 @@ toc: false
 <summary>🖥️ <strong>백엔드</strong></summary>
 <ul>
   <li><strong>Java</strong><br><span>JPA와 MyBatis를 활용한 RESTful API 개발 경험</span></li>
-  <li><strong>Node.js</strong><br><span>Express 기반의 서버 구축 및 GraphQL API 개발</span></li>
+  <li><strong>Nodejs</strong><br><span>Express 기반의 서버 구축 및 GraphQL API 개발</span></li>
+  <li><strong>MQTT</strong><br><span>IoT 및 실시간 메시징 프로토콜 경험</span></li>
+  <li><strong>Kafka</strong><br><span>분산 이벤트 스트리밍 및 메시지 큐 경험</span></li>
 </ul>
 </details>
 
