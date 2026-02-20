@@ -44,7 +44,9 @@ Publish-Subscribe(발행-구독) 모델을 사용하여 Publisher(데이터 전�
 먼저 클러스터 공통 설정과 노드별 포트를 정의한다.  
 아래는 `env.local` 기준이니 참고 부탁드립니다.
 
-```env
+```
+# .env.local
+
 # 공통 설정
 EMQX_ALLOW_ANONYMOUS=true
 
