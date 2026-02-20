@@ -39,7 +39,7 @@ Publish-Subscribe(발행-구독) 모델을 사용하여 Publisher(데이터 전�
 
 ---
 
-## Step 1) 환경 변수 구성
+## 환경 변수 구성
 
 먼저 클러스터 공통 설정과 노드별 포트를 정의한다.  
 아래는 `env.local` 기준이니 참고 부탁드립니다.
@@ -71,7 +71,7 @@ NGINX_STAGE=local
 
 ---
 
-## Step 2) EMQX 3노드 + Nginx 구성 확인
+## EMQX 3노드 + Nginx 구성 확인
 
 `docker-compose.yml`에서 EMQX 3개 노드와 Nginx(로드밸런서)를 함께 정의합니다.
 
@@ -128,7 +128,7 @@ services:
 
 ---
 
-## Step 3) Nginx MQTT 로드밸런싱 설정
+## Nginx MQTT 로드밸런싱 설정
 
 Nginx Stream 설정으로 MQTT 접속을 EMQX 노드에 분산합니다.
 
@@ -148,7 +148,7 @@ server {
 
 ---
 
-## Step 4) 클러스터 기동
+## 클러스터 기동
 
 실행 전 기존 컨테이너/볼륨을 내린 뒤, 환경 파일 기준으로 재기동합니다.
 
@@ -160,7 +160,7 @@ docker compose -p emqx-cluster --env-file env.local up -d
 
 ---
 
-## Step 5) MQTT 메시지 발행/구독 테스트
+## MQTT 메시지 발행/구독 테스트
 
 먼저 Subscriber를 열고, Publisher로 JSON 메시지를 발행해 데이터 수집을 확인합니다.
 
@@ -200,7 +200,7 @@ mosquitto_pub -h 127.0.0.1 -p 1886 -t /mqtt/test/vehicle1 -m "{\"imei\":\"1234\"
 
 ---
 
-## Step 6) 클러스터 상태 점검
+## 클러스터 상태 점검
 
 각 노드 상태와 클러스터 구성 노드를 확인합니다.
 
@@ -222,7 +222,7 @@ docker exec nginx-mqtt tail -f /var/log/nginx/access/stream_access.log
 
 ---
 
-## Step 7) EMQX 대시보드 접속 및 초기 계정
+## EMQX 대시보드 접속 및 초기 계정
 
 아래 URL로 각 노드 대시보드에 접속할 수 있습니다.
 
