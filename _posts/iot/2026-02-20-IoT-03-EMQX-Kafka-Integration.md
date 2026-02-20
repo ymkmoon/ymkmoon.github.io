@@ -43,7 +43,7 @@ RUN mkdir -p "${CAMEL_PLUGIN_PATH}" \
 ENV CONNECT_PLUGIN_PATH="/usr/share/java,${CAMEL_PLUGIN_PATH}"
 ```
 
-이미지 빌드:
+### 이미지 빌드
 
 ```bash
 docker build -t custom-kafka-connect:7.7.4 .
@@ -85,9 +85,9 @@ kafka3:
 
 ### 브로커 최적화 포인트
 
-- `INTERNAL/EXTERNAL` 리스너 분리로 클러스터 내부 통신과 외부 접근을 명확히 분리
-- `KAFKA_INTER_BROKER_LISTENER_NAME=INTERNAL`로 브로커 간 트래픽 안정화
-- `KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR`를 멀티 브로커 수에 맞춰 설정해 장애 복구성 강화
+- `INTERNAL/EXTERNAL` : 리스너 분리로 클러스터 내부 통신과 외부 접근을 명확히 분리
+- `KAFKA_INTER_BROKER_LISTENER_NAME=INTERNAL` : 브로커 간 트래픽 안정화
+- `KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR` : 멀티 브로커 수에 맞춰 설정해 장애 복구성 강화
 
 ---
 
