@@ -1,5 +1,5 @@
 ---
-title:  "[IoT] 02. EMQX와 Kafka 연동 및 브로커 최적화"
+title:  "[IoT] 03. EMQX와 Kafka 연동"
 excerpt: "EMQX Rule Engine을 통한 Kafka 데이터 전송 및 브로커 구성 가이드"
 
 tags:
@@ -15,12 +15,12 @@ last_modified_at: 2026-02-20
 
 ### IoT 데이터 파이프라인 구축 시리즈
 
-1. [인트로](https://ymkmoon.github.io/Aws-02-Cognito/)
+1. [인트로](https://ymkmoon.github.io/IoT-01_Intro/)
 
-2. [EMQX 브로커 설정 및 데이터 수집](https://ymkmoon.github.io/Aws-03-Cognito-OAuth2/)
+2. [EMQX 브로커 설정 및 데이터 수집](https://ymkmoon.github.io/IoT-02-EMQX-Setup/)
 
-3. [EMQX와 Kafka 연동(현재글)](https://ymkmoon.github.io/Aws-04-Cognito-React/)
+3. [EMQX와 Kafka 연동(현재글)](https://ymkmoon.github.io/IoT-03-EMQX-Kafka-Integration/)
 
-4. [Kafka Consumer를 활용한 데이터 소비](https://ymkmoon.github.io/Aws-04-Cognito-React/)
+4. [Kafka Consumer를 활용한 데이터 소비](https://ymkmoon.github.io/IoT-04-Kafka-Consumer-App/)
 
 ---
