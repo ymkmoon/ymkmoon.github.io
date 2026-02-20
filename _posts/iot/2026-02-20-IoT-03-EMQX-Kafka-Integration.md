@@ -1,6 +1,6 @@
 ---
-title:  "[IoT] 03. EMQX와 Kafka 연동"
-excerpt: "EMQX Rule Engine을 통한 Kafka 데이터 전송 및 브로커 구성 가이드"
+title:  "[IoT] MQTT -> Kafka를 이용한 데이터 파이프라인 구축하기 #3"
+excerpt: "EMQX와 Kafka 연동"
 
 tags:
   - [IoT, EMQX, Kafka]

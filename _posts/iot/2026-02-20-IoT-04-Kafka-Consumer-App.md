@@ -1,6 +1,6 @@
 ---
-title:  "[IoT] 04. Kafka Consumer를 활용한 데이터 소비"
-excerpt: "Kafka에서 수집된 IoT 데이터를 비즈니스 로직으로 처리하는 컨슈머 구현"
+title:  "[IoT] MQTT -> Kafka를 이용한 데이터 파이프라인 구축하기 #4"
+excerpt: "Kafka Consumer를 활용한 데이터 소비"
 
 tags:
   - [Kafka, Consumer, Data-Processing]
