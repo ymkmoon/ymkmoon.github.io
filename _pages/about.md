@@ -134,15 +134,49 @@ toc: false
 ## 경력
 
 <details>
-<summary><strong>데이터통합서비스 플랫폼</strong> <span style="color:#6a737d;">(2025.07 ~)</span> - Backend (NodeJS)</summary>
+<summary><strong>IoT 기반 탐사 관제</strong> <span style="color:#6a737d;">(2026.01 ~ )</span> - Backend (NodeJS)</summary>
 
 <table>
   <thead>
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
-    <tr><td>📅 프로젝트 설명</td><td>각 업무에 대한 결과 입력 및 업무 싸이클을 통한 자동 생성</td></tr>
-    <tr><td>🎯 담당분야</td><td>Backend, 인프라 관리, DB 구성</td></tr>
+    <tr><td>📅 프로젝트 설명</td><td>실시간 로봇 데이터 수집 및 탐사 예약/관제를 위한 통합 백엔드 시스템 개발</td></tr>
+    <tr><td>🎯 담당분야</td><td>Backend 개발 및 IoT 데이터 인프라 구축</td></tr>
+    <tr><td>🛠️ 사용기술</td><td>Kafka, MQTT, Nodejs, Mongodb, PostgreSQL</td></tr>
+    <tr><td>📝 업무내용</td><td><b>실시간 데이터 파이프라인 구축:</b> MQTT로 수집된 IoT 데이터를 Kafka Connector를 통해 MongoDB에 안정적으로 적재하는 파이프라인 설계 및 운영</td></tr>
+  </tbody>
+</table>
+
+</details>
+
+<details>
+<summary><strong>Form Editor & Code Editor</strong> <span style="color:#6a737d;">(2025.11 - 2026.01)</span> - Backend (golang)</summary>
+
+<table>
+  <thead>
+    <tr><th>구분</th><th>내용</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>📅 프로젝트 설명</td><td>원격 코드 실행 및 MongoDB 관리</td></tr>
+    <tr><td>🎯 담당분야</td><td>Backend</td></tr>
+    <tr><td>🛠️ 사용기술</td><td>gRPC, Golang, Docker, Mongodb</td></tr>
+    <tr><td>📝 업무내용</td><td>Docker 를 이용한 코드 원격 실행 프로세스 개발 및 gRPC 기반 Meta/Data API 설계·구현 (컬렉션, 문서 CRUD, 기본 도큐먼트, Time-Series 지원 등)</td></tr>
+  </tbody>
+</table>
+
+</details>
+
+<details>
+<summary><strong>상수도관 점검 플랫폼</strong> <span style="color:#6a737d;">(2025.07 - 2025.11)</span> - Backend (NodeJS)</summary>
+
+<table>
+  <thead>
+    <tr><th>구분</th><th>내용</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>📅 프로젝트 설명</td><td>상수도관 관련 각 업무에 대한 결과 입력 및 업무 싸이클을 통한 자동 생성</td></tr>
+    <tr><td>🎯 담당분야</td><td>Backend, 인프라 관리, DB 설계</td></tr>
     <tr><td>🛠️ 사용기술</td><td>NodeJS, GraphQL, Docker, Nginx</td></tr>
     <tr><td>📝 업무내용</td><td>CRUD API 개발, 스케줄러 개발, 초기스크립트 정리, 도커를 이용한 이미지 생성과 컨테이너 실행</td></tr>
   </tbody>
