@@ -1,6 +1,6 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
   <style>
-    /* 사이드바 아코디언 전용 스타일 */
+    /* 1. 사이드바 아코디언 및 레이아웃 스타일 */
     .nav__list .sidebar-accordion {
       margin-bottom: 5px;
     }
@@ -12,18 +12,17 @@
       align-items: center;
       padding: 4px 0;
       border-bottom: 1px solid #f2f3f3;
-      list-style: none;
+      list-style: none; /* 기본 삼각형 숨기기 */
     }
     .nav__list .sidebar-accordion summary::-webkit-details-marker {
-      display: none;
+      display: none; /* 크롬/사파리용 삼각형 숨기기 */
     }
 
-    /* 1. 카테고리명 폰트 크기 조절 (기존보다 작게) */
+    /* 2. 카테고리명 스타일 (크기 축소 및 강조) */
     .nav__list .sidebar-accordion .category-name {
-      font-size: 0.85em; /* 크기 축소 */
+      font-size: 0.82em; 
       color: #494e52;
       font-weight: bold;
-      /* 카테고리명도 길 경우 대비 */
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -31,11 +30,12 @@
     }
     .nav__list .sidebar-accordion .post-count {
       color: #999;
-      font-size: 0.8em;
+      font-size: 0.85em;
       font-weight: normal;
-      margin-left: 3px;
+      margin-left: 4px;
     }
 
+    /* 3. 포스팅 리스트 스타일 (들여쓰기 및 구분선) */
     .nav__list .sidebar-accordion ul {
       margin: 5px 0 8px 10px;
       padding: 0;
@@ -47,19 +47,17 @@
       margin-bottom: 2px;
     }
 
-    /* 2. 포스팅 타이틀 폰트 크기 및 말줄임 처리 */
+    /* 4. 포스팅 타이틀 스타일 (더 작게 + 말줄임표) */
     .nav__list .sidebar-accordion ul li a {
-      font-size: 0.75em; /* 더 작게 조절 */
+      font-size: 0.72em; 
       text-decoration: none;
       color: #898c8f;
       display: block;
       line-height: 1.5;
-      
-      /* 말줄임표(...) 핵심 설정 */
-      white-space: nowrap;      /* 줄바꿈 방지 */
-      overflow: hidden;         /* 영역 벗어나는 글자 숨김 */
-      text-overflow: ellipsis;  /* 말줄임표 표시 */
-      width: 100%;              /* 부모 너비에 맞춤 */
+      white-space: nowrap;      /* 한 줄 유지 */
+      overflow: hidden;         /* 넘치는 글자 숨김 */
+      text-overflow: ellipsis;  /* 말줄임표(...) 표시 */
+      width: 100%;
     }
 
     .nav__list .sidebar-accordion ul li a:hover,
@@ -68,6 +66,7 @@
       font-weight: bold;
     }
 
+    /* 5. 열렸을 때 화살표 회전 애니메이션 */
     .nav__list .sidebar-accordion[open] summary i {
       transform: rotate(180deg);
       color: #333;
@@ -79,46 +78,48 @@
       {% include author-profile.html %}
     {% endif %}
 
-    <nav class="nav__list">
-      <label class="nav__title" style="margin-bottom: 10px;">Categories</label>
-      <ul class="nav__items">
-        {% assign sorted_categories = site.categories | sort %}
-        {% for category in sorted_categories %}
-          {% assign category_name = category | first %}
-          {% assign posts = category | last %}
-          
-          <li>
-            <details class="sidebar-accordion" {% if page.categories contains category_name %}open{% endif %}>
-              <summary>
-                <span class="category-name">
-                  {{ category_name }}<span class="post-count">({{ posts | size }})</span>
-                </span>
-                <i class="fas fa-chevron-down" style="font-size: 0.6em; transition: 0.3s; color: #ccc;"></i>
-              </summary>
-              <ul>
-                {% for post in posts %}
-                  <li>
-                    <a href="{{ post.url | relative_url }}" 
-                       title="{{ post.title }}" 
-                       {% if page.url == post.url %}class="active"{% endif %}>
-                      {{ post.title }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </details>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
+    {% if page.sidebar.nav and page.sidebar.nav != "" %}
+      <nav class="nav__list">
+        <label class="nav__title" style="margin-bottom: 10px;">Categories</label>
+        <ul class="nav__items">
+          {% assign sorted_categories = site.categories | sort %}
+          {% for category in sorted_categories %}
+            {% assign category_name = category | first %}
+            {% assign posts = category | last %}
+            <li>
+              <details class="sidebar-accordion" {% if page.categories contains category_name %}open{% endif %}>
+                <summary>
+                  <span class="category-name">
+                    {{ category_name }}<span class="post-count">({{ posts | size }})</span>
+                  </span>
+                  <i class="fas fa-chevron-down" style="font-size: 0.6em; transition: 0.3s; color: #ccc;"></i>
+                </summary>
+                <ul>
+                  {% for post in posts %}
+                    <li>
+                      <a href="{{ post.url | relative_url }}" 
+                         title="{{ post.title }}" 
+                         {% if page.url == post.url %}class="active"{% endif %}>
+                        {{ post.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </details>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
 
     {% if page.sidebar %}
       {% for s in page.sidebar %}
-        {% if s.image %}
-          <img src="{{ s.image | relative_url }}" alt="{{ s.image_alt }}">
-        {% endif %}
-        {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-        {% if s.text %}{{ s.text | markdownify }}{% endif %}
+        {% unless s.nav %} {% if s.image %}
+            <img src="{{ s.image | relative_url }}" alt="{{ s.image_alt }}">
+          {% endif %}
+          {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+          {% if s.text %}{{ s.text | markdownify }}{% endif %}
+        {% endunless %}
       {% endfor %}
     {% endif %}
   </div>

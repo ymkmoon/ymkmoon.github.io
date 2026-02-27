@@ -5,6 +5,9 @@ excerpt: "About Me"
 search: true
 last_modified_at: 2025-07-30
 toc: false
+author_profile: false
+sidebar:
+  nav: ""
 ---
 
 <style>
