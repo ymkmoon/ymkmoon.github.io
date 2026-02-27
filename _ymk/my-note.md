@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "나만 아는 비밀 노트"
-permalink: /hidden-space/special-note/  # 본인만 알 수 있는 복잡한 주소로 설정
+title: ""
+permalink: /2/0/2/6/0/1/0/3/1/  # 본인만 알 수 있는 복잡한 주소로 설정
 author_profile: true
 sitemap: false      # 구글이나 네이버 검색 엔진이 긁어가지 못하게 함
 sidebar:
