@@ -1,132 +1,21 @@
-<style>
-  /* 사이드바 전체 컨테이너 제어 */
-  .custom-sidebar-nav {
-    font-size: 0.85em; 
-    line-height: 1.4;
-    width: 100%;            /* 상위 요소 너비에 100% 맞춤 */
-    max-width: 100%;        /* 절대 부모를 넘지 않음 */
-    box-sizing: border-box; /* 패딩, 테두리가 너비에 포함됨 */
-    overflow-x: hidden;     /* 가로 스크롤 방지 */
-  }
+{% if page.author_profile or layout.author_profile or page.sidebar %}
+  <div class="sidebar sticky">
+    {% if page.author_profile or layout.author_profile %}
+      {% include author-profile.html %}
+    {% endif %}
 
-  .cat-item-title {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 0;
-    color: #494e52;
-    border-bottom: 1px solid #f2f3f3;
-    gap: 10px;              /* 이름과 숫자 사이 간격 유지 */
-  }
-
-  .cat-item-title:hover {
-    color: #000;
-  }
-
-  /* 카테고리 이름이 길 경우 말줄임 */
-  .cat-item-title span:first-child {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex-shrink: 1;         /* 공간 부족 시 이름이 먼저 줄어듦 */
-  }
-
-  .post-list-under-cat {
-    display: none;
-    list-style: none;
-    padding-left: 15px !important; /* 들여쓰기 최적화 */
-    margin: 4px 0 10px 0 !important;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .post-item-link {
-    display: block;
-    padding: 3px 0;
-    text-decoration: none;
-    color: #7a7a7a !important;
-    font-size: 0.9em;
-    
-    /* 포스트 제목 말줄임 처리 (가장 중요한 부분) */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 100%;
-  }
-
-  .post-item-link:hover {
-    color: #333 !important;
-    text-decoration: underline !important;
-  }
-
-  .post-item-link.is-active {
-    color: #222 !important;
-    font-weight: bold !important;
-  }
-
-  /* 숫자 배지가 찌그러지지 않게 보호 */
-  .badge-count {
-    flex-shrink: 0;
-    background: #f2f3f3;
-    padding: 1px 6px;
-    border-radius: 8px;
-    font-size: 0.8em;
-    color: #8b9296;
-  }
-</style>
-
-<nav class="custom-sidebar-nav">
-  {% assign sorted_categories = site.categories | sort %}
-  {% for category in sorted_categories %}
-    {% assign category_name = category[0] %}
-    {% assign posts = category[1] %}
-    
-    <div class="sidebar-group">
-      <div class="cat-item-title" onclick="toggleCategory('cat-{{ forloop.index }}')">
-        <span><i class="far fa-folder" style="margin-right: 5px;"></i>{{ category_name }}</span>
-        <span class="badge-count">{{ posts | size }}</span>
-      </div>
-      
-      <ul id="cat-{{ forloop.index }}" class="post-list-under-cat">
-        {% for post in posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}" 
-             class="post-item-link {% if page.url == post.url %}is-active{% endif %}"
-             title="{{ post.title }}"> • {{ post.title }}
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+    <div class="custom-sidebar-section" style="margin-top: 20px;">
+      <h3 class="nav__title" style="margin-bottom: 10px;">
+        <i class="fas fa-list"></i> Categories
+      </h3>
+      {% include custom_sidebar.html %} 
     </div>
-  {% endfor %}
-</nav>
 
-<script>
-function toggleCategory(id) {
-  const element = document.getElementById(id);
-  // display 값 체크 방식을 개선하여 첫 클릭부터 잘 작동하게 변경
-  if (element.style.display === "block") {
-    element.style.display = "none";
-  } else {
-    element.style.display = "block";
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  const currentUrl = "{{ page.url }}";
-  const links = document.querySelectorAll('.post-item-link');
-  
-  links.forEach(function(link) {
-    // 상대 경로 및 절대 경로 매칭 대응
-    const linkHref = link.getAttribute('href');
-    if (linkHref === currentUrl || linkHref === '{{ site.baseurl }}' + currentUrl) {
-      link.classList.add('is-active');
-      const parentUl = link.closest('ul');
-      if (parentUl) {
-        parentUl.style.display = 'block';
-      }
-    }
-  });
-});
-</script>
+    {% if page.sidebar %}
+      {% for s in page.sidebar %}
+        {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+        {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endif %}
