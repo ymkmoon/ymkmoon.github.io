@@ -1,128 +1,109 @@
-<style>
-  /* 1. 사이드바 자체를 Sticky로 강제 고정 */
-  /* 부모 레이아웃이 float 기반일 때를 대비하여 고정 스타일 부여 */
-  .sidebar.sticky {
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    top: 20px !important;
-    width: 100%; /* 부모(aside) 너비에 맞춤 */
-    max-height: calc(100vh - 40px);
-    overflow-y: auto; /* 내용이 너무 길면 사이드바 내부 스크롤 */
-    z-index: 10;
-  }
+{% if page.author_profile or layout.author_profile or page.sidebar %}
+  <style>
+    /* 사이드바 아코디언 전용 스타일 */
+    .nav__list .sidebar-accordion {
+      margin-bottom: 8px;
+    }
+    .nav__list .sidebar-accordion summary {
+      cursor: pointer;
+      outline: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid #f2f3f3;
+      list-style: none; /* 기본 삼각형 숨기기 */
+    }
+    .nav__list .sidebar-accordion summary::-webkit-details-marker {
+      display: none; /* 크롬/사파리용 삼각형 숨기기 */
+    }
+    .nav__list .sidebar-accordion summary:hover span {
+      color: #333;
+      font-weight: bold;
+    }
+    .nav__list .sidebar-accordion .category-name {
+      font-size: 0.95em;
+      color: #494e52;
+    }
+    .nav__list .sidebar-accordion .post-count {
+      color: #999;
+      font-size: 0.85em;
+      font-weight: normal;
+      margin-left: 5px;
+    }
+    .nav__list .sidebar-accordion ul {
+      margin: 8px 0 12px 12px;
+      padding: 0;
+      list-style: none;
+      border-left: 2px solid #f2f3f3;
+    }
+    .nav__list .sidebar-accordion ul li {
+      padding-left: 12px;
+      margin-bottom: 5px;
+    }
+    .nav__list .sidebar-accordion ul li a {
+      font-size: 0.85em;
+      text-decoration: none;
+      color: #898c8f;
+      display: block;
+      line-height: 1.3;
+    }
+    .nav__list .sidebar-accordion ul li a:hover,
+    .nav__list .sidebar-accordion ul li a.active {
+      color: #333;
+      font-weight: bold;
+    }
+    /* 열렸을 때 화살표 회전 */
+    .nav__list .sidebar-accordion[open] summary i {
+      transform: rotate(180deg);
+      color: #333;
+    }
+  </style>
 
-  /* 2. 카테고리 리스트 스타일 */
-  .custom-sidebar-nav {
-    font-size: 0.85em;
-    line-height: 1.4;
-    margin-top: 20px;
-    border-top: 1px solid #f2f3f3;
-    padding-top: 15px;
-  }
-  .cat-item-title {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px 0;
-    color: #494e52;
-    border-bottom: 1px solid #f2f3f3;
-  }
-  .cat-item-title:hover { color: #000; }
-  .post-list-under-cat {
-    display: none;
-    list-style: none;
-    padding-left: 15px !important;
-    margin: 4px 0 !important;
-  }
-  .post-item-link {
-    display: block;
-    padding: 3px 0;
-    text-decoration: none;
-    color: #7a7a7a !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .post-item-link:hover { color: #333 !important; text-decoration: underline !important; }
-  
-  /* 3. 포스팅 개수 배지 */
-  .badge-count {
-    background: #f2f3f3;
-    padding: 1px 6px;
-    border-radius: 10px;
-    font-size: 0.8em;
-    color: #8b9296;
-    flex-shrink: 0;
-  }
-</style>
+  <div class="sidebar sticky">
+    {% if page.author_profile or layout.author_profile %}
+      {% include author-profile.html %}
+    {% endif %}
 
-{% if page.author_profile or layout.author_profile %}
-  {% include author-profile.html %}
-{% endif %}
-
-<nav class="custom-sidebar-nav">
-  <h3 class="nav__title" style="margin-bottom: 10px; font-size: 1.1em;">
-    <i class="fas fa-list"></i> Categories
-  </h3>
-  
-  {% assign sorted_categories = site.categories | sort %}
-  {% for category in sorted_categories %}
-    {% assign category_name = category[0] %}
-    {% assign posts = category[1] %}
-    
-    <div>
-      <div class="cat-item-title" onclick="toggleCategory('cat-{{ forloop.index }}')">
-        <span><i class="far fa-folder" style="margin-right: 5px;"></i>{{ category_name }}</span>
-        <span class="badge-count">{{ posts | size }}</span>
-      </div>
-      
-      <ul id="cat-{{ forloop.index }}" class="post-list-under-cat">
-        {% for post in posts %}
-        <li>
-          <a href="{{ post.url | relative_url }}" 
-             class="post-item-link {% if page.url == post.url %}is-active{% endif %}">
-            • {{ post.title }}
-          </a>
-        </li>
+    <nav class="nav__list">
+      <label class="nav__title" style="margin-bottom: 15px;">Categories</label>
+      <ul class="nav__items">
+        {% assign sorted_categories = site.categories | sort %}
+        {% for category in sorted_categories %}
+          {% assign category_name = category | first %}
+          {% assign posts = category | last %}
+          
+          <li>
+            <details class="sidebar-accordion" {% if page.categories contains category_name %}open{% endif %}>
+              <summary>
+                <span class="category-name">
+                  {{ category_name }}<span class="post-count">({{ posts | size }})</span>
+                </span>
+                <i class="fas fa-chevron-down" style="font-size: 0.7em; transition: 0.3s;"></i>
+              </summary>
+              <ul>
+                {% for post in posts %}
+                  <li>
+                    <a href="{{ post.url | relative_url }}" {% if page.url == post.url %}class="active"{% endif %}>
+                      {{ post.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </details>
+          </li>
         {% endfor %}
       </ul>
-    </div>
-  {% endfor %}
-</nav>
+    </nav>
 
-{% if page.sidebar %}
-  {% for s in page.sidebar %}
-    {% if s.image %}
-      <img src="{{ s.image | relative_url }}" alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}" style="width: 100%; margin: 10px 0;">
+    {% if page.sidebar %}
+      {% for s in page.sidebar %}
+        {% if s.image %}
+          <img src="{{ s.image | relative_url }}" alt="{{ s.image_alt }}">
+        {% endif %}
+        {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+        {% if s.text %}{{ s.text | markdownify }}{% endif %}
+      {% endfor %}
     {% endif %}
-    {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-    {% if s.text %}{{ s.text | markdownify }}{% endif %}
-    {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
-  {% endfor %}
+  </div>
 {% endif %}
-
-<script>
-function toggleCategory(id) {
-  const el = document.getElementById(id);
-  if (el.style.display === "block") {
-    el.style.display = "none";
-  } else {
-    el.style.display = "block";
-  }
-}
-
-// 현재 보고 있는 글의 카테고리를 자동으로 펼쳐주는 로직
-document.addEventListener("DOMContentLoaded", function() {
-  const currentUrl = "{{ page.url }}";
-  const links = document.querySelectorAll('.post-item-link');
-  links.forEach(link => {
-    if (link.getAttribute('href') === currentUrl) {
-      const parentUl = link.closest('ul');
-      if (parentUl) parentUl.style.display = 'block';
-      link.style.fontWeight = 'bold';
-      link.style.color = '#222';
-    }
-  });
-});
-</script>
