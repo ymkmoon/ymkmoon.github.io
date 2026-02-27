@@ -2,6 +2,9 @@
 title:  "[ETC] 블로그 글 한방에 보기"
 excerpt: "코드농장"
 
+categories:
+  - Etc
+
 tags:
   - [etc]
 
