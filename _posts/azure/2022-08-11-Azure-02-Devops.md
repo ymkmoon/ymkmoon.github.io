@@ -2,6 +2,9 @@
 title:  "[Azure] DevOps organizations - DevOps 생성과 Git Repository 배포하기"
 excerpt: "Azure 에 대한 설명과 리소스 만들기"
 
+categories:
+  - Azure
+  
 tags:
   - [Azure]
 

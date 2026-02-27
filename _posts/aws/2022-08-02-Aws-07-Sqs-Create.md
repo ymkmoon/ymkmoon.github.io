@@ -2,6 +2,9 @@
 title:  "[AWS] SQS(Simple Queue Service) 대기열 생성하기"
 excerpt: "AWS SQS 의 대기열 생성하기"
 
+categories:
+  - AWS
+  
 tags:
   - [AWS, SQS]
 

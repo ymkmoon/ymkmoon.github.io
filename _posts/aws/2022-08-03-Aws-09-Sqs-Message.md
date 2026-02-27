@@ -2,6 +2,9 @@
 title:  "[AWS] SpringBoot 에서 SQS 사용하기 (send, receive)"
 excerpt: "SpringBoot 에서 SQS 메세지 보내기 받기"
 
+categories:
+  - AWS
+  
 tags:
   - [AWS, SQS, Java, SpringBoot]
 

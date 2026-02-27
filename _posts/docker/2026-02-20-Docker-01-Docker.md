@@ -2,6 +2,9 @@
 title:  "[Docker] Docker 란"
 excerpt: "🐳 Docker: 개념보다 요소로 이해하기"
 
+categories:
+  - Infra
+
 tags:
   - [Docker]
 

@@ -2,6 +2,9 @@
 title:  "[Azure] Key Vault 생성 & Spring Boot 에서 사용하기"
 excerpt: "CLI 환경에서 Azure Key Vault 생성 및 스프링부트에서 사용하기"
 
+categories:
+  - Azure
+  
 tags:
   - [Azure]
 

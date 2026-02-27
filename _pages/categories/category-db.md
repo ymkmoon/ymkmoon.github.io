@@ -1,5 +1,5 @@
 ---
-title: "DB"
+title: "Database"
 layout: archive
 permalink: categories/db/
 author_profile: true

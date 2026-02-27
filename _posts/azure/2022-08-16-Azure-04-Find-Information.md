@@ -2,6 +2,9 @@
 title:  "[Azure] 내가 생성한 리소스, App 의 Client id, secret, tenant 찾기"
 excerpt: "생성하거나 생성되어 있는 리소스와 App의 정보 찾기"
 
+categories:
+  - Azure
+  
 tags:
   - [Azure]
 

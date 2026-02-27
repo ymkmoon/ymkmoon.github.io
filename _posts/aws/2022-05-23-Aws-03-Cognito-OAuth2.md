@@ -2,6 +2,9 @@
 title:  "[AWS] Cognito 와 Google OAuth2 연동하기"
 excerpt: "Aws Cognito 와 Google OAuth2 연동하기"
 
+categories:
+  - AWS
+  
 tags:
   - [AWS, Cognito, OAuth2]
 

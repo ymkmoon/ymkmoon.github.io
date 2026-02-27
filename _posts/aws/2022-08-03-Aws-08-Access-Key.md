@@ -2,6 +2,9 @@
 title:  "[AWS] SQS(Simple Queue Service) 사용을 위한 AWS Access Key 발급받기"
 excerpt: "AWS SQS 인증을 위한 Access Key 발급"
 
+categories:
+  - AWS
+  
 tags:
   - [AWS, SQS]
 

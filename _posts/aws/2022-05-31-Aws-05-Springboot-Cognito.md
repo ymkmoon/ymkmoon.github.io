@@ -2,6 +2,9 @@
 title:  "[AWS] SpringBoot 에서 AWS Cognito OAuth2 와 JWT 동시에 사용하기"
 excerpt: "AWS Cognito OAuth2 와 JWT 토큰을 이용한 인증처리"
 
+categories:
+  - AWS
+  
 tags:
   - [AWS, Cognito, OAuth2, Java, Springboot]
 

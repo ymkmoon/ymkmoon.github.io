@@ -2,6 +2,9 @@
 title:  "[AWS] React 에서 Cognito OAuth2 사용하기"
 excerpt: "React 에서 Cognito 사용하여 OAuth2 로그인과 이메일 인증을 통한 회원가입, 로그인을 해보자"
 
+categories:
+  - AWS
+  
 tags:
   - [AWS, Cognito, OAuth2, React]
 

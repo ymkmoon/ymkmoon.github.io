@@ -2,6 +2,9 @@
 title:  "[자료구조] 스택? 큐? "
 excerpt: "스택, 큐에 대한 설명"
 
+categories:
+  - Database
+
 tags:
   - [자료구조]
 

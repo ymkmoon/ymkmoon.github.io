@@ -2,6 +2,9 @@
 title:  "[Azure] Table Storage 란? Table Storage 생성 & Spring Boot 로 사용"
 excerpt: "Azure Table Storage 생성에 대한 방법과 Java 로 사용해보기"
 
+categories:
+  - Azure
+  
 tags:
   - [Azure]
 

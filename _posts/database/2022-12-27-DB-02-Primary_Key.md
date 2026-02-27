@@ -2,6 +2,9 @@
 title:  "[DB] PK는 자연키? 대체키? 복합키?"
 excerpt: "Primary Key의 종류와 뭘 써야 좋을지에 대한 내용 "
 
+categories:
+  - Database
+
 tags:
   - [Database]
 

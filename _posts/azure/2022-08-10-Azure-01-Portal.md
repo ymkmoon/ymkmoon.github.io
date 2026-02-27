@@ -2,6 +2,9 @@
 title:  "[Azure] Azure 란? - 계정과 리소스 생성하기"
 excerpt: "Azure 에 대한 설명과 리소스 만들기"
 
+categories:
+  - Azure
+
 tags:
   - [Azure]
 
