@@ -1,6 +1,6 @@
 ---
 title: "React"
-layout: archive
+layout: category
 permalink: categories/react/
 author_profile: true
 taxonomy: React

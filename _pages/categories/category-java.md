@@ -1,6 +1,6 @@
 ---
 title: "Java"
-layout: archive
+layout: category
 permalink: categories/java/
 author_profile: true
 taxonomy: Java

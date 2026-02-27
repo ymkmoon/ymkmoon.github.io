@@ -1,6 +1,6 @@
 ---
 title: "Azure"
-layout: archive
+layout: category
 permalink: categories/azure/
 author_profile: true
 taxonomy: Azure
