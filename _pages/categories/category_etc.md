@@ -1,7 +1,8 @@
 ---
 title: "Etc"
-layout: archive
-permalink: categories/etc
+layout: category
+permalink: categories/etc/
 author_profile: true
+taxonomy: Etc
 sidebar_main: true
 ---

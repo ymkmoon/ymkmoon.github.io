@@ -6,6 +6,8 @@ main:
     url: /
   - title: "Tags"
     url: /tags/
+  - title: "Categories"  
+    url: /categories/
 
 # 좌측 사이드바 메뉴 (카테고리 목록)
 sidebar_main:
