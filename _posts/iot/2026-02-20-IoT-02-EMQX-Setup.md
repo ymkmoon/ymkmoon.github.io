@@ -18,7 +18,7 @@ last_modified_at: 2026-02-20
 
 ### IoT 데이터 파이프라인 구축 시리즈
 
-1. [인트로](https://ymkmoon.github.io/IoT-01_Intro/)
+1. [인트로](https://ymkmoon.github.io/IoT-01-Intro/)
 
 2. [EMQX 브로커 설정 및 데이터 수집(현재글)](https://ymkmoon.github.io/IoT-02-EMQX-Setup/)
 
