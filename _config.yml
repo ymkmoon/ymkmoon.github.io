@@ -271,7 +271,7 @@ defaults:
       layout: single
       author_profile: true
       sidebar:
-        nav: "custom_sidebar" # 사이드바 상시 노출
+        nav: "sidebar_main" # 사이드바 상시 노출
 
   # 2. _posts 폴더 내의 포스트들에만 추가로 적용할 설정
   - scope:
@@ -286,7 +286,7 @@ defaults:
       share: true
       related: true
       sidebar:
-        nav: "custom_sidebar"  # 위에서 만든 sidebar_main을 불러옵니다.
+        nav: "sidebar_main"  # 위에서 만든 sidebar_main을 불러옵니다.
 
   # _pages
   - scope:
@@ -299,4 +299,4 @@ defaults:
       show_date: true
       classes: wide
       sidebar:
-        nav: "custom_sidebar"
+        nav: "sidebar_main"
