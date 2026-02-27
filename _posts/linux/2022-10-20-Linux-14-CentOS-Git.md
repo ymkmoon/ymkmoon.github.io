@@ -2,6 +2,9 @@
 title:  "[Linux] CentOS7 Git 설치 및 Repository clone 하기"
 excerpt: "리눅스 환경에 깃 설치와 레파지토리 복제하기"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux, Git]
 

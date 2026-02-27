@@ -2,6 +2,9 @@
 title:  "[Linux] CentOS7 Apache 설치"
 excerpt: "리눅스 환경에 Apche 설치하기"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux]
 

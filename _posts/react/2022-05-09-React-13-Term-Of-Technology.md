@@ -2,6 +2,9 @@
 title:  "[React] 기술용어"
 excerpt: "React 기술용어"
 
+categories:
+  - React
+
 tags:
   - [React]
 

@@ -2,6 +2,9 @@
 title:  "[Linux] 가상머신(Virtual machine) 설치"
 excerpt: "윈도우 환경에 리눅스 서버를 구축해보자."
 
+categories:
+  - Infra
+
 tags:
   - [Linux, VMWare]
 

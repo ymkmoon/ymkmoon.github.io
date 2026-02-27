@@ -2,6 +2,9 @@
 title:  "[Linux] CentOS7 Gradle 설치"
 excerpt: "리눅스 환경에 Gradle 설치하기"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux, Gradle]
 

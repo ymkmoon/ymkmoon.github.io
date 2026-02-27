@@ -2,6 +2,9 @@
 title:  "[Linux] 리눅스에 대한 내용과 기본명령어"
 excerpt: "리눅스에 대해 알아보자"
 
+categories:
+  - Infra
+
 tags:
   - [Linux]
 

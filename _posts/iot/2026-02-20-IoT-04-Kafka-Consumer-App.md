@@ -2,6 +2,9 @@
 title:  "[IoT] MQTT -> Kafka를 이용한 데이터 파이프라인 구축하기 #4"
 excerpt: "Kafka Consumer를 활용한 데이터 소비"
 
+categories:
+  - Infra
+
 tags:
   - [Kafka, Consumer, Data-Processing]
 

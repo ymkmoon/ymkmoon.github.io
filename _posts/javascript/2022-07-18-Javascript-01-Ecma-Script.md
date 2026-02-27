@@ -1,6 +1,9 @@
 ---
-title:  "[JavaScript] ECMAScript 란?"
+title:  "[Javascript] ECMAScript 란?"
 excerpt: "ECMAScript 란 무엇인가"
+
+categories:
+  - Javascript
 
 tags:
   - [Javascript]
@@ -19,7 +22,7 @@ last_modified_at: 2022-07-18
 
 
 
-### ``JavaScript 란 ``
+### ``Javascript 란 ``
 
 서버에 데이터를 보내기 전, 데이터 유효성 검사 등을 처리하는 스크립트 언어이다. <br>
 1995년 넷스케이프(Netscape)의 Brendan Eich에 의해 개발된 언어이고, Mocha -> LiveScript -> JavaScript의 네이밍 변천사를 갖고있다. 그리고 사실 우리가 알던 자바스크립트는 ECMAScript + BOM(Browser Object Model) + DOM(Document Object Model)라는 1개의 코어와 2개의 모델로 이루어져있다.

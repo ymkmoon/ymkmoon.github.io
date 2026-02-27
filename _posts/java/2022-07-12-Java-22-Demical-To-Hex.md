@@ -2,6 +2,9 @@
 title:  "[Java] 16진수 변환하기 "
 excerpt: "16진수를 10진수로 변환하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

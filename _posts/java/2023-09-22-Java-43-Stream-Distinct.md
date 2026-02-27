@@ -2,6 +2,9 @@
 title:  "[Java] 배열에서 특정 Key 의 중복제거"
 excerpt: "Stream Filter 와 Predicate 를 이용한 특정 Key 의 중복제거"
 
+categories:
+  - Java
+
 tags:
   - [Java, Stream, distinct]
 

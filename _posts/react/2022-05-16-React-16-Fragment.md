@@ -2,6 +2,9 @@
 title:  "[React] Fragment 란?"
 excerpt: "Fragment 의 사용이유와 사용법"
 
+categories:
+  - React
+
 tags:
   - [React]
 

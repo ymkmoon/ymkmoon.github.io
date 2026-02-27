@@ -2,6 +2,9 @@
 title:  "[Java] 배열의 평균값 구하기"
 excerpt: "배열의 평균값 구하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

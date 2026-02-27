@@ -2,6 +2,9 @@
 title:  "[React] Hooks : useEffect()"
 excerpt: "React useEffect()"
 
+categories:
+  - React
+
 tags:
   - [React]
 

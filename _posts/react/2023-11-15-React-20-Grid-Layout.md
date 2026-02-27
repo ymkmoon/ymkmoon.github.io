@@ -2,6 +2,9 @@
 title:  "[React] Grid Layout 사용하기 (Typescript) #1"
 excerpt: "Grid Layout 사용하기 "
 
+categories:
+  - React
+
 tags:
   - [React]
 

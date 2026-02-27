@@ -2,6 +2,9 @@
 title:  "[React] 게시판 만들기 #7 : Axios 를 이용한 게시판 작성"
 excerpt: "React & Axios 게시글 입력하기"
 
+categories:
+  - React
+
 tags:
   - [React, Axios]
 

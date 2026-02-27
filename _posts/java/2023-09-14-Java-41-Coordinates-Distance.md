@@ -2,6 +2,9 @@
 title:  "[Java] 두 좌표 사이의 거리 계산"
 excerpt: "두 좌표(위경도) 사이의 거리 계산"
 
+categories:
+  - Java
+
 tags:
   - [Java, Coordinate, distance]
 

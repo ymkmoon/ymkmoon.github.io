@@ -2,6 +2,9 @@
 title:  "[Java] 완전탐색(Exhaustive Search) 이란? #3 예시"
 excerpt: "완전탐색(Exhaustive Search) 을 문제로 이해하기"
 
+categories:
+  - Java
+
 tags:
   - [Java, Algorithm]
 

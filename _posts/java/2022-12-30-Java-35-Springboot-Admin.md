@@ -2,6 +2,9 @@
 title:  "[Java] Springboot Admin을 사용하여 모니터링하기"
 excerpt: "Springboot Admin을 사용하여 모니터링하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

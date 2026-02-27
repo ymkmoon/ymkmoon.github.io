@@ -2,6 +2,9 @@
 title:  "[React] 리액트란"
 excerpt: "React 에 대해 알아보자"
 
+categories:
+  - React
+
 tags:
   - [React]
 

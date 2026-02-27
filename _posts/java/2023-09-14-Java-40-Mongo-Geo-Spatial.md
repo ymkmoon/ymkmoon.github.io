@@ -2,6 +2,9 @@
 title:  "[Java] Mongodb 에서 가장 가까운 위치 데이터 조회하기"
 excerpt: "Mongodb 의 Geo-Spatial query 활용"
 
+categories:
+  - Java
+
 tags:
   - [Java, Mongodb, Coordinate]
 

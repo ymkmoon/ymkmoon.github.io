@@ -2,6 +2,9 @@
 title:  "[React] 게시판 만들기 #10 : Apollo & GraphQL 을 이용한게시판 상세보기"
 excerpt: "React Apollo & Rest API 게시글 상세보기"
 
+categories:
+  - React
+
 tags:
   - [React, Apollo, GraphQL]
 

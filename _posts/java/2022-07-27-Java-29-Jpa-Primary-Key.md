@@ -2,6 +2,9 @@
 title:  "[Java] JPA 기본키 매핑 전략과 IDENTITY의 주의점"
 excerpt: "JPA 기본키 매핑 전략과 IDENTITY 의 주의점"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

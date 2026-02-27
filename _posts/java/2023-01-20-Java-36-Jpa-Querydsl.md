@@ -2,6 +2,9 @@
 title:  "[Java] Querydsl 이란? 검색 기능과 페이징"
 excerpt: "JPA 에서 Querydsl을 이용한 검색 기능 구현과 Pagealbe을 이용한 페이징처리"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

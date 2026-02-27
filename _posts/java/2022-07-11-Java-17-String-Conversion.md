@@ -2,6 +2,9 @@
 title:  "[Java] String 형변환"
 excerpt: "toString() vs String.valueOf()"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

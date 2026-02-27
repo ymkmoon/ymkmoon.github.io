@@ -2,6 +2,9 @@
 title:  "[Java] 재귀함수란? "
 excerpt: "재귀함수의 설명과 사용법"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

@@ -2,6 +2,9 @@
 title:  "[Java] StringBuffer 와 StringBuilder 중 뭘 써야 할까?"
 excerpt: "String vs StringBuffer vs StringBuilder"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

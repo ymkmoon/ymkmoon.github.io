@@ -2,6 +2,9 @@
 title:  "[IoT] MQTT -> Kafka를 이용한 데이터 파이프라인 구축하기 #2"
 excerpt: "EMQX 브로커 설정 및 데이터 수집"
 
+categories:
+  - Infra
+
 tags:
   - [IoT, MQTT, EMQX]
 

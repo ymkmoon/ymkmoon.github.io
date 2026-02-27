@@ -2,6 +2,9 @@
 title:  "[Java] Setter? Builer? 뭘 사용해야 되지?"
 excerpt: "Builder Pattern"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

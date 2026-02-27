@@ -2,6 +2,9 @@
 title:  "[Linux] CentOS7 계정에 sudo 권한 부여하기"
 excerpt: "CentOS7 sudo 권한 설정"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux]
 

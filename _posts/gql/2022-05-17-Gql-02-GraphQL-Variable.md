@@ -2,6 +2,9 @@
 title:  "[GQL] GraphQL Varaible 설정하기(쿼리에 변수주기)"
 excerpt: "GraphQL Varaible 설정하기"
 
+categories:
+  - React
+  
 tags:
   - [React, GraphQL]
 

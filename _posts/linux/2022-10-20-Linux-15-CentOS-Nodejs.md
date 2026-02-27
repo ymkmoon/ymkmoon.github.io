@@ -2,6 +2,9 @@
 title:  "[Linux] CentOS7 NodeJS 설치"
 excerpt: "NodeJS 설치와 no package nodejs available 해결방법"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux, NodeJS]
 

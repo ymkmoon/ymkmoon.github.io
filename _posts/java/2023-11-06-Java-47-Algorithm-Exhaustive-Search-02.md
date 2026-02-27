@@ -2,6 +2,9 @@
 title:  "[Java] 완전탐색(Exhaustive Search) 이란? #2 종류별설명"
 excerpt: "완전탐색(Exhaustive Search) 종류별설명"
 
+categories:
+  - Java
+
 tags:
   - [Java, Algorithm]
 

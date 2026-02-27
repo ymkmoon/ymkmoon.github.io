@@ -2,6 +2,9 @@
 title:  "[Git] Github commit message 수정"
 excerpt: "깃허브 커밋 메세지를 수정해보자."
 
+categories:
+  - Git
+
 tags:
   - [Git]
 

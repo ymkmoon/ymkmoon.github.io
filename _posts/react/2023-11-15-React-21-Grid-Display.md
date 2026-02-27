@@ -2,6 +2,9 @@
 title:  "[React] Grid Layout 사용하기 (Typescript) #2"
 excerpt: "Grid Layout 으로 원하는 아이템 숨기기 "
 
+categories:
+  - React
+
 tags:
   - [React]
 

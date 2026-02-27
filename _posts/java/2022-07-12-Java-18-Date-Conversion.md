@@ -2,6 +2,9 @@
 title:  "[Java] Date - 날짜 더하기 빼기"
 excerpt: "날짜 더하기 뺴기와 현재시간 구하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

@@ -2,6 +2,10 @@
 title:  "[Java] 성능 개선"
 excerpt: "Java Complie 속도 향상시키기"
 
+
+categories:
+  - Java
+
 tags:
   - [Java]
 

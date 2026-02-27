@@ -2,6 +2,9 @@
 title:  "[Java] Collection 이란?"
 excerpt: "Collection 에 대해 알아보자"
 
+categories:
+  - Java
+
 tags:
   - [Java, Collection]
 

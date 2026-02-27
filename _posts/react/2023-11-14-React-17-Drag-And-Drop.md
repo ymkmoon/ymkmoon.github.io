@@ -2,6 +2,9 @@
 title:  "[React] DragAndDrop(DND) 사용하기 (Typescript)"
 excerpt: "DND 사용해보기"
 
+categories:
+  - React
+
 tags:
   - [React]
 

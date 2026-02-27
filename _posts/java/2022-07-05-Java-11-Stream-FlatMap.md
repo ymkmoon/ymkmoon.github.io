@@ -2,6 +2,9 @@
 title:  "[Java] Stream FlatMap - 두 객체 묶기"
 excerpt: "Stream FlatMap을 이용하여 두개의 객체 스트림을 하나로 묶기"
 
+categories:
+  - Java
+
 tags:
   - [Java, Stream]
 

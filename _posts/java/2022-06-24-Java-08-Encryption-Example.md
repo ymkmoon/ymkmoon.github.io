@@ -2,6 +2,9 @@
 title:  "[Java] 암호화 복호화 예제코드"
 excerpt: "암호화 복호화 예제코드"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

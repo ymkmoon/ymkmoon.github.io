@@ -2,6 +2,9 @@
 title:  "[Java] Consumer 예제"
 excerpt: "var와 lambda를 이용한 Consumer 예제"
 
+categories:
+  - Java
+
 tags:
   - [Java, Lambda, Consumer]
 

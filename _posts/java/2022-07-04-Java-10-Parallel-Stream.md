@@ -2,6 +2,9 @@
 title:  "[Java] 병렬 Stream"
 excerpt: "병렬 스트림"
 
+categories:
+  - Java
+
 tags:
   - [Java, Stream]
 

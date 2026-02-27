@@ -2,6 +2,9 @@
 title:  "[Linux] 가상머신에 리눅스 환경 구축하기"
 excerpt: "가상머신에 CentOS7 설치"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux]
 

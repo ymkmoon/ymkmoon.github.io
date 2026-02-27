@@ -2,6 +2,9 @@
 title:  "[GQL] GraphQL mutation"
 excerpt: "Apollo mutation 사용하기"
 
+categories:
+  - React
+  
 tags:
   - [React, GraphQL]
 

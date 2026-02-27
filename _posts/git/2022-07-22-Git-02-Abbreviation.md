@@ -2,6 +2,9 @@
 title:  "[Git] 자주쓰는 Git 약어 모음"
 excerpt: "자주사용하는 Git 협업 약어모음"
 
+categories:
+  - Git
+  
 tags:
   - [Git]
 

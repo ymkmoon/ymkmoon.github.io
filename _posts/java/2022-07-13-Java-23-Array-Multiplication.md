@@ -2,6 +2,9 @@
 title:  "[Java] 두 배열 인수의 곱셈 "
 excerpt: "두 배열 인수의 곱셈 구하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

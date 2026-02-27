@@ -2,6 +2,9 @@
 title:  "[Java] 암호화 복호화란?"
 excerpt: "암호화와 복호화시 사용 알고리즘"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

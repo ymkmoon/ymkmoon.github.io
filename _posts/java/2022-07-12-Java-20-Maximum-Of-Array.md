@@ -2,6 +2,9 @@
 title:  "[Java] 배열의 최대값 찾기 "
 excerpt: "배열의 최대값"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

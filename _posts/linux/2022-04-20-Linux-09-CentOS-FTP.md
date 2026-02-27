@@ -2,6 +2,9 @@
 title:  "[Linux] CentOS7 FTP 설정"
 excerpt: "리눅스 환경에 FTP 설정하기"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux, FTP]
 

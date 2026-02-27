@@ -2,6 +2,9 @@
 title:  "[Java] Java의 표준 함수형 인터페이스"
 excerpt: "함수형 인터페이스의 종류와 설명"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

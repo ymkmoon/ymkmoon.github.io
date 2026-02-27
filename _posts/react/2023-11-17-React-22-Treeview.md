@@ -2,6 +2,9 @@
 title:  "[React] Tree View 사용하기 (Typescript)"
 excerpt: "아이템을 Tree 형태로 보여주기"
 
+categories:
+  - React
+
 tags:
   - [React]
 

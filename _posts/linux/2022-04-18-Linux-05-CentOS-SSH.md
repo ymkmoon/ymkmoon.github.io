@@ -2,6 +2,9 @@
 title:  "[Linux] CentOS7 SSH 설정"
 excerpt: "리눅스 환경에 SSH 설정하기"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux, SSH]
 

@@ -2,6 +2,9 @@
 title:  "[Java] 랜덤 알파벳+숫자 생성하기 "
 excerpt: "랜덤 String 생성"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

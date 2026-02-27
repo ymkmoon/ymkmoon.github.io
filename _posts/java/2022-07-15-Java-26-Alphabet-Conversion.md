@@ -2,6 +2,9 @@
 title:  "[Java] ASCII 를 이용한 알파벳 대소문자 변환"
 excerpt: "알파벳 대문자, 소문자 변환하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

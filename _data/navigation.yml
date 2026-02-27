@@ -15,16 +15,18 @@ sidebar_main:
         url: /categories/aws/
       - title: "Azure"
         url: /categories/azure/
-      - title: "Data Structure"
+      - title: "DataStructure"
         url: /categories/datastructure/
       - title: "Database"
         url: /categories/db/
       - title: "Git"
         url: /categories/git/
-      - title: "infra"
+      - title: "Infra"
         url: /categories/infra/
       - title: "Java"
         url: /categories/java/
+      - title: "Javascript"
+        url: /categories/javascript/      
       - title: "React"
         url: /categories/react/
       - title: "Etc"

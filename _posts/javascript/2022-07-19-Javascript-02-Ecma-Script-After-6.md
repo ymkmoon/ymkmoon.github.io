@@ -1,6 +1,9 @@
 ---
-title:  "[JavaScript] ES6 & ES7 & ES8"
+title:  "[Javascript] ES6 & ES7 & ES8"
 excerpt: "ES6, 7, 8 정리"
+
+categories:
+  - Javascript
 
 tags:
   - [Javascript]

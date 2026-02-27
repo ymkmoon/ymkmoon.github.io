@@ -2,6 +2,9 @@
 title:  "[Java] Stream - 숫자형 스트림"
 excerpt: "숫자형 스트림 사용하기"
 
+categories:
+  - Java
+
 tags:
   - [Java, Stream]
 

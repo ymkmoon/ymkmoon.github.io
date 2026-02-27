@@ -2,6 +2,9 @@
 title:  "[Java] Stream Reduce - 가공과 연산"
 excerpt: "Stream Match 요소 검색 및 객체 꺼내기"
 
+categories:
+  - Java
+
 tags:
   - [Java, Stream]
 

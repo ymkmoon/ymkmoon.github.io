@@ -2,6 +2,9 @@
 title:  "[Java] Http Status Code"
 excerpt: "자주쓰는 Http 상태 코드를 알아보자"
 
+categories:
+  - Java
+  
 tags:
   - [Java, Error]
 

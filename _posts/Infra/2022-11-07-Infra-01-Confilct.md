@@ -2,6 +2,9 @@
 title:  "VMWare 프리징현상 해결하기(동작안함, 자꾸죽음)"
 excerpt: "VMWare (VMWorkStation) 와 WSL 충돌문제 해결, Docker Desktop 설치 시 주의사항"
 
+categories:
+  - Infra
+
 tags:
   - [VMWare, WSL]
 

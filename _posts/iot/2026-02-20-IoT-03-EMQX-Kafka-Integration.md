@@ -2,6 +2,9 @@
 title:  "[IoT] MQTT -> Kafka를 이용한 데이터 파이프라인 구축하기 #3"
 excerpt: "EMQX와 Kafka 연동"
 
+categories:
+  - Infra
+
 tags:
   - [IoT, EMQX, Kafka]
 

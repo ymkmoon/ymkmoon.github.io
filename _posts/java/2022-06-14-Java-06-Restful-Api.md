@@ -2,6 +2,9 @@
 title:  "[Java] Restful API 모범설계"
 excerpt: "Restful API 모범설계"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

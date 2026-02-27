@@ -2,6 +2,9 @@
 title:  "[React] 게시판 만들기 #9 : Apollo & GraphQL 을 이용한 게시판 목록"
 excerpt: "React Apollo & Rest API 게시판 목록 만들기"
 
+categories:
+  - React
+
 tags:
   - [React, Apollo, GraphQL]
 

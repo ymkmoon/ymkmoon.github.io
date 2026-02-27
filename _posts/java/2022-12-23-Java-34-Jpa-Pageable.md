@@ -2,6 +2,9 @@
 title:  "[Java] JPA 에서 페이징과 정렬처리하기"
 excerpt: "JPA Pageable"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

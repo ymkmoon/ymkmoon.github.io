@@ -2,6 +2,9 @@
 title:  "[React] DragAndDrop(DND) 와 Resizing 사용하기 #2 (Typescript)"
 excerpt: "DND 와 Resizing 사용하기"
 
+categories:
+  - React
+
 tags:
   - [React]
 

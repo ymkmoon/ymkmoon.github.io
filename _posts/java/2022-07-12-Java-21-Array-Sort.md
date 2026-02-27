@@ -2,6 +2,9 @@
 title:  "[Java] 숫자형 배열 오름차순 내림차순 정렬하기 "
 excerpt: "배열 정렬하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

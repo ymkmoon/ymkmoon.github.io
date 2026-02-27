@@ -2,6 +2,9 @@
 title:  "[React] 게시판 만들기 #6 : Axios 를 이용한 게시판 상세보기"
 excerpt: "React & Axios 게시글 상세보기"
 
+categories:
+  - React
+
 tags:
   - [React, Axios]
 

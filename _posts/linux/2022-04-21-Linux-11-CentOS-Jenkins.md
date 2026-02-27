@@ -2,6 +2,9 @@
 title:  "[Linux] CentOS7 Jenkins 설치"
 excerpt: "리눅스 환경에 Jenkins 설치하기"
 
+categories:
+  - Infra
+
 tags:
   - [CentOS7, Linux, Jenkins]
 

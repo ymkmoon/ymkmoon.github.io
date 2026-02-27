@@ -2,6 +2,9 @@
 title:  "[Java] 선형탐색(Linear Search) 이란?"
 excerpt: "선형탐색(Linear Search) 이해하기"
 
+categories:
+  - Java
+
 tags:
   - [Java, Algorithm]
 

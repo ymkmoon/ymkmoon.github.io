@@ -2,6 +2,9 @@
 title:  "[Java] Optional 사용예시"
 excerpt: "Optional 사용 예시"
 
+categories:
+  - Java
+
 tags:
   - [Java, Optional]
 

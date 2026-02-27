@@ -2,6 +2,9 @@
 title:  "[Java] 다중 필터에서 AOP Logging 구현하기(Parameter, RequestBody)"
 excerpt: "다중 시큐리티 환경에서 Aop 를 이용해 Request 에 저장 된 Parameter 와 RequestBody 출력하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

@@ -2,6 +2,9 @@
 title:  "[Java] 자연수 자릿수의 합"
 excerpt: "자연수 자릿수의 합 구하기"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 

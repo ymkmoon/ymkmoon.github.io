@@ -2,6 +2,9 @@
 title:  "[Java] 객제치향(Object Oriented) 이란?"
 excerpt: "객체지향에 대한 설명"
 
+categories:
+  - Java
+
 tags:
   - [Java]
 
