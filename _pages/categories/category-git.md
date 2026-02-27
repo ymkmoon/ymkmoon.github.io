@@ -1,7 +1,7 @@
 ---
-title: "스프링부트"
+title: "Git"
 layout: archive
-permalink: categories/springBoot
+permalink: categories/git
 author_profile: true
 sidebar_main: true
 ---

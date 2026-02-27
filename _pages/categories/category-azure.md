@@ -1,7 +1,7 @@
 ---
-title: "스프링"
+title: "Azure"
 layout: archive
-permalink: categories/spring
+permalink: categories/azure
 author_profile: true
 sidebar_main: true
 ---

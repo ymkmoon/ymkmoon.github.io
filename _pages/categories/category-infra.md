@@ -1,8 +1,7 @@
 ---
-title: "리눅스"
+title: "Infra"
 layout: archive
-permalink: categories/linux
+permalink: categories/infra
 author_profile: true
 sidebar_main: true
 ---
-
