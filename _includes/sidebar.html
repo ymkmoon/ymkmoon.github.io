@@ -1,19 +1,43 @@
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
-        <img src="{{ s.image | relative_url }}"
-             alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
-      {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-      {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
+  <aside class="sidebar sticky" style="
+    width: 260px; 
+    float: left; 
+    margin-right: 30px; 
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 20px; 
+    z-index: 10;
+  ">
+    
+    {% if page.author_profile or layout.author_profile %}
+      <div style="margin-bottom: 20px;">
+        {% include author-profile.html %}
+      </div>
     {% endif %}
-  {% endif %}
-  </div>
+
+    <div class="custom-sidebar-section" style="
+      border-top: 1px solid #f2f3f3; 
+      padding-top: 15px;
+      max-height: calc(100vh - 300px); /* 화면 높이에 맞춰 내부 스크롤 허용 */
+      overflow-y: auto; 
+    ">
+      <h3 class="nav__title" style="margin-bottom: 15px; font-size: 1.1em;">
+        <i class="fas fa-list"></i> Categories
+      </h3>
+      {% include custom_sidebar.html %} 
+    </div>
+
+    {% if page.sidebar %}
+      <div style="margin-top: 20px;">
+        {% for s in page.sidebar %}
+          {% if s.image %}
+            <img src="{{ s.image | relative_url }}" alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}" style="width: 100%; margin-bottom: 10px;">
+          {% endif %}
+          {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+          {% if s.text %}{{ s.text | markdownify }}{% endif %}
+          {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </aside>
 {% endif %}
