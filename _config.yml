@@ -276,6 +276,8 @@ defaults:
       comments: true
       share: true
       related: true
+      sidebar:
+        nav: "sidebar_main"  # 위에서 만든 sidebar_main을 불러옵니다.
 
   # _pages
   - scope:

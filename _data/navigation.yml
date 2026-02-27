@@ -1,4 +1,4 @@
-# main links
+# 상단 헤더 메뉴
 main:
   - title: "About"
     url: /about/
@@ -6,3 +6,26 @@ main:
     url: /
   - title: "Tags"
     url: /tags/
+
+# 좌측 사이드바 메뉴 (카테고리 목록)
+sidebar_main:
+  - title: "Categories"
+    children:
+      - title: "AWS"
+        url: /categories/aws/
+      - title: "Azure"
+        url: /categories/azure/
+      - title: "Data Structure"
+        url: /categories/datastructure/
+      - title: "Database"
+        url: /categories/db/
+      - title: "Git"
+        url: /categories/git/
+      - title: "Infrastructure"
+        url: /categories/infra/
+      - title: "Java"
+        url: /categories/java/
+      - title: "React"
+        url: /categories/react/
+      - title: "Etc"
+        url: /categories/etc/
