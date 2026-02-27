@@ -264,7 +264,16 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
+  # 1. 모든 페이지(홈, 카테고리 페이지 포함)에 기본 적용
+  - scope:
+      path: "" # 루트 폴더 내의 모든 파일
+    values:
+      layout: single
+      author_profile: true
+      sidebar:
+        nav: "sidebar_main" # 사이드바 상시 노출
+
+  # 2. _posts 폴더 내의 포스트들에만 추가로 적용할 설정
   - scope:
       path: ""
       type: posts
@@ -289,3 +298,5 @@ defaults:
       read_time: false
       show_date: true
       classes: wide
+      sidebar:
+        nav: "sidebar_main"
