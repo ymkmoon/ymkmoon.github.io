@@ -1,19 +1,98 @@
-{% if page.author_profile or layout.author_profile or page.sidebar %}
-  <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
-  {% if page.sidebar %}
-    {% for s in page.sidebar %}
-      {% if s.image %}
-        <img src="{{ s.image | relative_url }}"
-             alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
-      {% endif %}
-      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
-      {% if s.text %}{{ s.text | markdownify }}{% endif %}
-      {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
-    {% endfor %}
-    {% if page.sidebar.nav %}
-      {% include nav_list nav=page.sidebar.nav %}
-    {% endif %}
-  {% endif %}
-  </div>
-{% endif %}
+<style>
+  /* 사이드바 전체 폰트 및 간격 최적화 */
+  .custom-sidebar-nav {
+    font-size: 0.85em; 
+    line-height: 1.4;
+  }
+  .cat-item-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    color: #494e52;
+    border-bottom: 1px solid #f2f3f3;
+  }
+  .cat-item-title:hover {
+    color: #000;
+  }
+  .post-list-under-cat {
+    display: none;
+    list-style: none;
+    padding-left: 12px !important;
+    margin: 4px 0 10px 0 !important;
+  }
+  .post-item-link {
+    display: block;
+    padding: 2px 0;
+    text-decoration: none;
+    color: #7a7a7a !important;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .post-item-link:hover {
+    color: #333 !important;
+    text-decoration: underline !important;
+  }
+  .post-item-link.is-active {
+    color: #222 !important;
+    font-weight: bold !important;
+  }
+  .badge-count {
+    background: #f2f3f3;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    color: #8b9296;
+  }
+</style>
+
+<nav class="custom-sidebar-nav">
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+    {% assign category_name = category[0] %}
+    {% assign posts = category[1] %}
+    
+    <div>
+      <div class="cat-item-title" onclick="toggleCategory('cat-{{ forloop.index }}')">
+        <span><i class="far fa-folder" style="margin-right: 5px;"></i>{{ category_name }}</span>
+        <span class="badge-count">{{ posts | size }}</span>
+      </div>
+      
+      <ul id="cat-{{ forloop.index }}" class="post-list-under-cat">
+        {% for post in posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}" 
+             class="post-item-link {% if page.url == post.url %}is-active{% endif %}">
+            • {{ post.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</nav>
+
+<script>
+function toggleCategory(id) {
+  var element = document.getElementById(id);
+  if (element.style.display === "block") {
+    element.style.display = "none";
+  } else {
+    element.style.display = "block";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var currentUrl = "{{ page.url }}";
+  var links = document.querySelectorAll('.post-item-link');
+  links.forEach(function(link) {
+    if (link.getAttribute('href') === currentUrl) {
+      var parentUl = link.closest('ul');
+      if (parentUl) parentUl.style.display = 'block';
+    }
+  });
+});
+</script>
