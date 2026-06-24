@@ -147,7 +147,7 @@ sidebar:
     <tr><td>📅 프로젝트 설명</td><td>실시간 로봇 데이터 수집 및 탐사 예약/관제를 위한 통합 백엔드 시스템 개발</td></tr>
     <tr><td>🎯 담당분야</td><td>Backend 개발 및 IoT 데이터 인프라 구축</td></tr>
     <tr><td>🛠️ 사용기술</td><td>Kafka, MQTT, Nodejs, Mongodb, PostgreSQL</td></tr>
-    <tr><td>📝 업무내용</td><td><b>플랫폼화를 위한 SQL 성능개선 및 기능별 CRUD API 개발 </td></tr>
+    <tr><td>📝 업무내용</td><td>플랫폼화를 위한 SQL 성능개선 및 기능별 CRUD API 개발 </td></tr>
   </tbody>
 </table>
 
