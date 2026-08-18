@@ -137,7 +137,24 @@ sidebar:
 ## 경력
 
 <details>
-<summary><strong>IoT 기반 탐사 관제 2차</strong> <span style="color:#6a737d;">(2026.06 ~ )</span> - Backend (NodeJS)</summary>
+<summary><strong>실내 주차장 관리 플랫폼 (SPMS) 2nd</strong> <span style="color:#6a737d;">(2026.07 ~ )</span> - Backend (NodeJS)</summary>
+
+<table>
+  <thead>
+    <tr><th>구분</th><th>내용</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>📅 프로젝트 설명</td><td>실내 내비 및 화재 감지</td></tr>
+    <tr><td>🎯 담당분야</td><td>Backend</td></tr>
+    <tr><td>🛠️ 사용기술</td><td>Nodejs</td></tr>
+    <tr><td>📝 업무내용</td><td>프로젝트 리딩</td></tr>
+  </tbody>
+</table>
+
+</details>
+
+<details>
+<summary><strong>IoT 기반 탐사 관제 (GPR) 2nd</strong> <span style="color:#6a737d;">(2026.06 ~ 2026.07)</span> - Backend (NodeJS)</summary>
 
 <table>
   <thead>
@@ -154,15 +171,15 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>주차장 관제 플랫폼</strong> <span style="color:#6a737d;">(2026.03 ~ 2026.05)</span> - Backend (NodeJS)</summary>
+<summary><strong>실내 주차장 관리 플랫폼 (SPMS)</strong> <span style="color:#6a737d;">(2026.03 ~ 2026.05)</span> - Backend (NodeJS)</summary>
 
 <table>
   <thead>
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
-    <tr><td>📅 프로젝트 설명</td><td>실시간 차량 추적 데이터 수집 및 주차 현황·영상 관제를 위한 통합 백엔드 시스템 개발</td></tr>
-    <tr><td>🎯 담당분야</td><td>Backend 개발 및 실시간 데이터 인프라 구축</td></tr>
+    <tr><td>📅 프로젝트 설명</td><td>실내 내비 및 화재 감지</td></tr>
+    <tr><td>🎯 담당분야</td><td>Backend</td></tr>
     <tr><td>🛠️ 사용기술</td><td>Node.js, TypeScript, GraphQL, RabbitMQ, Redis, MongoDB, PostgreSQL, WebSocket</td></tr>
     <tr><td>📝 업무내용</td><td>
       <b>실시간 데이터 파이프라인 구축:</b> RabbitMQ 기반 Dispatcher–Worker 구조를 설계하여 수집된 차량 추적 데이터를 분기·처리하고 MongoDB에 안정적으로 적재하는 파이프라인 운영<br><br>
@@ -176,7 +193,7 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>IoT 기반 탐사 관제</strong> <span style="color:#6a737d;">(2026.02 ~ 2026.02)</span> - Backend (NodeJS)</summary>
+<summary><strong>IoT 기반 탐사 관제 (GPR)</strong> <span style="color:#6a737d;">(2026.02 ~ 2026.02)</span> - Backend (NodeJS)</summary>
 
 <table>
   <thead>
@@ -210,7 +227,7 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>상수도관 점검 플랫폼</strong> <span style="color:#6a737d;">(2025.07 - 2025.11)</span> - Backend (NodeJS)</summary>
+<summary><strong>상하수도 점검 플랫폼 (SMARTGIS)</strong> <span style="color:#6a737d;">(2025.07 - 2025.11)</span> - Backend (NodeJS)</summary>
 
 <table>
   <thead>
@@ -227,7 +244,24 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>차량관제 FMS</strong> <span style="color:#6a737d;">(2024.01 - 2025.06)</span> - Frontend (React)</summary>
+<summary><strong>스마트 차량 운행관리 플랫폼 (UFMS) 2nd</strong> <span style="color:#6a737d;">(2024.01 - 2025.06)</span> - Frontend (React)</summary>
+
+<table>
+  <thead>
+    <tr><th>구분</th><th>내용</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>📅 프로젝트 설명</td><td>차량 단말(IoT) 데이터를 이용해 차량 관제와 관리를 제공하는 서비스</td></tr>
+    <tr><td>🎯 담당분야</td><td>Frontend, 담당 AWS 인프라 관리</td></tr>
+    <tr><td>🛠️ 사용기술</td><td>React, Nginx, AWS (S3, Codedeploy, EC2)</td></tr>
+    <tr><td>📝 업무내용</td><td>운영 이슈 대응 및 신규 기능 추가와 기능 안정화</td></tr>
+  </tbody>
+</table>
+
+</details>
+
+<details>
+<summary><strong>스마트 차량 운행관리 플랫폼 (UFMS)</strong> <span style="color:#6a737d;">(2024.01 - 2025.06)</span> - Frontend (React)</summary>
 
 <table>
   <thead>
@@ -244,7 +278,7 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>국가연구과제</strong> <span style="color:#6a737d;">(2023.07 - 2023.11)</span> - Backend (Springboot) & Frontend (React)</summary>
+<summary><strong>실내 복합측위 솔루션 (연구개발)</strong> <span style="color:#6a737d;">(2023.07 - 2023.11)</span> - Backend (Springboot) & Frontend (React)</summary>
 
 <table>
   <thead>
@@ -261,14 +295,14 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>Mobility Service 2차</strong> <span style="color:#6a737d;">(2023.05 - 2023.07)</span> - Frontend (React)</summary>
+<summary><strong>렌터카 서비스 플랫폼 (RMS) 2nd</strong> <span style="color:#6a737d;">(2023.05 - 2023.07)</span> - Frontend (React)</summary>
 
 <table>
   <thead>
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
-    <tr><td>📅 프로젝트 설명</td><td>렌터카 APP의 관리와 운영을 제공하는 관리자 웹 서비스</td></tr>
+    <tr><td>📅 프로젝트 설명</td><td>렌터카 APP 의 관리와 운영을 제공하는 관리자 웹을 제공하는 서비스</td></tr>
     <tr><td>🎯 담당분야</td><td>Frontend</td></tr>
     <tr><td>🛠️ 사용기술</td><td>React, Typescript, Apollo, GraphQL, Kakao Map</td></tr>
     <tr><td>📝 업무내용</td><td>고객의 추가 요구사항에 대해 수정 및 추가 개발(단말기관련)</td></tr>
@@ -278,17 +312,17 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>Car Sharing</strong> <span style="color:#6a737d;">(2023.04 - 2023.05)</span> - Frontend (React)</summary>
+<summary><strong>업무용 차량 예약 플랫폼 (Car Sharing)</strong> <span style="color:#6a737d;">(2023.04 - 2023.05)</span> - Frontend (React)</summary>
 
 <table>
   <thead>
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
-    <tr><td>📅 프로젝트 설명</td><td>내부 인력을 위한 렌터카 예약 서비스</td></tr>
+    <tr><td>📅 프로젝트 설명</td><td>업무용 차량 예약 플랫폼</td></tr>
     <tr><td>🎯 담당분야</td><td>Frontend</td></tr>
     <tr><td>🛠️ 사용기술</td><td>React, Typescript, GraphQL, Naver Map</td></tr>
-    <tr><td>📝 업무내용</td><td>로그인, 회원가입, 차량 예약, 예약 히스토리, 마이페이지 등 개발</td></tr>
+    <tr><td>📝 업무내용</td><td>디자인패턴 적용 및 화면(로그인, 회원가입, 차량 예약, 예약 히스토리, 마이페이지) 개발</td></tr>
   </tbody>
 </table>
 
@@ -302,9 +336,10 @@ sidebar:
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
+    <tr><td>📅 프로젝트 설명</td><td>소상공인 종합 지원 서비스 플랫폼</td></tr>
     <tr><td>🎯 담당분야</td><td>Backend, Frontend</td></tr>
     <tr><td>🛠️ 사용기술</td><td>Java, 전자정부 프레임워크, jQuery, Javascript</td></tr>
-    <tr><td>📝 업무내용</td><td>기존 환경 분석하여 로컬 환경 빌드 및 실행과 운영 환경 배포까지의 흐름 문서화</td></tr>
+    <tr><td>📝 업무내용</td><td>기존 환경 분석 및 기존 이슈 대응과 업무 프로토콜 작성 후 인계</td></tr>
   </tbody>
 </table>
 
@@ -328,14 +363,14 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>Mobility Service 1차</strong> <span style="color:#6a737d;">(2022.05 - 2022.11)</span> - Frontend (React)</summary>
+<summary><strong>렌터카 서비스 플랫폼 (RMS)</strong> <span style="color:#6a737d;">(2022.05 - 2022.11)</span> - Frontend (React)</summary>
 
 <table>
   <thead>
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
-    <tr><td>📅 프로젝트 설명</td><td>렌터카 APP의 관리와 운영을 제공하는 관리자 웹 서비스</td></tr>
+    <tr><td>📅 프로젝트 설명</td><td>렌터카 APP 사용자의 관리와 운영을 제공하는 웹 플랫폼</td></tr>
     <tr><td>🎯 담당분야</td><td>Frontend</td></tr>
     <tr><td>🛠️ 사용기술</td><td>React, Typescript, Apollo, GraphQL, Kakao Map</td></tr>
     <tr><td>📝 업무내용</td><td>렌터카 스케줄표 생성과 차량 예약 및 배차 화면 개발</td></tr>
@@ -345,14 +380,14 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>Maas (열차 예약 시스템) 2차</strong> <span style="color:#6a737d;">(2021.12 - 2022.05)</span> - Backend (Springboot) & Frontend (JSP)</summary>
+<summary><strong>디지털 티켓 플랫폼 (EMOT) 2nd</strong> <span style="color:#6a737d;">(2021.12 - 2022.05)</span> - Backend (Springboot) & Frontend (JSP)</summary>
 
 <table>
   <thead>
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
-    <tr><td>📅 프로젝트 설명</td><td>일본 내 열차 예약 서비스</td></tr>
+    <tr><td>📅 프로젝트 설명</td><td>일본 오다큐 전철이 운영하는 모바일 앱 및 디지털 티켓 플랫폼</td></tr>
     <tr><td>🎯 담당분야</td><td>Backend, Frontend</td></tr>
     <tr><td>🛠️ 사용기술</td><td>Java, JSP, Springboot, AWS Cognito</td></tr>
     <tr><td>📝 업무내용</td><td>AWS Cognito 기반 유저 관리, 특급 열차 티켓 변경 및 환불 개발</td></tr>
@@ -362,15 +397,16 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>차량관제 고도화</strong> <span style="color:#6a737d;">(2021.09 - 2021.12)</span> - Backend (Spring) & Frontend (JSP)</summary>
+<summary><strong>공군기지 차량관제</strong> <span style="color:#6a737d;">(2021.09 - 2021.12)</span> - Backend (Spring) & Frontend (JSP)</summary>
 
 <table>
   <thead>
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
+    <tr><td>📅 프로젝트 설명</td><td>공군기지내에서의 차량 관제 플랫폼</td></tr>
     <tr><td>🎯 담당분야</td><td>Backend, Frontend</td></tr>
-    <tr><td>🛠️ 사용기술</td><td>Java, JSP, Spring Framework, Geosoft Map, Olleh Map, Javascript</td></tr>
+    <tr><td>🛠️ 사용기술</td><td>Java, JSP, Spring Framework, Javascript</td></tr>
     <tr><td>📝 업무내용</td><td>차량 관제 시스템 고도화(지도 변경), 데이터 시각화 및 지도 기반 Polyline, Polygon 기능 추가</td></tr>
   </tbody>
 </table>
@@ -378,14 +414,14 @@ sidebar:
 </details>
 
 <details>
-<summary><strong>Maas (열차 예약 시스템) 1차</strong> <span style="color:#6a737d;">(2021.04 - 2021.10)</span> - Backend (Springboot) & Frontend (JSP)</summary>
+<summary><strong>디지털 티켓 플랫폼 (EMOT)</strong> <span style="color:#6a737d;">(2021.04 - 2021.10)</span> - Backend (Springboot) & Frontend (JSP)</summary>
 
 <table>
   <thead>
     <tr><th>구분</th><th>내용</th></tr>
   </thead>
   <tbody>
-    <tr><td>📅 프로젝트 설명</td><td>일본 내 열차 예약 서비스</td></tr>
+    <tr><td>📅 프로젝트 설명</td><td>일본 오다큐 전철이 운영하는 모바일 앱 및 디지털 티켓 플랫폼</td></tr>
     <tr><td>🎯 담당분야</td><td>Backend, Frontend</td></tr>
     <tr><td>🛠️ 사용기술</td><td>Java, JSP, Springboot, AWS Cognito, Javascript</td></tr>
     <tr><td>📝 업무내용</td><td>AWS Cognito 기반 유저 관리, 열차 티켓 예약, 구매, 마이페이지 개발</td></tr>
