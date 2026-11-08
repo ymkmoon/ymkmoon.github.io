@@ -13,7 +13,7 @@ toc_sticky: true
 toc_label: "[EMQX-Kafka 통합 설정]"
  
 date: 2026-02-20
-last_modified_at: 2026-02-20
+last_modified_at: 2026-11-08
 ---
 
 ### IoT 데이터 파이프라인 구축 시리즈
@@ -38,10 +38,10 @@ FROM confluentinc/cp-kafka-connect:7.7.4
 
 ARG CAMEL_PLUGIN_PATH="/home/appuser/camel-kafka-connectors"
 ARG CAMEL_REPOSITORY_BASE_URL="https://repo.maven.apache.org/maven2/org/apache/camel/kafkaconnector"
-ARG CAMEL_PACKAGE_VERSOIN="4.11.0"
+ARG CAMEL_PACKAGE_VERSION="4.11.0"
 
 RUN mkdir -p "${CAMEL_PLUGIN_PATH}" \
-  && wget -qO- "${CAMEL_REPOSITORY_BASE_URL}/camel-mqtt-source-kafka-connector/${CAMEL_PACKAGE_VERSOIN}/camel-mqtt-source-kafka-connector-${CAMEL_PACKAGE_VERSOIN}-package.tar.gz" | tar -C "${CAMEL_PLUGIN_PATH}" -xz
+  && wget -qO- "${CAMEL_REPOSITORY_BASE_URL}/camel-mqtt-source-kafka-connector/${CAMEL_PACKAGE_VERSION}/camel-mqtt-source-kafka-connector-${CAMEL_PACKAGE_VERSION}-package.tar.gz" | tar -C "${CAMEL_PLUGIN_PATH}" -xz
 
 ENV CONNECT_PLUGIN_PATH="/usr/share/java,${CAMEL_PLUGIN_PATH}"
 ```
@@ -57,6 +57,8 @@ docker build -t custom-kafka-connect:7.7.4 .
 ## Kafka 브로커 클러스터 기본 구성 확인
 
 `docker-compose.yml`에서 브로커 3대, 내부/외부 리스너, 복제 설정을 확인합니다.
+
+> 이 글은 ZooKeeper 기반 구성(cp-kafka 7.7)입니다. Kafka 4.0부터는 ZooKeeper 지원이 제거되어 KRaft 모드만 쓸 수 있으니, 새로 구성한다면 KRaft를 검토해주세요.
 
 ```yaml
 # docker-compose.yml (Kafka broker 핵심)
@@ -77,6 +79,7 @@ kafka2:
     KAFKA_BROKER_ID: 2
     KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka2:${KAFKA_INTERNAL_PORT},EXTERNAL://${KAFKA2_ADVERTISED_HOST}:${KAFKA2_HOST_PORT}
     KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: ${KAFKA_REPLICATION_FACTOR}
+    # (나머지 리스너 설정은 kafka1과 동일)
 
 kafka3:
   image: confluentinc/cp-kafka:7.7.4
@@ -84,6 +87,7 @@ kafka3:
     KAFKA_BROKER_ID: 3
     KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka3:${KAFKA_INTERNAL_PORT},EXTERNAL://${KAFKA3_ADVERTISED_HOST}:${KAFKA3_HOST_PORT}
     KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: ${KAFKA_REPLICATION_FACTOR}
+    # (나머지 리스너 설정은 kafka1과 동일)
 ```
 
 ### 브로커 최적화 포인트
@@ -92,13 +96,15 @@ kafka3:
 - `KAFKA_INTER_BROKER_LISTENER_NAME=INTERNAL` : 브로커 간 트래픽 안정화
 - `KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR` : 멀티 브로커 수에 맞춰 설정해 장애 복구성 강화
 
+> 이후 명령어는 `KAFKA_INTERNAL_PORT=9092` 기준입니다. 컨테이너 안에서는 INTERNAL 리스너(`kafka1:9092`)로, 호스트에서는 EXTERNAL 리스너로 접속합니다.
+
 ---
 
 ## 토픽 선생성(권장) 및 클러스터 기동
 
 `topic-creator` 컨테이너를 통해 `vehicle-data` 토픽을 사전 생성합니다.
 
-> 토픽 생성 전에 커넥터가 연결되면 토픽이 공유되지 않는 현상이 발생합니다. 꼭 토픽을 미리 생성해주세요.
+> 토픽이 없는 상태에서 커넥터가 먼저 메시지를 쓰면, 브로커가 토픽을 **기본값으로 자동 생성**합니다. 기본값(`num.partitions`, `default.replication.factor`)을 따로 지정하지 않았다면 파티션 1개 · 복제 1개 토픽이 만들어져, 브로커 3대를 두고도 분산과 복제가 되지 않습니다. 한 번 만들어진 토픽의 복제 계수는 쉽게 바꿀 수 없으니 꼭 토픽을 미리 생성해주세요.
 
 
 ### Docker Compose 를 이용한 토픽 생성
@@ -121,7 +127,7 @@ topic-creator:
       echo "Waiting for Kafka brokers to be ready..."
       cub kafka-ready -b kafka1:${KAFKA_INTERNAL_PORT} 3 30
       echo "Creating vehicle-data topic..."
-      kafka-topics --create --topic vehicle-data --bootstrap-server kafka1:${KAFKA_INTERNAL_PORT} --partitions ${KAFKA_REPLICATION_PARTITIONS} --replication-factor ${KAFKA_REPLICATION_FACTOR} || true
+      kafka-topics --create --if-not-exists --topic vehicle-data --bootstrap-server kafka1:${KAFKA_INTERNAL_PORT} --partitions ${KAFKA_REPLICATION_PARTITIONS} --replication-factor ${KAFKA_REPLICATION_FACTOR}
       echo "Topic creation completed."
 ```
 
@@ -130,27 +136,25 @@ topic-creator:
 ```bash
 kafka-topics --create \
   --topic 토픽이름 \
-  --bootstrap-server MQTT 브로커 접속 URL \
+  --bootstrap-server Kafka 브로커 접속 주소 \
   --partitions 3 \
   --replication-factor 3
 
-kafka-topics --create \
-  --bootstrap-server kafka1:9093,kafka2:9093,kafka3:9093 \
+docker exec -it kafka1 kafka-topics --create \
+  --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092 \
   --replication-factor 3 \
   --partitions 3 \
   --topic vehicle-data
 ```
 
 
-### 클러스트 실행
+### 클러스터 실행
 
 ```bash
 # 로컬 예시
 docker compose -p kafka-cluster --env-file kafka.local.env down --volumes --remove-orphans
 docker compose -p kafka-cluster --env-file kafka.local.env up -d
 ```
-
-> 커넥터가 토픽을 자동 생성하도록 두면 replication-factor가 기대값과 다를 수 있으므로, 운영 환경에서는 토픽 선생성을 권장합니다.
 
 ---
 
@@ -178,11 +182,16 @@ kafka-connect1:
     - ./kafka-init:/kafka-init
 ```
 
+여기서 분산 모드의 이점은 **처리량이 아니라 장애 대비**입니다.  
+MQTT 소스 커넥터는 EMQX에 구독자 하나로 붙기 때문에 일을 나눌 수 없고, task는 1개만 돕니다. Connect 노드 1대가 죽으면 같은 그룹의 다른 노드가 그 task를 이어받습니다.
+
 ---
 
 ## MQTT Source Connector 설정
 
 EMQX(MQTT 브로커)에서 구독한 메시지를 Kafka `vehicle-data` 토픽으로 보냅니다.
+
+> 아래 파일은 `curl`로 그대로 보낼 파일이라 주석을 넣지 않았습니다. JSON은 `//` 주석을 허용하지 않아서, 주석이 있으면 등록 요청이 실패합니다. 각 항목 설명은 아래 표를 참고해주세요.
 
 ```json
 {
@@ -240,18 +249,47 @@ EMQX(MQTT 브로커)에서 구독한 메시지를 Kafka `vehicle-data` 토픽으
 
 ```
 
+| 항목 | 설명 |
+| :--- | :--- |
+| `connector.class` | Camel MQTT Source 커넥터 클래스 |
+| `tasks.max` | 반드시 `1` (아래 설명 참고) |
+| `topics` | Kafka 브로커에 메시지가 기록될 대상 토픽명 |
+| `brokerUrl` | MQTT 브로커 접속 URL (프로토콜 + 호스트 + 포트) |
+| `clientId` | EMQX가 이 커넥터를 식별하는 ID. 지속 세션을 쓰려면 고정값이어야 함 |
+| `topic` | EMQX에서 구독할 MQTT 토픽 (와일드카드 `#` 지원) |
+| `qos` | `1` = At least once. 유실 대신 중복을 허용하고 중복은 Consumer에서 처리 |
+| `clean.session.enabled` | `false` = 지속 세션. 커넥터가 재시작되는 동안의 메시지를 EMQX가 보관 |
+| `connect.timeout.seconds` / `keepalive.interval.seconds` | 연결 시도 타임아웃 / keep-alive 간격(초) |
+| `max.retry.time.ms` | 연결 재시도 최대 대기 시간(ms) |
+| `key.converter` / `value.converter` | Kafka에 기록할 key / value 직렬화 방식 |
+
+Camel 커넥터에는 이 밖에도 aggregation, idempotency 관련 옵션이 많지만, 기본값으로 두어도 동작합니다. 위 항목만 상황에 맞게 조정하면 충분합니다.
+
 실무 팁:
 
-- `brokerUrl`은 실제 EMQX 엔드포인트로 변경
-- `topic`은 EMQX Rule/토픽 정책과 맞게 설계
-- 메시지 중복/유실 요구사항에 따라 `qos`, `clean.session.enabled` 조합 조정
+- **`brokerUrl`에 `localhost`를 쓰면 안 됩니다.** 커넥터는 Connect 컨테이너 안에서 돌기 때문에 `localhost`는 Connect 컨테이너 자신을 가리킵니다. 같은 Docker 네트워크라면 `nginx-mqtt` 같은 서비스 이름을, 아니라면 호스트 주소를 넣어주세요.
+- **`clean.session.enabled`는 `false`로 둡니다.** `true`면 커넥터가 재시작되거나 재배포되는 동안 발행된 메시지는 받을 세션이 없어 그대로 사라집니다. [#2](https://ymkmoon.github.io/IoT-02-EMQX-Setup/)의 지속 세션 조건(고정 Client ID + QoS 1 이상)이 커넥터에도 똑같이 적용됩니다.
+- **`tasks.max`를 늘리면 메시지가 중복됩니다.** task마다 같은 MQTT 토픽을 따로 구독하므로 같은 메시지가 task 수만큼 Kafka에 기록됩니다. Client ID가 고정이라면 task끼리 서로의 연결을 끊어 버리기도 합니다.
+- **MQTT 토픽은 발행하는 쪽과 정확히 맞춰야 합니다.** 발행 토픽을 바꾸고 커넥터 `topic`을 그대로 두면 에러 없이 조용히 수집이 멈춥니다. 토픽을 바꿀 때는 양쪽을 함께 바꿔주세요.
+- `value.converter`가 `JsonConverter`이면 MQTT 본문(byte 배열)이 Base64 문자열로 기록됩니다. Consumer에서 이를 어떻게 처리하는지는 [#4](https://ymkmoon.github.io/IoT-04-Kafka-Consumer-App/)에서 다룹니다.
 
 ---
 
 ## 커넥터 등록
 
+`POST /connectors`는 처음 한 번만 성공하고, 같은 이름의 커넥터가 있으면 `409 Conflict`로 실패합니다.  
+설정을 바꿀 때마다 삭제 후 재등록하게 되므로, **`PUT /connectors/{name}/config`**를 쓰는 편이 좋습니다. 없으면 만들고 있으면 설정을 바꾸기 때문에, 몇 번을 실행해도 결과가 같습니다.
+
+PUT은 `name`을 경로로 받고 본문에는 `config` 객체만 보냅니다. 아래 예시는 `jq`로 `config` 부분만 꺼내 보냅니다(`jq`가 없다면 `config` 내용만 담은 파일을 따로 두고 `--data @파일명`으로 보내도 됩니다).
+
 ```bash
+# 최초 등록 (한 번만)
 curl -X POST -H "Content-Type: application/json" http://localhost:28083/connectors --data @mqtt-connector.json
+
+# 등록 + 변경 (권장 — 여러 번 실행해도 안전)
+jq .config mqtt-connector.json | \
+  curl -X PUT -H "Content-Type: application/json" \
+  http://localhost:28083/connectors/mqtt-source-connector/config --data @-
 ```
 
 ---
@@ -262,11 +300,11 @@ curl -X POST -H "Content-Type: application/json" http://localhost:28083/connecto
 
 ```bash
 # 토픽 목록/상세 확인
-docker exec -it kafka1 kafka-topics --list --bootstrap-server kafka1:9093,kafka2:9093,kafka3:9093
+docker exec -it kafka1 kafka-topics --list --bootstrap-server kafka1:9092
 docker exec -it kafka1 kafka-topics --describe --topic vehicle-data --bootstrap-server kafka1:9092
 
 # 메시지 소비 확인(파티션 출력)
-docker exec -it kafka1 kafka-console-consumer --bootstrap-server kafka1:9093,kafka2:9093,kafka3:9093 --topic vehicle-data --property print.partition=true --from-beginning
+docker exec -it kafka1 kafka-console-consumer --bootstrap-server kafka1:9092 --topic vehicle-data --property print.partition=true --from-beginning
 
 # 파티션 오프셋 확인(분산 적재 체크)
 docker exec -it kafka1 kafka-get-offsets --bootstrap-server kafka1:9092 --topic vehicle-data
@@ -274,12 +312,14 @@ docker exec -it kafka1 kafka-get-offsets --bootstrap-server kafka1:9092 --topic 
 # 커넥터 상태 확인
 curl http://localhost:28083/connectors/mqtt-source-connector/status
 
-## 특정 커넥터만 재배포
-curl -X POST http://localhost:28083/connectors/mqtt-source-connector/tasks/1/restart
+## 커넥터와 실패한 task 재시작 (task 번호는 0부터 시작)
+curl -X POST "http://localhost:28083/connectors/mqtt-source-connector/restart?includeTasks=true&onlyFailed=true"
 
 ## 커넥터 삭제
 curl -X DELETE http://localhost:28083/connectors/mqtt-source-connector
 ```
+
+> task를 하나만 재시작하려면 `POST /connectors/{name}/tasks/{taskId}/restart`를 씁니다. `tasks.max=1`이면 task는 `0`번 하나뿐이라 `tasks/1`은 404가 납니다.
 
 ---
 
@@ -288,4 +328,5 @@ curl -X DELETE http://localhost:28083/connectors/mqtt-source-connector
 - EMQX 접속 주소와 Kafka 외부 리스너 주소가 서로 통신 가능한 네트워크인지 확인
 - 토픽 복제 계수(`replication-factor`)와 브로커 수 불일치 여부 점검
 - Connect 내부 토픽과 업무 토픽 모두 보존 정책/파티션 수를 운영 목적에 맞게 사전 설계
+- 커넥터를 재시작하는 동안 발행한 메시지가 Kafka에 들어오는지(지속 세션) 확인
 - 장애 테스트(브로커 1대/Connect 1대 다운)로 복구 시간과 데이터 연속성 검증
