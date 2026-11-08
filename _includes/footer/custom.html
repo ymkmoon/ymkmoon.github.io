@@ -1,3 +1,32 @@
 <!-- start custom footer snippets -->
+{% if page.mermaid %}
+<style>
+  .mermaid { margin: 1.5em 0; text-align: center; }
+</style>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 
+  // 마크다운의 mermaid 코드 블록을 그림 영역으로 바꾼다.
+  // 코드 블록이 줄번호 표 형태로 출력된 경우에도 코드 칸의 글자만 꺼낸다.
+  document.querySelectorAll('code.language-mermaid, div.language-mermaid').forEach((el) => {
+    if (!el.isConnected) return;
+    const block = el.closest('div.language-mermaid') || el.closest('pre') || el;
+    const source = block.querySelector('td.rouge-code pre, td.code pre') || block.querySelector('code') || block;
+    const box = document.createElement('div');
+    box.className = 'mermaid';
+    box.textContent = source.textContent;
+    block.replaceWith(box);
+  });
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'default',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif',
+    themeVariables: { fontSize: '14px' },
+    flowchart: { curve: 'basis', nodeSpacing: 30, rankSpacing: 40, padding: 10 },
+    sequence: { mirrorActors: false, width: 120, actorMargin: 40, actorFontSize: 14, messageFontSize: 14, noteFontSize: 13 },
+  });
+  await mermaid.run({ querySelector: '.mermaid' });
+</script>
+{% endif %}
 <!-- end custom footer snippets -->
